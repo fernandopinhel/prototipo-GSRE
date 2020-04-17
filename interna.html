@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- meta tags obrigatorias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- estilo css -->
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <!-- datepicker -->
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+
+    <title>Protótipo</title>
+  </head>
+  <body>
+    <header>
+      <div class="container py-1">
+        <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+          <a class="navbar-brand logo" href="#"><img src="img/logo.png" alt=""></a>
+          <button class="navbar-toggler mr-3" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="navbar-collapse collapse" id="navbarCollapse" style="">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Consultas <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Cadastro</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Relatório</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Tratamentos</a>
+              </li>
+              <li class="nav-item separator">
+                <a class="nav-link" href="#">Sair</a>
+              </li>
+            </ul>
+            <div class="dropdown user ml-auto">
+              <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="img/user.jpg">
+                <div class="options">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Item 1</a>
+                <a class="dropdown-item" href="#">Item 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Sair</a>
+              </div>
+            </div>
+          </div>
+
+        </nav>
+      </div>
+
+    </header>
+    <section class="interna">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <div class="box">
+              <div class="float-left">
+                <p>Apólice</p>
+                <span>514684666165</span>
+              </div>
+              <div class="float-right">
+                <img src="img/icon-apolice.png" alt="">
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="box">
+              <div class="float-left">
+                <p>Apólice</p>
+                <span>514684666165</span>
+              </div>
+              <div class="float-right">
+                <img src="img/icon-data.png" alt="">
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="box">
+              <div class="float-left">
+                <p>Apólice</p>
+                <span>514684666165</span>
+              </div>
+              <div class="float-right">
+                <img src="img/icon-placa.png" alt="">
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="box">
+              <div class="float-left">
+                <p>Apólice</p>
+                <span>514684666165</span>
+              </div>
+              <div class="float-right">
+                <img src="img/icon-sinistro.png" alt="">
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="box">
+              <div class="float-left">
+                <p>Apólice</p>
+                <span>514684666165</span>
+              </div>
+              <div class="float-right">
+                <img src="img/icon-nome.png" alt="">
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="box">
+              <div class="float-left">
+                <p>Apólice</p>
+                <span>514684666165</span>
+              </div>
+              <div class="float-right">
+                <img src="img/icon-naas.png" alt="">
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+        <div class="desktop">
+          <div class="row">
+            <div class="col-4">
+              <div class="nav flex-column nav-pills white" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link anexos active" id="anexos-tab" data-toggle="pill" href="#anexos" role="tab" aria-controls="anexos" aria-selected="true">Anexos</a>
+                <a class="nav-link orcamento" id="orcamento-tab" data-toggle="pill" href="#orcamento" role="tab" aria-controls="orcamento" aria-selected="false">Orçamento</a>
+                <a class="nav-link parecer" id="parecer-tab" data-toggle="pill" href="#parecer" role="tab" aria-controls="parecer" aria-selected="false">Parecer</a>
+                <a class="nav-link indenizacao" id="indenizacao-tab" data-toggle="pill" href="#indenizacao" role="tab" aria-controls="indenizacao" aria-selected="false">Indenização</a>
+                <a class="nav-link benef-veiculo" id="benef-veiculo-tab" data-toggle="pill" href="#benef-veiculo" role="tab" aria-controls="benef-veiculo" aria-selected="false">Beneficiário / Veículo</a>
+                <a class="nav-link historico" id="historico-tab" data-toggle="pill" href="#historico" role="tab" aria-controls="historico" aria-selected="false">Histórico</a>
+                <a class="nav-link detalhes-apolic" id="detalhes-apolic-tab" data-toggle="pill" href="#detalhes-apolic" role="tab" aria-controls="detalhes-apolic" aria-selected="false">Detalhes da apólice</a>
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="tab-content white" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="anexos" role="tabpanel" aria-labelledby="anexos-tab">
+                  <div class="container-fluid">
+                    <h1>Anexo</h1>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="orcamento" role="tabpanel" aria-labelledby="orcamento-tab">
+                  <div class="container-fluid">
+                    <h1>Orçamento</h1>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="parecer" role="tabpanel" aria-labelledby="parecer-tab">
+                  <div class="container-fluid">
+                    <h1>Parecer</h1>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="benef-veiculo" role="tabpanel" aria-labelledby="benef-veiculo-tab">
+                  <div class="container-fluid">
+                    <h1>Beneficiário / Veículo</h1>
+                    <div class="row">
+                      <div class="col-12">
+                        <h2>Dados do beneficiário</h2>
+                      </div>
+                      <div class="col-sm-9">
+                        <div class="form">
+                          <input type="text" name="text" autocomplete="off" required>
+                          <label for="text" class="label-name">
+                              <span class="content-name">Nome</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="form">
+                          <input type="text" name="text" autocomplete="off" required>
+                          <label for="text" class="label-name">
+                              <span class="content-name">CPF</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="form">
+                          <input type="text" name="text" autocomplete="off" required>
+                          <label for="text" class="label-name">
+                              <span class="content-name">Banco</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="form">
+                          <input type="text" name="text" autocomplete="off" required>
+                          <label for="text" class="label-name">
+                              <span class="content-name">Agência</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="form">
+                          <input type="text" name="text" autocomplete="off" required>
+                          <label for="text" class="label-name">
+                              <span class="content-name">Conta corrente</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <h2>Dados do veículo</h2>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="form">
+                          <input type="text" name="text" autocomplete="off" required>
+                          <label for="text" class="label-name">
+                              <span class="content-name">Placa</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="form">
+                          <input type="text" name="text" autocomplete="off" required>
+                          <label for="text" class="label-name">
+                              <span class="content-name">Chassi</span>
+                          </label>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <h2>Dados do proprietário</h2>
+                      </div>
+                      <div class="col-sm-9">
+                        <div class="form">
+                          <input type="text" name="text" autocomplete="off" required>
+                          <label for="text" class="label-name">
+                              <span class="content-name">Nome</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="form">
+                          <input type="text" name="text" autocomplete="off" required>
+                          <label for="text" class="label-name">
+                              <span class="content-name">CPF</span>
+                          </label>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <div class="float-right mt-5">
+                          <button type="button" class="btn btn-cancel">Cancelar</button>
+                          <button type="button" class="btn btn-salvar">Salvar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="indenizacao" role="tabpanel" aria-labelledby="indenizacao-tab">
+                  <div class="container-fluid">
+                    <h1>Indenização</h1>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="historico" role="tabpanel" aria-labelledby="historico-tab">
+                  <div class="container-fluid">
+                    <h1>Histórico</h1>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="detalhes-apolic" role="tabpanel" aria-labelledby="detalhes-apolic-tab">
+                  <div class="container-fluid">
+                    <h1>Detalhes da apólice</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile">
+          <div class="row">
+
+            <div class="col">
+              <div class="accordion" id="exampleAccordion">
+                <div class="card">
+                  <div class="card-header" id="anexos">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link anexos collapsed" type="button" data-toggle="collapse" data-target="#anexos1" aria-expanded="false" aria-controls="anexos1" onclick="toggleFunctionAnexos(this)">
+                        Anexos
+                        <div class="bar-geral one-bar">
+                          <div class="bar1"></div>
+                          <div class="bar2"></div>
+                        </div>
+                      </button>
+
+
+                    </h5>
+
+                  </div>
+                  <div id="anexos1" class="collapse show" aria-labelledby="anexos" data-parent="#exampleAccordion">
+                    <div class="card-body">
+                      <p>Anexos</p>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="orcamento">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link orcamento" type="button" data-toggle="collapse" data-target="#orcamento2" aria-expanded="true" aria-controls="orcamento2">Orçamento</button>
+                    </h5>
+                  </div>
+                  <div id="orcamento2" class="collapse" aria-labelledby="orcamento" data-parent="#exampleAccordion">
+                    <div class="card-body">
+                      <p>orcamento</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="parecer">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link parecer collapsed" type="button" data-toggle="collapse" data-target="#parecer3" aria-expanded="false" aria-controls="parecer3">Parecer</button>
+                    </h5>
+                  </div>
+                  <div id="parecer3" class="collapse" aria-labelledby="parecer" data-parent="#exampleAccordion">
+                    <div class="card-body">
+                      <p>parecer</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="indenizacao">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link indenizacao collapsed" type="button" data-toggle="collapse" data-target="#indenizacao4" aria-expanded="false" aria-controls="indenizacao4">Indenização</button>
+                    </h5>
+                  </div>
+                  <div id="indenizacao4" class="collapse" aria-labelledby="indenizacao" data-parent="#exampleAccordion">
+                    <div class="card-body">
+                      <p>indenizacao</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="beneficiaria">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link benef-veiculo collapsed" type="button" data-toggle="collapse" data-target="#beneficiaria5" aria-expanded="false" aria-controls="beneficiaria5">Beneficiário / Veículo</button>
+                    </h5>
+                  </div>
+                  <div id="beneficiaria5" class="collapse" aria-labelledby="beneficiaria" data-parent="#exampleAccordion">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-12">
+                          <h2>Dados do beneficiário</h2>
+                        </div>
+                        <div class="col-sm-9">
+                          <div class="form">
+                            <input type="text" name="text" autocomplete="off" required>
+                            <label for="text" class="label-name">
+                                <span class="content-name">Nome</span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="form">
+                            <input type="text" name="text" autocomplete="off" required>
+                            <label for="text" class="label-name">
+                                <span class="content-name">CPF</span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="form">
+                            <input type="text" name="text" autocomplete="off" required>
+                            <label for="text" class="label-name">
+                                <span class="content-name">Banco</span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="form">
+                            <input type="text" name="text" autocomplete="off" required>
+                            <label for="text" class="label-name">
+                                <span class="content-name">Agência</span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="form">
+                            <input type="text" name="text" autocomplete="off" required>
+                            <label for="text" class="label-name">
+                                <span class="content-name">Conta corrente</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12">
+                          <h2>Dados do veículo</h2>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="form">
+                            <input type="text" name="text" autocomplete="off" required>
+                            <label for="text" class="label-name">
+                                <span class="content-name">Placa</span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="form">
+                            <input type="text" name="text" autocomplete="off" required>
+                            <label for="text" class="label-name">
+                                <span class="content-name">Chassi</span>
+                            </label>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="row">
+                        <div class="col-12">
+                          <h2>Dados do proprietário</h2>
+                        </div>
+                        <div class="col-sm-9">
+                          <div class="form">
+                            <input type="text" name="text" autocomplete="off" required>
+                            <label for="text" class="label-name">
+                                <span class="content-name">Nome</span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="form">
+                            <input type="text" name="text" autocomplete="off" required>
+                            <label for="text" class="label-name">
+                                <span class="content-name">CPF</span>
+                            </label>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <div class="float-right mt-5">
+                            <button type="button" class="btn btn-cancel">Cancelar</button>
+                            <button type="button" class="btn btn-salvar">Salvar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="historico">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link historico collapsed" type="button" data-toggle="collapse" data-target="#historico6" aria-expanded="false" aria-controls="historico6">Histórico</button>
+                    </h5>
+                  </div>
+                  <div id="historico6" class="collapse" aria-labelledby="historico" data-parent="#exampleAccordion">
+                    <div class="card-body">
+                      <p>historico</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="detalhes-apolice">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link detalhes-apolic collapsed" type="button" data-toggle="collapse" data-target="#detalhes-apolice7" aria-expanded="false" aria-controls="detalhes-apolice7">Detalhes da apólice</button>
+                    </h5>
+                  </div>
+                  <div id="detalhes-apolice7" class="collapse" aria-labelledby="detalhes-apolice" data-parent="#exampleAccordion">
+                    <div class="card-body">
+                      <p>detalhes-apolice</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer></footer>
+  </body>
+
+
+
+
+  <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+  <script src="js/jquery-3.3.1.slim.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- configs js -->
+  <script src="js/config.js"></script>
+
+  <!-- Script Datepicker-->
+  <script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+  <script type="text/javascript" src="js/locales/bootstrap-datetimepicker.pt-BR.js" charset="UTF-8"></script>
+  <script type="text/javascript">
+  $('.form_date').datetimepicker({
+      language:  'pt-BR',
+      autoclose: 1,
+      minView: 2,
+      format: "dd/mm/yyyy"
+      });
+  </script>
+  <script>
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+  </script>
+  <script>
+  // Máscara formato data no campo date 99/99/9999
+  function mascaraData(campo, e){
+      var kC = (document.all) ? event.keyCode : e.keyCode;
+      var data = campo.value;
+      if( kC!=8 && kC!=46 ){
+      if( data.length==2 ){
+          campo.value = data += '/';
+      }else if( data.length==5){
+      campo.value = data += '/';
+      }else
+  campo.value = data;
+  }
+  }
+  </script>
+
+  <!-- Script display none box-item form select -->
+  <script>
+    $(document).ready(function(){
+      $(".add-mais").click(function(){
+        // $(".box-item").addClass("display-none-box");
+        $(".box-item").removeClass("display-none-box");
+      });
+    });
+  </script>
+
+  <script>
+    function toggleFunctionAnexos(x) {
+      x.classList.toggle("change");
+    }
+  </script>
+
+</html>
