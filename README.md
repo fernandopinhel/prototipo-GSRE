@@ -1,2 +1,0 @@
-# prototipo-GSRE
-Protótipo GSRE
