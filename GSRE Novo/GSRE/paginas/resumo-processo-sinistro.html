@@ -501,22 +501,22 @@
 									<div class="container-fluid">
 										<div class="row">
 											<div class="col-lg-12">
-												<h1>Parecer</h1>
+												<h1 class="float-left mt-2">Parecer</h1>
+												<button type="button" name="button" class="btn btn-salvar float-right">Incluir Parecer</button>
 											</div>
 											<div class="col-lg-12"><hr></div>
 										</div>
 										<div class="row">
-											<div class="col-lg-4">												
-												<label for="tipo-de-parecer">Tipo de Parecer</label> 
-												<select id="tipo-de-parecer" class="form-control">
-													<option value="-1">Selecione...</option>
-												</select>	
+											<div class="col-sm-12 col-xl-4">
+												<label for="text">Info. Parecer</label>
+												<input type="text" name="filtro.dedocEProcesso" maxlength="8" value="" id="cmpNumeroDedoc" class="form-control dedocProc" onkeypress="return isNumberKey(event)" autocomplete="off"> 
+										   	</div>
+										   	<div class="col-sm-12 col-xl-4">												
+												<label for="cmpOcorrDataInicio">Data</label> 
+												<input type="text" name="filtro.dataOcorrenciaInicio" value="" id="cmpOcorrDataInicio" class="form-control date">
 											</div>
-											<div class="col-lg-8 mt-2">
+											<div class="col-sm-12 mt-2 col-xl-2">
 												<button type="button" name="button" class="btn btn-primary mr-3 mt-4">Buscar</button>
-												<button type="button" name="button" class="btn mt-3 float-right">
-													<span class="btn-add"></span>
-												</button>
 											</div>
 										</div>
 										<div class="row mt-5">
@@ -524,14 +524,14 @@
 												<div class="info-parecer">
 													<div class="container-fluid p-0">
 														<div class="row header-parecer">
-															<div class="col-lg-4">
+															<div class="col-lg-3">
 																<p>Data do Parecer: <b>15/09/2019 - 20:11</b></p>
 															</div>
-															<div class="col-lg-4">
+															<div class="col-lg-3">
 																<p>Reponsável pelo Parecer: <b>Jacob de Sousa Farias</b></p>
 															</div>
-															<div class="col-lg-4">
-																<p>Categoria do Parecer: <b>ASE/ANÁLISE/TRANSMISSÂO</b></p>
+															<div class="col-lg-3">
+																<p>Categoria do Parecer: <b>TRANSMISSÂO</b></p>
 															</div>
 														</div>
 														<div class="row conteudo-parecer">
@@ -546,19 +546,19 @@
 												</div>
 											</div>
 										</div>
-										<div class="row mt-3">
+										<div class="row mt-5">
 											<div class="col-lg-12">
 												<div class="info-parecer">
 													<div class="container-fluid p-0">
 														<div class="row header-parecer">
-															<div class="col-sm-4">
-																<p>Data do Parecer: 15/09/2019 - 20:11</p>
+															<div class="col-lg-3">
+																<p>Data do Parecer: <b>15/09/2019 - 20:11</b></p>
 															</div>
-															<div class="col-sm-4">
-																<p>Reponsável pelo Parecer: Jacob de Sousa Farias</p>
+															<div class="col-lg-3">
+																<p>Reponsável pelo Parecer: <b>Jacob de Sousa Farias</b></p>
 															</div>
-															<div class="col-sm-4">
-																<p>Categoria do Parecer: ASE/ANÁLISE/TRANSMISSÂO</p>
+															<div class="col-lg-3">
+																<p>Categoria do Parecer: <b>TRANSMISSÂO</b></p>
 															</div>
 														</div>
 														<div class="row conteudo-parecer">
@@ -573,6 +573,34 @@
 												</div>
 											</div>
 										</div>
+										<div class="row mt-5">
+											<div class="col-lg-12">
+												<div class="info-parecer">
+													<div class="container-fluid p-0">
+														<div class="row header-parecer">
+															<div class="col-lg-3">
+																<p>Data do Parecer: <b>15/09/2019 - 20:11</b></p>
+															</div>
+															<div class="col-lg-3">
+																<p>Reponsável pelo Parecer: <b>Jacob de Sousa Farias</b></p>
+															</div>
+															<div class="col-lg-3">
+																<p>Categoria do Parecer: <b>TRANSMISSÂO</b></p>
+															</div>
+														</div>
+														<div class="row conteudo-parecer">
+															<div class="col-lg-12">
+																<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non nibh elit.
+																Sed quam dolor, egestas ut sem quis, feugiat suscipit tellus. Nunc iaculis imperdiet eleifend.
+																Sed sodales elit ut lacus tempor tempus. Nunc ipsum mi, aliquam semper interdum a, finibus quis
+																nibh. Maecenas fringilla lobortis lorem, nec efficitur lorem imperdiet at.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
 									</div>
 								</div>
 							</div>

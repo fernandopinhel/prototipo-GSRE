@@ -1048,9 +1048,10 @@ header .navbar{
 
 span.btn-add{
   background:url(../img/add.svg);
-  width: 35px;
-  height: 35px;
+  width: 28px;
+  height: 28px;
   right: 15px;
+  bottom: 2px;
   position: absolute;
   background-repeat: no-repeat;
   background-position: center;
@@ -1062,11 +1063,25 @@ span.btn-add{
   border-radius: 10px;
 }
 
+.header-parecer > div > p{
+  font-size: 14px;
+}
+
 .conteudo-parecer{
   background: #fff;
   margin: 20px 0;
   padding: 10px 0;
   border-radius: 10px;
+}
+
+.toolbar-imagens{
+  overflow: hidden;
+  display: none;
+}
+
+.panel-main:hover > .toolbar-imagens{
+  overflow: visible;
+  display: block;
 }
 
 .btn-salvar{
