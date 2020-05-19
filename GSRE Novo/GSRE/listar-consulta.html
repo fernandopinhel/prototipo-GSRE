@@ -1,0 +1,1088 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Sinistro Auto
+	</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<link rel="shortcut icon" type="image/x-icon" href="/GSRE-SinistroAuto/includes/img/favicon.ico" />
+	
+	<!-- Ebix styles -->
+	<link rel="stylesheet" type="text/css" href="/GSRE-SinistroAuto/includes/css/bootstrap/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="/GSRE-SinistroAuto/includes/css/bootstrap/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="/GSRE-SinistroAuto/includes/css/fontawesome/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="/GSRE-SinistroAuto/includes/css/bootstrap/bootstrap-select.css" />
+	<link rel="stylesheet" type="text/css" href="/GSRE-SinistroAuto/includes/css/estilo.css" />
+	<link rel="stylesheet" type="text/css" href="/GSRE-SinistroAuto/includes/css/sweetalert2/sweetalert2.css" />
+	
+    
+    <!-- Bradesco styles -->
+    <link rel="stylesheet" type="text/css" href="/GSRE-SinistroAuto/includes/css/bradseg_icons.css" />
+    
+    
+<!-- External plugins -->
+	<script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/jquery-3.3.1.slim.min.js"></script>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/popper.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.4/sweetalert2.all.js"></script>
+	<script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/jquery.maskedinput.js"></script>
+	
+	
+    <!-- configs js -->
+    <script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/comum/comum.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/config.js"></script>
+    <script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/sweetalert2/sweetalert2.js"></script>
+    
+
+    <!-- Script Datepicker-->
+    <script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/bootstrap/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/bootstrap/bootstrap-select.js"></script>
+    
+    
+    <script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/consultasinistro/consulta-sinistro.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/moment/moment.min.js"></script>
+    <script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/moment/moment-with-locales.js"></script>
+	
+	
+	<script>window.baseURL = "/GSRE-SinistroAuto/";</script>
+	
+	
+</head>
+
+
+
+
+
+
+
+<header style="height: 128px">
+	<div class="container py-1">
+		<nav class="navbar navbar-expand-xl navbar-dark bg-dark" style="margin-top: 34px;">
+			<a class="navbar-brand logo" href="#"> 
+				<img src="/GSRE-SinistroAuto/includes/img/logo.png" alt="">
+			</a>
+			<button class="navbar-toggler mr-3" type="button"
+					data-toggle="collapse" data-target="#navbarCollapse"
+					aria-controls="navbarCollapse" aria-expanded="true"
+					aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+	
+			<div class="navbar-collapse collapse" id="navbarCollapse">
+				<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+					<li class="nav-item">
+						<a class="nav-link active" 
+						   id="pills-consultas-tab" 
+						   data-toggle="pill" 
+						   href="#pills-consultas"
+						   role="tab" aria-controls="pills-consultas" 
+						   aria-selected="false">Consultas</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle"  
+							data-toggle="dropdown" 
+							href="#" role="tab" 
+							aria-selected="true">Cadastros</a>
+						<div class="dropdown-menu">
+					      <a class="dropdown-item" id="pills-cadastro-perfil-tab"        href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaPerfil.do'>Perfil</a>
+					      <a class="dropdown-item" id="pills-cadastro-usuario-tab"       href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaUsuario.do'>Usuário</a>
+					      <a class="dropdown-item" id="pills-cadastro-instituicao-tab"   href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaInstituicao.do'>Instituições</a>
+					      <a class="dropdown-item" id="pills-cadastro-tabelas-tab"       href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaTabelas.do'>Tabelas</a>
+					      <a class="dropdown-item" id="pills-cadastro-cartas-tab"        href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaCartas.do'>Cartas</a>
+					      <a class="dropdown-item" id="pills-cadastro-oficinas-tab"      href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaOficinas.do'>Oficinas</a>
+					    </div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="pills-relatorios-tab" 
+							   data-toggle="pill" href="#pills-relatorios"
+							   role="tab" aria-controls="pills-relatorios" 
+							   aria-selected="false">Relatórios</a>
+						</li>
+					</ul>
+	
+					<div class="dropdown user ml-auto">
+						<label class="welcome">Bem-vindo(a): Igor - M123456</label>
+						<button class="dropdown-toggle" type="button"
+							    id="dropdownMenuButton" data-toggle="dropdown"
+							    aria-haspopup="true" aria-expanded="false">
+							<img src="/GSRE-SinistroAuto/includes/img/credential.png">
+							<div class="options">
+								<span></span> <span></span> <span></span>
+							</div>
+						</button>
+						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							<a class="dropdown-item" href="#">M123456 - Jeniffer</a> <a
+								class="dropdown-item" href="#">Minhas Configurações</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Sair</a>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+</header>
+
+<body>
+<section class="consulta">
+<div class="container">
+		<div id="dv-loading"></div>
+	
+	
+	
+	 <br />
+	<div id="dvMsgError"></div>
+	
+			<div class="col-xs-12 col-sm-6">
+				<div class="titulo">
+					<h6><span class="icon-titulo mr-2"></span>Filtros</h6>
+				</div>
+			</div>
+			<div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
+			  <form id="formConsultaSinistro" name="formConsultaSinistro" action="/GSRE-SinistroAuto/modulo-consulta/listarConsulta.do" method="post">
+				<div class="card">
+					<div class="card-header" id="headingOne" role="tab">
+						<h5 class="mb-0">
+							<button class="btn btn-link btn-one"
+									onclick="toggleFunctionProcesso(this)" 
+									type="button"
+									data-toggle="collapse" 
+									data-target="#collapseOne"
+									aria-expanded="true" 
+									aria-controls="collapseOne"
+									data-parent="#accordion">
+									Processo
+								<div class="bar-geral one-bar">
+									<div class="bar1"></div>
+									<div class="bar2"></div>
+								</div>
+							</button>
+						</h5>
+					</div>
+					<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+						<div class="card-body">
+							<div class="container">
+								<div class="row">
+									<div class="col-sm-12 col-md-12 col-lg-4 check">
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="checkbox" id="cmpApolsFuncs"/> 
+											<label class="form-check-label" for="checkboxApolsFuncs">Apólices Funcionários</label>
+										</div>
+									</div>
+									
+									<div class="col-sm-12 col-md-12 col-lg-6 check">
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="checkbox" id="cmpApolsCondEsp" name="filtro.condEspecialContrato"/> 
+											<label class="form-check-label" for="checkboxApolsCondsEspeciais">Apólices com condições especiais contrato </label>
+										</div>
+									</div>
+								</div>
+								
+								<div class="row mt-4">
+									<div class="form-group col-sm-12 col-md-6 col-lg-4 col-xl-2">
+										 <label for="text">DEDOC<span class="campoItalicoText"> (Dedoc/Processo)</span></label>
+										 <input type="text" name="filtro.dedocEProcesso" maxlength="8" value="" id="cmpNumeroDedoc" class="form-control dedocProc" onkeypress="return isNumberKey(event)" autocomplete="off"/> 
+									</div>
+									
+									<div class="form-group col-sm-12 col-md-6 col-lg-2 col-xl-2">
+										<label for="text">Número de AVAS</label>
+										<input type="text" name="filtro.numeroProcessoSinistro" maxlength="15" value="" id="cmpNumeroAvas" class="form-control" onkeypress="return isNumberKey(event)" autocomplete="off"/> 
+									</div>
+									
+									<div class="form-group col-sm-12 col-md-6 col-lg-3 col-xl-3">
+										<label for="text">Chave da Apólice<span class="campoItalicoText"> (Sucursal/Apólice/Item)</span></label>
+										<input type="text" name="filtro.chaveApolice" value="" id="cmpSucursal" class="form-control chaveApol" autocomplete="off"/> 
+									</div>
+									
+									<div class="form-group col-sm-12 col-md-6 col-lg-4 col-xl-2">
+										<label for="text">CHASSI</label>
+										<input type="text" name="filtro.chassi" maxlength="20" value="" id="cmpChassi" class="form-control" onkeyup="this.value = this.value.toUpperCase();" autocomplete="off"/> 
+									</div>
+									
+									<div class="form-group col-sm-12 col-md-6 col-lg-2">
+										<label for="text" class="label-name">Placa</label>
+										<input type="text" name="filtro.placa" value="" id="cmpPlaca" class="form-control placa" autocomplete="off"/> 
+									</div>
+									
+									<div class="col-sm-12 col-md-6 col-lg-1">
+										<div class="stld-fields">
+											<label for="campUf">UF</label> 
+											<select name="filtro.uf" id="campUf" class="selectpicker form-control" data-container="body">
+    <option value=""
+    >-</option>
+
+
+</select>
+
+
+										</div>
+									</div>
+								</div>
+								
+								<div class="row mb-4 mt-4">
+									<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+										<div class="stld-fields">
+											<label for="cmpNatProc">Natureza do Processo</label> 
+											 <select class="selectpicker form-control" id="cmpNatProc"  
+											 		 name="filtro.codigoNaturezaProcesso" 
+											 		 title="Selecione..." data-hide-disabled="true"
+											 		 data-container="body"
+											 		 data-actions-box="true" multiple>
+												
+								        </select>
+										</div>
+									</div>
+									
+									<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+										<label for="cmpPosicaoAtual">Posição Atual do Processo</label> 
+										<select class="selectpicker form-control" id="cmpPosicaoAtual" 
+												data-live-search="true"
+												title="Selecione..." data-hide-disabled="true"
+												data-container="body"
+												 name="filtro.posicaoAtual"
+												 data-actions-box="true" multiple>
+												
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header" id="headingTwo" role="tab">
+						<h5 class="mb-0">
+							<button class="btn btn-link btn-two collapsed"
+								onclick="toggleFunctionNews(this)" type="button"
+								data-toggle="collapse" data-target="#collapseTwo"
+								aria-expanded="false" aria-controls="collapseTwo"
+								data-parent="#accordion">
+								News
+								<div class="bar-geral two-bar">
+									<div class="bar-1"></div>
+									<div class="bar-2"></div>
+								</div>
+							</button>
+						</h5>
+					</div>
+					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+						<div class="card-body">
+							<div class="container">
+								<div class="row">
+									<div class="col-sm-12 col-md-12 col-lg-4 col-xl-3">
+										<div class="form-check form-check-inline">
+										  <input type="checkbox" name="filtro.newsOrcamento" value="true" id="cmpNewsOrcamento" class="form-check-input" onclick="trataNewsOrcamento()"/><input type="hidden" id="__checkbox_cmpNewsOrcamento" name="__checkbox_filtro.newsOrcamento" value="true" />
+										  <label class="form-check-label" for="cmpNewsOrcamento">Orçamentos não autorizados</label>
+										</div>
+									</div>
+									<div class="col-sm-12 col-md-12 col-lg-4 col-xl-3">
+										<div class="form-check form-check-inline">
+										  <input type="checkbox" name="filtro.newsNotaFiscais" value="true" id="cmpNewsNotaFiscais" class="form-check-input" onclick="trataNewsNotaFiscais()"/><input type="hidden" id="__checkbox_cmpNewsNotaFiscais" name="__checkbox_filtro.newsNotaFiscais" value="true" />
+										  <label class="form-check-label" for="cmpNewsNotaFiscais">Notas Fiscais</label>
+										</div>
+									</div>
+									<div class="col-sm-12 col-md-12 col-lg-4 col-xl-3">	
+										<div class="form-check form-check-inline">
+										  <input type="checkbox" name="filtro.newsNovosDocumentos" value="true" id="cmpNewsNovosDocumentos" class="form-check-input"/><input type="hidden" id="__checkbox_cmpNewsNovosDocumentos" name="__checkbox_filtro.newsNovosDocumentos" value="true" />
+										  <label class="form-check-label" for="cmpNewsNovosDocumentos">Novos Documentos</label>
+										</div>
+									</div>
+									<div class="col-sm-12 col-md-12 col-lg-4 col-xl-3">	
+										<div class="form-check form-check-inline">
+										  <input type="checkbox" name="filtro.newsParecer" value="true" id="cmpNewsParecer" class="form-check-input"/><input type="hidden" id="__checkbox_cmpNewsParecer" name="__checkbox_filtro.newsParecer" value="true" />
+										  <label class="form-check-label" for="cmpNewsParecer">Parecer</label>
+										</div>
+									</div>	
+									<div class="col-sm-12 col-md-12 col-lg-4 col-xl-3">
+										<div class="form-check form-check-inline">
+										  <input type="checkbox" name="filtro.newsAse" value="true" id="cmpNewsAse" class="form-check-input"/><input type="hidden" id="__checkbox_cmpNewsAse" name="__checkbox_filtro.newsAse" value="true" />
+										  <label class="form-check-label" for="cmpNewsAse">News ASE</label>
+										</div>
+									</div>
+									<div class="col-sm-12 col-md-12 col-lg-4 col-xl-3">	
+										<div class="form-check form-check-inline">
+										  <input type="checkbox" name="filtro.newsDespachante" value="true" id="cmpNewsDespachante" class="form-check-input"/><input type="hidden" id="__checkbox_cmpNewsDespachante" name="__checkbox_filtro.newsDespachante" value="true" />
+										  <label class="form-check-label" for="cmpNewsDespachante">Despachantes</label>
+										</div>
+									</div>
+									<div class="col-sm-12 col-md-12 col-lg-4 col-xl-3">	
+										<div class="form-check form-check-inline">
+										  <input type="checkbox" name="filtro.newsParalelismo" value="true" id="cmpNewsParalelismo" class="form-check-input"/><input type="hidden" id="__checkbox_cmpNewsParalelismo" name="__checkbox_filtro.newsParalelismo" value="true" />
+										  <label class="form-check-label" for="cmpNewsParalelismo">Paralelismo</label>
+										</div>
+									</div>	
+									<div class="col-sm-12 col-md-12 col-lg-4 col-xl-3">	
+										<div class="form-check form-check-inline">
+										  <input type="checkbox" name="filtro.newsDebitosVeiculo" value="true" id="cmpNewsDebitosVeiculo" class="form-check-input"/><input type="hidden" id="__checkbox_cmpNewsDebitosVeiculo" name="__checkbox_filtro.newsDebitosVeiculo" value="true" />
+										  <label class="form-check-label" for="cmpNewsDebitosVeiculo">Débitos do Veículo</label>
+										</div>
+									</div>
+									<div class="col-sm-12 col-md-12 col-lg-4 col-xl-3">	
+										<div class="form-check form-check-inline">
+										  <input type="checkbox" name="filtro.newsPremioPendente" value="true" id="cmpNewsPremioPendente" class="form-check-input"/><input type="hidden" id="__checkbox_cmpNewsPremioPendente" name="__checkbox_filtro.newsPremioPendente" value="true" />
+										  <label class="form-check-label" for="cmpNewsPremioPendente">Prêmio Pendente</label>
+										</div>
+									</div>
+									<div class="col-sm-12 col-md-12 col-lg-4 col-xl-3">	
+										<div class="form-check form-check-inline">
+										  <input type="checkbox" name="filtro.newsReembolsoGastosPrestador" value="true" id="cmpNewsReembGastosPrest" class="form-check-input"/><input type="hidden" id="__checkbox_cmpNewsReembGastosPrest" name="__checkbox_filtro.newsReembolsoGastosPrestador" value="true" />
+										  <label class="form-check-label" for="cmpNewsReembGastosPrest">Reembolso de gastos do prestador</label>
+										</div>
+									</div>
+								
+									<div class="col-sm-12 col-md-12 col-lg-4 col-xl-3">	
+										<div class="form-check form-check-inline">
+										  <input type="checkbox" name="filtro.newsBeneficiario" value="true" id="cmpNewsBeneficiario" class="form-check-input"/><input type="hidden" id="__checkbox_cmpNewsBeneficiario" name="__checkbox_filtro.newsBeneficiario" value="true" />
+										  <label class="form-check-label" for="cmpNewsBeneficiario">Beneficiário</label>
+										</div>
+									</div>
+									<div class="col-sm-12 col-md-12 col-lg-4 col-xl-3">	
+										<div class="form-check form-check-inline">
+										  <input type="checkbox" name="filtro.newsFinanceira" value="true" id="cmpNewsFinanceira" class="form-check-input"/><input type="hidden" id="__checkbox_cmpNewsFinanceira" name="__checkbox_filtro.newsFinanceira" value="true" />
+										  <label class="form-check-label" for="cmpNewsFinanceira">Financeira</label>
+										</div>
+									</div>
+									<div class="col-sm-12 col-md-12 col-lg-4 col-xl-3">	
+										<div class="form-check form-check-inline">
+										  <input type="checkbox" name="filtro.newsPgtoDia" value="true" id="cmpNewsPgtoDia" class="form-check-input"/><input type="hidden" id="__checkbox_cmpNewsPgtoDia" name="__checkbox_filtro.newsPgtoDia" value="true" />
+										  <label class="form-check-label" for="cmpNewsPgtoDia">Pagamento do Dia</label>
+										</div>
+									</div>
+								</div>
+								
+								<hr/>
+								<div class="row" id="pnlOrcamentosNaoAutorizados" style="display: none">
+									<div class="col-md-3">
+										<div class="form-check form-check-inline">
+										  <input type="checkbox" name="filtro.vistoriaPrioritaria" value="true" id="cmpVistoriaPrioritaria" class="form-check-input" onclick="trataNewsVistoriaPrioritaria()"/><input type="hidden" id="__checkbox_cmpVistoriaPrioritaria" name="__checkbox_filtro.vistoriaPrioritaria" value="true" />
+										  <label class="form-check-label" for="cmpVistoriaPrioritaria">Vistoria Prioritária</label>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="form-check form-check-inline">
+										  <input type="checkbox" name="filtro.abaixoFranquiaDnc" value="true" id="cmpAbaixoFranquiaDnc" class="form-check-input" onclick="trataNewsFranquiaDnc()"/><input type="hidden" id="__checkbox_cmpAbaixoFranquiaDnc" name="__checkbox_filtro.abaixoFranquiaDnc" value="true" />
+										  <label class="form-check-label" for="cmpAbaixoFranquiaDnc">Abaixo da Franquia com DNC</label>
+										</div>
+									</div>
+								</div>		
+								
+								<div class="row" id="pnlVencimentoNF" style="display: none">
+									<div class="col-12">
+										<label for="">Vencimento Nota Fiscal</label>
+									</div>	
+									<div class="col-sm-12 col-md-6 col-lg-2 col-xl-2">
+										<label for="codigoCondicaoVencNF">Vencimento</label> 
+										<select name="filtro.codigoCondicaoVencNF" id="codigoCondicaoVencNF" class="form-control" data-container="body">
+
+
+</select>
+
+
+									</div>
+									
+									<div class="form-group col-sm-12 col-md-6 col-lg-2 col-xl-2">
+											<label for="cmpViasVenc">Dias</label>
+											 <input type="text" name="filtro.numeroDiasVenc" maxlength="3" value="" id="cmpViasVenc" class="form-control" autocomplete="off"/> 
+									</div>
+									
+
+									<div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 check">
+										<div class="form-check form-check-inline">
+										  <input type="checkbox" name="filtro.listaTodos" value="false" id="listaTodos" class="form-check-input"/>
+										  <label class="form-check-label" for="listaTodos">Listar Todos com News de Nota Fiscal</label>
+										 </div> 
+									</div>
+								</div>
+						</div>
+					</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header" id="headingThree" role="tab">
+						<h5 class="mb-0">
+							<button class="btn btn-link btn-three collapsed"
+								onclick="toggleFunctionOcorrencia(this)" type="button"
+								data-toggle="collapse" data-target="#collapseThree"
+								aria-expanded="false" aria-controls="collapseThree"
+								data-parent="#accordion">
+								Ocorrência
+								<div class="bar-geral three-bar">
+									<div class="bar-1"></div>
+									<div class="bar-2"></div>
+								</div>
+							</button>
+						</h5>
+					</div>
+					<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+						<div class="card-body">
+							<div class="container">
+								<div class="row">
+									<div class="form-group col-sm-12 col-md-12 col-lg-6 col-xl-4">
+										<label>Ocorrência do sinistro no período máximo de um ano:</label>
+									</div>	
+									<div class="form-group col-sm-6 col-sm-6 col-lg-2 col-xl-2">
+										<label for="cmpOcorrDataInicio">Data Início:</label> 
+										<input type="text" name="filtro.dataOcorrenciaInicio" value="" id="cmpOcorrDataInicio" class="form-control date"/>
+									</div>	
+									<div class="form-group col-sm-6 col-sm-6 col-lg-2 col-xl-2">
+										<label for="cmpOcorrDataFim">Data Fim:</label>
+										<input type="text" name="filtro.dataOcorrenciaFim" value="" id="cmpOcorrDataFim" class="form-control date"/>
+									</div>
+								</div>
+								<div class="row">	
+									<div class="form-group col-sm-12 col-md-12 col-lg-6 col-xl-4">
+										<label>Processo digitalizado no período máximo de um ano:</label>
+									</div>	
+									<div class="form-group col-sm-6 col-sm-6 col-lg-2 col-xl-2">
+										<label for="cmpOcorrDataInicioDigitalizado">Data Início:</label> 
+										<input type="text" name="filtro.dataDigitalizadoInicio" value="" id="cmpOcorrDataInicioDigitalizado" class="form-control date"/>
+									</div>	
+									<div class="form-group col-sm-6 col-sm-6 col-lg-2 col-xl-2">
+										<label for="cmpOcorrDataFimDigitalizado">Data Fim:</label>
+										<input type="text" name="filtro.dataDigitalizadoFim" value="" id="cmpOcorrDataFimDigitalizado" class="form-control date"/>
+									</div>
+								</div>
+								<div class="row">	
+									<div class="form-group col-sm-12 col-md-12 col-lg-6 col-xl-4">
+										<label>Vencimento da nota fiscal no período máximo de um ano:</label>
+									</div>	
+									<div class="form-group col-sm-6 col-sm-6 col-lg-2 col-xl-2">
+										<label for="cmpOcorrDataInicioVencimento">Data Início:</label> 
+										<input type="text" name="filtro.dataVencimentoNFInicio" value="" id="cmpOcorrDataInicioVencimento" class="form-control date"/>
+									</div>	
+									<div class="form-group col-sm-6 col-sm-6 col-lg-2 col-xl-2">
+										<label for="cmpOcorrDataFimVencimento">Data Fim:</label>
+										<input type="text" name="filtro.dataVencimentoNFFim" value="" id="cmpOcorrDataFimVencimento" class="form-control date"/>
+									</div>
+								</div>
+								<div class="row">	
+									<div class="form-group col-sm-12 col-md-12 col-lg-6 col-xl-4">
+										<label>Abertura do sinistro no período máximo de um ano:</label>
+									</div>	
+									<div class="form-group col-sm-6 col-sm-6 col-lg-2 col-xl-2">
+										<label for="cmpOcorrDataInicioVencimentoAbertura">Data Início:</label> 
+										<input type="text" name="filtro.dataAberturaInicio" value="" id="cmpOcorrDataInicioVencimentoAbertura" class="form-control date"/>
+									</div>	
+									<div class="form-group col-sm-6 col-sm-6 col-lg-2 col-xl-2">	
+										<label for="cmpOcorrDataFimVencimentoAbertura">Data Fim:</label>
+										<input type="text" name="filtro.dataAberturaFim" value="" id="cmpOcorrDataFimVencimentoAbertura" class="form-control date"/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header" id="headingFour" role="tab">
+						<h5 class="mb-0">
+							<button class="btn btn-link btn-four collapsed"
+								onclick="toggleFunctionPrestador(this)" type="button"
+								data-toggle="collapse" data-target="#collapseFour"
+								aria-expanded="false" aria-controls="collapseFour"
+								data-parent="#accordion">
+								Prestador
+								<div class="bar-geral four-bar">
+									<div class="bar--1"></div>
+									<div class="bar--2"></div>
+								</div>
+							</button>
+						</h5>
+					</div>
+					<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+						<div class="card-body">
+							<div class="container">
+								<div class="row">
+									<div class="form-group col-sm-12 col-md-12 col-lg-12 col-xl-12">
+										<div class="form-check">
+										    <input type="checkbox" class="form-check-input" id=checkPrestador name="filtro.ativaPrestador" onclick="habilitarPrestador()"/>
+										    <label class="form-check-label" for="checkPrestador">Prestador</label>
+										 </div>
+									</div>	 
+								</div>
+								<div class="row">
+									  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-3">
+										<div class="form-group form-check form-check-inline">
+											<input type="radio" name="filtro.tipoPrestador" id="grupoPrestador1" value="1" class="form-check-input" onchange="carregaComboPrestadores(this.value, true)"/><label for="grupoPrestador1" class="form-check-input">Despachante</label>
+<input type="radio" name="filtro.tipoPrestador" id="grupoPrestador2" value="2" class="form-check-input" onchange="carregaComboPrestadores(this.value, true)"/><label for="grupoPrestador2" class="form-check-input">Reguladora</label>
+
+										</div>
+									  </div>
+									  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4">
+										<label for="cmbRazaoSocial">Razão Social</label> 
+										<select  id="cmbRazaoSocial" class="form-control" disabled="disabled" data-container="body">
+								 			<option value="-1">Selecione...</option>
+								 			 	
+										</select>	
+									  </div>
+								</div>
+								<hr/>
+								<div class="row">
+										<div class="form-group col-sm-12 col-md-12 col-lg-4 col-xl-3">
+											<div class="form-check form-check-inline">
+											  <input type="checkbox" class="form-check-input" name="filtro.possuiNewsParecerQuestionamentoAcionamento" id="cmpAcionamento" disabled="disabled"/>
+											  <label class="form-check-label" for="cmpAcionamento">Acionamento</label>
+											  <input type="checkbox" class="form-check-input" name="filtro.possuiNewsParecerQuestionamentoPagamento" id="cmpPagamento" disabled="disabled"/>
+											  <label class="form-check-label" for="cmpPagamento">Pagamento</label>
+											</div>
+									    </div>
+								</div>	
+								<hr/>	
+								
+								<div class="row">
+									  <div class="form-group col-sm-12 col-md-6 col-lg-3 col-xl-2">
+										<label for="cmbStatusAcionamento">Status</label> 
+										 <select id="cmbStatusAcionamento" name="filtro.statusPrestador" class="form-control" disabled="disabled" data-container="body">
+											 <option value="-1">Selecione...</option>
+											 			
+										 </select>
+									  </div>
+									  <div class="col-sm-12 col-md-3 col-lg-2 col-xl-2">
+											<div class="form-group">
+												<label for="dataInicio">Data Início:</label> 
+												<input type="text" name="filtro.periodoInicialStatusPrestador" value="" id="dataInicioAcionamento" class="form-control"/>
+											</div>	
+									  </div>
+									   <div class="col-sm-12 col-md-3 col-lg-2 col-xl-2">
+											<div class="form-group">	
+												<label for="dataFim">Data Fim:</label>
+												<input type="text" name="filtro.periodoFinalStatusPrestador" value="" id="dataFimAcionamento" class="form-control"/>
+											</div>
+									  </div>	
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			  </form>
+
+
+
+			</div>
+			<div class="action-group">
+				<button type="button" name="button" class="btn btn-second mr-3" onclick="formConsultaSinistro.reset();">Limpar</button>
+				<button type="button" name="button" class="btn btn-primary mr-3" onclick="preparaSubmit();">Buscar</button>
+			</div>
+	 		<div class="row mt-5 resultado-filtro">
+	<div class="col">
+		<p><strong>19</strong> resultado(s) encontrado(s).</p>
+		<div class="table-responsive">
+			<table class="table table-striped" id="tabelaProcesso">
+			  
+				<thead>
+					<tr>
+						<th scope="col"></th>
+						<th scope="col">Chave da Apólice</th>
+						<th scope="col">Dedoc</th>
+						<th scope="col">Ocorrência</th>
+						<th scope="col">Nº Avas</th>
+						<th scope="col">Data do Aviso</th>
+						<th scope="col">Natureza</th>
+						<th scope="col">Situação do Processo</th>
+						<th scope="col">Posição Atual</th>
+					</tr>
+				</thead>
+				<tbody>
+				  
+					<tr style="display:none">
+						<td class="actions">
+	                        <div class="float-right">
+		                          <div class="menu-visible">
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                          </div>
+		                          <div class="menu-invisible">
+		                            <a href="#"  onclick="ativaLoading(); location.href='/GSRE-SinistroAuto/modulo-analise/analise-sinistro.do?numeroSinistro=2465801&codigoNatureza=11&numeroProcesso=2'">
+										<img src="/GSRE-SinistroAuto/includes/img/visualizar.png" title="Visualizar detalhes" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+		                            </a>
+		                          </div>
+	                        </div>
+	                     </td>
+						<td></td>
+						<td>2465801-2</td>
+						<td>17/09/2019</td>
+						<td></td>
+						<td>06/11/0019</td>
+						<td>11</td>
+						<td>Aguardando An&aacute;lise</td>
+						<td></td>
+					</tr>
+				  
+					<tr style="display:none">
+						<td class="actions">
+	                        <div class="float-right">
+		                          <div class="menu-visible">
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                          </div>
+		                          <div class="menu-invisible">
+		                            <a href="#"  onclick="ativaLoading(); location.href='/GSRE-SinistroAuto/modulo-analise/analise-sinistro.do?numeroSinistro=2465804&codigoNatureza=1&numeroProcesso=1'">
+										<img src="/GSRE-SinistroAuto/includes/img/visualizar.png" title="Visualizar detalhes" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+		                            </a>
+		                          </div>
+	                        </div>
+	                     </td>
+						<td>139 990 244 553333 0001</td>
+						<td>2465804-1</td>
+						<td>05/11/2019</td>
+						<td></td>
+						<td>06/11/0019</td>
+						<td>1</td>
+						<td>Aguardando An&aacute;lise</td>
+						<td></td>
+					</tr>
+				  
+					<tr style="display:none">
+						<td class="actions">
+	                        <div class="float-right">
+		                          <div class="menu-visible">
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                          </div>
+		                          <div class="menu-invisible">
+		                            <a href="#"  onclick="ativaLoading(); location.href='/GSRE-SinistroAuto/modulo-analise/analise-sinistro.do?numeroSinistro=2465808&codigoNatureza=11&numeroProcesso=2'">
+										<img src="/GSRE-SinistroAuto/includes/img/visualizar.png" title="Visualizar detalhes" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+		                            </a>
+		                          </div>
+	                        </div>
+	                     </td>
+						<td>613 990 244 071319 0001</td>
+						<td>2465808-2</td>
+						<td>26/08/2019</td>
+						<td></td>
+						<td>27/08/0019</td>
+						<td>11</td>
+						<td>Aguardando An&aacute;lise</td>
+						<td></td>
+					</tr>
+				  
+					<tr style="display:none">
+						<td class="actions">
+	                        <div class="float-right">
+		                          <div class="menu-visible">
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                          </div>
+		                          <div class="menu-invisible">
+		                            <a href="#"  onclick="ativaLoading(); location.href='/GSRE-SinistroAuto/modulo-analise/analise-sinistro.do?numeroSinistro=2465821&codigoNatureza=1&numeroProcesso=1'">
+										<img src="/GSRE-SinistroAuto/includes/img/visualizar.png" title="Visualizar detalhes" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+		                            </a>
+		                          </div>
+	                        </div>
+	                     </td>
+						<td>139 990 244 553333 0001</td>
+						<td>2465821-1</td>
+						<td>16/07/2019</td>
+						<td></td>
+						<td>16/07/0019</td>
+						<td>1</td>
+						<td>Aguardando An&aacute;lise</td>
+						<td></td>
+					</tr>
+				  
+					<tr style="display:none">
+						<td class="actions">
+	                        <div class="float-right">
+		                          <div class="menu-visible">
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                          </div>
+		                          <div class="menu-invisible">
+		                            <a href="#"  onclick="ativaLoading(); location.href='/GSRE-SinistroAuto/modulo-analise/analise-sinistro.do?numeroSinistro=2465821&codigoNatureza=11&numeroProcesso=2'">
+										<img src="/GSRE-SinistroAuto/includes/img/visualizar.png" title="Visualizar detalhes" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+		                            </a>
+		                          </div>
+	                        </div>
+	                     </td>
+						<td>139 990 244 553333 0001</td>
+						<td>2465821-2</td>
+						<td>16/07/2019</td>
+						<td></td>
+						<td>06/11/0019</td>
+						<td>11</td>
+						<td>Aguardando An&aacute;lise</td>
+						<td></td>
+					</tr>
+				  
+					<tr style="display:none">
+						<td class="actions">
+	                        <div class="float-right">
+		                          <div class="menu-visible">
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                          </div>
+		                          <div class="menu-invisible">
+		                            <a href="#"  onclick="ativaLoading(); location.href='/GSRE-SinistroAuto/modulo-analise/analise-sinistro.do?numeroSinistro=2465821&codigoNatureza=11&numeroProcesso=3'">
+										<img src="/GSRE-SinistroAuto/includes/img/visualizar.png" title="Visualizar detalhes" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+		                            </a>
+		                          </div>
+	                        </div>
+	                     </td>
+						<td>139 990 244 553333 0001</td>
+						<td>2465821-3</td>
+						<td>16/07/2019</td>
+						<td></td>
+						<td>06/11/0019</td>
+						<td>11</td>
+						<td>Aguardando An&aacute;lise</td>
+						<td></td>
+					</tr>
+				  
+					<tr style="display:none">
+						<td class="actions">
+	                        <div class="float-right">
+		                          <div class="menu-visible">
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                          </div>
+		                          <div class="menu-invisible">
+		                            <a href="#"  onclick="ativaLoading(); location.href='/GSRE-SinistroAuto/modulo-analise/analise-sinistro.do?numeroSinistro=2465822&codigoNatureza=11&numeroProcesso=2'">
+										<img src="/GSRE-SinistroAuto/includes/img/visualizar.png" title="Visualizar detalhes" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+		                            </a>
+		                          </div>
+	                        </div>
+	                     </td>
+						<td>919 990 244 044210 0001</td>
+						<td>2465822-2</td>
+						<td>09/08/2019</td>
+						<td></td>
+						<td>12/08/0019</td>
+						<td>11</td>
+						<td>Aguardando An&aacute;lise</td>
+						<td></td>
+					</tr>
+				  
+					<tr style="display:none">
+						<td class="actions">
+	                        <div class="float-right">
+		                          <div class="menu-visible">
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                          </div>
+		                          <div class="menu-invisible">
+		                            <a href="#"  onclick="ativaLoading(); location.href='/GSRE-SinistroAuto/modulo-analise/analise-sinistro.do?numeroSinistro=2465842&codigoNatureza=1&numeroProcesso=1'">
+										<img src="/GSRE-SinistroAuto/includes/img/visualizar.png" title="Visualizar detalhes" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+		                            </a>
+		                          </div>
+	                        </div>
+	                     </td>
+						<td>139 990 244 553333 0002</td>
+						<td>2465842-1</td>
+						<td>05/06/2019</td>
+						<td></td>
+						<td>11/10/0019</td>
+						<td>1</td>
+						<td>Aguardando An&aacute;lise</td>
+						<td></td>
+					</tr>
+				  
+					<tr style="display:none">
+						<td class="actions">
+	                        <div class="float-right">
+		                          <div class="menu-visible">
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                          </div>
+		                          <div class="menu-invisible">
+		                            <a href="#"  onclick="ativaLoading(); location.href='/GSRE-SinistroAuto/modulo-analise/analise-sinistro.do?numeroSinistro=2465843&codigoNatureza=1&numeroProcesso=1'">
+										<img src="/GSRE-SinistroAuto/includes/img/visualizar.png" title="Visualizar detalhes" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+		                            </a>
+		                          </div>
+	                        </div>
+	                     </td>
+						<td>139 990 244 553333 0002</td>
+						<td>2465843-1</td>
+						<td>28/07/2019</td>
+						<td></td>
+						<td>11/10/0019</td>
+						<td>1</td>
+						<td>Aguardando An&aacute;lise</td>
+						<td></td>
+					</tr>
+				  
+					<tr style="display:none">
+						<td class="actions">
+	                        <div class="float-right">
+		                          <div class="menu-visible">
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                          </div>
+		                          <div class="menu-invisible">
+		                            <a href="#"  onclick="ativaLoading(); location.href='/GSRE-SinistroAuto/modulo-analise/analise-sinistro.do?numeroSinistro=2465844&codigoNatureza=1&numeroProcesso=1'">
+										<img src="/GSRE-SinistroAuto/includes/img/visualizar.png" title="Visualizar detalhes" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+		                            </a>
+		                          </div>
+	                        </div>
+	                     </td>
+						<td>139 990 244 553333 0002</td>
+						<td>2465844-1</td>
+						<td>18/04/2019</td>
+						<td></td>
+						<td>14/10/0019</td>
+						<td>1</td>
+						<td>Aguardando An&aacute;lise</td>
+						<td></td>
+					</tr>
+				  
+					<tr style="display:none">
+						<td class="actions">
+	                        <div class="float-right">
+		                          <div class="menu-visible">
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                          </div>
+		                          <div class="menu-invisible">
+		                            <a href="#"  onclick="ativaLoading(); location.href='/GSRE-SinistroAuto/modulo-analise/analise-sinistro.do?numeroSinistro=2465845&codigoNatureza=1&numeroProcesso=1'">
+										<img src="/GSRE-SinistroAuto/includes/img/visualizar.png" title="Visualizar detalhes" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+		                            </a>
+		                          </div>
+	                        </div>
+	                     </td>
+						<td>139 990 244 553333 0001</td>
+						<td>2465845-1</td>
+						<td>18/04/2019</td>
+						<td></td>
+						<td>15/10/0019</td>
+						<td>1</td>
+						<td>Aguardando An&aacute;lise</td>
+						<td></td>
+					</tr>
+				  
+					<tr style="display:none">
+						<td class="actions">
+	                        <div class="float-right">
+		                          <div class="menu-visible">
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                          </div>
+		                          <div class="menu-invisible">
+		                            <a href="#"  onclick="ativaLoading(); location.href='/GSRE-SinistroAuto/modulo-analise/analise-sinistro.do?numeroSinistro=2465846&codigoNatureza=1&numeroProcesso=1'">
+										<img src="/GSRE-SinistroAuto/includes/img/visualizar.png" title="Visualizar detalhes" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+		                            </a>
+		                          </div>
+	                        </div>
+	                     </td>
+						<td>139 990 244 553333 0001</td>
+						<td>2465846-1</td>
+						<td>19/04/2019</td>
+						<td></td>
+						<td>15/10/0019</td>
+						<td>1</td>
+						<td>Aguardando An&aacute;lise</td>
+						<td></td>
+					</tr>
+				  
+					<tr style="display:none">
+						<td class="actions">
+	                        <div class="float-right">
+		                          <div class="menu-visible">
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                          </div>
+		                          <div class="menu-invisible">
+		                            <a href="#"  onclick="ativaLoading(); location.href='/GSRE-SinistroAuto/modulo-analise/analise-sinistro.do?numeroSinistro=2465847&codigoNatureza=1&numeroProcesso=2'">
+										<img src="/GSRE-SinistroAuto/includes/img/visualizar.png" title="Visualizar detalhes" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+		                            </a>
+		                          </div>
+	                        </div>
+	                     </td>
+						<td>919 990 244 054499 0001</td>
+						<td>2465847-2</td>
+						<td>07/01/2020</td>
+						<td></td>
+						<td>13/04/0020</td>
+						<td>1</td>
+						<td>Aguardando An&aacute;lise</td>
+						<td></td>
+					</tr>
+				  
+					<tr style="display:none">
+						<td class="actions">
+	                        <div class="float-right">
+		                          <div class="menu-visible">
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                          </div>
+		                          <div class="menu-invisible">
+		                            <a href="#"  onclick="ativaLoading(); location.href='/GSRE-SinistroAuto/modulo-analise/analise-sinistro.do?numeroSinistro=2465848&codigoNatureza=1&numeroProcesso=2'">
+										<img src="/GSRE-SinistroAuto/includes/img/visualizar.png" title="Visualizar detalhes" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+		                            </a>
+		                          </div>
+	                        </div>
+	                     </td>
+						<td>919 990 244 054499 0001</td>
+						<td>2465848-2</td>
+						<td>14/01/2020</td>
+						<td></td>
+						<td>13/04/0020</td>
+						<td>1</td>
+						<td>Aguardando An&aacute;lise</td>
+						<td></td>
+					</tr>
+				  
+					<tr style="display:none">
+						<td class="actions">
+	                        <div class="float-right">
+		                          <div class="menu-visible">
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                          </div>
+		                          <div class="menu-invisible">
+		                            <a href="#"  onclick="ativaLoading(); location.href='/GSRE-SinistroAuto/modulo-analise/analise-sinistro.do?numeroSinistro=2465849&codigoNatureza=1&numeroProcesso=2'">
+										<img src="/GSRE-SinistroAuto/includes/img/visualizar.png" title="Visualizar detalhes" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+		                            </a>
+		                          </div>
+	                        </div>
+	                     </td>
+						<td>919 990 244 054499 0001</td>
+						<td>2465849-2</td>
+						<td>21/01/2020</td>
+						<td></td>
+						<td>13/04/0020</td>
+						<td>1</td>
+						<td>Aguardando An&aacute;lise</td>
+						<td></td>
+					</tr>
+				  
+					<tr style="display:none">
+						<td class="actions">
+	                        <div class="float-right">
+		                          <div class="menu-visible">
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                          </div>
+		                          <div class="menu-invisible">
+		                            <a href="#"  onclick="ativaLoading(); location.href='/GSRE-SinistroAuto/modulo-analise/analise-sinistro.do?numeroSinistro=2465850&codigoNatureza=1&numeroProcesso=2'">
+										<img src="/GSRE-SinistroAuto/includes/img/visualizar.png" title="Visualizar detalhes" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+		                            </a>
+		                          </div>
+	                        </div>
+	                     </td>
+						<td>919 990 244 054499 0001</td>
+						<td>2465850-2</td>
+						<td>20/01/2020</td>
+						<td></td>
+						<td>14/04/0020</td>
+						<td>1</td>
+						<td>Aguardando An&aacute;lise</td>
+						<td></td>
+					</tr>
+				  
+					<tr style="display:none">
+						<td class="actions">
+	                        <div class="float-right">
+		                          <div class="menu-visible">
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                          </div>
+		                          <div class="menu-invisible">
+		                            <a href="#"  onclick="ativaLoading(); location.href='/GSRE-SinistroAuto/modulo-analise/analise-sinistro.do?numeroSinistro=2465851&codigoNatureza=1&numeroProcesso=2'">
+										<img src="/GSRE-SinistroAuto/includes/img/visualizar.png" title="Visualizar detalhes" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+		                            </a>
+		                          </div>
+	                        </div>
+	                     </td>
+						<td>919 990 244 054499 0001</td>
+						<td>2465851-2</td>
+						<td>28/01/2020</td>
+						<td></td>
+						<td>16/04/0020</td>
+						<td>1</td>
+						<td>Aguardando An&aacute;lise</td>
+						<td></td>
+					</tr>
+				  
+					<tr style="display:none">
+						<td class="actions">
+	                        <div class="float-right">
+		                          <div class="menu-visible">
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                          </div>
+		                          <div class="menu-invisible">
+		                            <a href="#"  onclick="ativaLoading(); location.href='/GSRE-SinistroAuto/modulo-analise/analise-sinistro.do?numeroSinistro=2465852&codigoNatureza=1&numeroProcesso=2'">
+										<img src="/GSRE-SinistroAuto/includes/img/visualizar.png" title="Visualizar detalhes" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+		                            </a>
+		                          </div>
+	                        </div>
+	                     </td>
+						<td>919 990 244 054499 0001</td>
+						<td>2465852-2</td>
+						<td>17/02/2020</td>
+						<td></td>
+						<td>16/04/0020</td>
+						<td>1</td>
+						<td>Aguardando An&aacute;lise</td>
+						<td></td>
+					</tr>
+				  
+					<tr style="display:none">
+						<td class="actions">
+	                        <div class="float-right">
+		                          <div class="menu-visible">
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                            <span class="circle"></span>
+		                          </div>
+		                          <div class="menu-invisible">
+		                            <a href="#"  onclick="ativaLoading(); location.href='/GSRE-SinistroAuto/modulo-analise/analise-sinistro.do?numeroSinistro=2465855&codigoNatureza=1&numeroProcesso=2'">
+										<img src="/GSRE-SinistroAuto/includes/img/visualizar.png" title="Visualizar detalhes" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+		                            </a>
+		                          </div>
+	                        </div>
+	                     </td>
+						<td>601 990 244 030849 0001</td>
+						<td>2465855-2</td>
+						<td>01/01/2019</td>
+						<td></td>
+						<td>17/04/0020</td>
+						<td>1</td>
+						<td>Aguardando An&aacute;lise</td>
+						<td></td>
+					</tr>
+				  	
+				</tbody>
+				
+					
+			</table>
+			 
+				<div style="text-align:center" id="btn-load-more">
+					<button type="button" class="btn btn-light btn-lg">Mostrar mais resultados</button>
+				</div>
+				
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/consultasinistro/lista-resultado-consulta-sinistro.js"></script>
+		</div>
+	 </section>
+</body>
+<footer id="rodape">
+	<img src="/GSRE-SinistroAuto/includes/img/bg-footer.png" alt="" style="width:100%" >
+</footer>
+</html>

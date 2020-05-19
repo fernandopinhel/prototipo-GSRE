@@ -1,0 +1,1633 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Sinistro Auto
+	</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<link rel="shortcut icon" type="image/x-icon" href="/GSRE-SinistroAuto/includes/img/favicon.ico" />
+	
+	<!-- Ebix styles -->
+	<link rel="stylesheet" type="text/css" href="/GSRE-SinistroAuto/includes/css/bootstrap/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="/GSRE-SinistroAuto/includes/css/bootstrap/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="/GSRE-SinistroAuto/includes/css/fontawesome/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="/GSRE-SinistroAuto/includes/css/estilo.css" />
+	<link rel="stylesheet" type="text/css" href="/GSRE-SinistroAuto/includes/css/style.css" />
+    
+    <!-- Bradesco styles -->
+    <link rel="stylesheet" type="text/css" href="/GSRE-SinistroAuto/includes/css/bradseg_icons.css" />
+	
+	<!-- External plugins -->
+	<script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/jquery-3.3.1.slim.min.js"></script>
+	<script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/jquery.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/popper.min.js"></script>
+	<script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/bootstrap/bootstrap.min.js"></script>
+	
+    <!-- configs js -->
+    <script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/config.js"></script>
+    
+    <script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/comum/comum.js" charset="utf-8"></script>
+
+    <!-- Script Datepicker-->
+    <script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/bootstrap/bootstrap-datetimepicker.js"></script>
+    
+    
+    <script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/consultasinistro/consulta-sinistro.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/moment/moment.min.js"></script>
+    <script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/moment/moment-with-locales.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="/GSRE-SinistroAuto/includes/css/documento/documento-processo.css" />
+    <script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/documento/documento-processo.js" charset="utf-8"></script>
+    
+    <link rel="stylesheet" type="text/css" href="/GSRE-SinistroAuto/includes/css/timeline/timeline.css" />
+       <script type="text/javascript">
+           $(function () {
+               $('.datetimepicker1').datetimepicker({
+               	 locale: 'pt-br',
+               	 format:'DD/MM/YYYY'
+               });
+           });
+       </script>
+	
+	
+	<script>window.baseURL = "/GSRE-SinistroAuto/";</script>
+	
+	
+</head>
+
+
+
+
+
+
+
+<header style="height: 128px">
+	<div class="container py-1">
+		<nav class="navbar navbar-expand-xl navbar-dark bg-dark" style="margin-top: 34px;">
+			<a class="navbar-brand logo" href="#"> 
+				<img src="/GSRE-SinistroAuto/includes/img/logo.png" alt="">
+			</a>
+			<button class="navbar-toggler mr-3" type="button"
+					data-toggle="collapse" data-target="#navbarCollapse"
+					aria-controls="navbarCollapse" aria-expanded="true"
+					aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+	
+			<div class="navbar-collapse collapse" id="navbarCollapse">
+				<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+					<li class="nav-item">
+						<a class="nav-link active" 
+						   id="pills-consultas-tab" 
+						   data-toggle="pill" 
+						   href="#pills-consultas"
+						   role="tab" aria-controls="pills-consultas" 
+						   aria-selected="false">Consultas</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle"  
+							data-toggle="dropdown" 
+							href="#" role="tab" 
+							aria-selected="true">Cadastros</a>
+						<div class="dropdown-menu">
+					      <a class="dropdown-item" id="pills-cadastro-perfil-tab"        href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaPerfil.do'>Perfil</a>
+					      <a class="dropdown-item" id="pills-cadastro-usuario-tab"       href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaUsuario.do'>Usuário</a>
+					      <a class="dropdown-item" id="pills-cadastro-instituicao-tab"   href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaInstituicao.do'>Instituições</a>
+					      <a class="dropdown-item" id="pills-cadastro-tabelas-tab"       href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaTabelas.do'>Tabelas</a>
+					      <a class="dropdown-item" id="pills-cadastro-cartas-tab"        href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaCartas.do'>Cartas</a>
+					      <a class="dropdown-item" id="pills-cadastro-oficinas-tab"      href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaOficinas.do'>Oficinas</a>
+					    </div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="pills-relatorios-tab" 
+							   data-toggle="pill" href="#pills-relatorios"
+							   role="tab" aria-controls="pills-relatorios" 
+							   aria-selected="false">Relatórios</a>
+						</li>
+					</ul>
+	
+					<div class="dropdown user ml-auto">
+						<label class="welcome">Bem-vindo(a): Igor - M123456</label>
+						<button class="dropdown-toggle" type="button"
+							    id="dropdownMenuButton" data-toggle="dropdown"
+							    aria-haspopup="true" aria-expanded="false">
+							<img src="/GSRE-SinistroAuto/includes/img/credential.png">
+							<div class="options">
+								<span></span> <span></span> <span></span>
+							</div>
+						</button>
+						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							<a class="dropdown-item" href="#">M123456 - Jeniffer</a> <a
+								class="dropdown-item" href="#">Minhas Configurações</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Sair</a>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+</header>
+<section class="interna">
+		<div class="container">
+			<div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
+				
+
+
+
+
+
+
+
+
+<div class="card">
+		<div class="card-header" id="headingOne" role="tab">
+			<h5 class="mb-0">
+				<button class="btn btn-link btn-one"
+					onclick="toggleFunctionDetalheProcesso(this)" 
+				type="button"
+				data-toggle="collapse" data-target="#collapseOne"
+				aria-expanded="false" aria-controls="collapseOne"
+				data-parent="#accordion">
+				Detalhe do Processo
+				<div class="bar-geral one-bar">
+					<div class="bar-1"></div>
+					<div class="bar-2"></div>
+				</div>
+			</button>
+		</h5>
+		<div class="card-body">
+			<div class="row">
+				<div class="col-sm-12 col-md-6 col-lg-3">
+					<div class="box">
+						<div class="float-left">
+							<p>Chave da Apólice</p>
+							<span>139 990 244 553333 0001</span>
+						</div>
+						<div class="float-right">
+							<img src="/GSRE-SinistroAuto/includes/img/icon-naas.png" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-6 col-lg-3">
+					<div class="box">
+						<div class="float-left">
+							<p>Número DEDOC</p>
+							<span>2465804-1</span>
+						</div>
+						<div class="float-right">
+							<img src="/GSRE-SinistroAuto/includes/img/icon-sinistro.png" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-6 col-lg-3">
+					<div class="box">
+						<div class="float-left">
+							<p>Número AVAS</p>
+							<span></span>
+						</div>
+						<div class="float-right">
+							<img src="/GSRE-SinistroAuto/includes/img/icon-apolice.png" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-6 col-lg-3">
+					<div class="box">
+						<div class="float-left">
+							<p>Nome Segurado</p>
+							<span>JACOB DE SOUSA FARIAS</span>
+						</div>
+						<div class="float-right">
+							<img src="/GSRE-SinistroAuto/includes/img/icon-nome.png" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+		<div class="card-body">
+			<div class="row">
+				<div class="col-sm-12 col-md-6 col-lg-3">
+					<div class="box">
+						<div class="float-left">
+							<p>Data Ocorrência do Sinistro</p>
+							<span>05/11/2019</span>
+						</div>
+						<div class="float-right">
+							<img src="/GSRE-SinistroAuto/includes/img/icon-data.png" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+
+
+				<div class="col-sm-12 col-md-6 col-lg-3">
+					<div class="box">
+						<div class="float-left">
+							<p>Natureza do Processo</p>
+							<span>1</span>
+						</div>
+						<div class="float-right">
+							<img src="/GSRE-SinistroAuto/includes/img/icon-natureza.png" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+
+				<div class="col-sm-12 col-md-6 col-lg-3">
+					<div class="box">
+						<div class="float-left">
+							<p>Marca/Tipo do Veículo</p>
+							<span></span>
+						</div>
+						<div class="float-right">
+							<img src="/GSRE-SinistroAuto/includes/img/icon-carro.png" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-6 col-lg-3">
+					<div class="box">
+						<div class="float-left">
+							<p>Placa/UF do Veículo</p>
+							<span>IBE2518/RJ</span>
+						</div>
+						<div class="float-right">
+							<img src="/GSRE-SinistroAuto/includes/img/icon-placa.png" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-6 col-lg-3">
+					<div class="box">
+						<div class="float-left">
+							<p>Chassi</p>
+							<span>9BM386059PB989077</span>
+						</div>
+						<div class="float-right">
+							<img src="/GSRE-SinistroAuto/includes/img/icon-chassi.png" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-6 col-lg-3">
+					<div class="box">
+						<div class="float-left">
+							<p>News</p>
+							<span>teste</span>
+						</div>
+						<div class="float-right">
+							<img src="/GSRE-SinistroAuto/includes/img/icon-notificacao.png" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-6 col-lg-3">
+					<div class="box">
+						<div class="float-left">
+							<p>Reguladora</p>
+							<span>teste</span>
+						</div>
+						<div class="float-right">
+							<img src="/GSRE-SinistroAuto/includes/img/icon-reguladora.png" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-6 col-lg-3">
+					<div class="box">
+						<div class="float-left">
+							<p>Orçamentadora</p>
+							<span>teste</span>
+						</div>
+						<div class="float-right">
+							<img src="/GSRE-SinistroAuto/includes/img/icon-orcamentadora.png" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+
+				<div class="col-sm-12 col-md-6 col-lg-3">
+					<div class="box">
+						<div class="float-left">
+							<p>Despachante</p>
+							<span>teste</span>
+						</div>
+						<div class="float-right">
+							<img src="/GSRE-SinistroAuto/includes/img/icon-despachante.png" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+
+				<div class="col-sm-12 col-md-6 col-lg-3">
+					<div class="box">
+						<div class="float-left">
+							<p>Status do Sinistro</p>
+							<span>teste</span>
+						</div>
+						<div class="float-right">
+							<img src="/GSRE-SinistroAuto/includes/img/icon-status.png" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+
+				<div class="col-sm-12 col-md-6 col-lg-3">
+					<div class="box">
+						<div class="float-left">
+							<p>Ressarcimento</p>
+							<span>teste</span>
+						</div>
+						<div class="float-right">
+							<img src="/GSRE-SinistroAuto/includes/img/icon-ressarcimento.png" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+
+				<div class="col-sm-12 col-md-6 col-lg-3">
+					<div class="box">
+						<div class="float-left">
+							<p>Caso Reserva</p>
+							<span>teste</span>
+						</div>
+						<div class="float-right">
+							<img src="/GSRE-SinistroAuto/includes/img/icon-reserva.png" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-6 col-lg-3">
+					<div class="box">
+						<div class="float-left">
+							<p>Alienação Fiduciária</p>
+							<span>teste</span>
+						</div>
+						<div class="float-right">
+							<img src="/GSRE-SinistroAuto/includes/img/icon-alienacao.png" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-6 col-lg-3">
+					<div class="box">
+						<div class="float-left">
+							<p>Prêmio pendente</p>
+							<span>teste</span>
+						</div>
+						<div class="float-right">
+							<img src="/GSRE-SinistroAuto/includes/img/icon-premio.png" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-6 col-lg-3">
+					<div class="box">
+						<div class="float-left">
+							<p>Nome da Oficina</p>
+							<span>teste</span>
+						</div>
+						<div class="float-right">
+							<img src="/GSRE-SinistroAuto/includes/img/icon-oficina.png" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-6 col-lg-3">
+					<div class="box">
+						<div class="float-left">
+							<p>Pagamento foi rejeitado?Qual o Motivo?</p>
+							<span>teste</span>
+						</div>
+						<div class="float-right">
+							<img src="/GSRE-SinistroAuto/includes/img/icon-pgto-rejeitado.png" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-6 col-lg-3">
+					<div class="box">
+						<div class="float-left">
+							<p>Processo Aprovado por</p>
+							<span>teste</span>
+						</div>
+						<div class="float-right">
+							<img src="/GSRE-SinistroAuto/includes/img/icon-aprovado-por.png" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-6 col-lg-3">
+					<div class="box">
+						<div class="float-left">
+							<p>Processo Acionado por</p>
+							<span>teste</span>
+						</div>
+						<div class="float-right">
+							<img src="/GSRE-SinistroAuto/includes/img/icon-acionar.png" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-6 col-lg-3">
+					<div class="box">
+						<div class="float-left">
+							<p>Processo Liquidado por</p>
+							<span>teste</span>
+						</div>
+						<div class="float-right">
+							<img src="/GSRE-SinistroAuto/includes/img/icon-liquidado.png" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-6 col-lg-3">
+					<div class="box">
+						<div class="float-left">
+							<p>Processo Encerrado por</p>
+							<span>teste</span>
+						</div>
+						<div class="float-right">
+							<img src="/GSRE-SinistroAuto/includes/img/icon-encerrado.png" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-6 col-lg-3">
+					<div class="box">
+						<div class="float-left">
+							<p>Pagamento Superior a IS</p>
+							<span>teste</span>
+						</div>
+						<div class="float-right">
+							<img src="/GSRE-SinistroAuto/includes/img/icon-pgto-superior.png" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-6 col-lg-3">
+					<div class="box">
+						<div class="float-left">
+							<p>Valor da IS</p>
+							<span>teste</span>
+						</div>
+						<div class="float-right">
+							<img src="/GSRE-SinistroAuto/includes/img/icon-valor.png" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/detalhe-processo/detalhe-processo.js" charset="utf-8"></script>
+			</div>
+			<div class="desktop mtop-10">
+			  <div class="row">
+				<div class="col-md-1"  id="tab-content-sidebar">
+					<div class="nav flex-column nav-pills white" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+						<a class="nav-link zedobone active"   	 id="ze-do-bone-tab" 	 	  href="/GSRE-SinistroAuto/modulo-consulta/detalharProcesso.do#zedobone" title="Acompanhamento"></a> 
+						<a class="nav-link orcamento" 		  	 id="orcamento-tab" 		 href="/GSRE-SinistroAuto/modulo-consulta/detalharProcesso.do#orcamento" title="Orçamento"></a> 
+						<a class="nav-link parecer" 		     id="parecer-tab" 		 	 href="/GSRE-SinistroAuto/modulo-consulta/detalharProcesso.do#parecer" title="Parecer"></a> 
+						<a class="nav-link indenizacao" 	 	 id="indenizacao-tab" 	 href="/GSRE-SinistroAuto/modulo-consulta/detalharProcesso.do#indenizacao" 	 title="Indenização"></a>
+						<a class="nav-link benef-veiculo" 		 id="benef-veiculo-tab"	 	  href="/GSRE-SinistroAuto/modulo-consulta/detalharProcesso.do#benef-veiculo" title="Beneficiário / Veículo"></a> 
+						<a class="nav-link acompanhamento" 		 id="acompanhamento-tab"  	 href="/GSRE-SinistroAuto/modulo-consulta/detalharProcesso.do#acompanhamento" 	title="Acompanhamento Histórico"></a> 
+ 						<a class="nav-link acompanhamentosaf" 	 id="acompanhamentosaf-tab"  href="/GSRE-SinistroAuto/modulo-consulta/detalharProcesso.do#"   title="Acompanhamento SAF"></a>
+					</div>
+				</div>
+				<div class="col-md-10" id="tab-content-principal">
+					<div class="tab-content white" id="conteudo-principal">
+						
+					</div>
+				</div>
+				
+				<div class="col-md-6" id="tab-imagens" style="display:none">
+					<div class="tab-content white">
+						<div class="container-fluid">
+							   <h1 id="link-imagens"><a data-toggle="collapse" data-parent="#accordionExample" href="#collapseDoc">Documentos</a></h1>
+							   
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/GSRE-SinistroAuto/includes/css/p8/inputMenuP8.css" />
+<link rel="stylesheet" type="text/css" href="/GSRE-SinistroAuto/includes/css/p8/cropper.css" />
+<link rel="stylesheet" type="text/css" href="/GSRE-SinistroAuto/includes/css/bootstrap/bootstrap-select.css" />
+<div class="row">
+    <div class="col-md-6">
+        <label for="filtro">Filtro</label>
+        <select class="selectpicker form-control" id="filtro" name="filtro.codigoNaturezaProcesso" data-live-search="true" title="Selecione..." data-hide-disabled="true" data-actions-box="true" multiple>
+        	
+	            <option value="1">Recentes</option>
+            
+	            <option value="2">&Uacute;ltimos 15 dias</option>
+            
+	            <option value="3">Apenas imagens</option>
+            
+	            <option value="4">Apenas documentos</option>
+            
+        </select>
+    </div>
+    <div class="col-md-6">
+        <label for="filtro">Tipo do Documento</label>
+        <select class="selectpicker form-control" id="filtro" name="filtro.codigoNaturezaProcesso" data-live-search="true" title="Selecione..." data-hide-disabled="true" data-actions-box="true">
+            <option value="0" selected>Selecione</option>
+            
+	            <option value="300">A CPI SP</option>
+            
+	            <option value="233">Acionamento de Despachante</option>
+            
+	            <option value="781">Acionamento de Reguladora</option>
+            
+	            <option value="237">Aditamento de BO</option>
+            
+	            <option value="717">Alvar&aacute; Judicial</option>
+            
+	            <option value="802">Anexo de Pagamento - Benefici&aacute;rio</option>
+            
+	            <option value="800">Anexo de parecer de acionamento</option>
+            
+	            <option value="801">Anexo de parecer de pagamento</option>
+            
+	            <option value="168">Anexos da ASE</option>
+            
+	            <option value="601">AntiFraude</option>
+            
+	            <option value="178">Ata de Posse</option>
+            
+	            <option value="188">Audi&ecirc;ncia Instr/Julgam.</option>
+            
+	            <option value="15">Aut. Fornecimento Carro Reserva</option>
+            
+	            <option value="159">Auto de Apreens&atilde;o da Pol&iacute;cia</option>
+            
+	            <option value="703">Auto de Apreens&atilde;o da Pol&iacute;cia</option>
+            
+	            <option value="222">Auto de Dep&oacute;sito</option>
+            
+	            <option value="160">Auto de Entrega da Pol&iacute;cia</option>
+            
+	            <option value="44">Auto de Entrega (Salvado)</option>
+            
+	            <option value="94">Auto de Libera&ccedil;&atilde;o</option>
+            
+	            <option value="220">Auto de Recupera&ccedil;&atilde;o</option>
+            
+	            <option value="291">Auto de Recupera&ccedil;&atilde;o da Pol&iacute;cia</option>
+            
+	            <option value="238">Autoriza&ccedil;&atilde;o </option>
+            
+	            <option value="102">Autorizacao de Indenizacao  Despach</option>
+            
+	            <option value="609">Autoriza&ccedil;&atilde;o de Pagamento</option>
+            
+	            <option value="64">Autoriza&ccedil;&atilde;o de Pagamento ao Credor</option>
+            
+	            <option value="31">Autoriza&ccedil;&atilde;o Pagto  Arrendante</option>
+            
+	            <option value="268">Autoriza&ccedil;&atilde;o para cargas perigosas</option>
+            
+	            <option value="746">Autoriza&ccedil;&atilde;o para D&eacute;bito de IPVA</option>
+            
+	            <option value="22">Autoriza&ccedil;&atilde;o Remo&ccedil;&atilde;o dos Salvados</option>
+            
+	            <option value="100">Autoriza&ccedil;&atilde;o Servi&ccedil;os</option>
+            
+	            <option value="36">Autoriza&ccedil;&atilde;o Transfer&ecirc;ncia Ve&iacute;culo</option>
+            
+	            <option value="200">Aviso de Alta M&eacute;dica</option>
+            
+	            <option value="39">Aviso de Exist&ecirc;ncia de Salvado</option>
+            
+	            <option value="92">Aviso de Localiza&ccedil;&atilde;o de Salvado</option>
+            
+	            <option value="40">Aviso de Recolhimento de Salvado</option>
+            
+	            <option value="2">Aviso de Sinistro</option>
+            
+	            <option value="161">Aviso Recebimento Correspond&ecirc;ncia</option>
+            
+	            <option value="773">Baixa da Comunica&ccedil;&atilde;o de Venda</option>
+            
+	            <option value="774">Baixa da D&iacute;vida Ativa</option>
+            
+	            <option value="176">Baixa da Reserva de Dom&iacute;nio</option>
+            
+	            <option value="183">Baixa da Restri&ccedil;&atilde;o Administrativa</option>
+            
+	            <option value="184">Baixa da Restri&ccedil;&atilde;o Judicial</option>
+            
+	            <option value="60">Baixa de Aliena&ccedil;&atilde;o</option>
+            
+	            <option value="278">Baixa de Placa do Ve&iacute;culo</option>
+            
+	            <option value="824">Baixa de Restri&ccedil;&atilde;o de Roubo/Furto</option>
+            
+	            <option value="736">Balan&ccedil;o Patrimonial</option>
+            
+	            <option value="1">BO - Boletim de Ocorr&ecirc;ncia</option>
+            
+	            <option value="823">BO de Devolu&ccedil;&atilde;o do Ve&iacute;culo</option>
+            
+	            <option value="163">Boleto - Financeira</option>
+            
+	            <option value="303">C&aacute;lculo - Simula&ccedil;&atilde;o</option>
+            
+	            <option value="223">Cancelamento de Cheque</option>
+            
+	            <option value="26">Capa Processo Sinistro-Abertura</option>
+            
+	            <option value="53">Capa Processo Sinistro-Anexos</option>
+            
+	            <option value="52">Capa Processo Sinistro-Fotos</option>
+            
+	            <option value="51">Carn&ecirc;</option>
+            
+	            <option value="66">Carn&ecirc; Quitado</option>
+            
+	            <option value="210">Carta Aux. Doen&ccedil;a</option>
+            
+	            <option value="180">Carta da Oficina</option>
+            
+	            <option value="175">Carta da Sucursal</option>
+            
+	            <option value="151">#Carta de Condicionamentos</option>
+            
+	            <option value="166">Carta de Corre&ccedil;&atilde;o de Nota Fiscal</option>
+            
+	            <option value="45">Carta de Cota&ccedil;&atilde;o</option>
+            
+	            <option value="165">Carta de Dedu&ccedil;&atilde;o</option>
+            
+	            <option value="752">Carta de Descaracteriza&ccedil;&atilde;o</option>
+            
+	            <option value="327">Carta de Inadimpl&ecirc;ncia</option>
+            
+	            <option value="224">Carta de Interesse Comercial</option>
+            
+	            <option value="153">#Carta de Negativa</option>
+            
+	            <option value="27">Carta de Saldo Devedor</option>
+            
+	            <option value="196">Carta do Corretor</option>
+            
+	            <option value="190">Carta do Reclamante</option>
+            
+	            <option value="57">Carta do Segurado</option>
+            
+	            <option value="150">#Carta Emitida - Autoriz. Pagto</option>
+            
+	            <option value="152">#Carta Emitida - Cobran&ccedil;a</option>
+            
+	            <option value="157">#Carta Emitida - Em Branco</option>
+            
+	            <option value="154">#Carta Emitida - Encaminhamento</option>
+            
+	            <option value="208">Carta Pens&atilde;o Morte Inss</option>
+            
+	            <option value="171">Carta (Seg) Detalhando o Sinistro</option>
+            
+	            <option value="266">Carta (Seg) Esclarecendo Culpa</option>
+            
+	            <option value="707">Carta (Seg) Esclarecendo o Condutor</option>
+            
+	            <option value="704">Carta Segurado Esclarecendo Culpa</option>
+            
+	            <option value="231">Carta/Email de Aceite da Proposta</option>
+            
+	            <option value="765">CAT - Com. de Acidente de Trabalho</option>
+            
+	            <option value="721">Cert. Nascimento dos Benefici&aacute;rios</option>
+            
+	            <option value="769">Cert. Pos. D&eacute;b. Efeito Neg. CPD-EN</option>
+            
+	            <option value="41">Certid&atilde;o de Baixa do Ve&iacute;culo (Salv)</option>
+            
+	            <option value="48">Certid&atilde;o de Casamento</option>
+            
+	            <option value="720">Certid&atilde;o de Casamento P&oacute;s-&Oacute;bito</option>
+            
+	            <option value="207">Certid&atilde;o de Nascimento</option>
+            
+	            <option value="713">Certid&atilde;o de Nascimento da V&iacute;tima</option>
+            
+	            <option value="718">Certid&atilde;o de &Oacute;bito da V&iacute;tima</option>
+            
+	            <option value="206">Certid&atilde;o de &Oacute;bito do Condutor Seg</option>
+            
+	            <option value="234">Certid&atilde;o de Passagem</option>
+            
+	            <option value="46">Certid&atilde;o de Prontu&aacute;rio</option>
+            
+	            <option value="35">Certid&atilde;o N&atilde;o Localiza&ccedil;&atilde;o Ve&iacute;culo</option>
+            
+	            <option value="288">Certid&atilde;o Negativa de D&eacute;bito INSS
+</option>
+            
+	            <option value="29">Certid&atilde;o Negativa de Multas</option>
+            
+	            <option value="294">Certid&atilde;o Negativa do DETRO/RJ</option>
+            
+	            <option value="279">Certificado do Ex&eacute;rcito - Blindagem</option>
+            
+	            <option value="603">Certificado MOPP do Condutor Seg</option>
+            
+	            <option value="700">Certificado MOPP do Condutor Segura</option>
+            
+	            <option value="280">Certificado Original do IN METRO</option>
+            
+	            <option value="302">Check-list</option>
+            
+	            <option value="256">Classifica&ccedil;&atilde;o de Danos</option>
+            
+	            <option value="7">CNH do Condutor Segurado</option>
+            
+	            <option value="318">CNPJ</option>
+            
+	            <option value="209">Comp. de Renda H&aacute;bil</option>
+            
+	            <option value="714">Comp de Resid&ecirc;ncia Benefici&aacute;rio(s)</option>
+            
+	            <option value="400">Comprovante de Despesas - Salvado</option>
+            
+	            <option value="604">Comprovante de Devolucao</option>
+            
+	            <option value="221">Comprovante de Multas Quitadas</option>
+            
+	            <option value="75">Comprovante de Pagamento</option>
+            
+	            <option value="756">Comprovante de Pagamento do IPVA</option>
+            
+	            <option value="316">Comprovante de Propriedade</option>
+            
+	            <option value="747">Comprovante de Quita&ccedil;&atilde;o do DPVAT</option>
+            
+	            <option value="826">Comprovante de Recolhimento</option>
+            
+	            <option value="229">Comprovante de Resid&ecirc;ncia</option>
+            
+	            <option value="281">Comprovante Instala&ccedil;&atilde;o Rastreador</option>
+            
+	            <option value="117">Comprovante Pgto Licenciamento</option>
+            
+	            <option value="733">Concess&atilde;o INSS + Mem&oacute;ria de C&aacute;lculo</option>
+            
+	            <option value="247">Cong&ecirc;nere/Aviso de Sinistro</option>
+            
+	            <option value="248">Cong&ecirc;nere/Carta do Advogado</option>
+            
+	            <option value="270">Cong&ecirc;nere/C&oacute;pia Ap&oacute;lice</option>
+            
+	            <option value="250">Cong&ecirc;nere/Laudo de Perda Total</option>
+            
+	            <option value="253">Cong&ecirc;nere/NF de Venda do Salvado</option>
+            
+	            <option value="249">Cong&ecirc;nere/Or&ccedil;amento</option>
+            
+	            <option value="252">Cong&ecirc;nere/Outros</option>
+            
+	            <option value="251">Cong&ecirc;nere/Recibo de Indeniza&ccedil;&atilde;o</option>
+            
+	            <option value="293">Cong&ecirc;nere/Tela da Ap&oacute;lice</option>
+            
+	            <option value="317">Conta de Consumo</option>
+            
+	            <option value="770">Contr. Social da Emp. Propriet&aacute;ria</option>
+            
+	            <option value="269">Contrato de aluguel do ve&iacute;culo</option>
+            
+	            <option value="272">Contrato de Presta&ccedil;&atilde;o de Servi&ccedil;o</option>
+            
+	            <option value="33">Contrato Social da Empresa Segurada</option>
+            
+	            <option value="735">Contrato Social da Empresa Terceira</option>
+            
+	            <option value="198">Corre&ccedil;&atilde;o de Sinistro</option>
+            
+	            <option value="4">CPF</option>
+            
+	            <option value="712">CPF da V&iacute;tima</option>
+            
+	            <option value="743">CPF do Propriet&aacute;rio do Bem</option>
+            
+	            <option value="745">CPF do Segurado</option>
+            
+	            <option value="711">CPF do(s) Benefici&aacute;rio(s)</option>
+            
+	            <option value="772">CPF dos S&oacute;cios da Emp. Prop.</option>
+            
+	            <option value="739">CPF dos S&oacute;cios Emp. Seg.</option>
+            
+	            <option value="740">CPF dos S&oacute;cios Emp. Terc.</option>
+            
+	            <option value="21">CRLV</option>
+            
+	            <option value="612">CRLV Ve&iacute;culo Segurado</option>
+            
+	            <option value="613">CRLV Ve&iacute;culo Terceiro</option>
+            
+	            <option value="19">Croqui do Acidente</option>
+            
+	            <option value="197">CRV</option>
+            
+	            <option value="751">CRV Original - F&iacute;sico</option>
+            
+	            <option value="6">CRV Ve&iacute;culo Segurado Frente e Verso</option>
+            
+	            <option value="20">CRV Ve&iacute;culo Terceiro Frente e Verso</option>
+            
+	            <option value="766">CTPS - Carteira de Trabalho</option>
+            
+	            <option value="701">Dados Banc&aacute;rios do Segurado</option>
+            
+	            <option value="324">Dados Banc&aacute;rios do Segurado</option>
+            
+	            <option value="325">Dados Banc&aacute;rios do Terceiro</option>
+            
+	            <option value="705">Dados Banc&aacute;rios do Terceiro</option>
+            
+	            <option value="715">Dados Banc&aacute;rios dos Benefici&aacute;rios</option>
+            
+	            <option value="731">Decl. Hosp. s/ Participa&ccedil;&atilde;o do SUS</option>
+            
+	            <option value="722">Decl. Inexist&ecirc;ncia Companheiro(a)</option>
+            
+	            <option value="723">Decl. Inexist&ecirc;ncia Descendentes</option>
+            
+	            <option value="240">Declara&ccedil;&atilde;o</option>
+            
+	            <option value="174">Declara&ccedil;&atilde;o da Oficina</option>
+            
+	            <option value="211">Declara&ccedil;&atilde;o de Imposto de Renda</option>
+            
+	            <option value="275">Declara&ccedil;&atilde;o do Sindicato do Taxista</option>
+            
+	            <option value="213">Declara&ccedil;&atilde;o SUS</option>
+            
+	            <option value="285">Demonstrativo de C&aacute;lculo/Pr&ecirc;mio</option>
+            
+	            <option value="730">Despesas Apresentadas ao DPVAT</option>
+            
+	            <option value="191">Despesas com Honor&aacute;rios</option>
+            
+	            <option value="110">DETRAN Laudo Classifica&ccedil;&atilde;o Danos</option>
+            
+	            <option value="260">DNIT</option>
+            
+	            <option value="173">Doc. em Duplicidade</option>
+            
+	            <option value="226">Docs para Lucro Cessantes</option>
+            
+	            <option value="16">Documento</option>
+            
+	            <option value="264">Documento - Dedoc</option>
+            
+	            <option value="805">Documento - solicita&ccedil;&atilde;o pagamento</option>
+            
+	            <option value="809">Documento - solicita&ccedil;&atilde;o pagamento</option>
+            
+	            <option value="808">Documento - solicita&ccedil;&atilde;o pagamento</option>
+            
+	            <option value="807">Documento - solicita&ccedil;&atilde;o pagamento</option>
+            
+	            <option value="810">Documento - solicita&ccedil;&atilde;o pagamento</option>
+            
+	            <option value="806">Documento - solicita&ccedil;&atilde;o pagamento</option>
+            
+	            <option value="99">Documento Ileg&iacute;vel</option>
+            
+	            <option value="158">Documentos de Emiss&atilde;o da Ap&oacute;lice</option>
+            
+	            <option value="262">DPRF-Bras&iacute;lia/DF</option>
+            
+	            <option value="261">DPRF-SERPRO</option>
+            
+	            <option value="803">DPVAT</option>
+            
+	            <option value="109">ECV - Laudo DETRAN</option>
+            
+	            <option value="254">E-mail</option>
+            
+	            <option value="761">Email &agrave; Montadora - P&ccedil;s Faltantes</option>
+            
+	            <option value="18">Endosso</option>
+            
+	            <option value="177">Estatuto Social</option>
+            
+	            <option value="719">Exame Cadav&eacute;rico da V&iacute;tima</option>
+            
+	            <option value="205">Exame Cadav&eacute;rico do Condutor Seg</option>
+            
+	            <option value="702">Exame Cadav&eacute;rico do Condutor Segura</option>
+            
+	            <option value="276">Exame de Alcoolemia do Condutor Seg</option>
+            
+	            <option value="204">Exame de Corpo de Delito</option>
+            
+	            <option value="716">Exames Complementares</option>
+            
+	            <option value="86">EXTRA - AVAS</option>
+            
+	            <option value="245">EXTRA - Baixa do Gravame</option>
+            
+	            <option value="187">EXTRA - Clie</option>
+            
+	            <option value="82">EXTRA - Cns</option>
+            
+	            <option value="80">EXTRA - Cnvr</option>
+            
+	            <option value="79">EXTRA - Cobertura</option>
+            
+	            <option value="85">EXTRA - Confer&ecirc;ncia de C/C</option>
+            
+	            <option value="84">EXTRA - Fime</option>
+            
+	            <option value="246">EXTRA - Gravame</option>
+            
+	            <option value="77">EXTRA - Hist</option>
+            
+	            <option value="78">EXTRA - Oficina</option>
+            
+	            <option value="83">EXTRA - Outros</option>
+            
+	            <option value="81">EXTRA - Psin</option>
+            
+	            <option value="97">EXTRA - Renavam</option>
+            
+	            <option value="258">EXTRA - RNS</option>
+            
+	            <option value="244">EXTRA - Stcb</option>
+            
+	            <option value="242">EXTRA - Temp</option>
+            
+	            <option value="241">EXTRA - Visa</option>
+            
+	            <option value="243">EXTRA - Vonl</option>
+            
+	            <option value="63">Extrato Consolidado D&eacute;bitos Ve&iacute;culo</option>
+            
+	            <option value="62">Extrato Consolidado IPVA</option>
+            
+	            <option value="202">Fatura Descriminativa</option>
+            
+	            <option value="729">Fatura Detalhada Conta Hospitalar</option>
+            
+	            <option value="55">Fax de Remo&ccedil;&atilde;o dos Salvados</option>
+            
+	            <option value="185">Fax Expedido</option>
+            
+	            <option value="186">Fax Recebido</option>
+            
+	            <option value="162">FAX Remo&ccedil;&atilde;o dos Salvados</option>
+            
+	            <option value="11">Ficha de Cobertura</option>
+            
+	            <option value="10">Ficha de Entrada na Oficina</option>
+            
+	            <option value="61">FIME-Ficha Mestra Resumida</option>
+            
+	            <option value="58">Folha de An&aacute;lise - PT Colis&atilde;o</option>
+            
+	            <option value="193">Folha de An&aacute;lise PT Furto</option>
+            
+	            <option value="179">Formal de Partilha</option>
+            
+	            <option value="741">Formul&aacute;rio de Autoriza&ccedil;&atilde;o Pgto</option>
+            
+	            <option value="263">Foto -  Dedoc</option>
+            
+	            <option value="321">Foto - Cambio</option>
+            
+	            <option value="89">Foto - Carroceria</option>
+            
+	            <option value="320">Foto - Chassi</option>
+            
+	            <option value="90">Foto - Constata&ccedil;&atilde;o</option>
+            
+	            <option value="12">Foto - Inicial</option>
+            
+	            <option value="87">Foto - Mec&acirc;nica e/ou Complemento</option>
+            
+	            <option value="319">Foto - Motor</option>
+            
+	            <option value="322">Foto - Painel</option>
+            
+	            <option value="295">Foto - P&aacute;tio do Leiloeiro</option>
+            
+	            <option value="602">Foto - Placa</option>
+            
+	            <option value="194">Foto - Reconstituicao</option>
+            
+	            <option value="818">Foto - Reintegra&ccedil;&atilde;o</option>
+            
+	            <option value="172">Foto - Sindic&acirc;ncia</option>
+            
+	            <option value="88">Foto - Supervis&atilde;o</option>
+            
+	            <option value="74">Foto - Vistoria Pr&eacute;via</option>
+            
+	            <option value="699">FOTO LOCAL</option>
+            
+	            <option value="170">G.R.P.S.</option>
+            
+	            <option value="42">Guia de Remessa de Cheque (Salvado)</option>
+            
+	            <option value="750">Guia para Pgto Benef&iacute;cio Tribut&aacute;rio</option>
+            
+	            <option value="3">Identidade</option>
+            
+	            <option value="742">Identidade do Propriet&aacute;rio do Bem</option>
+            
+	            <option value="744">Identidade do Segurado</option>
+            
+	            <option value="771">Identidade dos S&oacute;cios da Emp. Prop.</option>
+            
+	            <option value="286">Identidade dos S&oacute;cios da Emp. Seg.</option>
+            
+	            <option value="738">Identidade dos S&oacute;cios da Emp. Terc.</option>
+            
+	            <option value="710">Identidade ou CNH da V&iacute;tima</option>
+            
+	            <option value="709">Identidade ou CNH do Terceiro</option>
+            
+	            <option value="768">Inqu&eacute;rito Policial</option>
+            
+	            <option value="28">Instrumento de Libera&ccedil;&atilde;o</option>
+            
+	            <option value="219">Instrumento de Transa&ccedil;&atilde;o</option>
+            
+	            <option value="227">I.P.V.A.</option>
+            
+	            <option value="50">Judicial - Alvara</option>
+            
+	            <option value="307">Judicial - Atas de Audiencias</option>
+            
+	            <option value="309">Judicial - Carta de Intimacao</option>
+            
+	            <option value="192">Judicial - Citacao</option>
+            
+	            <option value="308">Judicial - Contestacao</option>
+            
+	            <option value="313">Judicial - Guia de Deposito</option>
+            
+	            <option value="284">Judicial - Honorarios Contrato</option>
+            
+	            <option value="310">Judicial - Honorarios Recibo</option>
+            
+	            <option value="315">Judicial - Outros</option>
+            
+	            <option value="312">Judicial - Penhora On-Line</option>
+            
+	            <option value="306">Judicial - Peticao Inicial</option>
+            
+	            <option value="311">Judicial - Planilha de Calculo</option>
+            
+	            <option value="287">Judicial - Sentenca</option>
+            
+	            <option value="314">Judicial - Termo de Acordo</option>
+            
+	            <option value="216">Laudo Complementar</option>
+            
+	            <option value="98">Laudo de Avalia&ccedil;&atilde;o de Salvado</option>
+            
+	            <option value="610">Laudo de Classifica&ccedil;&atilde;o de Danos</option>
+            
+	            <option value="257">Laudo de Constata&ccedil;&atilde;o de Danos</option>
+            
+	            <option value="292">Laudo de Necr&oacute;psia</option>
+            
+	            <option value="96">Laudo de Perda Total</option>
+            
+	            <option value="305">Laudo de Pesquisas Autom&aacute;ticas</option>
+            
+	            <option value="5">Laudo de Vistoria Sinistro</option>
+            
+	            <option value="821">Laudo Pericial</option>
+            
+	            <option value="67">Laudo Pericial do Acidente</option>
+            
+	            <option value="214">Laudo Radiogr&aacute;fico</option>
+            
+	            <option value="195">Laudo Tecnico de Fabrica</option>
+            
+	            <option value="215">Laudo Tomografia</option>
+            
+	            <option value="38">Laudo Vistoria Pr&eacute;via</option>
+            
+	            <option value="726">Laudos Radiogr&aacute;ficos</option>
+            
+	            <option value="804">Licenciamento</option>
+            
+	            <option value="228">Multas Pagas</option>
+            
+	            <option value="68">Nada Consta de Multas Estadual</option>
+            
+	            <option value="290">Nada Consta de Multas Federal</option>
+            
+	            <option value="236">Nada Consta (ITAU/BANERJ)</option>
+            
+	            <option value="0">N&atilde;o Classificado</option>
+            
+	            <option value="277">N.F. de Reparos do Bem</option>
+            
+	            <option value="323">Nota BLOQUEADA</option>
+            
+	            <option value="296">Nota de Cobertura</option>
+            
+	            <option value="727">Nota Fiscal da Conta Hospitalar</option>
+            
+	            <option value="169">Nota Fiscal de Carroceria</option>
+            
+	            <option value="297">Nota Fiscal de Devolucao</option>
+            
+	            <option value="24">Nota Fiscal de Pe&ccedil;as</option>
+            
+	            <option value="23">Nota Fiscal de Servi&ccedil;os</option>
+            
+	            <option value="76">Nota Fiscal de Venda p/ Seguradora</option>
+            
+	            <option value="737">Nota Fiscal Desinstala&ccedil;&atilde;o Kit G&aacute;s</option>
+            
+	            <option value="70">Nota Fiscal do Guincho</option>
+            
+	            <option value="282">Nota Fiscal do Kit G&aacute;s</option>
+            
+	            <option value="47">Nota Fiscal do Ve&iacute;culo Segurado</option>
+            
+	            <option value="706">Nota Fiscal do Ve&iacute;culo Terceiro</option>
+            
+	            <option value="326">Nota Fiscal do Ve&iacute;culo Terceiro</option>
+            
+	            <option value="763">Nota Fiscal dos Medicamentos</option>
+            
+	            <option value="304">Nota Fiscal dos Reparos &agrave; Revelia</option>
+            
+	            <option value="8">Nota Fiscal Pe&ccedil;as Servi&ccedil;os</option>
+            
+	            <option value="767">Nota Fiscal/Recibo da Fisioterapia</option>
+            
+	            <option value="728">Nota Fiscal/Recibo dos M&eacute;dicos</option>
+            
+	            <option value="760">Notif. &agrave; Montadora - P&ccedil;s Faltantes</option>
+            
+	            <option value="605">Notificacao Extrajudicial</option>
+            
+	            <option value="93">O.C.T.</option>
+            
+	            <option value="239">Of&iacute;cio</option>
+            
+	            <option value="825">Of&iacute;cio de Libera&ccedil;&atilde;o Judicial</option>
+            
+	            <option value="9">Or&ccedil;amento</option>
+            
+	            <option value="95">Or&ccedil;amento Carroceria</option>
+            
+	            <option value="101">Or&ccedil;amento Complementar</option>
+            
+	            <option value="724">Or&ccedil;amento de Procedimentos M&eacute;dicos</option>
+            
+	            <option value="73">Ordem de Servi&ccedil;o</option>
+            
+	            <option value="265">Outros</option>
+            
+	            <option value="199">OUTROS ASE</option>
+            
+	            <option value="611">Pedido de Pe&ccedil;as</option>
+            
+	            <option value="734">Pedido de Rean&aacute;lise</option>
+            
+	            <option value="232">Pesquisa BIN</option>
+            
+	            <option value="271">Peti&ccedil;&atilde;o Inicial</option>
+            
+	            <option value="273">Processo Judicial</option>
+            
+	            <option value="34">Procura&ccedil;&atilde;o</option>
+            
+	            <option value="749">Procura&ccedil;&atilde;o do Leasing Original</option>
+            
+	            <option value="283">Procura&ccedil;&atilde;o por Instrumento P&uacute;blico</option>
+            
+	            <option value="259">PRODEMGE</option>
+            
+	            <option value="54">Prontu&aacute;rio de Renova&ccedil;&atilde;o da CNH</option>
+            
+	            <option value="212">Prontu&aacute;rio M&eacute;dico</option>
+            
+	            <option value="17">Proposta de Endosso</option>
+            
+	            <option value="230">Protocolo de Recebimento</option>
+            
+	            <option value="725">Radiografias Pr&eacute; e P&oacute;s Cir&uacute;rgicas</option>
+            
+	            <option value="203">Receitu&aacute;rio M&eacute;dico</option>
+            
+	            <option value="14">Recibo</option>
+            
+	            <option value="72">Recibo da Oficina</option>
+            
+	            <option value="274">Recibo de Frete dos &uacute;ltimos 3 meses</option>
+            
+	            <option value="155">#Recibo de Indeniza&ccedil;&atilde;o</option>
+            
+	            <option value="91">Recibo de Indeniza&ccedil;&atilde;o</option>
+            
+	            <option value="753">Recibo de Quita&ccedil;&atilde;o do Leasing</option>
+            
+	            <option value="181">Recibo de Venda do Ve&iacute;culo</option>
+            
+	            <option value="71">Recibo do Guincho</option>
+            
+	            <option value="182">Recibo para Reembolso</option>
+            
+	            <option value="43">Reclama&ccedil;&atilde;o do Terceiro</option>
+            
+	            <option value="600">Reembolso de Pe&ccedil;as</option>
+            
+	            <option value="764">Rela&ccedil;&atilde;o de Dependentes no INSS</option>
+            
+	            <option value="708">Rela&ccedil;&atilde;o do Condutor com Segurado</option>
+            
+	            <option value="37">Relat&oacute;rio Complementar de ASE</option>
+            
+	            <option value="289">Relat&oacute;rio de ASE</option>
+            
+	            <option value="59">Relat&oacute;rio de Per&iacute;cia  T&eacute;cnica ASE</option>
+            
+	            <option value="69">Relat&oacute;rio de Regula&ccedil;&atilde;o</option>
+            
+	            <option value="218">Relat&oacute;rio do Rastreador</option>
+            
+	            <option value="201">Relat&oacute;rio M&eacute;dico</option>
+            
+	            <option value="217">Reportagem Jornal&iacute;stica</option>
+            
+	            <option value="164">Requisi&ccedil;&atilde;o de Cheque Mec&acirc;nico</option>
+            
+	            <option value="167">Requisi&ccedil;&atilde;o de Pe&ccedil;as</option>
+            
+	            <option value="608">Ressarcimento de Cong&ecirc;nere</option>
+            
+	            <option value="25">RPA - Recibo de Aut&ocirc;nomo</option>
+            
+	            <option value="811">SEDEX</option>
+            
+	            <option value="500">SEM CLASSIFICACAO</option>
+            
+	            <option value="235">Situa&ccedil;&atilde;o Fiscal</option>
+            
+	            <option value="115">Solicita&ccedil;&atilde;o Pgto Benefici&aacute;rio</option>
+            
+	            <option value="112">Solicita&ccedil;&atilde;o Pgto D&eacute;bitos Ve&iacute;culo</option>
+            
+	            <option value="116">Solicita&ccedil;&atilde;o Pgto Financeira</option>
+            
+	            <option value="114">Solicita&ccedil;&atilde;o Pgto Pr&ecirc;mio Pendente</option>
+            
+	            <option value="113">Solicita&ccedil;&atilde;o Pgto Reembolso</option>
+            
+	            <option value="732">Termo de Cess&atilde;o/Anu&ecirc;ncia</option>
+            
+	            <option value="189">Termo de Concilia&ccedil;&atilde;o</option>
+            
+	            <option value="748">Termo de Desist&ecirc;ncia - Leasing</option>
+            
+	            <option value="827">Termo de Devolu&ccedil;&atilde;o de Salvado</option>
+            
+	            <option value="607">Termo de Extravio</option>
+            
+	            <option value="156">Termo de Responsabilidade de Multas</option>
+            
+	            <option value="225">Teste de Embriaguez</option>
+            
+	            <option value="13">TQR - Termo de Quitacao</option>
+            
+	            <option value="606">TQT - Termo de Quitacao de Terceiro</option>
+            
+	            <option value="32">TRM -Termo Responsabilidade Multas</option>
+            
+	            <option value="301">Upload pela Web</option>
+            
+	            <option value="255">Visa</option>
+            
+	            <option value="267">3 or&ccedil;/cota&ccedil;&atilde;o para repara&ccedil;&atilde;o do bem</option>
+            
+	            <option value="30">4&ordf; Via da Declara&ccedil;&atilde;o de Importa&ccedil;&atilde;o</option>
+            
+        </select>
+    </div>
+    <div class="row container-imagens">
+        <div class="col-md-10 panel-main">
+            <div class="toolbar toolbar-principal toolbar-imagens">
+                <button title="Editar Imagem" class="toolbar-botao toolbar-botao-principal" id="editarImagem">
+                    <span class="fa-ajuste fa fa-pencil"></span>
+                </button>
+                <button title="Abrir em uma nova janela" class="toolbar-botao toolbar-botao-principal" id="abrirPopUp">
+                    <span class="fa-ajuste fa fa-search"></span>
+                </button>
+            </div>
+            <div class="toolbar toolbar-principal toolbar-arquivos" style="display: none;">
+                <button title="Fazer Download do Arquivo" class="toolbar-botao toolbar-botao-principal" id="download">
+                    <span class="fa-ajuste fa fa-download"></span>
+                </button>
+                <button title="Abrir em uma nova janela" class="toolbar-botao toolbar-botao-principal" id="abrirPopUp">
+                    <span class="fa-ajuste fa fa-search"></span>
+                </button>
+            </div>
+            <img src="/GSRE-SinistroAuto/includes/imagens/img1.jpg" id="selected" data-codigodocumento="2"
+                data-tipodocumento="pdf">
+        </div>
+
+        <div class="col-md-2 thumbs">
+            <img src="/GSRE-SinistroAuto/includes/imagens/img1.jpg">
+            <img src="/GSRE-SinistroAuto/includes/imagens/image-pdf.png">
+            <img src="/GSRE-SinistroAuto/includes/imagens/img2.jpg">
+            <img src="/GSRE-SinistroAuto/includes/imagens/image-doc.png">
+            <img src="/GSRE-SinistroAuto/includes/imagens/img3.jpg">
+            <img src="/GSRE-SinistroAuto/includes/imagens/img5.jpg">
+            <img src="/GSRE-SinistroAuto/includes/imagens/img1.jpg">
+            <img src="/GSRE-SinistroAuto/includes/imagens/img2.jpg">
+            <img src="/GSRE-SinistroAuto/includes/imagens/img3.jpg"> 
+            <!-- <img src="/GSRE-SinistroAuto/fileNetHandler/getFile.do?codigoDocumento=2"> -->
+        </div>
+    </div>
+    <div class="modal fade" id="modalAjusteImagem" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+        aria-hidden="true" style="z-index: 2016;">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Editar Imagem</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="img-container">
+                        <div class="toolbar toolbar-modalAjuste">
+                            <button title="Mover" class="toolbar-botao toolbar-botao-modalAjuste" id="mover">
+                                <span class="fa-modalAjuste fa fa-arrows"></span>
+                            </button>
+                            <button title="Cortar" class="toolbar-botao toolbar-botao-modalAjuste" id="cortar">
+                                <span class="fa-modalAjuste fa fa-crop"></span>
+                            </button>
+                            <button title="Zoom In" class="toolbar-botao toolbar-botao-modalAjuste" id="zoomIn">
+                                <span class="fa-modalAjuste fa fa-search-plus"></span>
+                            </button>
+                            <button title="Zoom Out" class="toolbar-botao toolbar-botao-modalAjuste" id="zoomOut">
+                                <span class="fa-modalAjuste fa fa-search-minus"></span>
+                            </button>
+                            <button title="Girar para esquerda" class="toolbar-botao toolbar-botao-modalAjuste"
+                                id="girarEsquerda">
+                                <span class="fa-modalAjuste fa fa-rotate-left"></span>
+                            </button>
+                            <button title="Girar pra direita" class="toolbar-botao toolbar-botao-modalAjuste"
+                                id="girarDireita">
+                                <span class="fa-modalAjuste fa fa-rotate-right"></span>
+                            </button>
+                        </div>
+                        <div style="width: auto; height: 600px;">
+                            <img id="image" src="https://avatars0.githubusercontent.com/u/3456749"
+                            data-codigodocumento="2" data-tipodocumento="pdf"
+                            style="width: 800; height: 600;">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="concluirEdicao">Concluir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/p8/inportMenuP8.js"></script>
+<script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/p8/cropper.js"></script>
+<script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/bootstrap/bootstrap-select.js"></script>							   
+						</div>
+					</div>
+				</div>
+				<div class="col-md-1" id="tab-documentos">
+					<div class="tab-content white">
+						<h4 id="link-docs"><a data-toggle="collapse" data-parent="#accordionExample" href="#collapseDoc">Documentos </a></h4>
+					</div>
+				</div>
+			 </div>	
+			</div>
+			
+			<div class="mobile">
+					<div class="row">
+						<div class="col">
+							<div class="accordion" id="accordionMobile">
+								<div class="card">
+									<div class="card-header" id="zedobone">
+										<h5 class="mb-0">
+											<button class="btn btn-link zedobone" 
+													type="button" data-toggle="collapse" 
+													data-target="#zedobone1"
+													aria-expanded="false" 
+													aria-controls="zedobone1">Resumo
+											</button>
+										</h5>
+									</div>
+									<div id="zedobone1" class="collapse" aria-labelledby="zedobone" data-parent="#accordionMobile">
+										<div class="card-body">
+											<p>Resumo</p>
+										</div>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-header" id="orcamento">
+										<h5 class="mb-0">
+											<button class="btn btn-link orcamento collapsed" 
+													type="button" data-toggle="collapse" 
+													data-target="#orcamento2"
+													aria-expanded="false" 
+													aria-controls="orcamento2">Orçamento
+											</button>
+										</h5>
+									</div>
+									<div id="orcamento2" class="collapse" aria-labelledby="orcamento" data-parent="#accordionMobile">
+										<div class="card-body">
+											<p>orcamento</p>
+										</div>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-header" id="parecer">
+										<h5 class="mb-0">
+											<button class="btn btn-link parecer collapsed" 
+													type="button" data-toggle="collapse" 
+													data-target="#parecer3"
+													aria-expanded="false" 
+													aria-controls="parecer3">Parecer</button>
+										</h5>
+									</div>
+									<div id="parecer3" class="collapse" aria-labelledby="parecer" data-parent="#accordionMobile">
+										<div class="card-body">
+											<p>parecer</p>
+										</div>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-header" id="indenizacao">
+										<h5 class="mb-0">
+											<button class="btn btn-link indenizacao collapsed"
+													type="button" data-toggle="collapse"
+													data-target="#indenizacao4" aria-expanded="false"
+													aria-controls="indenizacao4">Indenização</button>
+										</h5>
+									</div>
+									<div id="indenizacao4" class="collapse" aria-labelledby="indenizacao" data-parent="#accordionMobile">
+										<div class="card-body">
+											<p>indenizacao</p>
+										</div>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-header" id="beneficiaria">
+										<h5 class="mb-0">
+											<button class="btn btn-link benef-veiculo collapsed"
+													type="button" data-toggle="collapse"
+													data-target="#beneficiaria5" aria-expanded="false"
+													aria-controls="beneficiaria5">Beneficiário /
+													Veículo
+											</button>
+										</h5>
+									</div>
+									<div id="beneficiaria5" class="collapse" aria-labelledby="beneficiaria" data-parent="#accordionMobile">
+										<div class="card-body">
+											<div class="row">
+												<div class="col-12">
+													<h2>Dados do beneficiário</h2>
+												</div>
+												<div class="col-sm-9">
+													<div class="form">
+														<input type="text" name="text" autocomplete="off" required>
+														<label for="text" class="label-name"> <span class="content-name">Nome</span>
+														</label>
+													</div>
+												</div>
+												<div class="col-sm-3">
+													<div class="form">
+														<input type="text" name="text" autocomplete="off" required>
+														<label for="text" class="label-name"> <span class="content-name">CPF</span>
+														</label>
+													</div>
+												</div>
+												<div class="col-sm-4">
+													<div class="form">
+														<input type="text" name="text" autocomplete="off" required>
+														<label for="text" class="label-name"> <span class="content-name">Banco</span>
+														</label>
+													</div>
+												</div>
+												<div class="col-sm-4">
+													<div class="form">
+														<input type="text" name="text" autocomplete="off" required>
+														<label for="text" class="label-name"> <span class="content-name">Agência</span>
+														</label>
+													</div>
+												</div>
+												<div class="col-sm-4">
+													<div class="form">
+														<input type="text" name="text" autocomplete="off" required>
+														<label for="text" class="label-name"> <span class="content-name">Conta corrente</span>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-12">
+													<h2>Dados do veículo</h2>
+												</div>
+												<div class="col-sm-6">
+													<div class="form">
+														<input type="text" name="text" autocomplete="off" required>
+														<label for="text" class="label-name"> <span class="content-name">Placa</span>
+														</label>
+													</div>
+												</div>
+												<div class="col-sm-6">
+													<div class="form">
+														<input type="text" name="text" autocomplete="off" required>
+														<label for="text" class="label-name"> <span class="content-name">Chassi</span>
+														</label>
+													</div>
+												</div>
+
+											</div>
+											<div class="row">
+												<div class="col-12">
+													<h2>Dados do proprietário</h2>
+												</div>
+												<div class="col-sm-9">
+													<div class="form">
+														<input type="text" name="text" autocomplete="off" required>
+														<label for="text" class="label-name"> <span class="content-name">Nome</span>
+														</label>
+													</div>
+												</div>
+												<div class="col-sm-3">
+													<div class="form">
+														<input type="text" name="text" autocomplete="off" required>
+														<label for="text" class="label-name"> <span class="content-name">CPF</span>
+														</label>
+													</div>
+												</div>
+
+											</div>
+											<div class="row">
+												<div class="col">
+													<div class="float-right mt-5">
+														<button type="button" class="btn btn-cancel">Cancelar</button>
+														<button type="button" class="btn btn-salvar">Salvar</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-header" id="acompanhamento">
+										<h5 class="mb-0">
+											<button class="btn btn-link acompanhamento collapsed"
+													type="button" data-toggle="collapse"
+													data-target="#acompanhamento6" aria-expanded="false"
+													aria-controls="acompanhamento6">Acompanhamento
+											</button>
+										</h5>
+									</div>
+									<div id="acompanhamento6" class="collapse" aria-labelledby="acompanhamento" data-parent="#exampleAccordion">
+										<div class="card-body">
+											<p>Acompanhamento</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			
+		</div>
+	</section>
+<footer>
+	<img src="/GSRE-SinistroAuto/includes/img/bg-footer.png" alt="" style="width:100%" >
+</footer>
+</html>
