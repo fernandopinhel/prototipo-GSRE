@@ -60,6 +60,51 @@ a{
   float: left;
 }
 
+.print{
+  background: url(../img/print.svg);
+  width: 62px;
+  height: 39px;
+  background-repeat: no-repeat;
+  background-position: center;
+  right: 17px;
+  position: absolute;
+}
+
+.bg-gray{
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.mw-100{
+  max-width: 100% !important;
+}
+
+.print-conteudo-parecer{
+  float: right;
+  font-size: 13px;
+}
+
+.btn.focus, .btn:focus{
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+
+.bootstrap-select > .dropdown-toggle.bs-placeholder, .bootstrap-select > .dropdown-toggle.bs-placeholder:hover, .bootstrap-select > .dropdown-toggle.bs-placeholder:focus, .bootstrap-select > .dropdown-toggle.bs-placeholder:active{
+  color: #999 !important;
+  background: #fff !important;
+  border: 1px solid #ced4da !important;
+  border-radius: 5px !important;
+}
+
+.form-control > button.btn-light{
+  color: #999 !important;
+  background: #fff !important;
+  border: 1px solid #ced4da !important;
+  border-radius: 5px !important;
+}
+
 .btn {
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
@@ -103,6 +148,22 @@ button.btn-second:hover{
   opacity: 0.7;
   transition: $transicao-hover;
   color: #fff;
+}
+
+.btn-transparent{
+  background: transparent;
+  color: #6c757d;
+  border: 1px solid #6c757d;
+}
+
+.btn-transparent:hover, .btn-transparent:focus{
+  background: #6c757d;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.txt-up{
+  text-transform: uppercase;
 }
 
 .check{
@@ -271,7 +332,8 @@ button.btn-second:hover{
     float: left;
     color: #fff;
     text-align: right;
-    margin: 8px;
+    margin: 6px 18px 0 0;
+    font-size: 14px;
   }
 // fim resumo consulta
 
@@ -990,22 +1052,6 @@ header .navbar{
 
 .anexos.active{background:url(../img/icon-anexos-active.png) center no-repeat;}
 
-// .orcamento{background:url(../img/icon-orcamento.png) center no-repeat;}
-
-// .orcamento.active{background:url(../img/icon-orcamento-active.png) center no-repeat;}
-
-// .parecer{background:url(../img/icon-parecer.png) center no-repeat;}
-
-// .parecer.active{background:url(../img/icon-parecer-active.png) center no-repeat;}
-
-// .indenizacao{background:url(../img/icon-indenizacao.png) center no-repeat;}
-
-// .indenizacao.active{background:url(../img/icon-indenizacao-active.png) center no-repeat;}
-
-// .benef-veiculo{background:url(../img/icon-benef-veiculo.png) center no-repeat;}
-
-// .benef-veiculo.active{background:url(../img/icon-benef-veiculo-active.png) center no-repeat;}
-
 .historico{background:url(../img/icon-historico.png) center no-repeat;}
 
 .historico.active{background:url(../img/icon-historico-active.png) center no-repeat;}
@@ -1015,10 +1061,6 @@ header .navbar{
 .detalhes-apolic.active{background:url(../img/icon-detalhes-active.png) center no-repeat;}
 
 .detalhes-apolic.active{background:url(../img/icon-detalhes-active.png) center no-repeat;}
-
-// .acompanhamento {background: url(../img/icon-historico.png) center no-repeat;}
-
-// .acompanhamentosaf {background: url(../img/icon-detalhes.png) center no-repeat;}
 
 .icon-close{
   background:url(../img/close.svg);
@@ -1119,6 +1161,23 @@ span.btn-add{
   margin-top: 0;
 }
 
+.color-b{color: #0B67BE;}
+
+// load more
+#loads-m{
+   
+}
+// fim load more
+
+// modal
+.modal-title{
+  color: #0B67BE;
+  font-size: 23px;
+  font-weight: 500;
+  margin: 0;
+}
+// fim modal
+
 // fim interna
 
 // media query
@@ -1186,6 +1245,8 @@ span.btn-add{
   .separator{border-top: 1px solid #9a3559;}
 
   .interna .mobile{display: none;}
+
+  // #tab-content-sidebar, #tab-documentos{padding: 0;}
 }
 
 @media (min-width: 1200px){

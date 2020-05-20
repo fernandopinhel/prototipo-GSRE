@@ -116,3 +116,16 @@ $(document).ready(function () {
   $('[data-toggle="tooltip"]').tooltip();
 })
 // fim script Tooltip
+
+$(document).ready(function(){
+  $("#loadMore").click(function(){
+    $("#loads-m").removeClass("d-none");
+  });
+});
+
+
+$(document).ready(function(){
+  $("#link-imagens").click(function(){
+    $('#tab-documentos').show();
+  });
+});

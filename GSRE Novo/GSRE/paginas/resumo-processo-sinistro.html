@@ -54,7 +54,7 @@
 	</head>
 	<body>
 		<header>
-			<div class="container py-1">
+			<div class="container-fluid py-1">
 				<nav class="navbar navbar-expand-xl navbar-dark bg-dark">
 					<a class="navbar-brand logo" href="#"> 
 						<img src="/GSRE-SinistroAuto/includes/img/logo.png" alt="">
@@ -66,7 +66,7 @@
 						<span class="navbar-toggler-icon"></span>
 					</button>
 					<div class="navbar-collapse collapse" id="navbarCollapse">
-						<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+						<ul class="nav nav-pills" id="pills-tab" role="tablist">
 							<li class="nav-item">
 								<a class="nav-link active" 
 								id="pills-consultas-tab" 
@@ -99,7 +99,7 @@
 							<div class="dropdown user ml-auto">
 								<p class="welcome">Bem-vindo(a):<br>Igor - M123456</p>
 								<button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									<img src="/GSRE-SinistroAuto/includes/img/credential.png">
+									<img src="/GSRE-SinistroAuto/includes/img/user.svg">
 									<div class="options">
 										<span></span>
 										<span></span>
@@ -118,7 +118,7 @@
 			</div>
 		</header>
 		<section class="interna">
-			<div class="container">
+			<div class="container-fluid">
 				<div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
 					<div class="card">
 							<div class="card-header" id="headingOne" role="tab">
@@ -470,7 +470,7 @@
 				<!-- desktop -->
 				<div class="desktop mt-5">
 					<div class="row">
-						<div class="col-md-1"  id="tab-content-sidebar">
+						<div class="col-md-2 col-xl-1"  id="tab-content-sidebar">
 							<div class="nav flex-column nav-pills white menu-itens" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 								<a class="nav-link zedobone" id="ze-do-bone-tab" href="/GSRE-SinistroAuto/modulo-consulta/detalharProcesso.do#zedobone" data-toggle="tooltip" data-original-title="Acompanhamento">
 									<i class="icon icon-nav-visualizar"></i>
@@ -495,43 +495,55 @@
 								</a>
 							</div>
 						</div>
-						<div class="col-md-10" id="tab-content-principal">
+						<div class="col-md-8 col-xl-10" id="tab-content-principal">
 							<div class="tab-content white" id="conteudo-principal">
 								<div class="header-conteudo-principal">
 									<div class="container-fluid">
 										<div class="row">
 											<div class="col-lg-12">
 												<h1 class="float-left mt-2">Parecer</h1>
-												<button type="button" name="button" class="btn btn-salvar float-right">Incluir Parecer</button>
 											</div>
 											<div class="col-lg-12"><hr></div>
 										</div>
 										<div class="row">
-											<div class="col-sm-12 col-xl-4">
-												<label for="text">Info. Parecer</label>
-												<input type="text" name="filtro.dedocEProcesso" maxlength="8" value="" id="cmpNumeroDedoc" class="form-control dedocProc" onkeypress="return isNumberKey(event)" autocomplete="off"> 
-										   	</div>
-										   	<div class="col-sm-12 col-xl-4">												
-												<label for="cmpOcorrDataInicio">Data</label> 
-												<input type="text" name="filtro.dataOcorrenciaInicio" value="" id="cmpOcorrDataInicio" class="form-control date">
+											<div class="col-lg-12">
+												<div class="bg-gray">
+													<button type="button" name="button" class="btn btn-salvar mr-5" data-toggle="modal" data-target="#myModal">Incluir Parecer</button>
+													<a href="#" class="print float-right" data-toggle="tooltip" data-original-title="Imprimir todos Pareceres"></a>
+												</div>
 											</div>
-											<div class="col-sm-12 mt-2 col-xl-2">
+										</div>
+										<div class="row mt-4">
+											<div class="col-lg-4">
+												<label for="text">Info. Parecer</label>
+												<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+											</div>
+											<div class="col-lg-4">												
+												<label for="filtro">Data Parecer</label>
+												<select class="selectpicker form-control" id="filtro" name="filtro.codigoNaturezaProcesso" data-live-search="true" title="Selecione..." data-hide-disabled="true" data-actions-box="true" multiple>
+													<option value="1">20/05/20</option>
+													<option value="2">19/05/20</option>
+													<option value="3">18/05/20</option>
+													<option value="4">17/05/20</option>
+												</select>
+											</div>
+											<div class="col-lg-2 mt-2">
 												<button type="button" name="button" class="btn btn-primary mr-3 mt-4">Buscar</button>
 											</div>
 										</div>
-										<div class="row mt-5">
+										<div class="row mt-4">
 											<div class="col-lg-12">
 												<div class="info-parecer">
 													<div class="container-fluid p-0">
 														<div class="row header-parecer">
-															<div class="col-lg-3">
-																<p>Data do Parecer: <b>15/09/2019 - 20:11</b></p>
+															<div class="col-lg-3 mw-100">
+																<p>Data do Parecer: <b class="color-b">15/09/2019 - 20:11</b></p>
 															</div>
-															<div class="col-lg-3">
-																<p>Reponsável pelo Parecer: <b>Jacob de Sousa Farias</b></p>
+															<div class="col-lg-3 mw-100">
+																<p>Reponsável pelo Parecer: <b class="color-b">Jacob de Sousa Farias</b></p>
 															</div>
-															<div class="col-lg-3">
-																<p>Categoria do Parecer: <b>TRANSMISSÂO</b></p>
+															<div class="col-lg-3 mw-100">
+																<p>Categoria do Parecer: <b class="color-b">TRANSMISSÂO</b></p>
 															</div>
 														</div>
 														<div class="row conteudo-parecer">
@@ -540,6 +552,43 @@
 																Sed quam dolor, egestas ut sem quis, feugiat suscipit tellus. Nunc iaculis imperdiet eleifend.
 																Sed sodales elit ut lacus tempor tempus. Nunc ipsum mi, aliquam semper interdum a, finibus quis
 																nibh. Maecenas fringilla lobortis lorem, nec efficitur lorem imperdiet at.</p>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-lg-12">
+																<a href="#" class="print-conteudo-parecer">Imprimir</a>
+															</div>
+														</div>
+													</div>													
+												</div>
+											</div>
+										</div>
+										<div class="row mt-5">
+											<div class="col-lg-12">
+												<div class="info-parecer">
+													<div class="container-fluid p-0">
+														<div class="row header-parecer">
+															<div class="col-lg-3">
+																<p>Data do Parecer: <b class="color-b">15/09/2019 - 20:11</b></p>
+															</div>
+															<div class="col-lg-3">
+																<p>Reponsável pelo Parecer: <b class="color-b">Jacob de Sousa Farias</b></p>
+															</div>
+															<div class="col-lg-3">
+																<p>Categoria do Parecer: <b class="color-b">TRANSMISSÂO</b></p>
+															</div>
+														</div>
+														<div class="row conteudo-parecer">
+															<div class="col-lg-12">
+																<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non nibh elit.
+																Sed quam dolor, egestas ut sem quis, feugiat suscipit tellus. Nunc iaculis imperdiet eleifend.
+																Sed sodales elit ut lacus tempor tempus. Nunc ipsum mi, aliquam semper interdum a, finibus quis
+																nibh. Maecenas fringilla lobortis lorem, nec efficitur lorem imperdiet at.</p>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-lg-12">
+																<a href="#" class="print-conteudo-parecer">Imprimir</a>
 															</div>
 														</div>
 													</div>
@@ -552,13 +601,13 @@
 													<div class="container-fluid p-0">
 														<div class="row header-parecer">
 															<div class="col-lg-3">
-																<p>Data do Parecer: <b>15/09/2019 - 20:11</b></p>
+																<p>Data do Parecer: <b class="color-b">15/09/2019 - 20:11</b></p>
 															</div>
 															<div class="col-lg-3">
-																<p>Reponsável pelo Parecer: <b>Jacob de Sousa Farias</b></p>
+																<p>Reponsável pelo Parecer: <b class="color-b">Jacob de Sousa Farias</b></p>
 															</div>
 															<div class="col-lg-3">
-																<p>Categoria do Parecer: <b>TRANSMISSÂO</b></p>
+																<p>Categoria do Parecer: <b class="color-b">TRANSMISSÂO</b></p>
 															</div>
 														</div>
 														<div class="row conteudo-parecer">
@@ -569,52 +618,129 @@
 																nibh. Maecenas fringilla lobortis lorem, nec efficitur lorem imperdiet at.</p>
 															</div>
 														</div>
+														<div class="row">
+															<div class="col-lg-12">
+																<a href="#" class="print-conteudo-parecer">Imprimir</a>
+															</div>
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="row mt-5">
+										<div id="loads-m" class="d-none">
+											<div class="row mt-5">
+												<div class="col-lg-12">
+													<div class="info-parecer">
+														<div class="container-fluid p-0">
+															<div class="row header-parecer">
+																<div class="col-lg-3">
+																	<p>Data do Parecer: <b class="color-b">15/09/2019 - 20:11</b></p>
+																</div>
+																<div class="col-lg-3">
+																	<p>Reponsável pelo Parecer: <b class="color-b">Jacob de Sousa Farias</b></p>
+																</div>
+																<div class="col-lg-3">
+																	<p>Categoria do Parecer: <b class="color-b">TRANSMISSÂO</b></p>
+																</div>
+															</div>
+															<div class="row conteudo-parecer">
+																<div class="col-lg-12">
+																	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non nibh elit.
+																	Sed quam dolor, egestas ut sem quis, feugiat suscipit tellus. Nunc iaculis imperdiet eleifend.
+																	Sed sodales elit ut lacus tempor tempus. Nunc ipsum mi, aliquam semper interdum a, finibus quis
+																	nibh. Maecenas fringilla lobortis lorem, nec efficitur lorem imperdiet at.</p>
+																</div>
+															</div>
+															<div class="row">
+																<div class="col-lg-12">
+																	<a href="#" class="print-conteudo-parecer">Imprimir</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row mt-5">
+												<div class="col-lg-12">
+													<div class="info-parecer">
+														<div class="container-fluid p-0">
+															<div class="row header-parecer">
+																<div class="col-lg-3">
+																	<p>Data do Parecer: <b class="color-b">15/09/2019 - 20:11</b></p>
+																</div>
+																<div class="col-lg-3">
+																	<p>Reponsável pelo Parecer: <b class="color-b">Jacob de Sousa Farias</b></p>
+																</div>
+																<div class="col-lg-3">
+																	<p>Categoria do Parecer: <b class="color-b">TRANSMISSÂO</b></p>
+																</div>
+															</div>
+															<div class="row conteudo-parecer">
+																<div class="col-lg-12">
+																	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non nibh elit.
+																	Sed quam dolor, egestas ut sem quis, feugiat suscipit tellus. Nunc iaculis imperdiet eleifend.
+																	Sed sodales elit ut lacus tempor tempus. Nunc ipsum mi, aliquam semper interdum a, finibus quis
+																	nibh. Maecenas fringilla lobortis lorem, nec efficitur lorem imperdiet at.</p>
+																</div>
+															</div>
+															<div class="row">
+																<div class="col-lg-12">
+																	<a href="#" class="print-conteudo-parecer">Imprimir</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row mt-5">
+												<div class="col-lg-12">
+													<div class="info-parecer">
+														<div class="container-fluid p-0">
+															<div class="row header-parecer">
+																<div class="col-lg-3">
+																	<p>Data do Parecer: <b class="color-b">15/09/2019 - 20:11</b></p>
+																</div>
+																<div class="col-lg-3">
+																	<p>Reponsável pelo Parecer: <b class="color-b">Jacob de Sousa Farias</b></p>
+																</div>
+																<div class="col-lg-3">
+																	<p>Categoria do Parecer: <b class="color-b">TRANSMISSÂO</b></p>
+																</div>
+															</div>
+															<div class="row conteudo-parecer">
+																<div class="col-lg-12">
+																	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non nibh elit.
+																	Sed quam dolor, egestas ut sem quis, feugiat suscipit tellus. Nunc iaculis imperdiet eleifend.
+																	Sed sodales elit ut lacus tempor tempus. Nunc ipsum mi, aliquam semper interdum a, finibus quis
+																	nibh. Maecenas fringilla lobortis lorem, nec efficitur lorem imperdiet at.</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>										
+										<div class="row mt-3">
 											<div class="col-lg-12">
-												<div class="info-parecer">
-													<div class="container-fluid p-0">
-														<div class="row header-parecer">
-															<div class="col-lg-3">
-																<p>Data do Parecer: <b>15/09/2019 - 20:11</b></p>
-															</div>
-															<div class="col-lg-3">
-																<p>Reponsável pelo Parecer: <b>Jacob de Sousa Farias</b></p>
-															</div>
-															<div class="col-lg-3">
-																<p>Categoria do Parecer: <b>TRANSMISSÂO</b></p>
-															</div>
-														</div>
-														<div class="row conteudo-parecer">
-															<div class="col-lg-12">
-																<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non nibh elit.
-																Sed quam dolor, egestas ut sem quis, feugiat suscipit tellus. Nunc iaculis imperdiet eleifend.
-																Sed sodales elit ut lacus tempor tempus. Nunc ipsum mi, aliquam semper interdum a, finibus quis
-																nibh. Maecenas fringilla lobortis lorem, nec efficitur lorem imperdiet at.</p>
-															</div>
-														</div>
-													</div>
+												<div id="loadMore" class="text-center">
+													<button class="btn btn-transparent">Carregar mais Pareceres</button>
 												</div>
 											</div>
 										</div>
-										
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-1" id="tab-documentos" data-toggle="tooltip" data-original-title="Mostrar Documentos">
+						<div class="col-md-2 col-xl-1" id="tab-documentos">
 							<a data-toggle="collapse" data-parent="#accordionExample" href="#collapseDoc">
 								<div class="tab-content white h-auto">					
-									<div id="link-docs" class="menu-doc">
+									<div id="link-docs" class="menu-doc" data-toggle="tooltip" data-original-title="Mostrar Documentos">
 										<i class="icon icon-doc-documento"></i>
 									</div>
 								</div>
 							</a>
 						</div>
-						<div class="col-md-6" id="tab-imagens" style="display:none">
+						<div class="col-md-6 col-xl-7" id="tab-imagens" style="display:none">
 							<div class="tab-content white">
 								<div class="container-fluid">
 									<div class="row">
@@ -642,7 +768,6 @@
 											<label for="filtro">Tipo do Documento</label>
 											<select class="selectpicker form-control" id="filtro" name="filtro.codigoNaturezaProcesso" data-live-search="true" title="Selecione..." data-hide-disabled="true" data-actions-box="true">
 												<option value="0" selected>Selecione</option>
-												
 													<option value="300">A CPI SP</option>
 												
 													<option value="233">Acionamento de Despachante</option>
@@ -1503,8 +1628,8 @@
 														</div>
 													</div>
 													<div class="modal-footer">
-														<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-														<button type="button" class="btn btn-primary" id="concluirEdicao">Concluir</button>
+														<button type="button" class="btn btn-cancel txt-up mr-3" data-dismiss="modal">Cancelar</button>
+														<button type="button" class="btn btn-primary txt-up" id="concluirEdicao">Concluir</button>
 													</div>
 												</div>
 											</div>
@@ -1512,195 +1637,239 @@
 									</div>
 								</div>
 							</div>
-						</div>					
+						</div>				
 					</div>						
 				</div>
 				<!-- fim desktop -->
 				<!-- mobile -->
 				<div class="mobile">
-						<div class="row">
-							<div class="col">
-								<div class="accordion" id="accordionMobile">
-									<div class="card">
-										<div class="card-header" id="zedobone">
-											<h5 class="mb-0">
-												<button class="btn btn-link zedobone" 
-														type="button" data-toggle="collapse" 
-														data-target="#zedobone1"
-														aria-expanded="false" 
-														aria-controls="zedobone1">Resumo
-												</button>
-											</h5>
-										</div>
-										<div id="zedobone1" class="collapse" aria-labelledby="zedobone" data-parent="#accordionMobile">
-											<div class="card-body">
-												<p>Resumo</p>
-											</div>
+					<div class="row">
+						<div class="col">
+							<div class="accordion" id="accordionMobile">
+								<div class="card">
+									<div class="card-header" id="zedobone">
+										<h5 class="mb-0">
+											<button class="btn btn-link zedobone" 
+													type="button" data-toggle="collapse" 
+													data-target="#zedobone1"
+													aria-expanded="false" 
+													aria-controls="zedobone1">Resumo
+											</button>
+										</h5>
+									</div>
+									<div id="zedobone1" class="collapse" aria-labelledby="zedobone" data-parent="#accordionMobile">
+										<div class="card-body">
+											<p>Resumo</p>
 										</div>
 									</div>
-									<div class="card">
-										<div class="card-header" id="orcamento">
-											<h5 class="mb-0">
-												<button class="btn btn-link orcamento collapsed" 
-														type="button" data-toggle="collapse" 
-														data-target="#orcamento2"
-														aria-expanded="false" 
-														aria-controls="orcamento2">Orçamento
-												</button>
-											</h5>
-										</div>
-										<div id="orcamento2" class="collapse" aria-labelledby="orcamento" data-parent="#accordionMobile">
-											<div class="card-body">
-												<p>orcamento</p>
-											</div>
+								</div>
+								<div class="card">
+									<div class="card-header" id="orcamento">
+										<h5 class="mb-0">
+											<button class="btn btn-link orcamento collapsed" 
+													type="button" data-toggle="collapse" 
+													data-target="#orcamento2"
+													aria-expanded="false" 
+													aria-controls="orcamento2">Orçamento
+											</button>
+										</h5>
+									</div>
+									<div id="orcamento2" class="collapse" aria-labelledby="orcamento" data-parent="#accordionMobile">
+										<div class="card-body">
+											<p>orcamento</p>
 										</div>
 									</div>
-									<div class="card">
-										<div class="card-header" id="parecer">
-											<h5 class="mb-0">
-												<button class="btn btn-link parecer collapsed" type="button" data-toggle="collapse" data-target="#parecer3" aria-expanded="false" aria-controls="parecer3">Parecer</button>
-											</h5>
-										</div>
-										<div id="parecer3" class="collapse" aria-labelledby="parecer" data-parent="#accordionMobile">
-											<div class="card-body">
-												<p>parecer</p>
-											</div>
+								</div>
+								<div class="card">
+									<div class="card-header" id="parecer">
+										<h5 class="mb-0">
+											<button class="btn btn-link parecer collapsed" type="button" data-toggle="collapse" data-target="#parecer3" aria-expanded="false" aria-controls="parecer3">Parecer</button>
+										</h5>
+									</div>
+									<div id="parecer3" class="collapse" aria-labelledby="parecer" data-parent="#accordionMobile">
+										<div class="card-body">
+											<p>parecer</p>
 										</div>
 									</div>
-									<div class="card">
-										<div class="card-header" id="indenizacao">
-											<h5 class="mb-0">
-												<button class="btn btn-link indenizacao collapsed" type="button" data-toggle="collapse" data-target="#indenizacao4" aria-expanded="false" aria-controls="indenizacao4">Indenização</button>
-											</h5>
-										</div>
-										<div id="indenizacao4" class="collapse" aria-labelledby="indenizacao" data-parent="#accordionMobile">
-											<div class="card-body">
-												<p>indenizacao</p>
-											</div>
+								</div>
+								<div class="card">
+									<div class="card-header" id="indenizacao">
+										<h5 class="mb-0">
+											<button class="btn btn-link indenizacao collapsed" type="button" data-toggle="collapse" data-target="#indenizacao4" aria-expanded="false" aria-controls="indenizacao4">Indenização</button>
+										</h5>
+									</div>
+									<div id="indenizacao4" class="collapse" aria-labelledby="indenizacao" data-parent="#accordionMobile">
+										<div class="card-body">
+											<p>indenizacao</p>
 										</div>
 									</div>
-									<div class="card">
-										<div class="card-header" id="beneficiaria">
-											<h5 class="mb-0">
-												<button class="btn btn-link benef-veiculo collapsed"
-														type="button" data-toggle="collapse"
-														data-target="#beneficiaria5" aria-expanded="false"
-														aria-controls="beneficiaria5">Beneficiário /
-														Veículo
-												</button>
-											</h5>
-										</div>
-										<div id="beneficiaria5" class="collapse" aria-labelledby="beneficiaria" data-parent="#accordionMobile">
-											<div class="card-body">
-												<div class="row">
-													<div class="col-12">
-														<h2>Dados do beneficiário</h2>
-													</div>
-													<div class="col-sm-9">
-														<div class="form">
-															<input type="text" name="text" autocomplete="off" required>
-															<label for="text" class="label-name"> <span class="content-name">Nome</span>
-															</label>
-														</div>
-													</div>
-													<div class="col-sm-3">
-														<div class="form">
-															<input type="text" name="text" autocomplete="off" required>
-															<label for="text" class="label-name"> <span class="content-name">CPF</span>
-															</label>
-														</div>
-													</div>
-													<div class="col-sm-4">
-														<div class="form">
-															<input type="text" name="text" autocomplete="off" required>
-															<label for="text" class="label-name"> <span class="content-name">Banco</span>
-															</label>
-														</div>
-													</div>
-													<div class="col-sm-4">
-														<div class="form">
-															<input type="text" name="text" autocomplete="off" required>
-															<label for="text" class="label-name"> <span class="content-name">Agência</span>
-															</label>
-														</div>
-													</div>
-													<div class="col-sm-4">
-														<div class="form">
-															<input type="text" name="text" autocomplete="off" required>
-															<label for="text" class="label-name"> <span class="content-name">Conta corrente</span>
-															</label>
-														</div>
+								</div>
+								<div class="card">
+									<div class="card-header" id="beneficiaria">
+										<h5 class="mb-0">
+											<button class="btn btn-link benef-veiculo collapsed"
+													type="button" data-toggle="collapse"
+													data-target="#beneficiaria5" aria-expanded="false"
+													aria-controls="beneficiaria5">Beneficiário /
+													Veículo
+											</button>
+										</h5>
+									</div>
+									<div id="beneficiaria5" class="collapse" aria-labelledby="beneficiaria" data-parent="#accordionMobile">
+										<div class="card-body">
+											<div class="row">
+												<div class="col-12">
+													<h2>Dados do beneficiário</h2>
+												</div>
+												<div class="col-sm-9">
+													<div class="form">
+														<input type="text" name="text" autocomplete="off" required>
+														<label for="text" class="label-name"> <span class="content-name">Nome</span>
+														</label>
 													</div>
 												</div>
-												<div class="row">
-													<div class="col-12">
-														<h2>Dados do veículo</h2>
+												<div class="col-sm-3">
+													<div class="form">
+														<input type="text" name="text" autocomplete="off" required>
+														<label for="text" class="label-name"> <span class="content-name">CPF</span>
+														</label>
 													</div>
-													<div class="col-sm-6">
-														<div class="form">
-															<input type="text" name="text" autocomplete="off" required>
-															<label for="text" class="label-name"> <span class="content-name">Placa</span>
-															</label>
-														</div>
+												</div>
+												<div class="col-sm-4">
+													<div class="form">
+														<input type="text" name="text" autocomplete="off" required>
+														<label for="text" class="label-name"> <span class="content-name">Banco</span>
+														</label>
 													</div>
-													<div class="col-sm-6">
-														<div class="form">
-															<input type="text" name="text" autocomplete="off" required>
-															<label for="text" class="label-name"> <span class="content-name">Chassi</span>
-															</label>
-														</div>
+												</div>
+												<div class="col-sm-4">
+													<div class="form">
+														<input type="text" name="text" autocomplete="off" required>
+														<label for="text" class="label-name"> <span class="content-name">Agência</span>
+														</label>
 													</div>
+												</div>
+												<div class="col-sm-4">
+													<div class="form">
+														<input type="text" name="text" autocomplete="off" required>
+														<label for="text" class="label-name"> <span class="content-name">Conta corrente</span>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-12">
+													<h2>Dados do veículo</h2>
+												</div>
+												<div class="col-sm-6">
+													<div class="form">
+														<input type="text" name="text" autocomplete="off" required>
+														<label for="text" class="label-name"> <span class="content-name">Placa</span>
+														</label>
+													</div>
+												</div>
+												<div class="col-sm-6">
+													<div class="form">
+														<input type="text" name="text" autocomplete="off" required>
+														<label for="text" class="label-name"> <span class="content-name">Chassi</span>
+														</label>
+													</div>
+												</div>
 
-												</div>
-												<div class="row">
-													<div class="col-12">
-														<h2>Dados do proprietário</h2>
-													</div>
-													<div class="col-sm-9">
-														<div class="form">
-															<input type="text" name="text" autocomplete="off" required>
-															<label for="text" class="label-name"> <span class="content-name">Nome</span>
-															</label>
-														</div>
-													</div>
-													<div class="col-sm-3">
-														<div class="form">
-															<input type="text" name="text" autocomplete="off" required>
-															<label for="text" class="label-name"> <span class="content-name">CPF</span>
-															</label>
-														</div>
-													</div>
-
-												</div>
-												<div class="row">
-													<div class="col">
-														<div class="float-right mt-5">
-															<button type="button" class="btn btn-cancel">Cancelar</button>
-															<button type="button" class="btn btn-salvar">Salvar</button>
-														</div>
-													</div>
-												</div>
 											</div>
-										</div>
-									</div>
-									<div class="card">
-										<div class="card-header" id="acompanhamento">
-											<h5 class="mb-0">
-												<button class="btn btn-link acompanhamento collapsed" type="button" data-toggle="collapse" data-target="#acompanhamento6" aria-expanded="false" aria-controls="acompanhamento6">Acompanhamento</button>
-											</h5>
-										</div>
-										<div id="acompanhamento6" class="collapse" aria-labelledby="acompanhamento" data-parent="#exampleAccordion">
-											<div class="card-body">
-												<p>Acompanhamento</p>
+											<div class="row">
+												<div class="col-12">
+													<h2>Dados do proprietário</h2>
+												</div>
+												<div class="col-sm-9">
+													<div class="form">
+														<input type="text" name="text" autocomplete="off" required>
+														<label for="text" class="label-name"> <span class="content-name">Nome</span>
+														</label>
+													</div>
+												</div>
+												<div class="col-sm-3">
+													<div class="form">
+														<input type="text" name="text" autocomplete="off" required>
+														<label for="text" class="label-name"> <span class="content-name">CPF</span>
+														</label>
+													</div>
+												</div>
+
+											</div>
+											<div class="row">
+												<div class="col">
+													<div class="float-right mt-5">
+														<button type="button" class="btn btn-cancel">Cancelar</button>
+														<button type="button" class="btn btn-salvar">Salvar</button>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-
+								<div class="card">
+									<div class="card-header" id="acompanhamento">
+										<h5 class="mb-0">
+											<button class="btn btn-link acompanhamento collapsed" type="button" data-toggle="collapse" data-target="#acompanhamento6" aria-expanded="false" aria-controls="acompanhamento6">Acompanhamento</button>
+										</h5>
+									</div>
+									<div id="acompanhamento6" class="collapse" aria-labelledby="acompanhamento" data-parent="#exampleAccordion">
+										<div class="card-body">
+											<p>Acompanhamento</p>
+										</div>
+									</div>
+								</div>
 							</div>
+
 						</div>
+					</div>
 				</div>
 				<!-- fim mobile-->
+				<!-- The Modal -->
+				<div class="modal fade" id="myModal">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<!-- Modal Header -->
+							<div class="modal-header">
+							<h4 class="modal-title">Novo Parecer</h4>
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							</div>
+							<!-- Modal body -->
+							<div class="modal-body">
+								<form action="">
+									<div class="container-fluid">
+										<div class="row">
+											<div class="col-lg-12">												
+												<label for="filtro">Categoria do Parecer</label>
+												<select class="selectpicker form-control" id="filtro" name="filtro.codigoNaturezaProcesso" data-live-search="true" title="Selecione..." data-hide-disabled="true" data-actions-box="true">
+													<option value="0" selected>Selecione</option>
+														<option value="1">Tipo 1</option>
+														<option value="2">Tipo 2</option>
+														<option value="3">Tipo 3</option>
+														<option value="4">Tipo 4</option>
+												</select>
+											</div>
+										</div>
+										<div class="row mt-3">
+											<div class="col-lg-12">
+												<div class="form-group">
+													<label for="comment">Escreva aqui seu Parecer:</label>
+													<textarea class="form-control" rows="5" id="comment"></textarea>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+							<!-- Modal footer -->
+							<div class="modal-footer">
+							<button type="button" class="btn btn-cancel mr-3" data-dismiss="modal">Cancelar</button>
+							<button type="button" class="btn btn-salvar" data-dismiss="modal">Salvar</button>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<!-- fim container-->
 		</section>
@@ -1709,6 +1878,6 @@
 		</footer>	
 		<script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/p8/inportMenuP8.js"></script>
 		<script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/p8/cropper.js"></script>
-		<script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/bootstrap/bootstrap-select.js"></script>		
+		<script type="text/javascript" src="/GSRE-SinistroAuto/includes/js/bootstrap/bootstrap-select.js"></script>
 	</body>
 </html>
