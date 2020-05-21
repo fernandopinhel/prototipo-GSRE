@@ -1039,7 +1039,6 @@ header .navbar {
 .interna .box {
   border-radius: 5px;
   padding: 7px 15px 7px 30px;
-  margin-bottom: 30px;
   background: #F2F5F8;
 }
 
@@ -1212,11 +1211,12 @@ span.btn-add {
   color: #E70935;
   -webkit-transition: all 0.8s;
   transition: all 0.8s;
+  text-transform: uppercase;
 }
 
 .btn-cancel:hover {
-  border-color: red;
-  color: red;
+  background: #E70935;
+  color: #fff;
   -webkit-transition: all 0.8s;
   transition: all 0.8s;
 }

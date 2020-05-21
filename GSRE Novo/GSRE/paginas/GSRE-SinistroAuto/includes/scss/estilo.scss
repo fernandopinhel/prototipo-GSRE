@@ -981,7 +981,6 @@ header .navbar{
   -moz-border-radius: 5px;
   border-radius: 5px;
   padding: 7px 15px 7px 30px;
-  margin-bottom: 30px;
   background:#F2F5F8;
 }
 
@@ -1138,11 +1137,12 @@ span.btn-add{
   border-color:#E70935;
   color: #E70935;
   transition: $transicao-hover;
+  text-transform: uppercase;
 }
 
 .btn-cancel:hover{
-  border-color:red;
-  color: red;
+  background: #E70935;
+  color: #fff;
   transition: $transicao-hover;
 }
 
@@ -1162,12 +1162,6 @@ span.btn-add{
 }
 
 .color-b{color: #0B67BE;}
-
-// load more
-#loads-m{
-   
-}
-// fim load more
 
 // modal
 .modal-title{

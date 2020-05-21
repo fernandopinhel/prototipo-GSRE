@@ -129,3 +129,13 @@ $(document).ready(function(){
     $('#tab-documentos').show();
   });
 });
+
+$(document).ready(function(){
+  $(".b-parecer").click(function(){
+    $('.novo-parecer').removeClass('d-none');
+  });
+  $(".b-salvar-parecer").click(function(){
+    $('.novo-parecer').addClass('d-none');
+  });
+});
+
