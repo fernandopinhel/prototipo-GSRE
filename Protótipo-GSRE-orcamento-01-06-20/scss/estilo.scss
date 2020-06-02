@@ -60,8 +60,53 @@ a{
   float: left;
 }
 
+.autorizar{
+  background: url(../img/autorizar.svg);
+  width: 42px;
+  height: 36px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: -17px;
+  opacity: 0.7;
+  transition: $transicao-hover;
+}
+
+.autorizar:hover{
+  opacity: 1;
+  transition: $transicao-hover;
+}
+
+.desautorizar{
+  background: url(../img/desautorizar.svg);
+  width: 42px;
+  height: 36px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 60px;
+  top: -17px;
+  opacity: 0.7;
+  transition: $transicao-hover;
+}
+
+.desautorizar:hover{
+  opacity: 1;
+  transition: $transicao-hover;
+}
+
 .print{
   background: url(../img/print.svg);
+  width: 62px;
+  height: 39px;
+  background-repeat: no-repeat;
+  background-position: center;
+  right: 17px;
+  position: absolute;
+}
+
+.excel{
+  background: url(../img/excel.svg);
   width: 62px;
   height: 39px;
   background-repeat: no-repeat;
@@ -244,6 +289,7 @@ button.btn-second:hover{
 
 .chb2 input[type=checkbox] + label::before {top: 0;}
 
+.m-orcamento input[type=checkbox] + label::before {top: 4px !important;}
 
 .ex-checkbox input[type=checkbox] + label::before {
 	border: 1px solid #9f9f9f;
@@ -1214,17 +1260,25 @@ span.btn-add{
   background-position: center;
 }
 
-.info-parecer{
+.info-parecer, .info-orcamento{
   background: #eff4fc;
   padding: 15px 10px 10px 10px;
   border-radius: 10px;
 }
 
-.header-parecer > div > p{
+.header-parecer > div > p, .header-orcamento > div > p{
   font-size: 14px;
 }
 
-.conteudo-parecer{
+.conteudo-orcamento  div div div > p{
+  font-size: 14px;
+}
+
+.conteudo-orcamento  div div div > h6{
+  font-size: 13px;
+}
+
+.conteudo-parecer, .conteudo-orcamento{
   background: #fff;
   margin: 20px 0;
   padding: 10px 0;
@@ -1244,7 +1298,7 @@ span.btn-add{
 .btn-salvar{
   background: #10C35E;
   color: #fff;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 }
 
 .btn-cancel{
@@ -1275,6 +1329,9 @@ span.btn-add{
   font-weight: 500;
   margin: 0;
 }
+
+.m-header{background: #f7f7f7;}
+.m-header > h5{color: #4d4e53;}
 // fim modal
 
 // fim interna

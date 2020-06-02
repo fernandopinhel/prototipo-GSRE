@@ -168,5 +168,12 @@ $(document).ready(function(){
 });
 
 
+// marcar todos checkbox
+function marcarTodos(marcardesmarcar){
+  $('.marcar').each(function () {
+      this.checked = marcardesmarcar;
+  });
+}
+
 
 
