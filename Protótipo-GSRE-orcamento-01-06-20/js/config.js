@@ -175,5 +175,32 @@ function marcarTodos(marcardesmarcar){
   });
 }
 
+$(document).ready(function(){
+  $(".check-todos").click(function(){
+    $(".actions-autorizacao").toggleClass("d-none");
+  });
+  $(".marcar").click(function(){
+    $(".actions-autorizacao").removeClass("d-none");
+  });
+});
 
 
+
+
+$(document).ready(function(){
+  $('#tab-documentos').click(function() {
+    $('.internas-buscas').addClass('col-lg-6')
+    $('.internas-buscas').addClass('mt-3')
+    $('.b-right').removeClass('border-right')
+  });
+});
+
+$(document).ready(function(){
+  $('#link-imagens').click(function() {
+    $('.internas-buscas').removeClass('col-lg-6')
+    $('.internas-buscas:first-child').addClass('col-lg-3')
+    $('.b-right').addClass('border-right')
+    $('.internas-buscas').addClass('col-lg-2')
+    $('.internas-buscas').removeClass('mt-3')
+  });
+});
