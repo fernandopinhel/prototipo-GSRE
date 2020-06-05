@@ -190,8 +190,10 @@ $(document).ready(function(){
 $(document).ready(function(){
   $('#tab-documentos').click(function() {
     $('.internas-buscas').addClass('col-lg-6')
-    $('.internas-buscas').addClass('mt-3')
     $('.b-right').removeClass('border-right')
+    $('.conteudo-detalhes').removeClass('border-right')
+    $('.conteudo-detalhes').removeClass('pr-2')
+    $('.conteudo-detalhes').removeClass('mr-2')
   });
 });
 
@@ -201,6 +203,49 @@ $(document).ready(function(){
     $('.internas-buscas:first-child').addClass('col-lg-3')
     $('.b-right').addClass('border-right')
     $('.internas-buscas').addClass('col-lg-2')
-    $('.internas-buscas').removeClass('mt-3')
+    $('.conteudo-detalhes').addClass('border-right')
+    $('.conteudo-detalhes').addClass('pr-2')
+    $('.conteudo-detalhes').addClass('mr-2')
   });
 });
+
+// carregando divs do select
+$(function() { //onload aqui
+  $('#opcoes').on('change', function() {
+    $('.sel').hide();
+    let idSelecionado = $(this).val(); //construir o id
+    if (idSelecionado != "") $("#" + idSelecionado).show(); //mostrar o elemento
+  });
+
+  $('#opcoes').trigger("change"); //aplicar a lógica do change
+})
+// fim carregando divs do select
+
+// carregando divs do select
+$(function() { //onload aqui
+  $('#opcoes2').on('change', function() {
+    $('.sel').hide();
+    let idSelecionado = $(this).val(); //construir o id
+    if (idSelecionado != "") $("#" + idSelecionado).show(); //mostrar o elemento
+  });
+
+  $('#opcoes2').trigger("change"); //aplicar a lógica do change
+})
+// fim carregando divs do select
+
+
+
+$(document).ready(function(){
+  $(".bt-add-itens-pecas").click(function(){
+    $(".itens-add-pecas").toggleClass("d-none");
+  });
+});
+
+$(document).ready(function(){
+  $(".bt-add-mao-de-obra").click(function(){
+    $(".servicos-add-mao-de-obra").toggleClass("d-none");
+    $(".itens-add-pecas").toggleClass("d-none");
+    $(".outras-infos").removeClass("d-none");
+  });
+});
+
