@@ -188,7 +188,7 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){
-  $('#tab-documentos').click(function() {
+  $('#link-docs').click(function() {
     $('.internas-buscas').addClass('col-lg-6')
     $('.menu-footer').addClass('col-lg-12')
     $('.menu-footer').addClass('mt-3')

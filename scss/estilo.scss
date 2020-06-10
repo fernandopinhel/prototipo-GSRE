@@ -100,6 +100,57 @@ a{
   text-align: center;  
 }
 
+// light box imagens vinculadas
+.lightbox-gallery {
+  background: #f7f7f7;
+  padding-bottom: 30px;
+  background-repeat: no-repeat;
+  color: #000;
+  overflow-x: hidden
+}
+
+.lightbox-gallery p {
+  font-size: 13px;
+}
+
+.lightbox-gallery h2 {
+  font-weight: bold;
+  margin-bottom: 40px;
+  padding-top: 40px;
+  color: #fff
+}
+
+@media (max-width:767px) {
+  .lightbox-gallery h2 {
+      margin-bottom: 25px;
+      padding-top: 25px;
+      font-size: 24px
+  }
+}
+
+.lb-data .lb-close{
+  background: url(../img/close-light.png) top right no-repeat !important;
+}
+
+.lb-nav a.lb-next{
+  background: url(../img/next-light.png) right 48% no-repeat !important;
+}
+
+.lb-nav a.lb-prev{
+  background: url(../img/prev-light.png) left 48% no-repeat !important;
+}
+
+.lb-data .lb-details{
+  display: none;
+}
+
+.lb-dataContainer{
+  width: 100%;
+  position: absolute;
+  top: -6%;
+  right: 2%;
+}
+// fim light box imagens vinculadas
 
 .box-desautorizar > a{
   color: #fff;  
@@ -142,11 +193,11 @@ a{
 
 .orcamentos-autorizados{
   background: url(../img/orcamentos.svg);
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 33px;
   background-repeat: no-repeat;
   background-position: center;
-  right: 58px;
+  right: 54px;
   position: absolute;
   top: 4px;
 }
@@ -377,6 +428,15 @@ button.btn-second:hover{
   background-color: #fff;
   top: 2px;
   border-radius: 4px;
+}
+
+.check-img input[type=checkbox] + label::before {
+	left: 6px;
+  top: 23px;
+}
+
+.check-img{
+  margin: 0;
 }
 
 .ex-checkbox input[type=checkbox]:hover + label::before {
@@ -1594,6 +1654,10 @@ span.btn-add{
 }
 
 // modal
+.bg-light-gray{
+  background: #f2f2f2;
+}
+
 .modal-title{
   color: #0B67BE;
   font-size: 23px;
