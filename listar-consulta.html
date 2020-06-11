@@ -138,28 +138,39 @@
 								<div class="card-body">
 									<div class="container-fluid">
 										<div class="row">
+											<div class="form-group col-sm-12 col-md-12 col-lg-4 col-xl-2">
+												<label for="cmpWorkflow">Status do Processo</label> 
+												<div class="dropdown bootstrap-select show-tick form-control dropup">	
+													<select name="filtro.workflow" id="workflow" class="selectpicker form-control" data-container="body" onchange="habilitaFuncionario()">
+														<option>Selecione...</option>
+														<option value="EA">Em Processo</option>
+														<option value="AA">A Analisar</option>
+													</select>
+												</div>
+											</div>
+										
 											<div class="col-lg-2 check">
 												<div class="ex-checkbox">
-													<input class="form-check-input" type="checkbox" id="cmpApolsFuncs">
-													<label for="checkboxApolsFuncs">Apólices Funcionários</label>
+													<input class="form-check-input" type="checkbox" id="apoliceFuncionario" name="filtro.apolFuncionario" disabled="true">
+													<label for="apoliceFuncionario">Apólices Funcionários</label>
 												</div>
 											</div>
 											<div class="col-lg-4 check">
 												<div class="ex-checkbox">
-													<input class="form-check-input" type="checkbox" id="cmpApolsCondEsp" name="filtro.condEspecialContrato">
-													<label class="form-check-label" for="checkboxApolsCondsEspeciais" for="checkboxApolsFuncs">Apólices com condições especiais contrato</label>
+													<input class="form-check-input" type="checkbox" id="condEspecial" name="filtro.apolCondEspecialContrato">
+													<label class="form-check-label" for="condEspecial" for="checkboxApolsFuncs">Apólices com condições especiais contrato</label>
 												</div>
 											</div>
 										</div>
 										
 										<div class="row mt-4">
 											<div class="form-group col-lg-4 col-xl-2">
-												<label for="text">DEDOC<span class="campoItalicoText"> (Dedoc/Processo)</span></label>
+												<label for="text">Sinistro/Processo</label>
 												<input type="text" name="filtro.dedocEProcesso" maxlength="8" value="" id="cmpNumeroDedoc" class="form-control dedocProc" onkeypress="return isNumberKey(event)" autocomplete="off"/> 
 											</div>
 											
 											<div class="form-group col-lg-2 col-xl-2">
-												<label for="text">Número de AVAS</label>
+												<label for="text">Número do Aviso</label>
 												<input type="text" name="filtro.numeroProcessoSinistro" maxlength="15" value="" id="cmpNumeroAvas" class="form-control" onkeypress="return isNumberKey(event)" autocomplete="off"/> 
 											</div>
 											
@@ -607,42 +618,7 @@
 													<label class="form-check-label" for="cmpNewsParalelismo">Paralelismo</label>
 												</div>
 											</div>	
-											<div class="col-lg-4 col-xl-3">	
-												<div class="ex-checkbox">
-													<input class="form-check-input" type="checkbox" name="filtro.newsDebitosVeiculo" value="true" id="cmpNewsDebitosVeiculo"/>
-													<label class="form-check-label" for="cmpNewsDebitosVeiculo">Débitos do Veículo</label>
-												</div>
-											</div>
-											<div class="col-lg-4 col-xl-3">	
-												<div class="ex-checkbox">
-													<input class="form-check-input" type="checkbox" name="filtro.newsPremioPendente" value="true" id="cmpNewsPremioPendente"/>
-													<label class="form-check-label" for="cmpNewsPremioPendente">Prêmio Pendente</label>
-												</div>
-											</div>
-											<div class="col-lg-4 col-xl-3">
-												<div class="ex-checkbox">
-													<input class="form-check-input" type="checkbox" name="filtro.newsReembolsoGastosPrestador" value="true" id="cmpNewsReembGastosPrest" />
-													<label class="form-check-label" for="cmpNewsReembGastosPrest">Reembolso de gastos do prestador</label>
-												</div>
-											</div>
-											<div class="col-lg-4 col-xl-3">	
-												<div class="ex-checkbox">
-													<input class="form-check-input" type="checkbox" name="filtro.newsBeneficiario" value="true" id="cmpNewsBeneficiario" />
-													<label class="form-check-label" for="cmpNewsBeneficiario">Beneficiário</label>
-												</div>
-											</div>
-											<div class="col-lg-4 col-xl-3">	
-												<div class="ex-checkbox">
-													<input class="form-check-input" type="checkbox" name="filtro.newsFinanceira" value="true" id="cmpNewsFinanceira" />
-													<label class="form-check-label" for="cmpNewsFinanceira">Financeira</label>
-												</div>
-											</div>
-											<div class="col-lg-4 col-xl-3">	
-												<div class="ex-checkbox">
-													<input class="form-check-input" type="checkbox" nname="filtro.newsPgtoDia" value="true" id="cmpNewsPgtoDia" />
-													<label class="form-check-label" for="cmpNewsPgtoDia">Pagamento do Dia</label>
-												</div>
-											</div>
+											
 										</div>
 										<hr class="hr-mais-opcoes d-none"/>
 										<div class="row" id="pnlOrcamentosNaoAutorizados" style="display: none">
@@ -789,47 +765,102 @@
 										<div class="row">
 											<div class="form-group col-lg-12 col-xl-12">
 												<div class="ex-checkbox">
-													<input class="form-check-input" type="checkbox" id=checkPrestador name="filtro.ativaPrestador" onclick="habilitarPrestador()"/>
-													<label class="form-check-label" for="checkPrestador">Prestador</label>
+													<input class="form-check-input" type="checkbox" id="cmpCheckPrestador" name="filtro.ativaPrestador" onclick="habilitarPrestador()"/>
+													<label class="form-check-label" for="cmpCheckPrestador">Prestador</label>
 												</div>
 											</div>	 
 										</div>
 										<div class="form-row">
 											<div class="col-lg-12 col-xl-2">
 												<div class="form-group form-check form-check-inline">
-													<input type="radio" name="filtro.tipoPrestador" id="grupoPrestador1" value="1" class="form-check-input" onchange="carregaComboPrestadores(this.value, true)"/>
+													<input type="radio" name="filtro.tipoPrestador" id="grupoPrestador1" value="1" class="form-check-input tipo-prestador" onchange="carregaComboPrestadores(this.value, true)" disabled="true"/>
 													<label for="grupoPrestador1" class="form-check-input">Despachante</label>
 												</div>
 											</div>
 											<div class="col-lg-12 col-xl-2">
 												<div class="form-group form-check form-check-inline">
-													<input type="radio" name="filtro.tipoPrestador" id="grupoPrestador2" value="2" class="form-check-input" onchange="carregaComboPrestadores(this.value, true)"/>
+													<input type="radio" name="filtro.tipoPrestador" id="grupoPrestador2" value="2" class="form-check-input tipo-prestador" onchange="carregaComboPrestadores(this.value, true)" disabled="true"/>
 													<label for="grupoPrestador2" class="form-check-input">Reguladora</label>
 												</div>
 											</div>
 											<div class="col-lg-12 col-xl-4">
 												<label for="cmbRazaoSocial">Razão Social</label> 
-												<select  id="cmbRazaoSocial" class="form-control" disabled="disabled" data-container="body">
+												<select  id="cmbRazaoSocial" name="filtro.razaoSocialPrestador" class="form-control" disabled="disabled" data-container="body">
 													<option value="-1">Selecione...</option>
 												</select>	
 											</div>
 										</div>
 										<hr/>
 										<div class="row">
+											<div class="form-group col-sm-12 col-md-12 col-lg-12 col-xl-12">
+												<h6>Pareceres</h6>
+											</div>	 
+										</div>
+										<div class="row">
 											<div class="form-group col-lg-4 col-xl-2">
 												<div class="ex-checkbox">
-													<input class="form-check-input" type="checkbox" name="filtro.possuiNewsParecerQuestionamentoAcionamento" id="cmpAcionamento" disabled="disabled"/>
-													<label class="form-check-label" for="cmpAcionamento">Acionamento</label>
+													<input class="form-check-input" type="checkbox" name="filtro.possuiNewsParecerQuestionamentoAcionamento" id="idParecerAcionamento" disabled="true"/>
+													<label class="form-check-label" for="idParecerAcionamento">Acionamento</label>
 												</div>
 											</div>
 											<div class="form-group col-lg-4 col-xl-2">
 												<div class="ex-checkbox">
-													<input class="form-check-input" type="checkbox" name="filtro.possuiNewsParecerQuestionamentoPagamento" id="cmpPagamento" disabled="disabled"/>
-													<label class="form-check-label" for="cmpPagamento">Pagamento</label>
+													<input class="form-check-input" type="checkbox" name="filtro.possuiNewsParecerQuestionamentoPagamento" id="idParecerPagamento" disabled="true"/>
+													<label class="form-check-label" for="idParecerPagamento">Pagamento</label>
 												</div>
 											</div>
 										</div>	
-										<hr/>	
+										<hr/>
+									
+										<div class="row">
+											<div class="form-group col-sm-12 col-md-12 col-lg-12 col-xl-12">
+												<h6>Solicitações de Pagamento</h6>
+											</div>	 
+										</div>	
+										<div class="row">
+											<div class="col-lg-4 col-xl-3">	
+												<div class="ex-checkbox">
+													<input class="form-check-input" type="checkbox" name="filtro.newsDebitosVeiculo" value="true" id="idSolicitacaoPagamentoDespesasVeiculo" disabled="true"/>
+													<label class="form-check-label" for="idSolicitacaoPagamentoDespesasVeiculo">Débitos do Veículo (V)</label>
+												</div>
+											</div>
+											<div class="col-lg-4 col-xl-3">	
+												<div class="ex-checkbox">
+													<input class="form-check-input" type="checkbox" name="filtro.newsPremioPendente" value="true" id="idSolicitacaoPagamentoPremioPendente" disabled="true"/>
+													<label class="form-check-label" for="idSolicitacaoPagamentoPremioPendente">Prêmio Pendente (P)</label>
+												</div>
+											</div>
+											<div class="col-lg-4 col-xl-3">
+												<div class="ex-checkbox">
+													<input class="form-check-input" type="checkbox" name="filtro.newsReembolsoGastosPrestador" value="true" id="idSolicitacaoPagamentoGastosDespachante" disabled="true"/>
+													<label class="form-check-label" for="idSolicitacaoPagamentoGastosDespachante">Reembolso de gastos do prestador (R)</label>
+												</div>
+											</div>
+											<div class="col-lg-4 col-xl-3">	
+												<div class="ex-checkbox">
+													<input class="form-check-input" type="checkbox" name="filtro.newsBeneficiario" value="true" id="idSolicitacaoPagamentoBeneficiario" disabled="true"/>
+													<label class="form-check-label" for="idSolicitacaoPagamentoBeneficiario">Beneficiário (B)</label>
+												</div>
+											</div>
+											<div class="col-lg-4 col-xl-3">	
+												<div class="ex-checkbox">
+													<input class="form-check-input" type="checkbox" name="filtro.newsFinanceira" value="true" id="idSolicitacaoPagamentoFinanciamentoCdc" disabled="true"/>
+													<label class="form-check-label" for="idSolicitacaoPagamentoFinanciamentoCdc">Financeira (F)</label>
+												</div>
+											</div>
+											<div class="col-lg-4 col-xl-3">	
+												<div class="ex-checkbox">
+													<input class="form-check-input" type="checkbox" nname="filtro.newsPgtoDia" value="true" id="idSolicitacaoPagamentoDia" disabled="true" />
+													<label class="form-check-label" for="idSolicitacaoPagamentoDia">Pagamento do Dia (K)</label>
+												</div>
+											</div>
+										</div>
+										<hr/>
+										<div class="row">
+											<div class="form-group col-sm-12 col-md-12 col-lg-12 col-xl-12">
+												<h6>Acionamento</h6>
+											</div>	 
+										</div>
 										<div class="row">
 											<div class="form-group col-lg-3 col-xl-2">
 												<label for="cmbStatusAcionamento">Status</label> 
@@ -843,13 +874,13 @@
 											<div class="col-sm-12 col-md-3 col-lg-2 col-xl-2">
 												<div class="form-group">
 													<label for="dataInicio">Data Início:</label> 
-													<input type="text" name="filtro.periodoInicialStatusPrestador" value="" id="dataInicioAcionamento" class="form-control"/>
+													<input type="text" name="filtro.periodoInicialStatusPrestador" value="" id="dataInicioAcionamento" class="form-control" disabled="true"/>
 												</div>	
 											</div>
 											<div class="col-sm-12 col-md-3 col-lg-2 col-xl-2">
 												<div class="form-group">	
 													<label for="dataFim">Data Fim:</label>
-													<input type="text" name="filtro.periodoFinalStatusPrestador" value="" id="dataFimAcionamento" class="form-control"/>
+													<input type="text" name="filtro.periodoFinalStatusPrestador" value="" id="dataFimAcionamento" class="form-control" disabled="true"/>
 												</div>
 											</div>	
 										</div>
@@ -872,6 +903,9 @@
 								<div class="container-fluid text-center">
 									<div class="row">
 										<div class="col-12">
+											<button type="button" class="btn btn-warning mr-3 mt-2" onclick="showModalAlteracao()">
+												<span class="btn-label">Alterar Posição</span>
+											</button>
 											<button type="button" class="btn btn-info mr-3 mt-2" onclick="telaLiberarNews()">
 												<span class="btn-label">Liberar News</span>
 											</button>
@@ -881,7 +915,7 @@
 											<button type="button" class="btn btn-labeled btn-danger mr-3 mt-2"> 
 												<span class="btn-label">Gerar PDF</span>
 											</button>  
-											<button type="button" class="btn btn-labeled btn-secondary mt-2"> 
+											<button type="button" class="btn btn-labeled btn-secondary mt-2" onclick="telaCapaAnexo()"> 
 												<span class="btn-label">Gerar GRPS</span>
 											</button>
 										</div>
@@ -900,8 +934,8 @@
 										</th>
 										<th scope="col"></th>
 										<th scope="col">Chave da Apólice</th>
-										<th scope="col">Dedoc</th> 	
-										<th scope="col">Nº Avas</th>
+										<th scope="col">Sinistro-Processo</th> 	
+										<th scope="col">Nº do Aviso</th>
 										<th scope="col">Natureza</th>
 										<th scope="col">Ocorrência</th>
 										<th scope="col">Data do Aviso</th>
@@ -927,13 +961,13 @@
 													<span class="circle"></span>
 												</div>
 												<div class="menu-invisible">
-													<a href="#"  data-toggle="modal" data-target="#exampleModal" >
+													<a href="#">
 														<img src="img/informacao.svg"  data-toggle="tooltip" data-original-title="Informação">
 													</a>
-													<a href="#"  data-toggle="modal" data-target="#exampleModal" >
+													<a href="#"  data-toggle="modal" data-target="#modalAlteracaoProcesso" >
 														<img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar Posição Atual">
 													</a>
-													<a href="#"  onclick="ativaLoading(); location.href='/GSRE-SinistroAuto/modulo-analise/analise-sinistro.do?numeroSinistro=2464760&codigoNatureza=1&numeroProcesso=1'">
+													<a href="parecer.html">
 														<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Visualizar detalhes">
 													</a>
 												</div>
@@ -1107,63 +1141,160 @@
 						</form>
 					</div>					
 				</div>
-				<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
+				<!-- MODAL GRPS -->
+<div class="modal fade bd-example-modal-lg" id="modalGRPS" tabindex="-1" role="dialog" aria-labelledby="modalGRPSLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header m-header">
+        <h5 class="modal-title" id="modalGRPSLabel">Guia de Remessa de Processos de Sinistro</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+	      	<div class="container-fluid">
+	      	  <s:form id="form-capa-guia-sinistro" action="gerarGuiaSinistro">
+				<div class="row">
+					<div class="col-lg-12 col-xl-5">
+						<label for="text">Sucursal/Departamento/Prestador: </label>
+					</div>	
+					<div class="col-lg-12 col-xl-6">												
+					 	<input type="text" class="form-control" name="capaGuiaSinistro.departamentoRemetente" id="departamento"/>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-lg-12 col-xl-5">
+						<label>Data do Envio: </label>
+					</div>	
+					<div class="col-lg-12 col-xl-6">												
+						<p> <b class="color-b">22/05/2017</b></p>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-lg-12 col-xl-5">
+						<label>Funcionário Responsável: </label>
+					</div>	
+					<div class="col-lg-12 col-xl-6">	
+											
+							<p><b class="color-b">João José</b></p>
+						
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-lg-12 col-xl-5">
+						<label for="comment">Observações: </label>
+					</div>
+					<div class="col-lg-12 col-xl-12">	
+						<textarea cssClass="form-control" rows="5" cols="80" id="observacoes" name="capaGuiaSinistro.observacoes"></textarea>
+					</div>
+				</div>
+				</s:form>
+	        </div>
+ 		</div>     
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="gerarGuia">Gerar Guia</button>
+      </div>
+    </div>
+  </div>
+</div>
+				
+				<!-- MODAL LIBERAR NEWS -->
+				<div class="modal fade bd-example-modal-lg" id="modalLiberarNews" tabindex="-1" role="dialog" aria-labelledby="modalLiberaNewsLabel" aria-hidden="true">
+				  <div class="modal-dialog modal-lg" role="document">
 					<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Alteração</h5>
+					  <div class="modal-header m-header">
+						<h5 class="modal-title" id="modalLiberaNewsLabel">Liberar News</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						  <span aria-hidden="true">&times;</span>
+						</button>
+					  </div>
+					  <div class="modal-body">
+						<div class="container-fluid">
+							<div class="row">
+								<p>Foram Selecionados <strong><span id="quantidadeSelecionada">0</span></strong> registros para serem alterados.</p>
+								<p>Para prosseguir com a liberação clique em liberar.</p>
+							</div>
+						</div>		
+					  </div>
+					  <div class="modal-footer">
+						<button type="button" class="btn btn-primary" onclick="liberarNews()">Liberar</button>
+					  </div>
+					</div>
+				  </div>
+				</div>
+
+				
+				
+				<!-- MODAL ALTERAÇÃO DE GRID -->
+				<div class="modal fade bd-example-modal-lg" id="modalAlteracaoProcesso" tabindex="-1" role="dialog" aria-labelledby="modalAlteracaoProcessoLabel" aria-hidden="true">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content">
+					<div class="modal-header m-header">
+						<h5 class="modal-title" id="modalAlteracaoProcesso">Alterar Posição</h5>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 						</button>
 					</div>
-					<div class="modal-body">
-						<form>
-								<div class="form-group">
-										<label for="cmpUf">Natureza Sugerida</label> 
-										<select name="filtro.uf" id="naturezaSugerida" class="selectpicker form-control" data-container="body">
-					<option value=""
-					>-</option>
-
-
-				</select>
-
-
+				      <div class="modal-body">
+						<div class="container-fluid">
+							<div class="row">
+							<span id="modal-myvalue"></span> 
+								<div class="col-md-6">
+									<p>Apólice: <b class="color-b">132654987654</b></p>
 								</div>
-								<div class="form-group">
-										<label for="cmpUf">Prioridade</label> 
-										<select name="filtro.uf" id="prioridade" class="selectpicker form-control" data-container="body">
-					<option value=""
-					>-</option>
-
-
-				</select>
-
-
+								<div class="col-md-6">
+									<p>Sinistro: <b class="color-b">2465879</b></p>
 								</div>
-								<div class="form-group">
-										<label for="cmpUf">Posição Atual</label> 
-										<select name="filtro.uf" id="situacaoProcesso" class="selectpicker form-control" data-container="body">
-					<option value=""
-					>-</option>
-
-
-				</select>
-
-
+							</div>
+							<div class="row mtop-10">
+								<div class="col-md-6">
+										<label for="cmpNaturezaSugerida">Natureza Sugerida</label> 
+										<select class="selectpicker form-control" id="naturezaSugerida" name="dadosAlterado.naturezaSugerida">
+											<option>Selecione...</option>
+											<option>Natureza 1</option>
+											<option>Natureza 2</option>
+											<option>Natureza 3</option>
+										</select>
+										 
 								</div>
-								<div class="form-group">
-										<label for="cmpUf">Funcionário</label> 
-										<select name="filtro.uf" id="funcionario" class="selectpicker form-control" data-container="body">
-					<option value=""
-					>-</option>
-
-
-				</select>
-
-
+								<div class="col-md-6 ">
+										<label for="campoPrioridade">Prioridade</label> 
+										<select class="selectpicker form-control" id="prioridade" name="dadosAlterado.prioridade">
+											<option>Selecione...</option>
+											<option>Prioridade 1</option>
+											<option>Prioridade 2</option>
+											<option>Prioridade 3</option>
+										</select>
+										 
 								</div>
-						</form>
-					</div>
+								
+								<div class="col-md-6 mt-3">
+									<label for="campoPosicaoAtual">Posição Atual</label> 
+									<select class="selectpicker form-control" id="situacaoProcesso" name="dadosAlterado.situacaoProcesso">
+										<option>Selecione...</option>
+										<option>Posição Atual 1</option>
+										<option>Posição Atual 2</option>
+										<option>Posição Atual 3</option>
+									</select>
+									 
+								</div>
+								
+								<div class="col-md-6 mt-3">
+									<label for="campoFuncionario">Funcionário</label> 
+									<select class="selectpicker form-control" id="funcionario" name="dadosAlterado.codigoFuncionario">
+										<option>Selecione...</option>
+										<option>Funcionário 1</option>
+										<option>Funcionário 2</option>
+										<option>Funcionário 3</option>
+									</select>
+								</div>
+								
+							</div>	
+						</div>		
+					  </div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
 						<button type="button" class="btn btn-primary">Salvar</button>
