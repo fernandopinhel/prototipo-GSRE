@@ -1918,6 +1918,9 @@ span.btn-add {
     padding-top: 20px;
     padding-bottom: 20px;
   }
+  .card .card-header h5 > button.titulo-accordion-info {
+    font-size: 11px !important;
+  }
   .card .card-header h5 > button {
     font-size: 20px !important;
   }
@@ -1959,6 +1962,9 @@ span.btn-add {
   .form-check-inline {
     margin-top: 0;
   }
+  .titulo-accordion-info {
+    font-size: 11px !important;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -1967,6 +1973,13 @@ span.btn-add {
   }
   .interna .mobile {
     display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .class-docs {
+    width: 100%;
+    margin-top: 20px;
   }
 }
 
