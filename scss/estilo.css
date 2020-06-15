@@ -36,6 +36,10 @@ dl, ol, ul {
   margin: 0;
 }
 
+.font-16 {
+  font-size: 16px !important;
+}
+
 a {
   text-decoration: none !important;
   list-style: none !important;
@@ -93,6 +97,18 @@ a {
   transition: all 0.8s;
   width: 118px;
   text-align: center;
+}
+
+.box-news-modal {
+  margin: 15px 0;
+}
+
+.check-news {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  margin-top: 2px;
 }
 
 .lightbox-gallery {
@@ -242,10 +258,29 @@ a {
   font-size: 12px;
 }
 
+.btn-warning, .btn-warning:hover {
+  color: #fff;
+}
+
+.btn-distribuicao {
+  background: #499ED0;
+  color: #fff;
+}
+
+.btn-distribuicao:hover {
+  background: #3B8DB7;
+  color: #fff;
+}
+
 .btn.focus, .btn:focus {
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
+}
+
+.cont-modais {
+  color: #90263f !important;
+  font-size: 14px;
 }
 
 .bootstrap-select > .dropdown-toggle.bs-placeholder, .bootstrap-select > .dropdown-toggle.bs-placeholder:hover, .bootstrap-select > .dropdown-toggle.bs-placeholder:focus, .bootstrap-select > .dropdown-toggle.bs-placeholder:active {
@@ -1051,7 +1086,7 @@ td.actions .menu-invisible {
 }
 
 td.actions .menu-invisible a {
-  margin-right: 5px;
+  margin-right: 7px;
 }
 
 tr:hover td.actions .menu-visible {
@@ -1101,8 +1136,8 @@ tr:hover td {
 
 /* fim tabela sem hover */
 .t3 tbody tr td.ac-3 div > .menu-invisible {
-  width: 100px !important;
-  left: -47px;
+  width: 138px !important;
+  left: -48px;
   top: 2px;
 }
 
@@ -1111,7 +1146,8 @@ tr:hover td {
 }
 
 .t3 tbody tr:hover td.ac-3 {
-  width: 2%;
+  width: 4%;
+  padding-right: 50px;
 }
 
 .pagination .icon {

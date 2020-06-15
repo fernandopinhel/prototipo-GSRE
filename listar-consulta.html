@@ -68,8 +68,8 @@
 									href="#" role="tab" 
 									aria-selected="true">Cadastros</a>
 								<div class="dropdown-menu">
-								<a class="dropdown-item" id="pills-cadastro-perfil-tab"        href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaPerfil.do'>Perfil</a>
-								<a class="dropdown-item" id="pills-cadastro-usuario-tab"       href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaUsuario.do'>Usuário</a>
+									<a class="dropdown-item" id="pills-cadastro-perfil-tab"        href= 'perfil.html'>Perfil</a>
+									<a class="dropdown-item" id="pills-cadastro-usuario-tab"       href= 'usuarios.html'>Usuário</a>
 								<a class="dropdown-item" id="pills-cadastro-instituicao-tab"   href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaInstituicao.do'>Instituições</a>
 								<a class="dropdown-item" id="pills-cadastro-tabelas-tab"       href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaTabelas.do'>Tabelas</a>
 								<a class="dropdown-item" id="pills-cadastro-cartas-tab"        href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaCartas.do'>Cartas</a>
@@ -175,7 +175,7 @@
 											</div>
 											
 											<div class="form-group col-lg-3 col-xl-3">
-												<label for="text">Chave da Apólice<span class="campoItalicoText"> (Sucursal/Apólice/Item)</span></label>
+												<label for="text">Chave da Apólice<span class="campoItalicoText"> (Sucursal/CIA/Apólice/Item)</span></label>
 												<input type="text" name="filtro.chaveApolice" value="" id="cmpSucursal" class="form-control chaveApol" autocomplete="off"/> 
 											</div>
 											<div class="form-group col-lg-4 col-xl-2">
@@ -676,31 +676,31 @@
 								<div class="card-body">
 									<div class="container-fluid">
 										<div class="row">
-											<div class="col-xl-6">
+											<div class="col-lg-6 col-xl-6">
 												<div class="row">
 													<div class="col-xl-12 mb-4">
 														<h6 class="titulo-categorias">Ocorrência do sinistro no período máximo de um ano:</h6>
 													</div>
-													<div class="form-group col-lg-2 col-xl-6">
+													<div class="form-group col-lg-5 col-xl-5">
 														<label for="cmpOcorrDataInicio">Data Início:</label> 
 														<input type="text" name="filtro.dataOcorrenciaInicio" value="" id="cmpOcorrDataInicio" class="form-control date"/>
 													</div>	
-													<div class="form-group col-lg-2 col-xl-6">
+													<div class="form-group col-lg-5 col-xl-5">
 														<label for="cmpOcorrDataFim">Data Fim:</label>
 														<input type="text" name="filtro.dataOcorrenciaFim" value="" id="cmpOcorrDataFim" class="form-control date"/>
 													</div>
 												</div>
 											</div>
-											<div class="col-xl-6">
+											<div class="col-lg-6 col-xl-6">
 												<div class="row">
 													<div class="col-xl-12 mb-4">
 														<h6 class="titulo-categorias">Processo digitalizado no período máximo de um ano:</h6>
 													</div>
-													<div class="form-group col-lg-2 col-xl-6">
+													<div class="form-group col-lg-5 col-xl-5">
 														<label for="cmpOcorrDataInicioDigitalizado">Data Início:</label> 
 														<input type="text" name="filtro.dataDigitalizadoInicio" value="" id="cmpOcorrDataInicioDigitalizado" class="form-control date"/>
 													</div>	
-													<div class="form-group col-lg-2 col-xl-6">
+													<div class="form-group col-lg-5 col-xl-5">
 														<label for="cmpOcorrDataFimDigitalizado">Data Fim:</label>
 														<input type="text" name="filtro.dataDigitalizadoFim" value="" id="cmpOcorrDataFimDigitalizado" class="form-control date"/>
 													</div>
@@ -708,31 +708,31 @@
 											</div>
 										</div>
 										<div class="row mt-4">
-											<div class="col-xl-6">
+											<div class="col-lg-6 col-xl-6">
 												<div class="row">
 													<div class="col-xl-12 mb-4">
 														<h6 class="titulo-categorias">Vencimento da nota fiscal no período máximo de um ano:</h6>
 													</div>	
-													<div class="form-group col-lg-2 col-xl-6">
+													<div class="form-group col-lg-5 col-xl-5">
 														<label for="cmpOcorrDataInicioVencimento">Data Início:</label> 
 														<input type="text" name="filtro.dataVencimentoNFInicio" value="" id="cmpOcorrDataInicioVencimento" class="form-control date"/>
 													</div>	
-													<div class="form-group col-lg-2 col-xl-6">
+													<div class="form-group col-lg-5 col-xl-5">
 														<label for="cmpOcorrDataFimVencimento">Data Fim:</label>
 														<input type="text" name="filtro.dataVencimentoNFFim" value="" id="cmpOcorrDataFimVencimento" class="form-control date"/>
 													</div>
 												</div>
 											</div>
-											<div class="col-xl-6">
+											<div class="col-lg-6 col-xl-6">
 												<div class="row">
 													<div class="col-xl-12 mb-4">
 														<h6 class="titulo-categorias">Abertura do sinistro no período máximo de um ano:</h6>
 													</div>
-													<div class="form-group col-lg-2 col-xl-6">
+													<div class="form-group col-lg-5 col-xl-5">
 														<label for="cmpOcorrDataInicioVencimentoAbertura">Data Início:</label> 
 														<input type="text" name="filtro.dataAberturaInicio" value="" id="cmpOcorrDataInicioVencimentoAbertura" class="form-control date"/>
 													</div>	
-													<div class="form-group col-lg-2 col-xl-6">	
+													<div class="form-group col-lg-5 col-xl-5">
 														<label for="cmpOcorrDataFimVencimentoAbertura">Data Fim:</label>
 														<input type="text" name="filtro.dataAberturaFim" value="" id="cmpOcorrDataFimVencimentoAbertura" class="form-control date"/>
 													</div>
@@ -894,17 +894,19 @@
 					<button type="button" name="button" class="btn btn-second mr-3" onclick="formConsultaSinistro.reset();">Limpar</button>
 					<button type="button" name="button" class="btn btn-primary mr-3" onclick="preparaSubmit();">Buscar</button>
 				</div>
-
 				<div class="row mt-5 resultado-filtro">
 					<div class="col-12">
 						<p><strong>14</strong> resultado(s) encontrado(s).</p>
 						<div class="table-responsive">
-							<div class="action-group mb-5">
+							<div class="action-group mb-3">
 								<div class="container-fluid text-center">
 									<div class="row">
 										<div class="col-12">
 											<button type="button" class="btn btn-warning mr-3 mt-2" onclick="showModalAlteracao()">
-												<span class="btn-label">Alterar Posição</span>
+												<span class="btn-label">Alterar</span>
+											</button>
+											<button type="button" class="btn btn-distribuicao mr-3 mt-2" data-toggle="modal" data-target="#modalDistribuicao">
+												<span class="btn-label">Distribuição</span>
 											</button>
 											<button type="button" class="btn btn-info mr-3 mt-2" onclick="telaLiberarNews()">
 												<span class="btn-label">Liberar News</span>
@@ -961,14 +963,17 @@
 													<span class="circle"></span>
 												</div>
 												<div class="menu-invisible">
-													<a href="#">
-														<img src="img/informacao.svg"  data-toggle="tooltip" data-original-title="Informação">
+													<a href="#" data-toggle="modal" data-target="#modalReabrirProcesso" >
+														<img src="img/reabrir.svg"  data-toggle="tooltip" data-original-title="Reabrir Processo">
+													</a>
+													<a href="#" data-toggle="modal" data-target="#modalNewsGrid" >
+														<img src="img/news.svg"  data-toggle="tooltip" data-original-title="News">
 													</a>
 													<a href="#"  data-toggle="modal" data-target="#modalAlteracaoProcesso" >
-														<img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar Posição Atual">
+														<img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar">
 													</a>
 													<a href="parecer.html">
-														<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+														<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes">
 													</a>
 												</div>
 											</div>
@@ -999,52 +1004,17 @@
 													<span class="circle"></span>
 												</div>
 												<div class="menu-invisible">
-													<a href="#"  data-toggle="modal" data-target="#exampleModal" >
-														<img src="img/informacao.svg"  data-toggle="tooltip" data-original-title="Informação">
+													<a href="#" data-toggle="modal" data-target="#modalReabrirProcesso" >
+														<img src="img/reabrir.svg"  data-toggle="tooltip" data-original-title="Reabrir Processo">
 													</a>
-													<a href="#"  data-toggle="modal" data-target="#exampleModal" >
-														<img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar Posição Atual">
+													<a href="#" data-toggle="modal" data-target="#modalNewsGrid" >
+														<img src="img/news.svg"  data-toggle="tooltip" data-original-title="News">
 													</a>
-													<a href="#"  onclick="ativaLoading(); location.href='/GSRE-SinistroAuto/modulo-analise/analise-sinistro.do?numeroSinistro=2464760&codigoNatureza=1&numeroProcesso=1'">
-														<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+													<a href="#"  data-toggle="modal" data-target="#modalAlteracaoProcesso" >
+														<img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar">
 													</a>
-												</div>
-											</div>
-										</td>
-										<td>842 990 244 018586 0001</td>
-										<td>2464760-1</td>
-										<td>103201602220491</td>
-										<td>1</td>
-										<td>20/02/2016</td>
-										<td>22/02/0016</td>
-										<td></td>
-										<td></td>
-										<td>Encerrado sem Indeniza&ccedil;&atilde;o</td>
-										<td></td>
-									</tr>
-									<tr>
-										<td>
-											<div class="ex-checkbox chb2">
-												<input class="form-check-input" type="checkbox">
-												<label for="checkbox-table"></label>
-											</div>
-										</td>
-										<td class="actions ac-3">
-											<div class="float-right">
-												<div class="menu-visible">
-													<span class="circle"></span>
-													<span class="circle"></span>
-													<span class="circle"></span>
-												</div>
-												<div class="menu-invisible">
-													<a href="#"  data-toggle="modal" data-target="#exampleModal" >
-														<img src="img/informacao.svg"  data-toggle="tooltip" data-original-title="Informação">
-													</a>
-													<a href="#"  data-toggle="modal" data-target="#exampleModal" >
-														<img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar Posição Atual">
-													</a>
-													<a href="#"  onclick="ativaLoading(); location.href='/GSRE-SinistroAuto/modulo-analise/analise-sinistro.do?numeroSinistro=2464760&codigoNatureza=1&numeroProcesso=1'">
-														<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+													<a href="parecer.html">
+														<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes">
 													</a>
 												</div>
 											</div>
@@ -1075,14 +1045,17 @@
 													<span class="circle"></span>
 												</div>
 												<div class="menu-invisible">
-													<a href="#"  data-toggle="modal" data-target="#exampleModal" >
-														<img src="img/informacao.svg"  data-toggle="tooltip" data-original-title="Informação">
+													<a href="#" data-toggle="modal" data-target="#modalReabrirProcesso" >
+														<img src="img/reabrir.svg"  data-toggle="tooltip" data-original-title="Reabrir Processo">
 													</a>
-													<a href="#"  data-toggle="modal" data-target="#exampleModal" >
-														<img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar Posição Atual">
+													<a href="#" data-toggle="modal" data-target="#modalNewsGrid" >
+														<img src="img/news.svg"  data-toggle="tooltip" data-original-title="News">
 													</a>
-													<a href="#"  onclick="ativaLoading(); location.href='/GSRE-SinistroAuto/modulo-analise/analise-sinistro.do?numeroSinistro=2464760&codigoNatureza=1&numeroProcesso=1'">
-														<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+													<a href="#"  data-toggle="modal" data-target="#modalAlteracaoProcesso" >
+														<img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar">
+													</a>
+													<a href="parecer.html">
+														<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes">
 													</a>
 												</div>
 											</div>
@@ -1113,14 +1086,58 @@
 													<span class="circle"></span>
 												</div>
 												<div class="menu-invisible">
-													<a href="#"  data-toggle="modal" data-target="#exampleModal" >
-														<img src="img/informacao.svg"  data-toggle="tooltip" data-original-title="Informação">
+													<a href="#" data-toggle="modal" data-target="#modalReabrirProcesso" >
+														<img src="img/reabrir.svg"  data-toggle="tooltip" data-original-title="Reabrir Processo">
 													</a>
-													<a href="#"  data-toggle="modal" data-target="#exampleModal" >
-														<img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar Posição Atual">
+													<a href="#" data-toggle="modal" data-target="#modalNewsGrid" >
+														<img src="img/news.svg"  data-toggle="tooltip" data-original-title="News">
 													</a>
-													<a href="#"  onclick="ativaLoading(); location.href='/GSRE-SinistroAuto/modulo-analise/analise-sinistro.do?numeroSinistro=2464760&codigoNatureza=1&numeroProcesso=1'">
-														<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+													<a href="#"  data-toggle="modal" data-target="#modalAlteracaoProcesso" >
+														<img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar">
+													</a>
+													<a href="parecer.html">
+														<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes">
+													</a>
+												</div>
+											</div>
+										</td>
+										<td>842 990 244 018586 0001</td>
+										<td>2464760-1</td>
+										<td>103201602220491</td>
+										<td>1</td>
+										<td>20/02/2016</td>
+										<td>22/02/0016</td>
+										<td></td>
+										<td></td>
+										<td>Encerrado sem Indeniza&ccedil;&atilde;o</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>
+											<div class="ex-checkbox chb2">
+												<input class="form-check-input" type="checkbox">
+												<label for="checkbox-table"></label>
+											</div>
+										</td>
+										<td class="actions ac-3">
+											<div class="float-right">
+												<div class="menu-visible">
+													<span class="circle"></span>
+													<span class="circle"></span>
+													<span class="circle"></span>
+												</div>
+												<div class="menu-invisible">
+													<a href="#" data-toggle="modal" data-target="#modalReabrirProcesso" >
+														<img src="img/reabrir.svg"  data-toggle="tooltip" data-original-title="Reabrir Processo">
+													</a>
+													<a href="#" data-toggle="modal" data-target="#modalNewsGrid" >
+														<img src="img/news.svg"  data-toggle="tooltip" data-original-title="News">
+													</a>
+													<a href="#"  data-toggle="modal" data-target="#modalAlteracaoProcesso" >
+														<img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar">
+													</a>
+													<a href="parecer.html">
+														<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes">
 													</a>
 												</div>
 											</div>
@@ -1142,65 +1159,53 @@
 					</div>					
 				</div>
 				<!-- MODAL GRPS -->
-<div class="modal fade bd-example-modal-lg" id="modalGRPS" tabindex="-1" role="dialog" aria-labelledby="modalGRPSLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header m-header">
-        <h5 class="modal-title" id="modalGRPSLabel">Guia de Remessa de Processos de Sinistro</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-	      	<div class="container-fluid">
-	      	  <s:form id="form-capa-guia-sinistro" action="gerarGuiaSinistro">
-				<div class="row">
-					<div class="col-lg-12 col-xl-5">
-						<label for="text">Sucursal/Departamento/Prestador: </label>
-					</div>	
-					<div class="col-lg-12 col-xl-6">												
-					 	<input type="text" class="form-control" name="capaGuiaSinistro.departamentoRemetente" id="departamento"/>
+				<div class="modal fade bd-example-modal-lg" id="modalGRPS" tabindex="-1" role="dialog" aria-labelledby="modalGRPSLabel" aria-hidden="true">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content">
+					<div class="modal-header m-header">
+						<h5 class="modal-title" id="modalGRPSLabel">Guia de Remessa de Processos de Sinistro</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+							<div class="container-fluid">
+								<s:form id="form-capa-guia-sinistro" action="gerarGuiaSinistro">
+									<div class="row mb-3">
+										<div class="col-lg-12">
+											<label for="text">Sucursal/Departamento/Prestador: </label>
+										</div>	
+										<div class="col-lg-12">												
+											<input type="text" class="form-control" name="capaGuiaSinistro.departamentoRemetente" id="departamento"/>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<p> Data do Envio: <b class="color-b">22/05/2017</b></p>											
+										</div>	
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<p>Funcionário Responsável: <b class="color-b">João José</b></p>
+										</div>	
+									</div>
+									<div class="row mt-3">
+										<div class="col-lg-12">
+											<label for="comment">Observações: </label>
+										</div>
+										<div class="col-lg-12">	
+											<textarea cssClass="form-control" rows="5" cols="90" id="observacoes" name="capaGuiaSinistro.observacoes"></textarea>
+										</div>
+									</div>
+								</s:form>
+							</div>
+						</div>     
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" id="gerarGuia">Gerar Guia</button>
+					</div>
 					</div>
 				</div>
-				
-				<div class="row">
-					<div class="col-lg-12 col-xl-5">
-						<label>Data do Envio: </label>
-					</div>	
-					<div class="col-lg-12 col-xl-6">												
-						<p> <b class="color-b">22/05/2017</b></p>
-					</div>
 				</div>
-				
-				<div class="row">
-					<div class="col-lg-12 col-xl-5">
-						<label>Funcionário Responsável: </label>
-					</div>	
-					<div class="col-lg-12 col-xl-6">	
-											
-							<p><b class="color-b">João José</b></p>
-						
-					</div>
-				</div>
-				
-				<div class="row">
-					<div class="col-lg-12 col-xl-5">
-						<label for="comment">Observações: </label>
-					</div>
-					<div class="col-lg-12 col-xl-12">	
-						<textarea cssClass="form-control" rows="5" cols="80" id="observacoes" name="capaGuiaSinistro.observacoes"></textarea>
-					</div>
-				</div>
-				</s:form>
-	        </div>
- 		</div>     
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" id="gerarGuia">Gerar Guia</button>
-      </div>
-    </div>
-  </div>
-</div>
-				
 				<!-- MODAL LIBERAR NEWS -->
 				<div class="modal fade bd-example-modal-lg" id="modalLiberarNews" tabindex="-1" role="dialog" aria-labelledby="modalLiberaNewsLabel" aria-hidden="true">
 				  <div class="modal-dialog modal-lg" role="document">
@@ -1214,8 +1219,12 @@
 					  <div class="modal-body">
 						<div class="container-fluid">
 							<div class="row">
-								<p>Foram Selecionados <strong><span id="quantidadeSelecionada">0</span></strong> registros para serem alterados.</p>
-								<p>Para prosseguir com a liberação clique em liberar.</p>
+								<div class="col-12">
+									<p class="cont-modais">Foram Selecionados <strong><span id="quantidadeSelecionada">0</span></strong> registros para serem alterados.</p>
+								</div>
+								<div class="col-12">
+									<p>Para prosseguir com a liberação clique em liberar.</p>
+								</div>
 							</div>
 						</div>		
 					  </div>
@@ -1225,23 +1234,56 @@
 					</div>
 				  </div>
 				</div>
-
-				
-				
+				<!-- MODAL Distribuição -->
+				<div class="modal fade bd-example-modal-lg" id="modalDistribuicao" tabindex="-1" role="dialog" aria-labelledby="modalDistribuicaoLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+						<div class="modal-header m-header">
+							<h5 class="modal-title" id="modalDistribuicaoLabel">Distribuição</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-12">
+										<p class="cont-modais">Foram Selecionados <strong><span id="quantidadeSelecionada">1</span></strong> registros para serem alterados.</p>									
+									</div>
+								</div>
+								<div class="row mt-2">
+									<div class="col-12">
+										<label for="funcionario-distribuicao">Funcionário</label> 
+										<select class="selectpicker form-control" id="funcionario-distribuicao" name="">
+											<option>Adilson Conceição</option>
+											<option>João Carlos</option>
+											<option>Marcelo Ferreira</option>
+											<option>Marcos Paulo</option>
+										</select>
+									</div>
+								</div>
+							</div>		
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-salvar txt-up" data-dismiss="modal" aria-label="Close">Salvar</button>
+						</div>
+						</div>
+					</div>
+				</div>
 				<!-- MODAL ALTERAÇÃO DE GRID -->
 				<div class="modal fade bd-example-modal-lg" id="modalAlteracaoProcesso" tabindex="-1" role="dialog" aria-labelledby="modalAlteracaoProcessoLabel" aria-hidden="true">
 				<div class="modal-dialog modal-lg" role="document">
 					<div class="modal-content">
 					<div class="modal-header m-header">
-						<h5 class="modal-title" id="modalAlteracaoProcesso">Alterar Posição</h5>
+						<h5 class="modal-title" id="modalAlteracaoProcesso">Alterar</h5>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 						</button>
 					</div>
 				      <div class="modal-body">
 						<div class="container-fluid">
-							<div class="row">
-							<span id="modal-myvalue"></span> 
+							<div class="row mb-4">
+								<span id="modal-myvalue"></span> 
 								<div class="col-md-6">
 									<p>Apólice: <b class="color-b">132654987654</b></p>
 								</div>
@@ -1251,14 +1293,13 @@
 							</div>
 							<div class="row mtop-10">
 								<div class="col-md-6">
-										<label for="cmpNaturezaSugerida">Natureza Sugerida</label> 
-										<select class="selectpicker form-control" id="naturezaSugerida" name="dadosAlterado.naturezaSugerida">
-											<option>Selecione...</option>
-											<option>Natureza 1</option>
-											<option>Natureza 2</option>
-											<option>Natureza 3</option>
-										</select>
-										 
+									<label for="cmpNaturezaSugerida">Natureza Sugerida</label> 
+									<select class="selectpicker form-control" id="naturezaSugerida" name="dadosAlterado.naturezaSugerida">
+										<option>Selecione...</option>
+										<option>Natureza 1</option>
+										<option>Natureza 2</option>
+										<option>Natureza 3</option>
+									</select>
 								</div>
 								<div class="col-md-6 ">
 										<label for="campoPrioridade">Prioridade</label> 
@@ -1296,14 +1337,90 @@
 						</div>		
 					  </div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-						<button type="button" class="btn btn-primary">Salvar</button>
+						<button type="button" class="btn btn-cancel txt-up mr-3" data-dismiss="modal">Cancelar</button>
+						<button type="button" class="btn btn-salvar txt-up">Salvar</button>
 					</div>
 					</div>
 				</div>
 				</div>
 				<script type="text/javascript" src="js/consultasinistro/lista-resultado-consulta-sinistro.js"></script>
-			</div>
+				<!-- MODAL Reabrir Processo -->
+				<div class="modal fade bd-example-modal-lg" id="modalReabrirProcesso" tabindex="-1" role="dialog" aria-labelledby="modalReabrirProcessoLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+						<div class="modal-header m-header">
+							<h5 class="modal-title" id="modalReabrirProcesso">Reabrir Processo</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+							<div class="modal-body">
+							<div class="container-fluid">
+								<div class="row mtop-10">
+									<div class="col-md-6">
+											<label for="cmpNaturezaSugerida">Analista</label> 
+											<select class="selectpicker form-control" id="naturezaSugerida" name="dadosAlterado.naturezaSugerida">
+												<option>Daniele Gomes de Souza</option>
+												<option>João Carlos</option>
+												<option>Marcio Gomes</option>
+											</select>
+												
+									</div>
+									<div class="col-md-6 ">
+										<label for="campoPrioridade">Prioridade</label> 
+										<select class="selectpicker form-control" id="prioridade" name="dadosAlterado.prioridade">
+											<option>50</option>
+											<option>40</option>
+											<option>30</option>
+											<option>20</option>
+										</select>
+									</div>
+								</div>	
+							</div>		
+							</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-cancel txt-up mr-3" data-dismiss="modal">Cancelar</button>
+							<button type="button" class="btn btn-salvar txt-up">Reabrir</button>
+						</div>
+						</div>
+					</div>
+				</div>
+				<!-- MODAL News Grid -->
+				<div class="modal fade bd-example-modal-lg" id="modalNewsGrid" tabindex="-1" role="dialog" aria-labelledby="modalNewsGridLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header m-header">
+								<h5 class="modal-title" id="modalNewsGrid">News</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col-lg-12">
+											<div class="box-news-modal">
+												<img src="img/check-news-modal.svg" class="check-news" alt="">
+												<p>Chegada de Novos Documentos</p>
+											</div>
+											<hr>
+											<div class="box-news-modal">
+												<img src="img/check-news-modal.svg" class="check-news" alt="">
+												<p>Chegada de Parecer</p>
+											</div>
+											<hr>
+											<div class="box-news-modal">
+												<img src="img/check-news-modal.svg" class="check-news" alt="">
+												<p>Retorno de Pedido de Cancelamento de Pendência</p>
+											</div>
+										</div>
+									</div>
+								</div>		
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
 		</section>
 	
 		<!-- datepicker -->

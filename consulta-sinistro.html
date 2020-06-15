@@ -68,8 +68,8 @@
 									href="#" role="tab" 
 									aria-selected="true">Cadastros</a>
 								<div class="dropdown-menu">
-								<a class="dropdown-item" id="pills-cadastro-perfil-tab"        href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaPerfil.do'>Perfil</a>
-								<a class="dropdown-item" id="pills-cadastro-usuario-tab"       href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaUsuario.do'>Usuário</a>
+								<a class="dropdown-item" id="pills-cadastro-perfil-tab"        href= 'perfil.html'>Perfil</a>
+								<a class="dropdown-item" id="pills-cadastro-usuario-tab"       href= 'usuarios.html'>Usuário</a>
 								<a class="dropdown-item" id="pills-cadastro-instituicao-tab"   href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaInstituicao.do'>Instituições</a>
 								<a class="dropdown-item" id="pills-cadastro-tabelas-tab"       href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaTabelas.do'>Tabelas</a>
 								<a class="dropdown-item" id="pills-cadastro-cartas-tab"        href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaCartas.do'>Cartas</a>
@@ -138,33 +138,44 @@
 								<div class="card-body">
 									<div class="container-fluid">
 										<div class="row">
+											<div class="form-group col-sm-12 col-md-12 col-lg-4 col-xl-2">
+												<label for="cmpWorkflow">Status do Processo</label> 
+												<div class="dropdown bootstrap-select show-tick form-control dropup">	
+													<select name="filtro.workflow" id="workflow" class="selectpicker form-control" data-container="body" onchange="habilitaFuncionario()">
+														<option>Selecione...</option>
+														<option value="EA">Em Processo</option>
+														<option value="AA">A Analisar</option>
+													</select>
+												</div>
+											</div>
+										
 											<div class="col-lg-2 check">
 												<div class="ex-checkbox">
-													<input class="form-check-input" type="checkbox" id="cmpApolsFuncs">
-													<label for="checkboxApolsFuncs">Apólices Funcionários</label>
+													<input class="form-check-input" type="checkbox" id="apoliceFuncionario" name="filtro.apolFuncionario" disabled="true">
+													<label for="apoliceFuncionario">Apólices Funcionários</label>
 												</div>
 											</div>
 											<div class="col-lg-4 check">
 												<div class="ex-checkbox">
-													<input class="form-check-input" type="checkbox" id="cmpApolsCondEsp" name="filtro.condEspecialContrato">
-													<label class="form-check-label" for="checkboxApolsCondsEspeciais" for="checkboxApolsFuncs">Apólices com condições especiais contrato</label>
+													<input class="form-check-input" type="checkbox" id="condEspecial" name="filtro.apolCondEspecialContrato">
+													<label class="form-check-label" for="condEspecial" for="checkboxApolsFuncs">Apólices com condições especiais contrato</label>
 												</div>
 											</div>
 										</div>
 										
 										<div class="row mt-4">
 											<div class="form-group col-lg-4 col-xl-2">
-												<label for="text">DEDOC<span class="campoItalicoText"> (Dedoc/Processo)</span></label>
+												<label for="text">Sinistro/Processo</label>
 												<input type="text" name="filtro.dedocEProcesso" maxlength="8" value="" id="cmpNumeroDedoc" class="form-control dedocProc" onkeypress="return isNumberKey(event)" autocomplete="off"/> 
 											</div>
 											
 											<div class="form-group col-lg-2 col-xl-2">
-												<label for="text">Número de AVAS</label>
+												<label for="text">Número do Aviso</label>
 												<input type="text" name="filtro.numeroProcessoSinistro" maxlength="15" value="" id="cmpNumeroAvas" class="form-control" onkeypress="return isNumberKey(event)" autocomplete="off"/> 
 											</div>
 											
 											<div class="form-group col-lg-3 col-xl-3">
-												<label for="text">Chave da Apólice<span class="campoItalicoText"> (Sucursal/Apólice/Item)</span></label>
+												<label for="text">Chave da Apólice<span class="campoItalicoText"> (Sucursal/CIA/Apólice/Item)</span></label>
 												<input type="text" name="filtro.chaveApolice" value="" id="cmpSucursal" class="form-control chaveApol" autocomplete="off"/> 
 											</div>
 											<div class="form-group col-lg-4 col-xl-2">
@@ -607,42 +618,7 @@
 													<label class="form-check-label" for="cmpNewsParalelismo">Paralelismo</label>
 												</div>
 											</div>	
-											<div class="col-lg-4 col-xl-3">	
-												<div class="ex-checkbox">
-													<input class="form-check-input" type="checkbox" name="filtro.newsDebitosVeiculo" value="true" id="cmpNewsDebitosVeiculo"/>
-													<label class="form-check-label" for="cmpNewsDebitosVeiculo">Débitos do Veículo</label>
-												</div>
-											</div>
-											<div class="col-lg-4 col-xl-3">	
-												<div class="ex-checkbox">
-													<input class="form-check-input" type="checkbox" name="filtro.newsPremioPendente" value="true" id="cmpNewsPremioPendente"/>
-													<label class="form-check-label" for="cmpNewsPremioPendente">Prêmio Pendente</label>
-												</div>
-											</div>
-											<div class="col-lg-4 col-xl-3">
-												<div class="ex-checkbox">
-													<input class="form-check-input" type="checkbox" name="filtro.newsReembolsoGastosPrestador" value="true" id="cmpNewsReembGastosPrest" />
-													<label class="form-check-label" for="cmpNewsReembGastosPrest">Reembolso de gastos do prestador</label>
-												</div>
-											</div>
-											<div class="col-lg-4 col-xl-3">	
-												<div class="ex-checkbox">
-													<input class="form-check-input" type="checkbox" name="filtro.newsBeneficiario" value="true" id="cmpNewsBeneficiario" />
-													<label class="form-check-label" for="cmpNewsBeneficiario">Beneficiário</label>
-												</div>
-											</div>
-											<div class="col-lg-4 col-xl-3">	
-												<div class="ex-checkbox">
-													<input class="form-check-input" type="checkbox" name="filtro.newsFinanceira" value="true" id="cmpNewsFinanceira" />
-													<label class="form-check-label" for="cmpNewsFinanceira">Financeira</label>
-												</div>
-											</div>
-											<div class="col-lg-4 col-xl-3">	
-												<div class="ex-checkbox">
-													<input class="form-check-input" type="checkbox" nname="filtro.newsPgtoDia" value="true" id="cmpNewsPgtoDia" />
-													<label class="form-check-label" for="cmpNewsPgtoDia">Pagamento do Dia</label>
-												</div>
-											</div>
+											
 										</div>
 										<hr class="hr-mais-opcoes d-none"/>
 										<div class="row" id="pnlOrcamentosNaoAutorizados" style="display: none">
@@ -700,31 +676,31 @@
 								<div class="card-body">
 									<div class="container-fluid">
 										<div class="row">
-											<div class="col-xl-6">
+											<div class="col-lg-6 col-xl-6">
 												<div class="row">
 													<div class="col-xl-12 mb-4">
-														<p>Ocorrência do sinistro no período máximo de um ano:</p>
+														<h6 class="titulo-categorias">Ocorrência do sinistro no período máximo de um ano:</h6>
 													</div>
-													<div class="form-group col-lg-2 col-xl-6">
+													<div class="form-group col-lg-5 col-xl-5">
 														<label for="cmpOcorrDataInicio">Data Início:</label> 
 														<input type="text" name="filtro.dataOcorrenciaInicio" value="" id="cmpOcorrDataInicio" class="form-control date"/>
 													</div>	
-													<div class="form-group col-lg-2 col-xl-6">
+													<div class="form-group col-lg-5 col-xl-5">
 														<label for="cmpOcorrDataFim">Data Fim:</label>
 														<input type="text" name="filtro.dataOcorrenciaFim" value="" id="cmpOcorrDataFim" class="form-control date"/>
 													</div>
 												</div>
 											</div>
-											<div class="col-xl-6">
+											<div class="col-lg-6 col-xl-6">
 												<div class="row">
 													<div class="col-xl-12 mb-4">
-														<p>Processo digitalizado no período máximo de um ano:</p>
+														<h6 class="titulo-categorias">Processo digitalizado no período máximo de um ano:</h6>
 													</div>
-													<div class="form-group col-lg-2 col-xl-6">
+													<div class="form-group col-lg-5 col-xl-5">
 														<label for="cmpOcorrDataInicioDigitalizado">Data Início:</label> 
 														<input type="text" name="filtro.dataDigitalizadoInicio" value="" id="cmpOcorrDataInicioDigitalizado" class="form-control date"/>
 													</div>	
-													<div class="form-group col-lg-2 col-xl-6">
+													<div class="form-group col-lg-5 col-xl-5">
 														<label for="cmpOcorrDataFimDigitalizado">Data Fim:</label>
 														<input type="text" name="filtro.dataDigitalizadoFim" value="" id="cmpOcorrDataFimDigitalizado" class="form-control date"/>
 													</div>
@@ -732,31 +708,31 @@
 											</div>
 										</div>
 										<div class="row mt-4">
-											<div class="col-xl-6">
+											<div class="col-lg-6 col-xl-6">
 												<div class="row">
 													<div class="col-xl-12 mb-4">
-														<p>Vencimento da nota fiscal no período máximo de um ano:</p>
+														<h6 class="titulo-categorias">Vencimento da nota fiscal no período máximo de um ano:</h6>
 													</div>	
-													<div class="form-group col-lg-2 col-xl-6">
+													<div class="form-group col-lg-5 col-xl-5">
 														<label for="cmpOcorrDataInicioVencimento">Data Início:</label> 
 														<input type="text" name="filtro.dataVencimentoNFInicio" value="" id="cmpOcorrDataInicioVencimento" class="form-control date"/>
 													</div>	
-													<div class="form-group col-lg-2 col-xl-6">
+													<div class="form-group col-lg-5 col-xl-5">
 														<label for="cmpOcorrDataFimVencimento">Data Fim:</label>
 														<input type="text" name="filtro.dataVencimentoNFFim" value="" id="cmpOcorrDataFimVencimento" class="form-control date"/>
 													</div>
 												</div>
 											</div>
-											<div class="col-xl-6">
+											<div class="col-lg-6 col-xl-6">
 												<div class="row">
 													<div class="col-xl-12 mb-4">
-														<p>Abertura do sinistro no período máximo de um ano:</p>
+														<h6 class="titulo-categorias">Abertura do sinistro no período máximo de um ano:</h6>
 													</div>
-													<div class="form-group col-lg-2 col-xl-6">
+													<div class="form-group col-lg-5 col-xl-5">
 														<label for="cmpOcorrDataInicioVencimentoAbertura">Data Início:</label> 
 														<input type="text" name="filtro.dataAberturaInicio" value="" id="cmpOcorrDataInicioVencimentoAbertura" class="form-control date"/>
 													</div>	
-													<div class="form-group col-lg-2 col-xl-6">	
+													<div class="form-group col-lg-5 col-xl-5">
 														<label for="cmpOcorrDataFimVencimentoAbertura">Data Fim:</label>
 														<input type="text" name="filtro.dataAberturaFim" value="" id="cmpOcorrDataFimVencimentoAbertura" class="form-control date"/>
 													</div>
@@ -789,47 +765,102 @@
 										<div class="row">
 											<div class="form-group col-lg-12 col-xl-12">
 												<div class="ex-checkbox">
-													<input class="form-check-input" type="checkbox" id=checkPrestador name="filtro.ativaPrestador" onclick="habilitarPrestador()"/>
-													<label class="form-check-label" for="checkPrestador">Prestador</label>
+													<input class="form-check-input" type="checkbox" id="cmpCheckPrestador" name="filtro.ativaPrestador" onclick="habilitarPrestador()"/>
+													<label class="form-check-label" for="cmpCheckPrestador">Prestador</label>
 												</div>
 											</div>	 
 										</div>
 										<div class="form-row">
 											<div class="col-lg-12 col-xl-2">
 												<div class="form-group form-check form-check-inline">
-													<input type="radio" name="filtro.tipoPrestador" id="grupoPrestador1" value="1" class="form-check-input" onchange="carregaComboPrestadores(this.value, true)"/>
+													<input type="radio" name="filtro.tipoPrestador" id="grupoPrestador1" value="1" class="form-check-input tipo-prestador" onchange="carregaComboPrestadores(this.value, true)" disabled="true"/>
 													<label for="grupoPrestador1" class="form-check-input">Despachante</label>
 												</div>
 											</div>
 											<div class="col-lg-12 col-xl-2">
 												<div class="form-group form-check form-check-inline">
-													<input type="radio" name="filtro.tipoPrestador" id="grupoPrestador2" value="2" class="form-check-input" onchange="carregaComboPrestadores(this.value, true)"/>
+													<input type="radio" name="filtro.tipoPrestador" id="grupoPrestador2" value="2" class="form-check-input tipo-prestador" onchange="carregaComboPrestadores(this.value, true)" disabled="true"/>
 													<label for="grupoPrestador2" class="form-check-input">Reguladora</label>
 												</div>
 											</div>
 											<div class="col-lg-12 col-xl-4">
 												<label for="cmbRazaoSocial">Razão Social</label> 
-												<select  id="cmbRazaoSocial" class="form-control" disabled="disabled" data-container="body">
+												<select  id="cmbRazaoSocial" name="filtro.razaoSocialPrestador" class="form-control" disabled="disabled" data-container="body">
 													<option value="-1">Selecione...</option>
 												</select>	
 											</div>
 										</div>
 										<hr/>
 										<div class="row">
+											<div class="form-group col-sm-12 col-md-12 col-lg-12 col-xl-12">
+												<h6>Pareceres</h6>
+											</div>	 
+										</div>
+										<div class="row">
 											<div class="form-group col-lg-4 col-xl-2">
 												<div class="ex-checkbox">
-													<input class="form-check-input" type="checkbox" name="filtro.possuiNewsParecerQuestionamentoAcionamento" id="cmpAcionamento" disabled="disabled"/>
-													<label class="form-check-label" for="cmpAcionamento">Acionamento</label>
+													<input class="form-check-input" type="checkbox" name="filtro.possuiNewsParecerQuestionamentoAcionamento" id="idParecerAcionamento" disabled="true"/>
+													<label class="form-check-label" for="idParecerAcionamento">Acionamento</label>
 												</div>
 											</div>
 											<div class="form-group col-lg-4 col-xl-2">
 												<div class="ex-checkbox">
-													<input class="form-check-input" type="checkbox" name="filtro.possuiNewsParecerQuestionamentoPagamento" id="cmpPagamento" disabled="disabled"/>
-													<label class="form-check-label" for="cmpPagamento">Pagamento</label>
+													<input class="form-check-input" type="checkbox" name="filtro.possuiNewsParecerQuestionamentoPagamento" id="idParecerPagamento" disabled="true"/>
+													<label class="form-check-label" for="idParecerPagamento">Pagamento</label>
 												</div>
 											</div>
 										</div>	
-										<hr/>	
+										<hr/>
+									
+										<div class="row">
+											<div class="form-group col-sm-12 col-md-12 col-lg-12 col-xl-12">
+												<h6>Solicitações de Pagamento</h6>
+											</div>	 
+										</div>	
+										<div class="row">
+											<div class="col-lg-4 col-xl-3">	
+												<div class="ex-checkbox">
+													<input class="form-check-input" type="checkbox" name="filtro.newsDebitosVeiculo" value="true" id="idSolicitacaoPagamentoDespesasVeiculo" disabled="true"/>
+													<label class="form-check-label" for="idSolicitacaoPagamentoDespesasVeiculo">Débitos do Veículo (V)</label>
+												</div>
+											</div>
+											<div class="col-lg-4 col-xl-3">	
+												<div class="ex-checkbox">
+													<input class="form-check-input" type="checkbox" name="filtro.newsPremioPendente" value="true" id="idSolicitacaoPagamentoPremioPendente" disabled="true"/>
+													<label class="form-check-label" for="idSolicitacaoPagamentoPremioPendente">Prêmio Pendente (P)</label>
+												</div>
+											</div>
+											<div class="col-lg-4 col-xl-3">
+												<div class="ex-checkbox">
+													<input class="form-check-input" type="checkbox" name="filtro.newsReembolsoGastosPrestador" value="true" id="idSolicitacaoPagamentoGastosDespachante" disabled="true"/>
+													<label class="form-check-label" for="idSolicitacaoPagamentoGastosDespachante">Reembolso de gastos do prestador (R)</label>
+												</div>
+											</div>
+											<div class="col-lg-4 col-xl-3">	
+												<div class="ex-checkbox">
+													<input class="form-check-input" type="checkbox" name="filtro.newsBeneficiario" value="true" id="idSolicitacaoPagamentoBeneficiario" disabled="true"/>
+													<label class="form-check-label" for="idSolicitacaoPagamentoBeneficiario">Beneficiário (B)</label>
+												</div>
+											</div>
+											<div class="col-lg-4 col-xl-3">	
+												<div class="ex-checkbox">
+													<input class="form-check-input" type="checkbox" name="filtro.newsFinanceira" value="true" id="idSolicitacaoPagamentoFinanciamentoCdc" disabled="true"/>
+													<label class="form-check-label" for="idSolicitacaoPagamentoFinanciamentoCdc">Financeira (F)</label>
+												</div>
+											</div>
+											<div class="col-lg-4 col-xl-3">	
+												<div class="ex-checkbox">
+													<input class="form-check-input" type="checkbox" nname="filtro.newsPgtoDia" value="true" id="idSolicitacaoPagamentoDia" disabled="true" />
+													<label class="form-check-label" for="idSolicitacaoPagamentoDia">Pagamento do Dia (K)</label>
+												</div>
+											</div>
+										</div>
+										<hr/>
+										<div class="row">
+											<div class="form-group col-sm-12 col-md-12 col-lg-12 col-xl-12">
+												<h6>Acionamento</h6>
+											</div>	 
+										</div>
 										<div class="row">
 											<div class="form-group col-lg-3 col-xl-2">
 												<label for="cmbStatusAcionamento">Status</label> 
@@ -843,13 +874,13 @@
 											<div class="col-sm-12 col-md-3 col-lg-2 col-xl-2">
 												<div class="form-group">
 													<label for="dataInicio">Data Início:</label> 
-													<input type="text" name="filtro.periodoInicialStatusPrestador" value="" id="dataInicioAcionamento" class="form-control"/>
+													<input type="text" name="filtro.periodoInicialStatusPrestador" value="" id="dataInicioAcionamento" class="form-control" disabled="true"/>
 												</div>	
 											</div>
 											<div class="col-sm-12 col-md-3 col-lg-2 col-xl-2">
 												<div class="form-group">	
 													<label for="dataFim">Data Fim:</label>
-													<input type="text" name="filtro.periodoFinalStatusPrestador" value="" id="dataFimAcionamento" class="form-control"/>
+													<input type="text" name="filtro.periodoFinalStatusPrestador" value="" id="dataFimAcionamento" class="form-control" disabled="true"/>
 												</div>
 											</div>	
 										</div>
