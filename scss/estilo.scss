@@ -104,7 +104,7 @@ a{
   text-align: center;  
 }
 
-.box-news-modal{
+.box-news-modal, .box-detalhes-perfil-modal{
   margin: 15px 0;
 }
 
@@ -204,6 +204,27 @@ a{
   background-repeat: no-repeat;
   background-position: center;
   right: -3px;
+  position: absolute;
+}
+
+
+.excel-2{
+  background: url(../img/excel.svg);
+  width: 62px;
+  height: 39px;
+  background-repeat: no-repeat;
+  background-position: center;
+  right: 10px;
+  position: absolute;
+}
+
+.pdf{
+  background: url(../img/pdf.svg);
+  width: 62px;
+  height: 39px;
+  background-repeat: no-repeat;
+  background-position: center;
+  right: 53px;
   position: absolute;
 }
 
@@ -1071,6 +1092,8 @@ tr:hover td {color: #89919F;}
   padding-right: 50px;
 }
 
+
+
 // paginacao
 .pagination .icon{
   font-size: 11px;
@@ -1332,9 +1355,9 @@ header .navbar{
   text-transform: uppercase;
 }
 
-.title-add-orcamento{
+.title-add-orcamento, .title-cadastro-internas{
   letter-spacing: 2px;
-  color: #499ED0;
+  color: #e60935;
   text-transform: uppercase;
   font-size: 13px;
 }
