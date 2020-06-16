@@ -799,6 +799,34 @@ p.welcome{
 
 // Corpo Tabela
 
+// Tabela Perfil
+.h-250{
+  height: 250px;
+}
+
+.table-perfis > form > table > tbody > tr > td.actions{
+  width: 4%;
+}
+
+.table-perfis > form > table > tbody > tr:hover > td.actions{
+  width: 8%;
+}
+
+.table-perfis > form > table > tbody > tr:hover > td.actions > div > .menu-invisible{
+ left: -36px; 
+ width: 70px;
+}
+
+.table-perfis > form > table > tbody > tr > td:nth-child(2){
+  width: 12%;
+}
+
+.table-perfis > form > table > tbody > tr > td:nth-child(3){
+  width: 70%;
+}
+
+// Fim Tabela Perfil
+
 .menu-invisible > a > img{
   width: 25px;
   height: 25px;
@@ -1091,8 +1119,6 @@ tr:hover td {color: #89919F;}
   width: 4%;
   padding-right: 50px;
 }
-
-
 
 // paginacao
 .pagination .icon{
