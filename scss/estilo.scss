@@ -239,6 +239,17 @@ a{
   top: 4px;
 }
 
+.cotacao{
+  background: url(../img/cotacao.svg);
+  width: 35px;
+  height: 33px;
+  background-repeat: no-repeat;
+  background-position: center;
+  right: 94px;
+  position: absolute;
+  top: 4px;
+}
+
 .classificacao-docs{
   background: url(../img/classificacao-docs.svg);
   width: 30px;
@@ -1559,7 +1570,14 @@ header .navbar{
 .contadores-tabela > p{
   display: inline;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
+  color: #8A9EB2;
+}
+
+.itens-add-pecas{
+  font-size: 15px;
+  font-weight: 600;
+  color: #8A9EB2;
 }
 
 .titulo-tabela-itens{float: left;}
@@ -1737,6 +1755,14 @@ span.btn-add{
   line-height: 0;
   margin-top: 6px;
   text-transform: uppercase;
+}
+
+.title-pop-up{
+  color: #0B67BE;
+  font-size: 23px;
+  font-weight: 500;
+  padding: 10px;
+  margin: 0;
 }
 
 // modal
