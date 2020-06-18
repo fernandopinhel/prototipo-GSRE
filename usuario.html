@@ -203,35 +203,16 @@
                                                                     <label for="text">Empresa</label>
                                                                     <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
                                                                 </div>
-                                                            </div>
-														</div>
-														<div class="row mt-5">
-															<div class="col-lg-12">
-																<h6 class="title-cadastro-internas">Situação Funcional</h6>															
-																<hr>
 															</div>
 															<div class="col-lg-3 col-xl-3 mt-2">												
 																<label for="filtro">Situação</label>
 																<select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione...">
 																	<option value="0" selected>Ativo</option>
-																		<option value="1">Item 2</option>
-																		<option value="2">Item 3</option>
-																		<option value="3">Item 4</option>
-																		<option value="4">Item 5</option>
+																	<option value="1">Inativo</option>
 																</select>
 															</div>
-															<div class="col-lg-9">
-																<label for="comment">Observações</label>
-																<textarea class="form-control" rows="3" id="comment"></textarea>
-															</div>
-														</div>
-														<div class="row mt-5">
-															<div class="col-lg-12">
-																<h6 class="title-cadastro-internas">Adicionar Perfil</h6>															
-																<hr>
-															</div>		
 															<div class="col-lg-4 col-xl-4 mt-2">												
-																<label for="filtro">Tipo de Perfil</label>
+																<label for="filtro">Perfil</label>
 																<select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione..." multiple>
 																	<option value="0" selected>Perfil 1</option>
 																		<option value="1">Perfil 2</option>
@@ -239,12 +220,6 @@
 																		<option value="3">Perfil 4</option>
 																		<option value="4">Perfil 5</option>
 																</select>
-															</div>													
-														</div>
-														<div class="row mt-5">
-															<div class="col-lg-12">
-																<h6 class="title-cadastro-internas">Cargo e Alçadas</h6>															
-																<hr>
 															</div>
 															<div class="col-lg-4 col-xl-4 mt-2">												
 																<label for="filtro">Cargo</label>
@@ -255,8 +230,23 @@
 																		<option value="3">Item 4</option>
 																		<option value="4">Item 5</option>
 																</select>
-                                                            </div>
-                                                            <div class="col-lg-2 col-xl-2 mt-3">							
+															</div>
+															<div class="col-lg-3 col-xl-3 mt-4">							
+                                                                <p class="mb-2 font-16">Usuário</p>					
+                                                                <div class="form-group form-check form-check-inline mt-0">
+                                                                    <input type="radio" name="analistas-sim-nao" id="analistas-sim" class="form-check-input" />
+                                                                    <label for="analistas-sim-nao" class="form-check-input">Funcionário</label>
+                                                                </div>
+                                                                <div class="form-group form-check form-check-inline mt-0">
+                                                                    <input type="radio" name="analistas-sim-nao" id="analistas-nao" class="form-check-input" />
+                                                                    <label for="analistas-sim-nao" class="form-check-input">Terceiro</label>
+																</div>
+																<div class="form-group form-check form-check-inline mt-0">
+                                                                    <input type="radio" name="analistas-sim-nao" id="analistas-nao" class="form-check-input" />
+                                                                    <label for="analistas-sim-nao" class="form-check-input">Automático</label>
+                                                                </div>
+															</div>
+															<div class="col-lg-2 col-xl-2 mt-4">							
                                                                 <p class="mb-2 font-16">Analista Graduado</p>					
                                                                 <div class="form-group form-check form-check-inline mt-0">
                                                                     <input type="radio" name="analistas-sim-nao" id="analistas-sim" class="form-check-input" />
@@ -266,44 +256,41 @@
                                                                     <input type="radio" name="analistas-sim-nao" id="analistas-nao" class="form-check-input" />
                                                                     <label for="analistas-sim-nao" class="form-check-input">Não</label>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-lg-2 col-xl-2 mt-3">							
-                                                                <p class="mb-2 font-16">Usuário Humano</p>					
-                                                                <div class="form-group form-check form-check-inline mt-0">
-                                                                    <input type="radio" name="usuario-sim-nao" id="usuario-sim" class="form-check-input" />
-                                                                    <label for="usuario-sim-nao" class="form-check-input">Sim</label>
-                                                                </div>
-                                                                <div class="form-group form-check form-check-inline mt-0">
-                                                                    <input type="radio" name="usuario-sim-nao" id="usuario-nao" class="form-check-input" />
-                                                                    <label for="usuario-sim-nao" class="form-check-input">Não</label>
-                                                                </div>
-															</div>
-															<div class="col-lg-2 col-xl-2 mt-4">												
-                                                                <div class="ex-checkbox">
-                                                                    <input class="form-check-input" type="checkbox" id="pag" name="">
-                                                                    <label class="form-check-label" for="pag">Pagamento total a zero</label>
-                                                                </div>
-															</div>
-															<div class="col-lg-3 col-xl-3 mt-4">												
-                                                                <div class="form-group">
-                                                                    <label for="text">Valor Análise</label>
-                                                                    <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-                                                                </div>
-															</div>
-															<div class="col-lg-3 col-xl-3 mt-4">												
-                                                                <div class="form-group">
-                                                                    <label for="text">Valor Pagamento</label>
-                                                                    <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-                                                                </div>
-															</div>
-															<div class="col-lg-3 col-xl-3 mt-4">
-																<label for="a-partir-de">A partir de</label> 
-																<input type="text" name="" value="" id="a-partir-de" class="form-control date">
 															</div>
 															<div class="col-lg-3 col-xl-3 mt-4">												
                                                                 <div class="form-group">
                                                                     <label for="text">Atribuído por</label>
+                                                                    <input type="text" name="" maxlength="8" value="João Carlos" id="" class="form-control" autocomplete="off" disabled> 
+                                                                </div>
+															</div>
+															<div class="col-lg-3 col-xl-3 mt-4">												
+                                                                <div class="form-group">
+                                                                    <label for="text">Data de inclusão</label>
+                                                                    <input type="text" name="" maxlength="8" value="10/06/2020" id="" class="form-control" autocomplete="off" disabled> 
+                                                                </div>
+															</div>
+														</div>
+														<div class="row mt-5">
+															<div class="col-lg-12">
+																<h6 class="title-cadastro-internas">Cargos e Alçadas</h6>															
+																<hr>
+															</div>
+															<div class="col-lg-3 col-xl-3 mt-4">												
+                                                                <div class="form-group">
+                                                                    <label for="text">Alçada Análise</label>
                                                                     <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+                                                                </div>
+															</div>
+															<div class="col-lg-3 col-xl-3 mt-4">												
+                                                                <div class="form-group">
+                                                                    <label for="text">Alçada Pagamento</label>
+                                                                    <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+                                                                </div>
+															</div>
+															<div class="col-lg-2 col-xl-2 mt-5">												
+                                                                <div class="ex-checkbox">
+                                                                    <input class="form-check-input" type="checkbox" id="pag" name="">
+                                                                    <label class="form-check-label" for="pag">Pagamento total a zero</label>
                                                                 </div>
 															</div>
 														</div>
@@ -329,8 +316,8 @@
 										</div>
                                         <div class="row resultado-filtro">
                                             <div class="col-12">
-                                                <div class="table-responsive">
-                                                    <form id="formListaConsulta" name="formListaConsulta" action="/GSRE-SinistroAuto/modulo-consulta/listarConsulta.do" method="post">
+                                                <div class="table-responsive table-usuario">
+                                                    <form id="" name="" action="" method="post">
                                                         <table class="table table-striped t3" id="">
                                                             <thead>
                                                                 <tr>
@@ -366,6 +353,9 @@
                                                                                 <span class="circle"></span>
                                                                             </div>
                                                                             <div class="menu-invisible">
+																				<a href="#" data-toggle="modal" data-target="#modal-historico" >
+                                                                                    <img src="img/historico.svg" data-toggle="tooltip" data-original-title="Histórico">
+                                                                                </a>
                                                                                 <a href="#"  data-toggle="modal" data-target="#modal-alterar" >
                                                                                     <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar">
                                                                                 </a>
@@ -398,6 +388,9 @@
                                                                                 <span class="circle"></span>
                                                                             </div>
                                                                             <div class="menu-invisible">
+																				<a href="#" data-toggle="modal" data-target="#modal-historico" >
+                                                                                    <img src="img/historico.svg" data-toggle="tooltip" data-original-title="Histórico">
+                                                                                </a>
                                                                                 <a href="#"  data-toggle="modal" data-target="#modal-alterar" >
                                                                                     <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar">
                                                                                 </a>
@@ -430,6 +423,9 @@
                                                                                 <span class="circle"></span>
                                                                             </div>
                                                                             <div class="menu-invisible">
+																				<a href="#" data-toggle="modal" data-target="#modal-historico" >
+                                                                                    <img src="img/historico.svg" data-toggle="tooltip" data-original-title="Histórico">
+                                                                                </a>
                                                                                 <a href="#"  data-toggle="modal" data-target="#modal-alterar" >
                                                                                     <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar">
                                                                                 </a>
@@ -462,6 +458,9 @@
                                                                                 <span class="circle"></span>
                                                                             </div>
                                                                             <div class="menu-invisible">
+																				<a href="#" data-toggle="modal" data-target="#modal-historico" >
+                                                                                    <img src="img/historico.svg" data-toggle="tooltip" data-original-title="Histórico">
+                                                                                </a>
                                                                                 <a href="#"  data-toggle="modal" data-target="#modal-alterar" >
                                                                                     <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar">
                                                                                 </a>
@@ -499,43 +498,49 @@
 
 			<!-- modal histórico -->
 			<div class="modal fade bd-example-modal-lg" id="modal-historico" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-				<div class="modal-dialog modal-lg w-1050">	
+				<div class="modal-dialog modal-lg">	
 					<div class="modal-content">
 						<div class="modal-header m-header">
-							<h5 class="modal-title" id="exampleModalLongTitle">Histórico do Perfil</h5>
+							<h5 class="modal-title" id="exampleModalLongTitle">Histórico do Usuário</h5>
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 							</button>
 						</div>
-						<div class="modal-body mbody-totalizadores d-flex justify-content-center">
-							<div class="container-fluid">
-								<div class="table-responsive bg-transparent p-0">
-									<form id="" class="tabela-itens-orcamento" name="" action="" method="post">
+						<div class="modal-body  d-flex justify-content-center">
+								<div class="table-responsive bg-transparent">
+									<form id="" class="" name="" action="" method="post">
 										<table class="table table-striped" id="">
 											<thead>
 												<tr>
+													<th scope="col">Cadastrado por</th>
+													<th scope="col">Data de Cadastro</th>
 													<th scope="col">Alterado por</th>
 													<th scope="col">Data da Alteração</th>
 												</tr>
 											</thead>
 											<tbody>
 												<tr>
-													<td>João Carlos</td>
-													<td>12/06/20</td>
+													<td style="width:25%">Marcelo Silva</td>
+													<td style="width:25%">10/06/20</td>
+													<td style="width:25%">João Carlos</td>
+													<td style="width:25%">12/06/20</td>
 												</tr>
 												<tr>
-													<td>João Carlos</td>
-													<td>10/06/20</td>
+													<td style="width:25%">Marcelo Silva</td>
+													<td style="width:25%">10/06/20</td>
+													<td style="width:25%">João Carlos</td>
+													<td style="width:25%">12/06/20</td>
 												</tr>
 												<tr>
-													<td>João Carlos</td>
-													<td>08/06/20</td>
+													<td style="width:25%">Marcelo Silva</td>
+													<td style="width:25%">10/06/20</td>
+													<td style="width:25%">João Carlos</td>
+													<td style="width:25%">12/06/20</td>
 												</tr>
 											</tbody>
 										</table>
 									</form>
 								</div>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -546,65 +551,13 @@
 				<div class="modal-dialog modal-lg">
 					<div class="modal-content">
 						<div class="modal-header m-header">
-							<h5 class="modal-title" id="exampleModalLongTitle">Detalhes do Perfil</h5>
+							<h5 class="modal-title" id="exampleModalLongTitle">Detalhes do Usuário</h5>
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 							</button>
 						</div>
 						<div class="modal-body mbody-detalhes d-flex justify-content-center">
 							<div class="container-fluid">
-								<div class="row">
-									<div class="col-lg-4 mt-3 mb-3 pr-2">
-										<h6 class="txt-up">Usuários Elencados</h6>
-										<h5><b class="color-b">20</b></h5>
-									</div>
-								</div>
-								<hr>
-								<div class="row">
-									<div class="col-lg-12">
-										<div class="box-detalhes-perfil-modal">
-											<img src="img/check-news-modal.svg" class="check-news" alt="">
-											<p>Visualizar Documento ASE</p>
-										</div>
-										<hr>
-										<div class="box-detalhes-perfil-modal">
-											<img src="img/check-news-modal.svg" class="check-news" alt="">
-											<p>Permissão de Reabrir Protocolo</p>
-										</div>
-										<hr>
-										<div class="box-detalhes-perfil-modal">
-											<img src="img/check-news-modal.svg" class="check-news" alt="">
-											<p>Administra Outros Usuários</p>
-										</div>
-										<hr>
-										<div class="box-detalhes-perfil-modal">
-											<img src="img/check-news-modal.svg" class="check-news" alt="">
-											<p>Acesso Sistema Imagem</p>
-										</div>
-										<hr>
-										<div class="box-detalhes-perfil-modal">
-											<img src="img/check-news-modal.svg" class="check-news" alt="">
-											<p>Altera CPF e Nome (Segurado e Terceiro)</p>
-										</div>
-										<hr>
-										<div class="box-detalhes-perfil-modal">
-											<img src="img/check-news-modal.svg" class="check-news" alt="">
-											<p>Pagamento na Data de Solicitação</p>
-										</div>
-										<hr>
-										<div class="box-detalhes-perfil-modal">
-											<img src="img/check-news-modal.svg" class="check-news" alt="">
-											<p>Liberar Crítica de Transmissão</p>
-										</div>
-									</div>
-								</div>
-								<hr>
-								<div class="row">
-									<div class="col-lg-12 mt-3 mb-3 pr-2">
-										<h6 class="txt-up">Observações</h6>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nisl nulla, rutrum ut imperdiet vitae, pulvinar id nibh. Fusce non velit at arcu porttitor tempus. Proin fermentum condimentum ipsum.</p>
-									</div>
-								</div>
 							</div>
 						</div>
 					</div>
