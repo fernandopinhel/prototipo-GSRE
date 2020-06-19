@@ -864,8 +864,24 @@ p.welcome {
   color: #A3A7AB;
 }
 
+#table-funcionalidades > tbody > tr > td:nth-child(1) {
+  width: 2%;
+}
+
+#table-funcionalidades > tbody > tr > td:nth-child(2) {
+  width: 8%;
+}
+
+#table-funcionalidades > tbody > tr > td {
+  width: 18%;
+}
+
 .h-250 {
   height: 250px;
+}
+
+.h-410 {
+  height: 410px;
 }
 
 .table-perfis > form > table > tbody > tr > td.actions {
@@ -1223,6 +1239,10 @@ tr:hover td {
 }
 
 .table-perfil tbody tr td:nth-child(5) {
+  width: 10%;
+}
+
+.table-perfil tbody tr td:nth-child(6) {
   width: 73%;
 }
 
@@ -1252,7 +1272,7 @@ tr:hover td {
 }
 
 .table-usuario tbody tr td:nth-child(2) {
-  width: 4%;
+  width: 3%;
 }
 
 .table-usuario tbody tr td.ac-3 div > .menu-invisible {
@@ -2178,6 +2198,10 @@ span.btn-add {
   .class-docs {
     width: 100%;
     margin-top: 20px;
+  }
+  .table-perfil tbody tr:hover td.ac-3 {
+    width: 19%;
+    padding-right: 42px;
   }
 }
 
