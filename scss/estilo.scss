@@ -1131,59 +1131,55 @@ tr:hover td {color: #89919F;}
   padding-right: 50px;
 }
 
-.table-perfil tbody tr td:nth-child(1){
-  width:2%;
-}
+.table-perfil tbody tr td:nth-child(1){width:2%;}
 
-.table-perfil tbody tr td:nth-child(2){
-  width:5%;
-}
+.table-perfil tbody tr td:nth-child(2){width:5%;}
 
-.table-perfil tbody tr td:nth-child(3){
-  width:90%;
-}
+.table-perfil tbody tr td:nth-child(3){width:10%;}
+
+.table-perfil tbody tr td:nth-child(4){width:10%;}
+
+.table-perfil tbody tr td:nth-child(5){width:73%;}
 
 .table-perfil tbody tr td.ac-3 div > .menu-invisible{
-  width: 107px !important;
+  width: 138px !important;
   right: 0;
   top: 2px;
 }
 
 .table-perfil tbody tr:hover td.ac-3 div > .menu-invisible{
-  width: 107px !important;
-  left: -21px;
+  width: 138px !important;
+  left: -71px;
   top: 2px;
 }
 
 .table-perfil tbody tr:hover td.ac-3{
-  width: 5%;
-  padding-right: 70px;
+  width:9%;
+  padding-right: 32px;
 }
 
 // usuarios
-.table-usuario tbody tr td{
-  width: 11%;
-}
+.table-usuario tbody tr td{width: 12%;}
 
-.table-usuario tbody tr td:nth-child(1){
-  width:2%;
-}
+.table-usuario tbody tr td:nth-child(1){width:2%;}
+
+.table-usuario tbody tr td:nth-child(2){width:4%;}
 
 .table-usuario tbody tr td.ac-3 div > .menu-invisible{
-  width: 107px !important;
+  width: 138px !important;
   left: 0;
   top: 2px;
 }
 
 .table-usuario tbody tr:hover td.ac-3 div > .menu-invisible{
-  width: 107px !important;
+  width: 138px !important;
   left: -16px;
   top: 2px;
 }
 
 .table-usuario tbody tr:hover td.ac-3{
   width: 5%;
-  padding-right: 70px;
+  padding-right: 100px;
 }
 
 // paginacao
