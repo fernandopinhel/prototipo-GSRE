@@ -72,9 +72,9 @@
 								<a class="nav-link" 
 								id="pills-consultas-tab" 
 								data-toggle="pill" 
-								href='consulta-sinistro.html'
+								href="listar-consulta.html"
 								role="tab" aria-controls="pills-consultas" 
-								>Consultas</a>
+								aria-selected="false">Consultas</a>
 							</li>
 							<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle active"  
@@ -82,8 +82,8 @@
 									href="#" role="tab" 
 									aria-selected="true">Cadastros</a>
 								<div class="dropdown-menu">
-								<a class="dropdown-item" id="pills-cadastro-perfil-tab"        href= 'perfil.html'>Perfil</a>
-								<a class="dropdown-item" id="pills-cadastro-usuario-tab"       href= 'usuario.html'>Usuário</a>
+                                <a class="dropdown-item" id="pills-cadastro-perfil-tab"        href= 'perfil.html'>Perfil</a>
+                                <a class="dropdown-item" id="pills-cadastro-usuario-tab"       href= 'usuario.html'>Usuário</a>
 								<a class="dropdown-item" id="pills-cadastro-instituicao-tab"   href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaInstituicao.do'>Instituições</a>
 								<a class="dropdown-item" id="pills-cadastro-tabelas-tab"       href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaTabelas.do'>Tabelas</a>
 								<a class="dropdown-item" id="pills-cadastro-cartas-tab"        href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaCartas.do'>Cartas</a>
@@ -162,7 +162,7 @@
 										<!-- Novo Usuário -->
 										<div class="row mt-4">
 											<div class="col-lg-12">
-												<div class="info-parecer novo-parecer d-none">
+												<div class="info-parecer novo-parecer">
 													<div class="container-fluid">
 														<div class="row">
 															<div class="col-lg-12">
@@ -183,25 +183,25 @@
                                                             <div class="col-lg-3 col-xl-3">												
                                                                 <div class="form-group">
                                                                     <label for="text">Matrícula</label>
-                                                                    <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+                                                                    <input type="text" value="5151651561" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
                                                                 </div>
                                                             </div>
 															<div class="col-lg-3 col-xl-3">												
                                                                 <div class="form-group">
                                                                     <label for="text">Nome</label>
-                                                                    <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+                                                                    <input type="text" name="" value="João Carlos" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
                                                                 </div>
 															</div>
 															<div class="col-lg-3 col-xl-3"> 							
                                                                 <div class="form-group">
                                                                     <label for="text">CPF</label>
-                                                                    <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+                                                                    <input type="text" name="" value="999.999.999-99" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
                                                                 </div>
 															</div>
 															<div class="col-lg-3 col-xl-3">												
                                                                 <div class="form-group">
                                                                     <label for="text">Empresa</label>
-                                                                    <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+                                                                    <input type="text" name="" value="Bradesco Seguros" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
                                                                 </div>
 															</div>
 															<div class="col-lg-3 col-xl-3 mt-2">												
@@ -234,22 +234,22 @@
 															<div class="col-lg-3 col-xl-3 mt-4">							
                                                                 <p class="mb-2 font-16">Usuário</p>					
                                                                 <div class="form-group form-check form-check-inline mt-0">
-                                                                    <input type="radio" name="analistas-sim-nao" id="analistas-sim" class="form-check-input" />
-                                                                    <label for="analistas-sim-nao" class="form-check-input">Funcionário</label>
+                                                                    <input type="radio" name="tipo-usuario" id="func" class="form-check-input" checked/>
+                                                                    <label for="tipo-usuario" class="form-check-input">Funcionário</label>
                                                                 </div>
                                                                 <div class="form-group form-check form-check-inline mt-0">
-                                                                    <input type="radio" name="analistas-sim-nao" id="analistas-nao" class="form-check-input" />
-                                                                    <label for="analistas-sim-nao" class="form-check-input">Terceiro</label>
+                                                                    <input type="radio" name="tipo-usuario" id="terc" class="form-check-input" />
+                                                                    <label for="tipo-usuario" class="form-check-input">Terceiro</label>
 																</div>
 																<div class="form-group form-check form-check-inline mt-0">
-                                                                    <input type="radio" name="analistas-sim-nao" id="analistas-nao" class="form-check-input" />
-                                                                    <label for="analistas-sim-nao" class="form-check-input">Automático</label>
+                                                                    <input type="radio" name="tipo-usuario" id="auto" class="form-check-input" />
+                                                                    <label for="tipo-usuario" class="form-check-input">Automático</label>
                                                                 </div>
 															</div>
 															<div class="col-lg-2 col-xl-2 mt-4">							
                                                                 <p class="mb-2 font-16">Analista Graduado</p>					
                                                                 <div class="form-group form-check form-check-inline mt-0">
-                                                                    <input type="radio" name="analistas-sim-nao" id="analistas-sim" class="form-check-input" />
+                                                                    <input type="radio" name="analistas-sim-nao" id="analistas-sim" class="form-check-input" checked/>
                                                                     <label for="analistas-sim-nao" class="form-check-input">Sim</label>
                                                                 </div>
                                                                 <div class="form-group form-check form-check-inline mt-0">
@@ -278,22 +278,25 @@
 															<div class="col-lg-3 col-xl-3 mt-4">												
                                                                 <div class="form-group">
                                                                     <label for="text">Alçada Análise</label>
-                                                                    <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+                                                                    <input type="text" value="R$ 10.000,00" name="" maxlength="8" class="form-control" autocomplete="off"> 
                                                                 </div>
 															</div>
 															<div class="col-lg-3 col-xl-3 mt-4">												
                                                                 <div class="form-group">
                                                                     <label for="text">Alçada Pagamento</label>
-                                                                    <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+                                                                    <input type="text" value="R$ 10.000,00" name="" maxlength="8" class="form-control" autocomplete="off"> 
                                                                 </div>
 															</div>
 															<div class="col-lg-2 col-xl-2 mt-5">												
                                                                 <div class="ex-checkbox">
-                                                                    <input class="form-check-input" type="checkbox" id="pag" name="">
+                                                                    <input class="form-check-input" type="checkbox" id="pag" name="" checked>
                                                                     <label class="form-check-label" for="pag">Pagamento total a zero</label>
                                                                 </div>
-															</div>
-														</div>
+                                                            </div>
+                                                            <div class="col-lg-4 col-xl-4 mt-5">
+                                                                <button class="btn btn-info d-flex"><img src="img/historico-alcadas.svg" width="22px" data-toggle="modal" data-target="#historico-alcadas" class="my-auto mr-2"> <span class="my-auto">Histórico de Alçadas</span></button>
+                                                            </div>
+                                                        </div>
 														<div class="row mb-4 mt-5">
 															<div class="col-lg-12">
 																<button class="btn btn-salvar float-right b-salvar-parecer">Salvar</button>
@@ -358,7 +361,7 @@
 																				<a href="#" data-toggle="modal" data-target="#modal-historico" >
                                                                                     <img src="img/historico.svg" data-toggle="tooltip" data-original-title="Histórico">
                                                                                 </a>
-                                                                                <a href="usuario-edicao.html">
+                                                                                <a href="#"  data-toggle="modal" data-target="#modal-alterar" >
                                                                                     <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar">
                                                                                 </a>
                                                                                 <a href="#" data-toggle="modal" data-target="#modal-detalhes" >
@@ -395,7 +398,7 @@
 																				<a href="#" data-toggle="modal" data-target="#modal-historico" >
                                                                                     <img src="img/historico.svg" data-toggle="tooltip" data-original-title="Histórico">
                                                                                 </a>
-                                                                                <a href="usuario-edicao.html">
+                                                                                <a href="#"  data-toggle="modal" data-target="#modal-alterar" >
                                                                                     <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar">
                                                                                 </a>
                                                                                 <a href="#" data-toggle="modal" data-target="#modal-detalhes-2" >
@@ -432,7 +435,7 @@
 																				<a href="#" data-toggle="modal" data-target="#modal-historico" >
                                                                                     <img src="img/historico.svg" data-toggle="tooltip" data-original-title="Histórico">
                                                                                 </a>
-                                                                                <a href="usuario-edicao.html">
+                                                                                <a href="#"  data-toggle="modal" data-target="#modal-alterar" >
                                                                                     <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar">
                                                                                 </a>
                                                                                 <a href="#" data-toggle="modal" data-target="#modal-detalhes" >
@@ -469,7 +472,7 @@
 																				<a href="#" data-toggle="modal" data-target="#modal-historico" >
                                                                                     <img src="img/historico.svg" data-toggle="tooltip" data-original-title="Histórico">
                                                                                 </a>
-                                                                                <a href="usuario-edicao.html">
+                                                                                <a href="#"  data-toggle="modal" data-target="#modal-alterar" >
                                                                                     <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar">
                                                                                 </a>
                                                                                 <a href="#" data-toggle="modal" data-target="#modal-detalhes" >

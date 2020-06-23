@@ -82,8 +82,8 @@
 									href="#" role="tab" 
 									aria-selected="true">Cadastros</a>
 								<div class="dropdown-menu">
-								<a class="dropdown-item" id="pills-cadastro-perfil-tab"        href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaPerfil.do'>Perfil</a>
-								<a class="dropdown-item" id="pills-cadastro-usuario-tab"       href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaUsuario.do'>Usuário</a>
+								<a class="dropdown-item" id="pills-cadastro-perfil-tab"        href= 'perfil.html'>Perfil</a>
+								<a class="dropdown-item" id="pills-cadastro-usuario-tab"       href= 'usuario.html'>Usuário</a>
 								<a class="dropdown-item" id="pills-cadastro-instituicao-tab"   href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaInstituicao.do'>Instituições</a>
 								<a class="dropdown-item" id="pills-cadastro-tabelas-tab"       href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaTabelas.do'>Tabelas</a>
 								<a class="dropdown-item" id="pills-cadastro-cartas-tab"        href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaCartas.do'>Cartas</a>
@@ -181,21 +181,880 @@
 															<div class="col-lg-12">
 																<h6 class="title-cadastro-internas mb-3">Funcionalidades</h6>		
 																<hr>																
-																<div class="table-responsive h-410">
+																<div class="table-responsive table-desk">
 																	<form id="" name="" action="" method="post">
 																		<table class="table table-striped" id="table-funcionalidades">
 																			<thead>
 																				<tr>
-																					<th class="text-center">
+																					<th class="">
 																						<div class="ex-checkbox chb2">
 																							<input class="form-check-input" type="checkbox" data-toggle="tooltip" data-original-title="Selecionar todos">
 																							<label for="checkbox-table"></label>
 																						</div>
 																					</th>
 																					<th scope="col">Funcionalidades</th>
-																					<th scope="col" class="text-center">Consulta</th>
-																					<th scope="col" class="text-center">Inclusão/Edição</th>
-																					<th scope="col" class="text-center">Exclusão</th>
+																					<th scope="col">Consulta</th>
+																					<th scope="col">Inclusão/Edição</th>
+																					<th scope="col">Exclusão</th>
+																				</tr>
+																			</thead>
+																			<tbody>
+																				<tr>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td>Ase (Aba)</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>                                               
+																				</tr>
+																				<tr>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td>Classificação de Documentos</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>                                               
+																				</tr>
+																				<tr>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td>Comprovante de Despesas?</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>                                               
+																				</tr>
+																				<tr>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td>Despachante</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>                                               
+																				</tr>
+																				<tr>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td>Indenização</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>                                               
+																				</tr>
+																				<tr>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td>Orçamento/Cotação</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>                                               
+																				</tr>
+																				<tr>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td>Parecer</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>                                               
+																				</tr>
+																				<tr>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td>Beneficiário</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>                                               
+																				</tr>
+																				<tr>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td>Acompanhamento</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>                                               
+																				</tr>
+																				<tr>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td>Acompanhamento SAF</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>                                               
+																				</tr>
+																				<tr>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td>Documentos Aguardados</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>                                               
+																				</tr>
+																				<tr>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td>Emissão de Cartas</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>                                               
+																				</tr>
+																				<tr>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td>Importa Imagens</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>                                               
+																				</tr>
+																				<tr>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td>Pedido de Cobertura</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>                                               
+																				</tr>
+																				<tr>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td>Cadastro Prestadores, Despachantes, Instituição</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>                                               
+																				</tr>
+																				<tr>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td>Cadastro Oficinas</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>                                               
+																				</tr>
+																				<tr>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td>Cadastro Perfil</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>                                               
+																				</tr>
+																				<tr>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td>Cadastro Usuário</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>                                               
+																				</tr>
+																				<tr>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td>Erro Orçamento</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>                                               
+																				</tr>
+																				<tr>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td>Erro Captura</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>                                               
+																				</tr>
+																				<tr>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td>Pagamento</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>                                               
+																				</tr>
+																				<tr>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td>Painel Distribuição Automática</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>                                               
+																				</tr>
+																				<tr>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td>Ressarcimentos</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>                                               
+																				</tr>
+																				<tr>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td>Tabelas</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>                                               
+																				</tr>
+																				<tr>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td>Troca de Índice</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>                                               
+																				</tr>
+																				<tr>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td>Aviso Sinistro</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>                                               
+																				</tr>
+																				<tr>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td>Parametrização de Cartas</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>                                               
+																				</tr>
+																				<tr>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td>Relatórios Gerenciais</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>                                               
+																				</tr>
+																				<tr>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td>Pendências do Paralelismo</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>                                               
+																				</tr>
+																				<tr>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td>Relatórios SUSEP 445</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>                                               
+																				</tr>
+																				<tr>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td>Relatórios de Produtividade</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>
+																					<td class="text-center">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</td>                                               
+																				</tr>
+																			</tbody>
+																		</table>
+																	</form>
+																</div>
+																<div class="table-responsive table-mobile">
+																	<form id="" name="" action="" method="post">
+																		<table class="table table-striped" id="">
+																			<thead>
+																				<tr>
+																					<th class="">
+																						<div class="ex-checkbox chb2">
+																							<input class="form-check-input" type="checkbox" data-toggle="tooltip" data-original-title="Selecionar todos">
+																							<label for="checkbox-table"></label>
+																						</div>
+																					</th>
+																					<th scope="col">Funcionalidades</th>
+																					<th scope="col">Consulta</th>
+																					<th scope="col">Inclusão/Edição</th>
+																					<th scope="col">Exclusão</th>
 																				</tr>
 																			</thead>
 																			<tbody>
@@ -1293,7 +2152,7 @@
 
 			<!-- modal histórico -->
 			<div class="modal fade bd-example-modal-lg" id="modal-historico" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-				<div class="modal-dialog modal-lg">	
+				<div class="modal-dialog modal-lg w-1050">	
 					<div class="modal-content">
 						<div class="modal-header m-header">
 							<h5 class="modal-title" id="exampleModalLongTitle">Histórico do Perfil</h5>
@@ -1312,6 +2171,7 @@
 													<th scope="col">Data de Cadastro</th>
 													<th scope="col">Alterado por</th>
 													<th scope="col">Data da Alteração</th>
+													<th scope="col">Status do Perfil</th>
 												</tr>
 											</thead>
 											<tbody>
@@ -1330,10 +2190,11 @@
 															</div>
 														</div>
 													</td>
-													<td style="width:25%">Marcelo Silva</td>
-													<td style="width:25%">10/06/20</td>
-													<td style="width:25%">João Carlos</td>
-													<td style="width:25%">13/06/20</td>
+													<td style="width:20%">Marcelo Silva</td>
+													<td style="width:20%">10/06/20</td>
+													<td style="width:20%">João Carlos</td>
+													<td style="width:20%">13/06/20</td>
+													<td style="width:20%">Ativo</td>
 												</tr>
 												<tr>
 													<td class="actions" style="padding-left: 35px;">
@@ -1350,10 +2211,11 @@
 															</div>
 														</div>
 													</td>
-													<td style="width:25%">Marcelo Silva</td>
-													<td style="width:25%">10/06/20</td>
-													<td style="width:25%">Carlos Alberto</td>
-													<td style="width:25%">12/06/20</td>
+													<td style="width:20%">Marcelo Silva</td>
+													<td style="width:20%">10/06/20</td>
+													<td style="width:20%">Carlos Alberto</td>
+													<td style="width:20%">12/06/20</td>
+													<td style="width:20%">Ativo</td>
 												</tr>
 												<tr>
 													<td class="actions" style="padding-left: 35px;">
@@ -1370,10 +2232,11 @@
 															</div>
 														</div>
 													</td>
-													<td style="width:25%">Marcelo Silva</td>
-													<td style="width:25%">10/06/20</td>
-													<td style="width:25%">Mauricio Botelho</td>
-													<td style="width:25%">11/06/20</td>
+													<td style="width:20%">Marcelo Silva</td>
+													<td style="width:20%">10/06/20</td>
+													<td style="width:20%">Mauricio Botelho</td>
+													<td style="width:20%">11/06/20</td>
+													<td style="width:20%">Inativo</td>
 												</tr>
 											</tbody>
 										</table>
@@ -1611,7 +2474,7 @@
 									</div>
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-danger txt-up" data-dismiss="modal">Inativar Perfil</button>
+									<button type="button" class="btn btn-danger txt-up" data-dismiss="modal">Desativar Perfil</button>
 								</div>
 							</div>
 						</div>
