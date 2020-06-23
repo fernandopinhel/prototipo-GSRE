@@ -130,7 +130,7 @@
 									<div class="container-fluid">
 										<div class="row mb-4">
 											<div class="col-lg-12">
-												<h1 class="float-left mt-2">Usuários</h1>
+												<h1 class="float-left mt-2">Usuário</h1>
 											</div>
 										</div>
 										<div class="row">
@@ -199,22 +199,22 @@
                                                                 </div>
 															</div>
 															<div class="col-lg-3 col-xl-3">												
-                                                                <div class="form-group">
-                                                                    <label for="text">Empresa</label>
-                                                                    <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-                                                                </div>
+																<label for="filtro">Empresa</label>
+																<select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione...">
+																	<option value="0">Bradesco Seguros</option>
+																</select>
 															</div>
 															<div class="col-lg-3 col-xl-3 mt-2">												
 																<label for="filtro">Situação</label>
 																<select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione...">
-																	<option value="0" selected>Ativo</option>
+																	<option value="0">Ativo</option>
 																	<option value="1">Inativo</option>
 																</select>
 															</div>
 															<div class="col-lg-3 col-xl-3 mt-2">												
 																<label for="filtro">Perfil</label>
 																<select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione...">
-																	<option value="0" selected>Perfil 1</option>
+																	<option value="0">Perfil 1</option>
 																		<option value="1">Perfil 2</option>
 																		<option value="2">Perfil 3</option>
 																		<option value="3">Perfil 4</option>
@@ -224,7 +224,7 @@
 															<div class="col-lg-3 col-xl-3 mt-2">												
 																<label for="filtro">Cargo</label>
 																<select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione...">
-																	<option value="0" selected>Analista de Sinistro</option>
+																	<option value="0">Analista de Sinistro</option>
 																		<option value="1">Item 2</option>
 																		<option value="2">Item 3</option>
 																		<option value="3">Item 4</option>
@@ -352,16 +352,13 @@
                                                                                 <span class="circle"></span>
                                                                             </div>
                                                                             <div class="menu-invisible">
-																				<a href="#">
-                                                                                    <img src="img/excluir.svg" data-toggle="tooltip" data-original-title="Excluir">
-                                                                                </a>
 																				<a href="#" data-toggle="modal" data-target="#modal-historico" >
                                                                                     <img src="img/historico.svg" data-toggle="tooltip" data-original-title="Histórico">
                                                                                 </a>
                                                                                 <a href="usuario-edicao.html">
                                                                                     <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar">
                                                                                 </a>
-                                                                                <a href="#" data-toggle="modal" data-target="#modal-detalhes" >
+                                                                                <a href="usuario-consulta.html">
                                                                                     <img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes">
                                                                                 </a>
                                                                             </div>
@@ -389,16 +386,13 @@
                                                                                 <span class="circle"></span>
                                                                             </div>
                                                                             <div class="menu-invisible">
-																				<a href="#">
-                                                                                    <img src="img/excluir.svg" data-toggle="tooltip" data-original-title="Excluir">
-                                                                                </a>
 																				<a href="#" data-toggle="modal" data-target="#modal-historico" >
                                                                                     <img src="img/historico.svg" data-toggle="tooltip" data-original-title="Histórico">
                                                                                 </a>
                                                                                 <a href="usuario-edicao.html">
                                                                                     <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar">
                                                                                 </a>
-                                                                                <a href="#" data-toggle="modal" data-target="#modal-detalhes-2" >
+                                                                                <a href="usuario-consulta.html">
                                                                                     <img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes">
                                                                                 </a>
                                                                             </div>
@@ -426,16 +420,13 @@
                                                                                 <span class="circle"></span>
                                                                             </div>
                                                                             <div class="menu-invisible">
-																				<a href="#">
-                                                                                    <img src="img/excluir.svg" data-toggle="tooltip" data-original-title="Excluir">
-                                                                                </a>
 																				<a href="#" data-toggle="modal" data-target="#modal-historico" >
                                                                                     <img src="img/historico.svg" data-toggle="tooltip" data-original-title="Histórico">
                                                                                 </a>
                                                                                 <a href="usuario-edicao.html">
                                                                                     <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar">
                                                                                 </a>
-                                                                                <a href="#" data-toggle="modal" data-target="#modal-detalhes" >
+                                                                                <a href="usuario-consulta.html">
                                                                                     <img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes">
                                                                                 </a>
                                                                             </div>
@@ -463,16 +454,13 @@
                                                                                 <span class="circle"></span>
                                                                             </div>
                                                                             <div class="menu-invisible">
-																				<a href="#">
-                                                                                    <img src="img/excluir.svg" data-toggle="tooltip" data-original-title="Excluir">
-                                                                                </a>
 																				<a href="#" data-toggle="modal" data-target="#modal-historico" >
                                                                                     <img src="img/historico.svg" data-toggle="tooltip" data-original-title="Histórico">
                                                                                 </a>
                                                                                 <a href="usuario-edicao.html">
                                                                                     <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar">
                                                                                 </a>
-                                                                                <a href="#" data-toggle="modal" data-target="#modal-detalhes" >
+                                                                                <a href="usuario-consulta.html">
                                                                                     <img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes">
                                                                                 </a>
                                                                             </div>

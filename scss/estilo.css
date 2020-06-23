@@ -64,6 +64,11 @@ a {
   text-align: center;
 }
 
+.bootstrap-select .dropdown-toggle .filter-option-inner-inner {
+  color: #495057;
+  font-weight: 500;
+}
+
 .actions-menu-orcamento {
   font-size: 14px;
 }
@@ -315,17 +320,23 @@ a {
 }
 
 .bootstrap-select > .dropdown-toggle.bs-placeholder, .bootstrap-select > .dropdown-toggle.bs-placeholder:hover, .bootstrap-select > .dropdown-toggle.bs-placeholder:focus, .bootstrap-select > .dropdown-toggle.bs-placeholder:active {
-  color: #999 !important;
-  background: #fff !important;
+  color: #495057 !important;
+  background-color: #fff !important;
+  opacity: 1 !important;
   border: 1px solid #ced4da !important;
   border-radius: 5px !important;
 }
 
 .form-control > button.btn-light {
-  color: #999 !important;
-  background: #fff !important;
+  color: #495057 !important;
+  background-color: #fff;
+  opacity: 1 !important;
   border: 1px solid #ced4da !important;
   border-radius: 5px !important;
+}
+
+.bootstrap-select.disabled, .bootstrap-select > .disabled {
+  background-color: #e9ecef !important;
 }
 
 .btn {
@@ -1389,7 +1400,7 @@ tr:hover td {
 
 .table-usuario tbody tr:hover td.ac-3 {
   width: 5%;
-  padding-right: 100px;
+  padding-right: 70px;
 }
 
 .pagination .icon {
