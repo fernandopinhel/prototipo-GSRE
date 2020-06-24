@@ -262,6 +262,23 @@ $(document).ready(function(){
 });
 
 
+$(document).ready(function(){
+  $(".default").click(function(){
+    $(".default").attr("checked");
+  });
+});
+
+
+
+$(document).ready(function(){
+  $("#checkbox-table-default").click(function(){
+    $("#checkbox-table-default-2").attr('checked', 'checked')
+    $("#checkbox-table-default-2").removeAttr('disabled')
+    $(".chkLineOne").removeAttr('disabled')
+  });
+});
+
+
 // pop-up vincular documentos
 function abrir(URL) {
   window.open(URL, 'janela', 'width=795, height=590, top=100, left=699, scrollbars=no, status=no, toolbar=no, location=no, menubar=no, resizable=no, fullscreen=no')
