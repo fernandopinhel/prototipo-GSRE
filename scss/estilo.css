@@ -1406,6 +1406,47 @@ tr:hover td {
   padding-right: 70px;
 }
 
+.table-prestadores tbody tr td:nth-child(1) {
+  width: 1%;
+}
+
+.table-prestadores tbody tr td:nth-child(2) {
+  width: 4%;
+}
+
+.table-prestadores tbody tr td:nth-child(3) {
+  width: 10%;
+}
+
+.table-prestadores tbody tr td:nth-child(4) {
+  width: 10%;
+}
+
+.table-prestadores tbody tr td:nth-child(5) {
+  width: 10%;
+}
+
+.table-prestadores tbody tr td:nth-child(6) {
+  width: 65%;
+}
+
+.table-prestadores tbody tr td.ac-3 div > .menu-invisible {
+  width: 138px !important;
+  left: 0;
+  top: 2px;
+}
+
+.table-prestadores tbody tr:hover td.ac-3 div > .menu-invisible {
+  width: 138px !important;
+  left: -16px;
+  top: 2px;
+}
+
+.table-prestadores tbody tr:hover td.ac-3 {
+  width: 5%;
+  padding-right: 70px;
+}
+
 .pagination .icon {
   font-size: 11px;
   margin: -4px;
