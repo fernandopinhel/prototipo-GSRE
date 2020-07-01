@@ -74,6 +74,7 @@
 								data-toggle="pill" 
 								href="listar-consulta.html"
 								role="tab" aria-controls="pills-consultas" 
+								onclick="window.location.href = 'consulta-sinistro.html'"
 								aria-selected="false">Consultas</a>
 							</li>
 							<li class="nav-item dropdown">
@@ -82,9 +83,10 @@
 									href="#" role="tab" 
 									aria-selected="true">Cadastros</a>
 								<div class="dropdown-menu">
-									<a class="dropdown-item" id="pills-cadastro-perfil-tab"        href= 'perfil.html'>Perfil</a>
-									<a class="dropdown-item" id="pills-cadastro-usuario-tab"       href= 'usuarios.html'>Usuário</a>
-								<a class="dropdown-item" id="pills-cadastro-instituicao-tab"   href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaInstituicao.do'>Instituições</a>
+								<a class="dropdown-item" id="pills-cadastro-perfil-tab"        href= 'perfil.html'>Perfil</a>
+								<a class="dropdown-item" id="pills-cadastro-usuario-tab"       href= 'usuario.html'>Usuário</a>
+								<a class="dropdown-item" id="pills-cadastro-usuario-tab"       href= 'prestador.html'>Prestador</a>
+								<a class="dropdown-item" id="pills-cadastro-instituicao-tab"   href= 'instituicoes.html'>Instituições</a>
 								<a class="dropdown-item" id="pills-cadastro-tabelas-tab"       href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaTabelas.do'>Tabelas</a>
 								<a class="dropdown-item" id="pills-cadastro-cartas-tab"        href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaCartas.do'>Cartas</a>
 								<a class="dropdown-item" id="pills-cadastro-oficinas-tab"      href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaOficinas.do'>Oficinas</a>
@@ -479,6 +481,9 @@
 								</a>  
 								<a class="nav-link indenizacao-tab" id="indenizacao-tab" href="#" 	 data-toggle="tooltip" data-original-title="Indenização">
 									<i class="icon icon-fin-receber"></i>
+								</a>
+								<a class="nav-link comprovante-tab" id="comprovante-tab" href="compraovante-de-despesas.html" onclick="abrir('compraovante-de-despesas.html')"  data-toggle="tooltip" data-original-title="Comprovante de Despesas">
+									<i class="icon icon-doc-demonstrativo"></i>
 								</a>
 								<a class="nav-link benef-veiculo-tab" id="benef-veiculo-tab" href="#" data-toggle="tooltip" data-original-title="Beneficiário/Veículo">
 									<i class="icon icon-info-vida"></i>
@@ -1200,17 +1205,8 @@
 												<a href="#" class="classificacao-docs" data-toggle="tooltip" data-original-title="Classificar Documentos"></a>
 											</div>
 										</div>
-										<div class="col-md-5 mb-2">
+										<div class="col-md-10 mb-2">
 											<label for="filtro">Filtro</label>
-											<select class="selectpicker form-control" id="filtro" name="filtro.codigoNaturezaProcesso" data-live-search="true" title="Selecione..." data-hide-disabled="true" data-actions-box="true" multiple>
-												<option value="1">Recentes</option>
-												<option value="2">&Uacute;ltimos 15 dias</option>
-												<option value="3">Apenas imagens</option>
-												<option value="4">Apenas documentos</option>
-											</select>
-										</div>
-										<div class="col-md-5 mb-2">
-											<label for="filtro">Tipo do Documento</label>
 											<select class="selectpicker form-control" id="filtro" name="filtro.codigoNaturezaProcesso" data-live-search="true" title="Selecione..." data-hide-disabled="true" data-actions-box="true">
 												<option value="0" selected>Selecione</option>
 													<option value="300">A CPI SP</option>

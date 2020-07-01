@@ -64,6 +64,23 @@ a {
   text-align: center;
 }
 
+.box-alerta {
+  border: 1px solid #99000f;
+  padding: 7px;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.box-alerta > h6 {
+  margin: 0;
+}
+
+.icons-absolute {
+  position: absolute !important;
+  right: 0 !important;
+  top: -17px !important;
+}
+
 .bootstrap-select .dropdown-toggle .filter-option-inner-inner {
   color: #495057;
   font-weight: 500;

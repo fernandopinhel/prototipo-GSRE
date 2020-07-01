@@ -73,6 +73,7 @@
 								id="pills-consultas-tab" 
 								data-toggle="pill" 
 								href='consulta-sinistro.html'
+								onclick="window.location.href = 'consulta-sinistro.html'"
 								role="tab" aria-controls="pills-consultas" 
 								>Consultas</a>
 							</li>
@@ -164,64 +165,82 @@
 															</div>
 														</div>
 														<div class="row mt-2">
-															<div class="col-lg-3 col-xl-3"> 							
+															<div class="col-lg-2 col-xl-2"> 							
 																<div class="form-group">
 																	<label for="text">CNPJ</label>
 																	<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 																</div>
                                                             </div>
                                                             <div class="col-lg-2 col-xl-2">												
-																<div class="form-group">
-																	<label for="text">Código Instituição</label>
-																	<input type="text" name="" maxlength="8" value="162" id="" class="form-control" autocomplete="off" disabled> 
-																</div>
-                                                            </div>
-                                                            <div class="col-lg-7 col-xl-7">												
+																<label for="filtro">Tipo de Instituição</label>
+																<select class="selectpicker form-control" id="filtro" name="" title="Selecione...">
+																	<option value="0">Tipo 1</option>
+																	<option value="1">Tipo 2</option>
+																</select>
+															</div>
+															<div class="col-lg-6 col-xl-6">												
 																<div class="form-group">
 																	<label for="text">Razão Social</label>
 																	<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 																</div>
                                                             </div>
-                                                            <div class="col-lg-3 col-xl-3 mt-2">												
-																<label for="filtro">Tipo de Instituição</label>
-																<select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione...">
-																	<option value="0">Tipo 1</option>
-																	<option value="1">Tipo 2</option>
-																</select>
+															<div class="col-lg-2 col-xl-2">												
+																<div class="form-group">
+																	<label for="text">Código Instituição</label>
+																	<input type="text" name="" maxlength="8" value="162" id="" class="form-control" autocomplete="off" disabled> 
+																</div>
 															</div>
-                                                            <div class="col-lg-3 col-xl-3 mt-2">												
+															<div class="col-lg-2 col-xl-2 mt-2">												
 																<label for="filtro">Situação</label>
-																<select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione...">
+																<select class="selectpicker form-control" id="filtro" name="" title="Selecione...">
 																	<option value="0">Ativo</option>
 																	<option value="1">Inativo</option>
 																</select>
 															</div>
+														</div>
+														<div class="row mt-5">
+															<div class="col-lg-12">
+																<h6 class="title-cadastro-internas">Pagamento</h6>															
+																<hr>
+                                                            </div>
 															<div class="col-lg-3 col-xl-3 mt-2">												
 																<label for="filtro">Forma de Pagamento</label>
-																<select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione...">
-                                                                    <option value="0">Conta Corrente</option>
-                                                                    <option value="0">Boleto</option>
+																<select class="selectpicker form-control" id="filtro" name="" title="Selecione...">
+																	<option value="0">Conta Corrente</option>
+																	<option value="0">Boleto</option>
 																</select>
-                                                            </div>
-                                                            <div class="col-lg-3 col-xl-3 mt-2">												
+															</div>
+															<div class="col-lg-3 col-xl-3 mt-2">												
 																<div class="form-group">
 																	<label for="text">Banco</label>
 																	<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 																</div>
-                                                            </div>
-                                                            <div class="col-lg-2 col-xl-2 mt-2">												
+															</div>
+															<div class="col-lg-2 col-xl-2 mt-2">												
 																<div class="form-group">
 																	<label for="text">Agência</label>
 																	<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 																</div>
-                                                            </div>
-                                                            <div class="col-lg-2 col-xl-2 mt-2">												
+															</div>
+															<div class="col-lg-1 col-xl-1 mt-3">												
+																<div class="form-group">
+																	<label for="text"></label>
+																	<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+																</div>
+															</div>
+															<div class="col-lg-2 col-xl-2 mt-2">												
 																<div class="form-group">
 																	<label for="text">Conta</label>
 																	<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 																</div>
-                                                            </div>
-                                                            <div class="col-lg-3 col-xl-3 mt-2">												
+															</div>
+															<div class="col-lg-1 col-xl-1 mt-3">												
+																<div class="form-group">
+																	<label for="text"></label>
+																	<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+																</div>
+															</div>
+															<div class="col-lg-3 col-xl-3 mt-2">												
 																<div class="form-group">
 																	<label for="text">Últ. Atualiz. Conta</label>
 																	<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
@@ -232,8 +251,14 @@
 															<div class="col-lg-12">
 																<h6 class="title-cadastro-internas">Endereço/Contato</h6>															
 																<hr>
-                                                            </div>
-                                                            <div class="col-lg-5 col-xl-5">												
+															</div>
+															<div class="col-lg-2 col-xl-2">												
+																<div class="form-group">
+																	<label for="text">CEP</label>
+																	<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+																</div>
+															</div>
+                                                            <div class="col-lg-6 col-xl-6">												
 																<div class="form-group">
 																	<label for="text">Logradouro</label>
 																	<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
@@ -253,7 +278,7 @@
                                                                     <option value="0">MG</option>
 																</select>
                                                             </div>
-                                                            <div class="col-lg-3 col-xl-3">												
+                                                            <div class="col-lg-3 col-xl-3 mt-2">												
 																<label for="filtro">Cidade</label>
 																<select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione...">
                                                                     <option value="0">Rio de Janeiro</option>
@@ -267,12 +292,6 @@
 																</select>
                                                             </div>
 															<div class="col-lg-2 col-xl-2 mt-2">												
-																<div class="form-group">
-																	<label for="text">CEP</label>
-																	<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-																</div>
-															</div>
-															<div class="col-lg-3 col-xl-3 mt-2">												
 																<div class="form-group">
 																	<label for="text">Telefone de Contato</label>
 																	<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
@@ -303,6 +322,13 @@
 										</div>
 										<!-- Fim Nova Instituição -->
 										<div class="row mt-5">
+											<div class="col-lg-2 col-xl-2">												
+												<label for="filtro">Tipo de Instituição</label>
+												<select class="selectpicker form-control" id="filtro" name="" title="Selecione...">
+													<option value="0">Tipo 1</option>
+													<option value="1">Tipo 2</option>
+												</select>
+											</div>
 											<div class="col-lg-2 col-xl-2">												
                                                 <div class="form-group">
                                                     <label for="text">CNPJ</label>

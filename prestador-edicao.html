@@ -74,6 +74,7 @@
 								data-toggle="pill" 
 								href='consulta-sinistro.html'
 								role="tab" aria-controls="pills-consultas" 
+								onclick="window.location.href = 'consulta-sinistro.html'"
 								>Consultas</a>
 							</li>
 							<li class="nav-item dropdown">
@@ -85,7 +86,7 @@
 								<a class="dropdown-item" id="pills-cadastro-perfil-tab"        href= 'perfil.html'>Perfil</a>
                                 <a class="dropdown-item" id="pills-cadastro-usuario-tab"       href= 'usuario.html'>Usuário</a>
                                 <a class="dropdown-item" id="pills-cadastro-usuario-tab"       href= 'prestador.html'>Prestador</a>
-								<a class="dropdown-item" id="pills-cadastro-instituicao-tab"   href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaInstituicao.do'>Instituições</a>
+								<a class="dropdown-item" id="pills-cadastro-instituicao-tab"   href= 'instituicoes.html'>Instituições</a>
 								<a class="dropdown-item" id="pills-cadastro-tabelas-tab"       href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaTabelas.do'>Tabelas</a>
 								<a class="dropdown-item" id="pills-cadastro-cartas-tab"        href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaCartas.do'>Cartas</a>
 								<a class="dropdown-item" id="pills-cadastro-oficinas-tab"      href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaOficinas.do'>Oficinas</a>
@@ -143,14 +144,14 @@
 												</div>
 											</div>
 										</div>
-										<!-- Consulta Prestador -->
+										<!-- Novo Prestador -->
 										<div class="row mt-4">
 											<div class="col-lg-12">
 												<div class="info-parecer novo-parecer">
 													<div class="container-fluid">
 														<div class="row">
 															<div class="col-lg-12">
-																<h5 class="float-left m-0 title-novo">Detalhes Prestador</h5>
+																<h5 class="float-left m-0 title-novo">Editar Prestador</h5>
 																<a href="#" class="float-right close-parecer">
 																	<i class="icon icon-close"></i>
 																</a>
@@ -164,73 +165,103 @@
 															</div>
 														</div>
 														<div class="row mt-2">
-															<div class="col-lg-3 col-xl-3"> 							
+															<div class="col-lg-2 col-xl-2"> 							
 																<div class="form-group">
 																	<label for="text">CNPJ</label>
-																	<input type="text" name="" value="99.999.999/9999-99" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+																	<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 																</div>
                                                             </div>
-                                                            <div class="col-lg-3 col-xl-3">												
+                                                            <div class="col-lg-2 col-xl-2">												
 																<label for="filtro">Tipo de Prestador</label>
-																<select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione...">
-																	<option value="0" selected>Despachante</option>
+																<select class="selectpicker form-control" id="filtro" name="" title="Selecione...">
+																	<option value="0">Despachante</option>
 																	<option value="1">Reguladora</option>
 																</select>
 															</div>
 															<div class="col-lg-6 col-xl-6">												
 																<div class="form-group">
 																	<label for="text">Razão Social</label>
-																	<input type="text" value="Lorem ipsum" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+																	<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 																</div>
                                                             </div>
-                                                            <div class="col-lg-3 col-xl-3 mt-2">												
-																<label for="filtro">Situação</label>
-																<select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione...">
-																	<option value="0" selected>Ativo</option>
-																	<option value="1">Inativo</option>
-																</select>
+															<div class="col-lg-2 col-xl-2">												
+																<div class="form-group">
+																	<label for="text">Código Prestador</label>
+																	<input type="text" name="" maxlength="8" value="162" id="" class="form-control" autocomplete="off" disabled> 
+																</div>
 															</div>
 															<div class="col-lg-2 col-xl-2 mt-2">												
 																<div class="form-group">
-																	<label for="text">Código Prestador</label>
-																	<input type="text" name="" value="162" maxlength="8" value="162" id="" class="form-control" autocomplete="off" disabled> 
-																</div>
-                                                            </div>
-                                                            <div class="col-lg-2 col-xl-2 mt-2">												
-																<div class="form-group">
 																	<label for="text">Código de Posição atual</label>
-																	<input type="text" name="190" maxlength="8" value="192" id="" class="form-control" autocomplete="off"> 
+																	<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+																</div>
+															</div>
+															<div class="col-lg-2 col-xl-2 mt-2">												
+																<label for="filtro">Situação</label>
+																<select class="selectpicker form-control" id="filtro" name="" title="Selecione...">
+																	<option value="0">Ativo</option>
+																	<option value="1">Inativo</option>
+																</select>
+															</div>
+															<div class="col-lg-3 col-xl-3 mt-2">												
+																<div class="form-group">
+																	<label for="text">Atribuído por</label>
+																	<input type="text" name="" maxlength="8" value="João Carlos" id="" class="form-control" autocomplete="off" disabled> 
 																</div>
 															</div>
 															<div class="col-lg-3 col-xl-3 mt-2">												
-																<label for="filtro">Forma de Pagamento</label>
-																<select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione...">
-                                                                    <option value="0" selected>Conta Corrente</option>
-                                                                    <option value="0">Boleto</option>
-																</select>
+																<div class="form-group">
+																	<label for="text">Data de inclusão</label>
+																	<input type="text" name="" maxlength="8" value="10/06/2020" id="" class="form-control" autocomplete="off" disabled> 
+																</div>
                                                             </div>
-                                                            <div class="col-lg-2 col-xl-2 mt-2">												
+														</div>
+														<div class="row mt-5">
+															<div class="col-lg-12">
+																<h6 class="title-cadastro-internas">Pagamento</h6>															
+																<hr>
+                                                            </div>
+															<div class="col-lg-3 col-xl-3 mt-2">												
+																<label for="filtro">Forma de Pagamento</label>
+																<select class="selectpicker form-control" id="filtro" name="" title="Selecione...">
+																	<option value="0">Conta Corrente</option>
+																	<option value="0">Boleto</option>
+																</select>
+															</div>
+															<div class="col-lg-3 col-xl-3 mt-2">												
 																<div class="form-group">
 																	<label for="text">Banco</label>
-																	<input type="text" name="" value="237 - Bradesco" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+																	<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 																</div>
-                                                            </div>
-                                                            <div class="col-lg-2 col-xl-2 mt-2">												
+															</div>
+															<div class="col-lg-2 col-xl-2 mt-2">												
 																<div class="form-group">
 																	<label for="text">Agência</label>
-																	<input type="text" value="9999" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+																	<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 																</div>
-                                                            </div>
-                                                            <div class="col-lg-2 col-xl-2 mt-2">												
+															</div>
+															<div class="col-lg-1 col-xl-1 mt-3">												
+																<div class="form-group">
+																	<label for="text"></label>
+																	<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+																</div>
+															</div>
+															<div class="col-lg-2 col-xl-2 mt-2">												
 																<div class="form-group">
 																	<label for="text">Conta</label>
-																	<input type="text" value="9999-9" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+																	<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 																</div>
-                                                            </div>
-                                                            <div class="col-lg-3 col-xl-3 mt-2">												
+															</div>
+															<div class="col-lg-1 col-xl-1 mt-3">												
+																<div class="form-group">
+																	<label for="text"></label>
+																	<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+																</div>
+															</div>
+															<div class="col-lg-3 col-xl-3 mt-2">												
 																<div class="form-group">
 																	<label for="text">Últ. Atualiz. Conta</label>
-																	<input type="text" value="05/07/2018" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+																	<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 																</div>
 															</div>
 														</div>
@@ -238,62 +269,62 @@
 															<div class="col-lg-12">
 																<h6 class="title-cadastro-internas">Endereço/Contato</h6>															
 																<hr>
-                                                            </div>
-                                                            <div class="col-lg-5 col-xl-5">												
+															</div>
+															<div class="col-lg-2 col-xl-2">												
+																<div class="form-group">
+																	<label for="text">CEP</label>
+																	<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+																</div>
+															</div>
+                                                            <div class="col-lg-6 col-xl-6">												
 																<div class="form-group">
 																	<label for="text">Logradouro</label>
-																	<input type="text" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit." name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+																	<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 																</div>
                                                             </div>
                                                             <div class="col-lg-3 col-xl-3">												
 																<label for="filtro">País</label>
 																<select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione...">
-                                                                    <option value="0" selected>Brasil</option>
+                                                                    <option value="0">Brasil</option>
 																</select>
                                                             </div>
                                                             <div class="col-lg-1 col-xl-1">												
 																<label for="filtro">UF</label>
 																<select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione...">
-                                                                    <option value="0" selected>RJ</option>
+                                                                    <option value="0">RJ</option>
                                                                     <option value="0">SP</option>
                                                                     <option value="0">MG</option>
 																</select>
                                                             </div>
-                                                            <div class="col-lg-3 col-xl-3">												
+                                                            <div class="col-lg-3 col-xl-3 mt-2">												
 																<label for="filtro">Cidade</label>
 																<select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione...">
-                                                                    <option value="0" selected>Rio de Janeiro</option>
+                                                                    <option value="0">Rio de Janeiro</option>
                                                                     <option value="0">São Paulo</option>
 																</select>
                                                             </div>
                                                             <div class="col-lg-3 col-xl-3 mt-2">												
 																<label for="filtro">Bairro</label>
 																<select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione...">
-                                                                    <option value="0" selected>Centro</option>
+                                                                    <option value="0">Centro</option>
 																</select>
                                                             </div>
 															<div class="col-lg-2 col-xl-2 mt-2">												
 																<div class="form-group">
-																	<label for="text">CEP</label>
-																	<input type="text" value="99999-999" name="" maxlength="8" id="" class="form-control" autocomplete="off"> 
-																</div>
-															</div>
-															<div class="col-lg-3 col-xl-3 mt-2">												
-																<div class="form-group">
 																	<label for="text">Telefone de Contato</label>
-																	<input type="text" name="" maxlength="8" value="(21)99999-9999" id="" class="form-control" autocomplete="off"> 
+																	<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 																</div>
                                                             </div>
                                                             <div class="col-lg-4 col-xl-4 mt-2">												
 																<div class="form-group">
 																	<label for="text">Nome de Contato</label>
-																	<input type="text" name="" maxlength="8" value="Lorem ipsum" id="" class="form-control" autocomplete="off"> 
+																	<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 																</div>
                                                             </div>
                                                             <div class="col-lg-3 col-xl-3 mt-2">												
 																<div class="form-group">
 																	<label for="text">E-mail</label>
-																	<input type="email" name="" maxlength="8" value="lorem@lorem.com.br" id="" class="form-control" autocomplete="off"> 
+																	<input type="email" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 																</div>
 															</div>
 														</div>
@@ -309,6 +340,13 @@
 										</div>
 										<!-- Fim Novo Prestador -->
 										<div class="row mt-5">
+											<div class="col-lg-2 col-xl-2">												
+												<label for="filtro">Tipo de Prestador</label>
+												<select class="selectpicker form-control" id="filtro" name="" title="Selecione...">
+													<option value="0">Despachante</option>
+													<option value="1">Reguladora</option>
+												</select>
+											</div>
 											<div class="col-lg-2 col-xl-2">												
                                                 <div class="form-group">
                                                     <label for="text">CNPJ</label>
@@ -335,7 +373,7 @@
 										<!-- Prestadores -->
 										<div class="row d-flex">
 											<div class="col-lg-12 my-auto">
-                                                <p class="mt-4"><strong>4</strong> Prestadore encontrados</p>
+                                                <p class="mt-4"><strong>4</strong> Prestadores encontrados</p>
 											</div>
 											<div class="col-12">
 												<hr>
@@ -529,7 +567,7 @@
 													<th scope="col">Data de Cadastro</th>
 													<th scope="col">Alterado por</th>
 													<th scope="col">Data da Alteração</th>
-													<th scope="col">Status do Prestador</th>
+													<th scope="col">Situação</th>
 												</tr>
 											</thead>
 											<tbody>
