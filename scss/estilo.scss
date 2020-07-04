@@ -259,6 +259,17 @@ a{
   top: 4px;
 }
 
+.pagamentos-rejeitados{
+  background: url(../img/pagamentos-rejeitados.svg);
+  width: 35px;
+  height: 33px;
+  background-repeat: no-repeat;
+  background-position: center;
+  right: 54px;
+  position: absolute;
+  top: 4px;
+}
+
 .cotacao{
   background: url(../img/cotacao.svg);
   width: 35px;
@@ -421,6 +432,11 @@ button.btn-second:hover{
 
 .w-1050{
   max-width: 1050px !important;
+}
+
+.w-90{
+  width: 90px !important;
+  max-width: 90px !important;
 }
 
 .txt-up{text-transform: uppercase;}
@@ -1265,6 +1281,34 @@ tr:hover td {color: #89919F;}
   padding-right: 32px;
 }
 
+// tabela indenizações
+.table-indenizacoes tbody tr td:nth-child(1){width:1%;}
+
+.table-indenizacoes tbody tr td:nth-child(2){width:4%;}
+
+.table-indenizacoes tbody tr td:nth-child(3){width:15%;}
+
+.table-indenizacoes tbody tr td:nth-child(4){width:15%;}
+
+.table-indenizacoes tbody tr td:nth-child(5){width:55%;}
+
+.table-indenizacoes tbody tr td.ac-3 div > .menu-invisible{
+  width: 138px !important;
+  right: 0;
+  top: 2px;
+}
+
+.table-indenizacoes tbody tr:hover td.ac-3 div > .menu-invisible{
+  width: 138px !important;
+  left: -71px;
+  top: 2px;
+}
+
+.table-indenizacoes tbody tr:hover td.ac-3{
+  width:9%;
+  padding-right: 32px;
+}
+
 // usuarios
 .table-usuario tbody tr td{width: 12%;}
 
@@ -1854,9 +1898,25 @@ span.btn-add{
   text-transform: uppercase;
 }
 
-.btn-salvar-orcamento:hover{
+.btn-salvar-orcamento:hover, .btn-salvar-orcamento:visited, .btn-salvar-orcamento:focus{
   background: #10C35E;
   border: 1px solid #10C35E;
+  color: #fff;
+  transition: $transicao-hover;
+}
+
+
+.btn-opcoes{
+  background: transparent;
+  border: 1px solid #999999;
+  color: #999999;
+  margin-top: 5px;
+  transition: $transicao-hover;  
+}
+
+.btn-opcoes:hover, .btn-opcoes:visited, .btn-opcoes:focus{
+  background: #999999;
+  border: 1px solid #999999;
   color: #fff;
   transition: $transicao-hover;
 }

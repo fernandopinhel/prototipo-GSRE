@@ -321,6 +321,17 @@
 														<div class="card-body p-0">
 															<div class="container-fluid p-0">
 																<div class="row">
+																	<div class="col-sm-12 col-md-6 col-lg-3 mb-4" data-toggle="modal" data-target="#modal-tipo-de-salvado">
+																		<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
+																			<div class="box-item-text my-auto">
+																				<p>Tipo de Salvado</p>
+																				<span>Recuperável</span>
+																			</div>
+																			<div class="box-item-img my-auto">
+																				<img src="img/icon-tipo-de-salvado.png" alt="">
+																			</div>
+																		</div>
+																	</div>
 																	<div class="col-sm-12 col-md-6 col-lg-3 mb-4">
 																		<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
 																			<div class="box-item-text my-auto">
@@ -354,17 +365,6 @@
 																			</div>
 																		</div>
 																	</div>
-																	<div class="col-sm-12 col-md-6 col-lg-3 mb-4">
-																		<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
-																			<div class="box-item-text my-auto">
-																				<p>Prêmio Pendente</p>
-																				<span>teste</span>
-																			</div>
-																			<div class="box-item-img my-auto">
-																				<img src="img/icon-premio.png" alt="">
-																			</div>
-																		</div>
-																	</div>
 																</div>
 															</div>
 														</div>
@@ -372,6 +372,17 @@
 													<div id="collapseInfo" class="collapse" aria-labelledby="headingInfo" data-parent="#accordionExample">
 														<div class="container-fluid">
 															<div class="row">
+																<div class="col-sm-12 col-md-6 col-lg-3 mb-4">
+																	<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
+																		<div class="box-item-text my-auto">
+																			<p>Prêmio Pendente</p>
+																			<span>teste</span>
+																		</div>
+																		<div class="box-item-img my-auto">
+																			<img src="img/icon-premio.png" alt="">
+																		</div>
+																	</div>
+																</div>
 																<div class="col-sm-12 col-md-6 col-lg-3 mb-4">
 																	<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
 																		<div class="box-item-text my-auto">
@@ -514,8 +525,8 @@
 												Incluir Indenização</button>
 											</div>
 											<div class="col-lg-6">
-												<div class="totalizador-orcamentos" data-toggle="modal" data-target="#modal-totalizadores">
-													<a href="#" class="orcamentos-autorizados" data-toggle="tooltip" data-original-title="Exibir Total de Orçamentos Autorizados"></a>
+												<div class="totalizador-orcamentos" data-toggle="modal" data-target="#modal-totalizadores-pagamentos-rejeitados">
+													<a href="#" class="pagamentos-rejeitados" data-toggle="tooltip" data-original-title="Exibir Total de Pagamentos Rejeitados"></a>
 												</div>
 												<div class="exportar-orcamentos">
 													<a href="#" class="excel" data-toggle="tooltip" data-original-title="Exportar Todos Orçamentos"></a>
@@ -546,25 +557,25 @@
 																	</div>
 																	<div class="col-lg-4 internas-buscas">
 																		<label for="text">Protocolo/Natureza</label>
-																		<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-																	</div>
-                                                                    <div class="col-lg-4 internas-buscas">
-                                                                        <label for="filtro">Salvado</label>							
-                                                                        <select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione..." data-hide-disabled="true" data-actions-box="true">
-                                                                            <option value="0" selected>Recuperável</option>
-                                                                            <option value="1">tipo 2</option>
-                                                                            <option value="2">tipo 3</option>
-                                                                            <option value="3">tipo 4</option>
-                                                                            <option value="4">tipo 5</option>
-                                                                        </select>
-                                                                    </div>
-																	<div class="col-lg-4 internas-buscas mt-4 mb-3">
-                                                                        <div class="box-alerta mt-2">
-                                                                            <h6 class="color-r">Pagamento Rejeitado</h6>                                                                        
-                                                                        </div>
+																		<input type="text" name="" maxlength="8" value="592858-4" id="" class="form-control" autocomplete="off"> 
 																	</div>
 																</div>
 																<!-- fim Informações Principais -->
+																<!-- Opções -->
+																<div class="row">
+																	<div class="col-lg-12 internas-buscas mt-4">
+																		<h6 class="title-add-orcamento">Opções</h6>
+																		<hr>
+																	</div>
+																</div>
+																<div class="row mt-2">
+																	<button type="button" class="btn btn-opcoes mr-2" data-toggle="modal" data-target="#modal-nota-fiscal">Nota Fiscal</button>
+																	<button type="button" class="btn btn-opcoes mr-2" data-toggle="modal" data-target="#modal-objetos-cotados">Cobertura</button>
+																	<button type="button" class="btn btn-opcoes mr-2" data-toggle="modal" data-target="#">Acréscimo</button>
+																	<button type="button" class="btn btn-opcoes mr-2" data-toggle="modal" data-target="#modal-orcamentos">Orçamento</button>
+																	<button type="button" class="btn btn-opcoes mr-2" data-toggle="modal" data-target="#">R$ 0,00</button>
+																</div>
+																<!-- fim Opções -->
 																<!-- Beneficiário do Pagamento -->
 																<div class="row">
 																	<div class="col-lg-12 internas-buscas mt-4">
@@ -573,10 +584,10 @@
 																	</div>
 																</div>
 																<div class="row mt-2">
-                                                                    <div class="col-lg-4 internas-buscas  mt-2  ">
+                                                                    <div class="col-lg-4 internas-buscas  mt-2">
                                                                         <label for="filtro">Tipo</label>							
-                                                                        <select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione..." data-hide-disabled="true" data-actions-box="true">
-                                                                            <option value="0">Segurado</option>
+                                                                        <select class="selectpicker form-control" id="filtro" name=""  title="Selecione..." data-hide-disabled="true" data-actions-box="true" disabled>
+                                                                            <option value="0" selected>Segurado</option>
                                                                             <option value="1">tipo 2</option>
                                                                             <option value="2">tipo 3</option>
                                                                             <option value="3">tipo 4</option>
@@ -585,8 +596,8 @@
                                                                     </div>
                                                                     <div class="col-lg-4 internas-buscas mt-2">
                                                                         <label for="filtro">Nome</label>							
-                                                                        <select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione..." data-hide-disabled="true" data-actions-box="true">
-                                                                            <option value="0">Estacionamento CP LTDA</option>
+                                                                        <select class="selectpicker form-control" id="filtro" name="" title="Selecione..." data-hide-disabled="true" data-actions-box="true" disabled>
+                                                                            <option value="0" selected>Estacionamento CP LTDA</option>
                                                                             <option value="1">tipo 2</option>
                                                                             <option value="2">tipo 3</option>
                                                                             <option value="3">tipo 4</option>
@@ -595,7 +606,7 @@
                                                                     </div>
                                                                     <div class="col-lg-4 internas-buscas mt-2">
 																		<label for="text">Valor de Mão de Obra</label>
-																		<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+																		<input type="text" name="" maxlength="8" value="R$ 500,00" id="" class="form-control" autocomplete="off" disabled> 
 																	</div>
                                                                 </div>
                                                                 <!-- Fim Beneficiário do Pagamento -->
@@ -613,24 +624,24 @@
                                                                     </div>
                                                                     <div class="col-lg-4 internas-buscas">
                                                                         <label for="filtro">Forma de Pagamento</label>							
-                                                                        <select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione..." data-hide-disabled="true" data-actions-box="true">
-                                                                            <option value="0" selected>OP Eletrônica</option>
-                                                                            <option value="1">Conta Corrente</option>
+                                                                        <select class="selectpicker form-control" id="filtro" name=""  title="Selecione..." data-hide-disabled="true" data-actions-box="true" disabled>
+                                                                            <option value="0">OP Eletrônica</option>
+                                                                            <option value="1" selected>Conta Corrente</option>
                                                                             <option value="2">Cheque</option>
                                                                         </select>
                                                                     </div>
 																	<div class="col-lg-4 internas-buscas">
 																		<label for="text">Data do Pagamento</label>
-																		<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+																		<input type="text" name="" maxlength="8" value="08/02/2020" id="" class="form-control" autocomplete="off" disabled> 
 																	</div>
 																	<div class="col-lg-4 internas-buscas mt-4">
 																		<label for="text">Valor Indenizado</label>
-																		<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+																		<input type="text" name="" maxlength="8" value="R$ 70,00" id="" class="form-control" autocomplete="off" disabled> 
                                                                     </div>
                                                                     <div class="col-lg-4 internas-buscas mt-5">
                                                                         <div class="mt-3">
                                                                             <div class="ex-checkbox m-orcamento d-flex my-auto mt-5">
-                                                                                <input type="checkbox" id="checkbox_one"/>
+                                                                                <input type="checkbox" id="checkbox_one" checked/>
                                                                                 <label for="checkbox_one" class="check-estilo">Pagamento na data de solicitação</label>
                                                                             </div>
                                                                         </div>
@@ -638,7 +649,7 @@
                                                                 </div>
                                                                 <!-- Fim Pagamento -->
                                                                 <!-- OP Eletrônica -->
-                                                                <div class="row mt-5">
+                                                                <div class="row mt-5 d-none">
                                                                     <div class="col-lg-12">
                                                                         <h6 class="title-cadastro-internas">OP Eletrônica</h6>															
                                                                         <hr>
@@ -646,64 +657,64 @@
                                                                     <div class="col-lg-2 col-xl-2">												
                                                                         <div class="form-group">
                                                                             <label for="text">CEP</label>
-                                                                            <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+                                                                            <input type="text" name="" maxlength="8" value="99999-999" id="" class="form-control" autocomplete="off" disabled> 
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-lg-6 col-xl-6">												
                                                                         <div class="form-group">
                                                                             <label for="text">Logradouro</label>
-                                                                            <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+                                                                            <input type="text" name="" maxlength="8" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit." id="" class="form-control" autocomplete="off" disabled> 
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-lg-3 col-xl-3">												
                                                                         <label for="filtro">País</label>
-                                                                        <select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione...">
-                                                                            <option value="0">Brasil</option>
+                                                                        <select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione..." disabled>
+                                                                            <option value="0" selected>Brasil</option>
                                                                         </select>
                                                                     </div>
                                                                     <div class="col-lg-1 col-xl-1">												
                                                                         <label for="filtro">UF</label>
-                                                                        <select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione...">
-                                                                            <option value="0">RJ</option>
+                                                                        <select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione..." disabled>
+                                                                            <option value="0" selected>RJ</option>
                                                                             <option value="0">SP</option>
                                                                             <option value="0">MG</option>
                                                                         </select>
                                                                     </div>
                                                                     <div class="col-lg-3 col-xl-3 mt-2">												
                                                                         <label for="filtro">Cidade</label>
-                                                                        <select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione...">
-                                                                            <option value="0">Rio de Janeiro</option>
+                                                                        <select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione..." disabled>
+                                                                            <option value="0" selected>Rio de Janeiro</option>
                                                                             <option value="0">São Paulo</option>
                                                                         </select>
                                                                     </div>
                                                                     <div class="col-lg-3 col-xl-3 mt-2">												
                                                                         <label for="filtro">Bairro</label>
-                                                                        <select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione...">
-                                                                            <option value="0">Centro</option>
+                                                                        <select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione..." disabled>
+                                                                            <option value="0" selected>Centro</option>
                                                                         </select>
                                                                     </div>
                                                                     <div class="col-lg-2 col-xl-2 mt-2">												
                                                                         <div class="form-group">
                                                                             <label for="text">Telefone de Contato</label>
-                                                                            <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+                                                                            <input type="text" name="" maxlength="8" value="(21)99999-9999" id="" class="form-control" autocomplete="off" disabled> 
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-lg-4 col-xl-4 mt-2">												
                                                                         <div class="form-group">
                                                                             <label for="text">Nome de Contato</label>
-                                                                            <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+                                                                            <input type="text" name="" maxlength="8" value="João Carlos" id="" class="form-control" autocomplete="off" disabled> 
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-lg-3 col-xl-3 mt-2">												
                                                                         <div class="form-group">
                                                                             <label for="text">E-mail</label>
-                                                                            <input type="email" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+                                                                            <input type="email" name="" maxlength="8" value="joaocarlos@email.com" id="" class="form-control" autocomplete="off" disabled> 
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <!-- Fim OP Eletrônica -->
                                                                 <!-- Cheque -->
-                                                                <div class="row mt-5">
+                                                                <div class="row mt-5 d-none">
                                                                     <div class="col-lg-12">
                                                                         <h6 class="title-cadastro-internas">Cheque</h6>															
                                                                         <hr>
@@ -711,25 +722,25 @@
                                                                     <div class="col-lg-2 col-xl-2">												
                                                                         <div class="form-group">
                                                                             <label for="text">Data do Vencimento</label>
-                                                                            <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+                                                                            <input type="text" name="" maxlength="8" value="21/05/2020" id="" class="form-control" autocomplete="off" disabled> 
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-lg-2 col-xl-2">												
                                                                         <div class="form-group">
                                                                             <label for="text">Nº do Documento</label>
-                                                                            <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+                                                                            <input type="text" name="" maxlength="8" value="564564" id="" class="form-control" autocomplete="off" disabled> 
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-lg-2 col-xl-2">												
                                                                         <div class="form-group">
                                                                             <label for="text">Data da Emissão</label>
-                                                                            <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+                                                                            <input type="text" name="" maxlength="8" value="05/05/2020" id="" class="form-control" autocomplete="off" disabled> 
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-lg-4 col-xl-4">												
                                                                         <label for="filtro">Sucursal Pagadora</label>
-                                                                        <select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione...">
-                                                                            <option value="0">Sucursal 1</option>
+                                                                        <select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione..." disabled>
+                                                                            <option value="0" selected>Sucursal 1</option>
                                                                             <option value="0">Sucursal 2</option>
                                                                             <option value="0">Sucursal 3</option>
                                                                         </select>
@@ -745,40 +756,40 @@
                                                                     <div class="col-lg-3 col-xl-3 mt-2">												
                                                                         <div class="form-group">
                                                                             <label for="text">Banco</label>
-                                                                            <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+                                                                            <input type="text" name="" maxlength="8" value="33" id="" class="form-control" autocomplete="off" disabled> 
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-lg-2 col-xl-2 mt-2">												
                                                                         <div class="form-group">
                                                                             <label for="text">Agência</label>
-                                                                            <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+                                                                            <input type="text" name="" maxlength="8" value="1673" id="" class="form-control" autocomplete="off" disabled> 
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-lg-1 col-xl-1 mt-3">												
                                                                         <div class="form-group">
                                                                             <label for="text"></label>
-                                                                            <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+                                                                            <input type="text" name="" maxlength="8" value="9" id="" class="form-control" autocomplete="off" disabled> 
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-lg-2 col-xl-2 mt-2">												
                                                                         <div class="form-group">
                                                                             <label for="text">Conta</label>
-                                                                            <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+                                                                            <input type="text" name="" maxlength="8" value="60003151" id="" class="form-control" autocomplete="off" disabled> 
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-lg-1 col-xl-1 mt-3">												
                                                                         <div class="form-group">
                                                                             <label for="text"></label>
-                                                                            <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+                                                                            <input type="text" name="" maxlength="8" value="1" id="" class="form-control" autocomplete="off" disabled> 
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <!-- Fim Cheque -->
+                                                                <!-- Fim Conta Corrente -->
 															</div>
 														</div>
 														<div class="row mt-5">
 															<div class="col-lg-12 col-xl-12 mb-3">
-																<button class="btn btn-salvar float-right b-salvar-parecer txt-up">Salvar</button>
+																<button class="btn btn-salvar float-right b-salvar-parecer txt-up" data-toggle="modal" data-target="#modal-tipo-de-salvado">Salvar</button>
 																<button class="btn btn-cancel float-right b-cancelar-parecer">cancelar</button>
 															</div>
 														</div>
@@ -789,362 +800,201 @@
 										<!-- Fim Nova Indenização -->
 										<!-- Indenizações -->
 										<div class="row buscas-gerais">
-											<div class="col-lg-3 internas-buscas">
+											<div class="col-lg-2 internas-buscas-2">
 												<label for="text">Protocolo/Natureza</label>
-												<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+												<input type="text" name="" maxlength="8" value="592858-4" id="" class="form-control" autocomplete="off"> 
 											</div>
-                                            <div class="col-lg-3 internas-buscas">
-                                                <label for="filtro">Salvado</label>							
-                                                <select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione..." data-hide-disabled="true" data-actions-box="true">
-                                                    <option value="0" selected>Recuperável</option>
-                                                    <option value="1">tipo 2</option>
-                                                    <option value="2">tipo 3</option>
-                                                    <option value="3">tipo 4</option>
-                                                    <option value="4">tipo 5</option>
-                                                </select>
-                                            </div>
+											<div class="col-lg-3 internas-buscas">
+												<label for="filtro">Tipo do Beneficiário</label>							
+												<select class="selectpicker form-control" id="filtro" name=""  title="Selecione..." data-hide-disabled="true" data-actions-box="true">
+													<option value="0" selected>Segurado</option>
+													<option value="1">tipo 2</option>
+													<option value="2">tipo 3</option>
+													<option value="3">tipo 4</option>
+													<option value="4">tipo 5</option>
+												</select>
+											</div>
+											<div class="col-lg-3 internas-buscas">
+												<label for="filtro">Nome do Beneficiário</label>							
+												<select class="selectpicker form-control" id="filtro" name="" title="Selecione..." data-hide-disabled="true" data-actions-box="true">
+													<option value="0" selected>Estacionamento CP LTDA</option>
+													<option value="1">tipo 2</option>
+													<option value="2">tipo 3</option>
+													<option value="3">tipo 4</option>
+													<option value="4">tipo 5</option>
+												</select>
+											</div>
 											<div class="col-lg-2 mt-2">
 												<button type="button" name="button" class="btn btn-primary mt-4">Buscar</button>
 											</div>
 										</div>
-										<div class="row mt-4">
-											<div class="col-lg-12 d-flex my-auto">
-												<p><strong>19</strong> Indenizações encontradas</p>
+										<div class="row mt-5">
+											<div class="col-lg-6 d-flex my-auto">
+												<p><strong>4</strong> Indenizações encontradas</p>
 											</div>
-										</div>
-										<div class="row mt-2">
-											<div class="col-lg-12">
-												<div class="info-orcamento">
-													<div class="container-fluid">
-														<div class="row header-orcamento m-0 d-flex">
-															<div class="col-lg-6 p-0 my-auto">
-																<div class="ex-checkbox mt-0 p-0">
-																	<input type="checkbox" class="marcar" id="checkbox_single"/>
-																	<label for="checkbox_single" class="check-estilo" data-toggle="tooltip" data-original-title="Selecionar Orçamento"></label>
-																</div>
-															</div>
-															<div class="col-lg-6 p-0 float-right my-auto">																
-																<a href="#" class="icon-autorizado icons-absolute"  data-toggle="tooltip" data-original-title="Pagamento Autorizado"></a>
-															</div>
-														</div>														
-														<div class="row conteudo-orcamento mt-1">
-															<div class="container-fluid">
-																<div class="row">																	
-																	<div class="col-lg-3 mt-3 mb-3 internas-buscas">
-																		<div class="box-orcamentos border-right">
-																			<h6 class="txt-up">Protocolo/Natureza</h6>
-																			<p class="color-b"><b>56693-4</b></p>
-																		</div>
-																	</div>
-																	<div class="col-lg-3 mt-3 mb-3 internas-buscas">
-																		<div class="box-orcamentos b-right border-right">
-																			<h6 class="txt-up">Salvado</h6>
-																			<p class="color-b"><b>Recuperável</b></p>
-																		</div>
-																	</div>
-																	<div class="col-lg-3 mt-3 mb-3 internas-buscas">
-																		<div class="box-orcamentos border-right">
-																			<h6 class="txt-up">Tipo</h6>
-																			<p class="color-b"><b>Segurado</b></p>
-																		</div>
-																	</div>
-																	<div class="col-lg-3 mt-3 mb-3 internas-buscas">
-																		<div class="box-orcamentos">
-																			<h6 class="txt-up">Nome</h6>
-																			<p class="color-b"><b>Estacionamento CP LTDA</b></p>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div class="row d-flex">
-															<div class="col-lg-12">
-																<a href="#" class="conteudo-detalhes" data-toggle="modal" data-target="#modalDetalhes">Detalhes</a>
-															</div>
-														</div>
-													</div>													
+											<div class="col-lg-6 actions-menu-orcamento">
+												<div class="float-right d-flex my-auto mr-2">
+													<div class="ex-checkbox m-orcamento d-flex my-auto">
+														<label for="checkbox_one" class="check-estilo my-auto mr-2">
+															<small>Selecionar todos</small>
+														</label>
+														<input type="checkbox" class="marcar" id="checkbox_single"/>
+														<label for="checkbox_single" class="check-estilo" data-toggle="tooltip" data-original-title="Selecionar Indenizações"></label>
+													</div>
 												</div>
 											</div>
+											<div class="col-lg-12"><hr></div>
 										</div>
-										<div class="row mt-4">
-											<div class="col-lg-12">
-												<div class="info-orcamento">
-													<div class="container-fluid">
-														<div class="row header-orcamento m-0 d-flex">
-															<div class="col-lg-6 p-0 my-auto">
-																<div class="ex-checkbox mt-0 p-0">
-																	<input type="checkbox" class="marcar" id="checkbox_single"/>
-																	<label for="checkbox_single" class="check-estilo" data-toggle="tooltip" data-original-title="Selecionar Orçamento"></label>
-																</div>
-															</div>
-															<div class="col-lg-6 p-0 float-right my-auto">																
-																<a href="#" class="icon-nao-autorizado icons-absolute"  data-toggle="tooltip" data-original-title="Pagamento Não Autorizado"></a>
-															</div>
-														</div>														
-														<div class="row conteudo-orcamento mt-1">
-															<div class="container-fluid">
-																<div class="row">																	
-																	<div class="col-lg-3 mt-3 mb-3 internas-buscas">
-																		<div class="box-orcamentos border-right">
-																			<h6 class="txt-up">Protocolo/Natureza</h6>
-																			<p class="color-b"><b>56693-4</b></p>
-																		</div>
-																	</div>
-																	<div class="col-lg-3 mt-3 mb-3 internas-buscas">
-																		<div class="box-orcamentos b-right border-right">
-																			<h6 class="txt-up">Salvado</h6>
-																			<p class="color-b"><b>Recuperável</b></p>
-																		</div>
-																	</div>
-																	<div class="col-lg-3 mt-3 mb-3 internas-buscas">
-																		<div class="box-orcamentos border-right">
-																			<h6 class="txt-up">Tipo</h6>
-																			<p class="color-b"><b>Segurado</b></p>
-																		</div>
-																	</div>
-																	<div class="col-lg-3 mt-3 mb-3 internas-buscas">
-																		<div class="box-orcamentos">
-																			<h6 class="txt-up">Nome</h6>
-																			<p class="color-b"><b>Estacionamento CP LTDA</b></p>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div class="row d-flex">
-															<div class="col-lg-12">
-																<a href="#" class="conteudo-detalhes" data-toggle="modal" data-target="#modalDetalhes">Detalhes</a>
-															</div>
-														</div>
-													</div>													
-												</div>
-											</div>
-										</div>
-										<div class="row mt-4">
-											<div class="col-lg-12">
-												<div class="info-orcamento">
-													<div class="container-fluid">
-														<div class="row header-orcamento m-0 d-flex">
-															<div class="col-lg-6 p-0 my-auto">
-																<div class="ex-checkbox mt-0 p-0">
-																	<input type="checkbox" class="marcar" id="checkbox_single"/>
-																	<label for="checkbox_single" class="check-estilo" data-toggle="tooltip" data-original-title="Selecionar Orçamento"></label>
-																</div>
-															</div>
-															<div class="col-lg-6 p-0 float-right my-auto">																
-																<a href="#" class="icon-autorizado icons-absolute"  data-toggle="tooltip" data-original-title="Pagamento Autorizado"></a>
-															</div>
-														</div>														
-														<div class="row conteudo-orcamento mt-1">
-															<div class="container-fluid">
-																<div class="row">																	
-																	<div class="col-lg-3 mt-3 mb-3 internas-buscas">
-																		<div class="box-orcamentos border-right">
-																			<h6 class="txt-up">Protocolo/Natureza</h6>
-																			<p class="color-b"><b>56693-4</b></p>
-																		</div>
-																	</div>
-																	<div class="col-lg-3 mt-3 mb-3 internas-buscas">
-																		<div class="box-orcamentos b-right border-right">
-																			<h6 class="txt-up">Salvado</h6>
-																			<p class="color-b"><b>Recuperável</b></p>
-																		</div>
-																	</div>
-																	<div class="col-lg-3 mt-3 mb-3 internas-buscas">
-																		<div class="box-orcamentos border-right">
-																			<h6 class="txt-up">Tipo</h6>
-																			<p class="color-b"><b>Segurado</b></p>
-																		</div>
-																	</div>
-																	<div class="col-lg-3 mt-3 mb-3 internas-buscas">
-																		<div class="box-orcamentos">
-																			<h6 class="txt-up">Nome</h6>
-																			<p class="color-b"><b>Estacionamento CP LTDA</b></p>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div class="row d-flex">
-															<div class="col-lg-12">
-																<a href="#" class="conteudo-detalhes" data-toggle="modal" data-target="#modalDetalhes">Detalhes</a>
-															</div>
-														</div>
-													</div>													
-												</div>
-											</div>
-										</div>
-										<div class="loads-m d-none">
-											<div class="row mt-4">
-                                                <div class="col-lg-12">
-                                                    <div class="info-orcamento">
-                                                        <div class="container-fluid">
-                                                            <div class="row header-orcamento m-0 d-flex">
-                                                                <div class="col-lg-6 p-0 my-auto">
-                                                                    <div class="ex-checkbox mt-0 p-0">
-                                                                        <input type="checkbox" class="marcar" id="checkbox_single"/>
-                                                                        <label for="checkbox_single" class="check-estilo" data-toggle="tooltip" data-original-title="Selecionar Orçamento"></label>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-6 p-0 float-right my-auto">																
-                                                                    <a href="#" class="icon-autorizado icons-absolute"  data-toggle="tooltip" data-original-title="Pagamento Autorizado"></a>
-                                                                </div>
-                                                            </div>														
-                                                            <div class="row conteudo-orcamento mt-1">
-                                                                <div class="container-fluid">
-                                                                    <div class="row">																	
-                                                                        <div class="col-lg-3 mt-3 mb-3 internas-buscas">
-                                                                            <div class="box-orcamentos border-right">
-                                                                                <h6 class="txt-up">Protocolo/Natureza</h6>
-                                                                                <p class="color-b"><b>56693-4</b></p>
+                                        <div class="row resultado-filtro">
+                                            <div class="col-12 p-0">
+                                                <div class="table-responsive">
+                                                    <form id="" name="" action="" method="post">
+                                                        <table class="table table-striped table-indenizacoes" id="">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>
+                                                                        <div class="ex-checkbox chb2">
+                                                                            <input class="form-check-input" type="checkbox" data-toggle="tooltip" data-original-title="Selecionar todos">
+                                                                            <label for="checkbox-table"></label>
+                                                                        </div>
+                                                                    </th>
+                                                                    <th scope="col"></th>
+																	<th scope="col">Protocolo/Natureza</th>
+																	<th scope="col">Tipo do Beneficiário</th>
+																	<th scope="col">Nome do Beneficiário</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="ex-checkbox chb2">
+                                                                            <input class="form-check-input" type="checkbox">
+                                                                            <label for="checkbox-table"></label>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="actions ac-3">
+                                                                        <div class="float-right">
+                                                                            <div class="menu-visible">
+                                                                                <span class="circle"></span>
+                                                                                <span class="circle"></span>
+                                                                                <span class="circle"></span>
+                                                                            </div>
+                                                                            <div class="menu-invisible">
+                                                                                <a href="#"  class="" data-toggle="modal" data-target="#modal-historico" >
+                                                                                    <img src="img/historico.svg" data-toggle="tooltip" data-original-title="Histórico">
+                                                                                </a>
+                                                                                <a href="#"  data-toggle="modal" data-target="#modal-alterar" >
+                                                                                    <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar">
+                                                                                </a>
+                                                                                <a href="#" data-toggle="modal" data-target="#modal-detalhes" >
+                                                                                    <img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes">
+                                                                                </a>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="col-lg-3 mt-3 mb-3 internas-buscas">
-                                                                            <div class="box-orcamentos b-right border-right">
-                                                                                <h6 class="txt-up">Salvado</h6>
-                                                                                <p class="color-b"><b>Recuperável</b></p>
+                                                                    </td>
+																	<td>592858-4</td>   
+																	<td>Tipo do Segurado</td>   
+																	<td>Nome do Beneficiário</td>                                                             
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="ex-checkbox chb2">
+                                                                            <input class="form-check-input" type="checkbox">
+                                                                            <label for="checkbox-table"></label>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="actions ac-3">
+                                                                        <div class="float-right">
+                                                                            <div class="menu-visible">
+                                                                                <span class="circle"></span>
+                                                                                <span class="circle"></span>
+                                                                                <span class="circle"></span>
+                                                                            </div>
+                                                                            <div class="menu-invisible">
+                                                                                <a href="#"  class="" data-toggle="modal" data-target="#modal-historico" >
+                                                                                    <img src="img/historico.svg" data-toggle="tooltip" data-original-title="Histórico">
+                                                                                </a>
+                                                                                <a href="#"  data-toggle="modal" data-target="#modal-alterar" >
+                                                                                    <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar">
+                                                                                </a>
+                                                                                <a href="#" data-toggle="modal" data-target="#modal-detalhes" >
+                                                                                    <img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes">
+                                                                                </a>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="col-lg-3 mt-3 mb-3 internas-buscas">
-                                                                            <div class="box-orcamentos border-right">
-                                                                                <h6 class="txt-up">Tipo</h6>
-                                                                                <p class="color-b"><b>Segurado</b></p>
+                                                                    </td>
+																	<td>592858-4</td>   
+																	<td>Tipo do Segurado</td>   
+																	<td>Nome do Beneficiário</td>                                                             
+																</tr>
+																<tr>
+                                                                    <td>
+                                                                        <div class="ex-checkbox chb2">
+                                                                            <input class="form-check-input" type="checkbox">
+                                                                            <label for="checkbox-table"></label>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="actions ac-3">
+                                                                        <div class="float-right">
+                                                                            <div class="menu-visible">
+                                                                                <span class="circle"></span>
+                                                                                <span class="circle"></span>
+                                                                                <span class="circle"></span>
+                                                                            </div>
+                                                                            <div class="menu-invisible">
+                                                                                <a href="#"  class="" data-toggle="modal" data-target="#modal-historico" >
+                                                                                    <img src="img/historico.svg" data-toggle="tooltip" data-original-title="Histórico">
+                                                                                </a>
+                                                                                <a href="#"  data-toggle="modal" data-target="#modal-alterar" >
+                                                                                    <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar">
+                                                                                </a>
+                                                                                <a href="#" data-toggle="modal" data-target="#modal-detalhes" >
+                                                                                    <img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes">
+                                                                                </a>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="col-lg-3 mt-3 mb-3 internas-buscas">
-                                                                            <div class="box-orcamentos">
-                                                                                <h6 class="txt-up">Nome</h6>
-                                                                                <p class="color-b"><b>Estacionamento CP LTDA</b></p>
+                                                                    </td>
+																	<td>592858-4</td>   
+																	<td>Tipo do Segurado</td>   
+																	<td>Nome do Beneficiário</td>                                                             
+																</tr>
+																<tr>
+                                                                    <td>
+                                                                        <div class="ex-checkbox chb2">
+                                                                            <input class="form-check-input" type="checkbox">
+                                                                            <label for="checkbox-table"></label>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="actions ac-3">
+                                                                        <div class="float-right">
+                                                                            <div class="menu-visible">
+                                                                                <span class="circle"></span>
+                                                                                <span class="circle"></span>
+                                                                                <span class="circle"></span>
+                                                                            </div>
+                                                                            <div class="menu-invisible">
+                                                                                <a href="#"  class="" data-toggle="modal" data-target="#modal-historico" >
+                                                                                    <img src="img/historico.svg" data-toggle="tooltip" data-original-title="Histórico">
+                                                                                </a>
+                                                                                <a href="#"  data-toggle="modal" data-target="#modal-alterar" >
+                                                                                    <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar">
+                                                                                </a>
+                                                                                <a href="#" data-toggle="modal" data-target="#modal-detalhes" >
+                                                                                    <img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes">
+                                                                                </a>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row d-flex">
-                                                                <div class="col-lg-12">
-                                                                    <a href="#" class="conteudo-detalhes" data-toggle="modal" data-target="#modalDetalhes">Detalhes</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>													
-                                                    </div>
+                                                                    </td>
+																	<td>592858-4</td>   
+																	<td>Tipo do Segurado</td>   
+																	<td>Nome do Beneficiário</td>                                                             
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </form>
                                                 </div>
-											</div>
-											<div class="row mt-4">
-                                                <div class="col-lg-12">
-                                                    <div class="info-orcamento">
-                                                        <div class="container-fluid">
-                                                            <div class="row header-orcamento m-0 d-flex">
-                                                                <div class="col-lg-6 p-0 my-auto">
-                                                                    <div class="ex-checkbox mt-0 p-0">
-                                                                        <input type="checkbox" class="marcar" id="checkbox_single"/>
-                                                                        <label for="checkbox_single" class="check-estilo" data-toggle="tooltip" data-original-title="Selecionar Orçamento"></label>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-6 p-0 float-right my-auto">																
-                                                                    <a href="#" class="icon-autorizado icons-absolute"  data-toggle="tooltip" data-original-title="Pagamento Autorizado"></a>
-                                                                </div>
-                                                            </div>														
-                                                            <div class="row conteudo-orcamento mt-1">
-                                                                <div class="container-fluid">
-                                                                    <div class="row">																	
-                                                                        <div class="col-lg-3 mt-3 mb-3 internas-buscas">
-                                                                            <div class="box-orcamentos border-right">
-                                                                                <h6 class="txt-up">Protocolo/Natureza</h6>
-                                                                                <p class="color-b"><b>56693-4</b></p>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-lg-3 mt-3 mb-3 internas-buscas">
-                                                                            <div class="box-orcamentos b-right border-right">
-                                                                                <h6 class="txt-up">Salvado</h6>
-                                                                                <p class="color-b"><b>Recuperável</b></p>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-lg-3 mt-3 mb-3 internas-buscas">
-                                                                            <div class="box-orcamentos border-right">
-                                                                                <h6 class="txt-up">Tipo</h6>
-                                                                                <p class="color-b"><b>Segurado</b></p>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-lg-3 mt-3 mb-3 internas-buscas">
-                                                                            <div class="box-orcamentos">
-                                                                                <h6 class="txt-up">Nome</h6>
-                                                                                <p class="color-b"><b>Estacionamento CP LTDA</b></p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row d-flex">
-                                                                <div class="col-lg-12">
-                                                                    <a href="#" class="conteudo-detalhes" data-toggle="modal" data-target="#modalDetalhes">Detalhes</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>													
-                                                    </div>
-                                                </div>
-											</div>
-											<div class="row mt-4">
-                                                <div class="col-lg-12">
-                                                    <div class="info-orcamento">
-                                                        <div class="container-fluid">
-                                                            <div class="row header-orcamento m-0 d-flex">
-                                                                <div class="col-lg-6 p-0 my-auto">
-                                                                    <div class="ex-checkbox mt-0 p-0">
-                                                                        <input type="checkbox" class="marcar" id="checkbox_single"/>
-                                                                        <label for="checkbox_single" class="check-estilo" data-toggle="tooltip" data-original-title="Selecionar Orçamento"></label>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-6 p-0 float-right my-auto">																
-                                                                    <a href="#" class="icon-autorizado icons-absolute"  data-toggle="tooltip" data-original-title="Pagamento Autorizado"></a>
-                                                                </div>
-                                                            </div>														
-                                                            <div class="row conteudo-orcamento mt-1">
-                                                                <div class="container-fluid">
-                                                                    <div class="row">																	
-                                                                        <div class="col-lg-3 mt-3 mb-3 internas-buscas">
-                                                                            <div class="box-orcamentos border-right">
-                                                                                <h6 class="txt-up">Protocolo/Natureza</h6>
-                                                                                <p class="color-b"><b>56693-4</b></p>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-lg-3 mt-3 mb-3 internas-buscas">
-                                                                            <div class="box-orcamentos b-right border-right">
-                                                                                <h6 class="txt-up">Salvado</h6>
-                                                                                <p class="color-b"><b>Recuperável</b></p>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-lg-3 mt-3 mb-3 internas-buscas">
-                                                                            <div class="box-orcamentos border-right">
-                                                                                <h6 class="txt-up">Tipo</h6>
-                                                                                <p class="color-b"><b>Segurado</b></p>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-lg-3 mt-3 mb-3 internas-buscas">
-                                                                            <div class="box-orcamentos">
-                                                                                <h6 class="txt-up">Nome</h6>
-                                                                                <p class="color-b"><b>Estacionamento CP LTDA</b></p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row d-flex">
-                                                                <div class="col-lg-12">
-                                                                    <a href="#" class="conteudo-detalhes" data-toggle="modal" data-target="#modalDetalhes">Detalhes</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>													
-                                                    </div>
-                                                </div>
-											</div>
-										</div>										
-										<div class="row mt-3">
-											<div class="col-lg-12">
-												<div class="text-center loadMore">
-													<button class="btn btn-transparent">Carregar mais Indenizações</button>
-												</div>
-											</div>
-										</div>
+                                            </div>					
+                                        </div>
 										<!-- Fim Indenizações -->
 									</div>
 								</div>
@@ -3071,6 +2921,7 @@
 					</div>
 				</div>
 				<!-- fim mobile-->
+
 				<!-- modal associar -->
 				<div class="modal fade bd-example-modal-lg" id="modal-associar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">				
 					<div class="modal-dialog modal-lg">
@@ -3268,7 +3119,7 @@
 				</div>
 				<!-- fim modal aprovar/desaprovar-->
 				<!-- modal detalhes -->
-				<div class="modal fade bd-example-modal-lg" id="modalDetalhes" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+				<div class="modal fade bd-example-modal-lg" id="modal-detalhes" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 					<div class="modal-dialog modal-lg">
 						<div class="modal-content">
 							<div class="modal-header m-header">
@@ -3281,53 +3132,88 @@
 								<div class="container-fluid">
 									<div class="row">
 										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Reguladora</h6>
-											<p><b>Autoreg</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Orçamentadora</h6>
-											<p><b>Cília</b></p>
+											<h6 class="txt-up">Protocolo/Natureza</h6>
+											<p><b>592858-4</b></p>
 										</div>
 									</div>
 									<hr>
 									<div class="row">
 										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Nº da Versão do Orçamento</h6>
-											<p><b>789456</b></p>
+											<h6 class="txt-up">Nota Fiscal</h6>
+											<p><b><a href="#">Visualizar</a></b></p>
 										</div>
+
 										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Nº do Orçamento</h6>
-											<p><b>789456</b></p>
+											<h6 class="txt-up">Cobertura</h6>
+											<p><b><a href="#">Visualizar</a></b></p>
 										</div>
+										
 										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Data da Transmissão</h6>
-											<p><b>12/05/2020</b></p>
+											<h6 class="txt-up">Acréscimo</h6>
+											<p><b><a href="#">Visualizar</a></b></p>
 										</div>
-									</div>
-									<hr>
-									<div class="row">
+
 										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Tipo de Oficina</h6>
-											<p><b>Tipo</b></p>
+											<h6 class="txt-up">Orçamento</h6>
+											<p><b><a href="#">Visualizar</a></b></p>
 										</div>
+
 										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Valor de Peças</h6>
-											<p><b>R$ 500,00</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Valor da Mão de Obra</h6>
-											<p><b>R$ 800,00</b></p>
+											<h6 class="txt-up">R$ 0,00</h6>
+											<p><b><a href="#">Visualizar</a></b></p>
 										</div>
 									</div>
 									<hr>
 									<div class="row">
 										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Franquia</h6>
-											<p><b>R$ 500,00</b></p>
+											<h6 class="txt-up">Tipo</h6>
+											<p><b>Segurado</b></p>
 										</div>
 										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Avaria</h6>
+											<h6 class="txt-up">Nome</h6>
+											<p><b>Estacionamento CP LTDA</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Valor de Mão de Obra</h6>
 											<p><b>R$ 500,00</b></p>
+										</div>
+									</div>
+									<hr>
+									<div class="row">
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Tipo de Pagamento</h6>
+											<p><b>Parcial</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Forma de Pagamento</h6>
+											<p><b>Conta Corrente</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Data do Pagamento</h6>
+											<p><b>08/02/2020</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Valor Indenizado</h6>
+											<p><b>R$ 70,00</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Pagamento na data de solicitação</h6>
+											<p><b>Sim</b></p>
+										</div>
+									</div>
+									<hr>
+									<div class="row">
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Banco</h6>
+											<p><b>33</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Agência</h6>
+											<p><b>1673-9</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Conta</h6>
+											<p><b>60003151-1</b></p>
 										</div>
 									</div>
 								</div>
@@ -3471,12 +3357,12 @@
 					</div>
 				</div>
 				<!-- fim modal itens -->
-				<!-- modal totalizadores -->
-				<div class="modal fade bd-example-modal-lg" id="modal-totalizadores" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+				<!-- modal totalizadores pagamentos rejeitados -->
+				<div class="modal fade bd-example-modal-lg" id="modal-totalizadores-pagamentos-rejeitados" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 					<div class="modal-dialog modal-lg w-1050">
 						<div class="modal-content">						
 							<div class="modal-header m-header">
-								<h5 class="modal-title" id="exampleModalLongTitle">Orçamentos Autorizados</h5>
+								<h5 class="modal-title" id="exampleModalLongTitle">Pagamentos Rejeitados</h5>
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 								</button>
@@ -3485,15 +3371,7 @@
 								<div class="container-fluid">
 									<div class="row">
 										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Total de Orçamentos</h6>
-											<h5><b class="color-b">R$ ?????</b></h5>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Valor Total da Natureza 1:</h6>
-											<h5><b class="color-b">R$ ?????</b></h5>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Valor Total da Natureza 2:</h6>
+											<h6 class="txt-up">Total de Pagamentos Rejeitados</h6>
 											<h5><b class="color-b">R$ ?????</b></h5>
 										</div>
 									</div>
@@ -3537,7 +3415,7 @@
 						</div>
 					</div>
 				</div>
-				<!-- fim modal totalizadores -->
+				<!-- fim modal totalizadores pagamentos rejeitados -->
 				<!-- modal IS -->
 				<div class="modal fade bd-example-modal-lg" id="modal-is" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 					<div class="modal-dialog modal-lg w-1050">	
@@ -3680,6 +3558,38 @@
 					</div>
 				</div>
 				<!-- fim modal editar veículos -->
+				<!-- modal tipo de salvado -->
+				<div class="modal fade" id="modal-tipo-de-salvado" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header m-header">
+								<h5 class="modal-title" id="exampleModalLongTitle">Tipo de Salvado</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body mbody-totalizadores mt-3 p-0 d-flex justify-content-center">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col-12">
+											<label for="filtro">Tipo</label>							
+											<select class="selectpicker form-control" id="filtro" name="" title="Selecione..." data-hide-disabled="true" data-actions-box="true">
+												<option value="0">Recuperável</option>
+											</select>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-12 text-right m-0 mt-5 bg-gray">
+											<button type="button" class="btn btn-cancel txt-up mr-3">Cancelar</button>
+											<button type="button" class="btn btn-salvar txt-up">Salvar</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- fim modal tipo de salvado -->
 				<!-- modal consulta cotação -->
 				<div class="modal fade bd-example-modal-lg" id="modal-cotacao" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 					<div class="modal-dialog modal-lg w-1050">	
@@ -3802,6 +3712,270 @@
 					</div>
 				</div>
 				<!-- fim add cotação -->				
+				<!-- Modal Nota Fiscal -->
+				<div class="modal fade bd-example-modal-lg" id="modal-nota-fiscal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg w-1050">	
+						<div class="modal-content">
+							<div class="modal-header m-header">
+								<h5 class="modal-title" id="exampleModalLongTitle">Recibos / Notas Fiscais de Orçamentos Autorizados</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body  d-flex justify-content-center">
+								<div class="container-fluid">
+									<div class="row">		
+										<div class="col-12 p-0">
+											<div class="bg-transparent">
+												<form id="" class="" name="" action="" method="post">
+													<table class="table table-striped" id="">
+														<thead>
+															<tr>
+																<th class="">
+																	<div class="ex-checkbox chb2">
+																		<input class="form-check-input" id="checkTodos" name="checkTodos" type="checkbox" data-toggle="tooltip" data-original-title="Selecionar todos">
+																		<label for="checkbox-table"></label>
+																	</div>
+																</th>
+																<th scope="col">Emitente</th>
+																<th scope="col">Valor</th>
+																<th scope="col">Saldo</th>
+																<th scope="col">Data Vencimento</th>
+																<th scope="col">Tipo Comprovante</th>
+																<th scope="col">Pagamento</th>
+																<th scope="col">DVConCor</th>
+																<th scope="col">Mão de Obra</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>
+																	<div class="ex-checkbox chb2">
+																		<input class="form-check-input" id="" name="" type="checkbox">
+																		<label for="checkbox-table"></label>
+																	</div>
+																</td>
+																<td style="width:16%">V M N Centro Automobilistico LTDA</td>
+																<td style="width:12%">R$ 1.200,00</td>
+																<td style="width:12%">R$ 1.200,00</td>
+																<td style="width:12%">12/11/2019</td>
+																<td style="width:12%">Nota Fiscal Pagamento</td>
+																<td style="width:12%">R$ 0,00</td>
+																<td style="width:12%"></td>
+																<td style="width:12%">R$ 1.200,00</td>
+															</tr>
+															<tr>
+																<td>
+																	<div class="ex-checkbox chb2">
+																		<input class="form-check-input" id="" name="" type="checkbox">
+																		<label for="checkbox-table"></label>
+																	</div>
+																</td>
+																<td style="width:16%">Eurocar Veículo LTDA.</td>
+																<td style="width:12%">R$ 500,00</td>
+																<td style="width:12%">R$ 0,00</td>
+																<td style="width:12%">25/11/2019</td>
+																<td style="width:12%">Nota Fiscal Pagamento</td>
+																<td style="width:12%">R$ 0,00</td>
+																<td style="width:12%"></td>
+																<td style="width:12%">R$ 500,00</td>
+															</tr>
+															<tr>
+																<td>
+																	<div class="ex-checkbox chb2">
+																		<input class="form-check-input" id="" name="" type="checkbox">
+																		<label for="checkbox-table"></label>
+																	</div>
+																</td>
+																<td style="width:16%">V M N Centro Automobilistico LTDA</td>
+																<td style="width:12%">R$ 600,00</td>
+																<td style="width:12%"></td>
+																<td style="width:12%">05/11/2019</td>
+																<td style="width:12%">Nota Fiscal Pagamento</td>
+																<td style="width:12%">R$ 0,00</td>
+																<td style="width:12%"></td>
+																<td style="width:12%">R$ 600,00</td>
+															</tr>
+														</tbody>
+													</table>
+												</form>
+											</div>		
+										</div>					
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<div class="container-fluid">
+									<button type="button" class="btn btn-salvar txt-up float-right w-90" data-toggle="modal" data-target="#modal-nota-fiscal" data-dismiss="modal">Ok</button>
+									<button type="button" class="btn btn-cancel txt-up float-left mr-2" data-toggle="modal" data-target="" data-dismiss="modal">Cancelar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fim Modal Nota Fiscal -->
+				<!-- Modal Valores de Objetos Cotados -->
+				<div class="modal fade bd-example-modal-lg" id="modal-objetos-cotados" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg w-1050">	
+						<div class="modal-content">
+							<div class="modal-header m-header">
+								<h5 class="modal-title" id="exampleModalLongTitle">Valores de Objetos Cotados</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body  d-flex justify-content-center">
+								<div class="container-fluid">
+									<div class="row">		
+										<div class="col-12 p-0">
+											<div class="bg-transparent">
+												<form id="" class="" name="" action="" method="post">
+													<table class="table table-striped" id="">
+														<thead>
+															<tr>
+																<th class="">
+																	<div class="ex-checkbox chb2">
+																		<input class="form-check-input" id="checkTodos" name="checkTodos" type="checkbox" data-toggle="tooltip" data-original-title="Selecionar todos">
+																		<label for="checkbox-table"></label>
+																	</div>
+																</th>
+																<th scope="col">Objeto</th>
+																<th scope="col">Valor</th>
+																<th scope="col">Saldo</th>
+																<th scope="col">Pagamento</th>
+																<th scope="col">Mão de Obra</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>
+																	<div class="ex-checkbox chb2">
+																		<input class="form-check-input" id="" name="" type="checkbox">
+																		<label for="checkbox-table"></label>
+																	</div>
+																</td>
+																<td style="width:16%">Casco</td>
+																<td style="width:12%">R$ 5.000,00</td>
+																<td style="width:12%">R$ 838,50</td>
+																<td style="width:12%">R$ 0,00</td>
+																<td style="width:12%">R$ 0,00</td>
+															</tr>
+														</tbody>
+													</table>
+												</form>
+											</div>		
+										</div>					
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<div class="container-fluid">
+									<button type="button" class="btn btn-salvar txt-up float-right w-90" data-toggle="modal" data-target="#" data-dismiss="modal">Ok</button>
+									<button type="button" class="btn btn-cancel txt-up float-left mr-2" data-toggle="modal" data-target="" data-dismiss="modal">Cancelar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fim Modal Valores de Objetos Cotados -->
+				<!-- Modal Orçamentos -->
+				<div class="modal fade bd-example-modal-lg" id="modal-orcamentos" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg w-1050">	
+						<div class="modal-content">
+							<div class="modal-header m-header">
+								<h5 class="modal-title" id="exampleModalLongTitle">Orçamentos</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body d-flex justify-content-center">
+								<div class="container-fluid">
+									<div class="row">		
+										<div class="col-12 p-0">
+											<div class="bg-transparent">
+												<form id="" class="" name="" action="" method="post">
+													<table class="table table-striped" id="">
+														<thead>
+															<tr>
+																<th class="">
+																	<div class="ex-checkbox chb2">
+																		<input class="form-check-input" id="checkTodos" name="checkTodos" type="checkbox" data-toggle="tooltip" data-original-title="Selecionar todos">
+																		<label for="checkbox-table"></label>
+																	</div>
+																</th>
+																<th scope="col">Emitente</th>
+																<th scope="col">Valor</th>
+																<th scope="col">Saldo</th>
+																<th scope="col">Pagamento</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>
+																	<div class="ex-checkbox chb2">
+																		<input class="form-check-input" id="" name="" type="checkbox">
+																		<label for="checkbox-table"></label>
+																	</div>
+																</td>
+																<td style="width:16%">Gambato Veiculos LTDA</td>
+																<td style="width:12%">R$ 2.964,70</td>
+																<td style="width:12%">R$ 2.964,70</td>
+																<td style="width:12%">R$ 0,00</td>																
+															</tr>
+															<tr>
+																<td>
+																	<div class="ex-checkbox chb2">
+																		<input class="form-check-input" id="" name="" type="checkbox">
+																		<label for="checkbox-table"></label>
+																	</div>
+																</td>
+																<td style="width:16%">Eurocar Veículo LTDA</td>
+																<td style="width:12%">R$ 0,00</td>
+																<td style="width:12%">R$ 500,00</td>
+																<td style="width:12%">R$ 0,00</td>																
+															</tr>
+															<tr>
+																<td>
+																	<div class="ex-checkbox chb2">
+																		<input class="form-check-input" id="" name="" type="checkbox">
+																		<label for="checkbox-table"></label>
+																	</div>
+																</td>
+																<td style="width:16%">V M N Centro Automobilístico</td>
+																<td style="width:12%">R$ 0,00</td>
+																<td style="width:12%">R$ 600,00</td>
+																<td style="width:12%">R$ 0,00</td>																
+															</tr>
+															<tr>
+																<td>
+																	<div class="ex-checkbox chb2">
+																		<input class="form-check-input" id="" name="" type="checkbox">
+																		<label for="checkbox-table"></label>
+																	</div>
+																</td>
+																<td style="width:16%">V M N Centro Automobilístico</td>
+																<td style="width:12%">R$ 0,00</td>
+																<td style="width:12%">R$ 0,00</td>
+																<td style="width:12%">R$ 0,00</td>														
+															</tr>
+														</tbody>
+													</table>
+												</form>
+											</div>		
+										</div>					
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<div class="container-fluid">
+									<button type="button" class="btn btn-salvar txt-up float-right w-90" data-toggle="modal" data-target="#" data-dismiss="modal">Ok</button>
+									<button type="button" class="btn btn-cancel txt-up float-left mr-2" data-toggle="modal" data-target="" data-dismiss="modal">Cancelar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fim Modal Orçamentos -->
 			</div>
 			<!-- fim container-->
 		</section>

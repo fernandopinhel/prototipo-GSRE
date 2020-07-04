@@ -190,6 +190,7 @@ $(document).ready(function(){
 $(document).ready(function(){
   $('#link-docs').click(function() {
     $('.internas-buscas').addClass('col-lg-6')
+    $('.internas-buscas-2').addClass('col-lg-6')
     $('.menu-footer').addClass('col-lg-12')
     $('.menu-footer').addClass('mt-3')
     $('.b-right').removeClass('border-right')
@@ -203,6 +204,8 @@ $(document).ready(function(){
   $('#link-imagens').click(function() {
     $('.internas-buscas').removeClass('col-lg-6')
     $('.internas-buscas:first-child').addClass('col-lg-3')
+    $('.internas-buscas-2:first-child').addClass('col-lg-2')
+    $('.internas-buscas-2:first-child').removeClass('col-lg-6')
     $('.b-right').addClass('border-right')
     $('.menu-footer').addClass('col-lg-2')
     $('.menu-footer').addClass('mt-3')
