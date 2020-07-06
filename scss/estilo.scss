@@ -1282,32 +1282,26 @@ tr:hover td {color: #89919F;}
 }
 
 // tabela indenizações
-.table-indenizacoes tbody tr td:nth-child(1){width:1%;}
-
-.table-indenizacoes tbody tr td:nth-child(2){width:4%;}
-
-.table-indenizacoes tbody tr td:nth-child(3){width:15%;}
-
-.table-indenizacoes tbody tr td:nth-child(4){width:15%;}
-
-.table-indenizacoes tbody tr td:nth-child(5){width:55%;}
-
 .table-indenizacoes tbody tr td.ac-3 div > .menu-invisible{
   width: 138px !important;
   right: 0;
-  top: 2px;
+  top: -4px;
 }
 
 .table-indenizacoes tbody tr:hover td.ac-3 div > .menu-invisible{
   width: 138px !important;
-  left: -71px;
-  top: 2px;
+  left: 2px;
+  top: -4px;
 }
 
-.table-indenizacoes tbody tr:hover td.ac-3{
-  width:9%;
-  padding-right: 32px;
+.table-indenizacoes tbody tr:hover td.ac-3 div > .menu-visible{
+  margin-left: 0 !important;
 }
+
+.table-indenizacoes tbody tr td.ac-3 div > .menu-visible{
+  margin-left: 0 !important;
+}
+
 
 // usuarios
 .table-usuario tbody tr td{width: 12%;}
@@ -2024,6 +2018,12 @@ span.btn-add{
   font-weight: 500;
   padding: 10px;
   margin: 0;
+}
+
+.estilo-indenizacao{
+  background-color: transparent !important;
+  color: #0B67BE !important;
+  border-color: #0B67BE !important;
 }
 
 // modal

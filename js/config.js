@@ -271,7 +271,11 @@ $(document).ready(function(){
   });
 });
 
-
+$(document).ready(function(){
+  $("#opcoes-regularizacao").click(function(){
+    $(".col-sap").removeClass("d-none");
+  });
+});
 
 $(document).ready(function(){
   $("#checkbox-table-default").click(function(){
