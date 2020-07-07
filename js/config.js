@@ -278,6 +278,15 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
+  $(".btn-mais-info").click(function(){
+    $(".mais-info").removeClass("d-none");
+    $(".btn-mais-info").addClass("d-none");
+  });
+});
+
+
+
+$(document).ready(function(){
   $("#checkbox-table-default").click(function(){
     $("#checkbox-table-default-2").attr('checked', 'checked')
     $("#checkbox-table-default-2").removeAttr('disabled')
