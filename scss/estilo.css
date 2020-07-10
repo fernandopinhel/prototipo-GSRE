@@ -1380,27 +1380,23 @@ tr:hover td {
 }
 
 .table-perfil tbody tr td:nth-child(1) {
-  width: 2%;
-}
-
-.table-perfil tbody tr td:nth-child(2) {
   width: 5%;
 }
 
+.table-perfil tbody tr td:nth-child(2) {
+  width: 15%;
+}
+
 .table-perfil tbody tr td:nth-child(3) {
-  width: 10%;
+  width: 15%;
 }
 
 .table-perfil tbody tr td:nth-child(4) {
-  width: 10%;
+  width: 15%;
 }
 
 .table-perfil tbody tr td:nth-child(5) {
-  width: 10%;
-}
-
-.table-perfil tbody tr td:nth-child(6) {
-  width: 73%;
+  width: 55%;
 }
 
 .table-perfil tbody tr td.ac-3 div > .menu-invisible {
@@ -1416,8 +1412,8 @@ tr:hover td {
 }
 
 .table-perfil tbody tr:hover td.ac-3 {
-  width: 9%;
   padding-right: 32px;
+  padding-left: 90px;
 }
 
 .table-indenizacoes tbody tr td.ac-3 div > .menu-invisible {
@@ -1448,10 +1444,6 @@ tr:hover td {
   width: 2%;
 }
 
-.table-usuario tbody tr td:nth-child(2) {
-  width: 3%;
-}
-
 .table-usuario tbody tr td.ac-3 div > .menu-invisible {
   width: 138px !important;
   left: 0;
@@ -1474,23 +1466,23 @@ tr:hover td {
 }
 
 .table-prestadores tbody tr td:nth-child(2) {
-  width: 4%;
+  width: 15%;
 }
 
 .table-prestadores tbody tr td:nth-child(3) {
-  width: 10%;
+  width: 15%;
 }
 
 .table-prestadores tbody tr td:nth-child(4) {
-  width: 10%;
+  width: 15%;
 }
 
 .table-prestadores tbody tr td:nth-child(5) {
-  width: 10%;
+  width: 55%;
 }
 
-.table-prestadores tbody tr td:nth-child(6) {
-  width: 65%;
+.table-prestadores tbody tr td.ac-3 div .menu-visible {
+  margin-left: 0;
 }
 
 .table-prestadores tbody tr td.ac-3 div > .menu-invisible {
@@ -1506,8 +1498,8 @@ tr:hover td {
 }
 
 .table-prestadores tbody tr:hover td.ac-3 {
-  width: 5%;
   padding-right: 70px;
+  padding-left: 30px;
 }
 
 .pagination .icon {
@@ -1719,7 +1711,7 @@ header .navbar {
 }
 
 .interna {
-  margin-top: 38px;
+  margin-top: 8px;
 }
 
 .interna .box {

@@ -122,6 +122,13 @@
 		</header>
 		<section class="interna">
 			<div class="container-fluid">
+				<div class="row mb-2">
+					<div class="col-lg-12">
+						 <button type="button" class="btn btn-labeled btn-sair float-right" >
+							<span class="btn-label mr-2"> Sair do Processo</span><i class="fa fa-power-off"	></i>
+						 </button>
+					</div>     
+				</div>
 				<div class="accordion accordion-desk" id="accordion" role="tablist" aria-multiselectable="true">
 					<div class="card">
 						<div class="card-header" id="headingOne" role="tab">
@@ -240,7 +247,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="col-sm-12 col-md-6 col-lg-3">
+										<div class="col-sm-12 col-md-6 col-lg-3" data-toggle="modal" data-target="#modal-alterar-processo">
 											<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
 												<div class="box-item-text my-auto">
 													<p>Posição Atual do Processo</p>
@@ -514,11 +521,8 @@
 								<div class="header-conteudo-principal">
 									<div class="container-fluid">
 										<div class="row mb-4">
-											<div class="col-lg-10">
+											<div class="col-lg-12">
 												<h1 class="float-left mt-2">Indenização</h1>
-											</div>
-											<div class="col-lg-2">
-												<a href="listar-consulta.html" class="sair" data-toggle="tooltip" data-original-title="Sair do Processo"></a>
 											</div>
 										</div>
 										<div class="row bg-gray m-0">
@@ -583,7 +587,7 @@
 																<div class="row">
 																	<div class="col-lg-4 internas-buscas col-sap d-none mt-4">
 																		<label for="text">OPBEL SAP</label>
-																		<input type="text" name="" maxlength="8" value="SAP" id="" class="form-control" autocomplete="off"> 
+																		<input type="text" name="" maxlength="8" value="7789" id="" class="form-control" autocomplete="off"> 
 																	</div>
 																</div>
 																<!-- fim Opções -->
@@ -597,12 +601,12 @@
 																<div class="row mt-2">
                                                                     <div class="col-lg-4 internas-buscas  mt-2">
                                                                         <label for="filtro">Tipo</label>							
-                                                                        <select class="selectpicker form-control" id="filtro" name=""  title="Selecione..." data-hide-disabled="true" data-actions-box="true" disabled>
-                                                                            <option value="0" selected>Segurado</option>
-                                                                            <option value="1">tipo 2</option>
-                                                                            <option value="2">tipo 3</option>
-                                                                            <option value="3">tipo 4</option>
-                                                                            <option value="4">tipo 5</option>
+                                                                        <select class="selectpicker form-control" id="filtro" name=""  title="Selecione..." data-hide-disabled="true" data-actions-box="true">
+                                                                            <option value="0">Segurado</option>
+                                                                            <option value="1">Terceiro</option>
+                                                                            <option value="2">Despachante</option>
+                                                                            <option value="3">Financeira</option>
+                                                                            <option value="4">Hospital</option>
                                                                         </select>
                                                                     </div>
                                                                     <div class="col-lg-4 internas-buscas mt-2">
@@ -614,7 +618,10 @@
                                                                             <option value="3">tipo 4</option>
                                                                             <option value="4">tipo 5</option>
                                                                         </select>
-                                                                    </div>
+																	</div>
+																	<div class="col-lg-4 internas-buscas mt-4">
+																		<button class="btn btn-info mt-3" data-toggle="modal" data-target="#modal-beneficiario">Cadastrar Beneficiário</button>
+																	</div>
                                                                 </div>
                                                                 <!-- Fim Beneficiário do Pagamento -->
                                                                 <!-- Pagamento -->
@@ -3144,20 +3151,16 @@
 											<h6 class="color-r">Pagamento</h6>
 										</div>
 										<div class="col-lg-12 mt-3 mb-2 pr-2">
-											<h6 class="txt-up">Motivo da Rejeição</h6>
-											<p class="border p-2"><b class="color-r">Pagamento rejeitado por CPF inválido</b></p>
+											<h6 class="txt-up">Status</h6>
+											<p class="border p-2"><b class="color-r">Rejeitado - Pagamento rejeitado por CPF inválido</b></p>
 										</div>
 										<div class="col-lg-4 mt-3 mb-3 pr-2">
 											<h6 class="txt-up">Regularização</h6>
-											<p><b>SAP OPBEL</b></p>
+											<p><b>7789</b></p>
 										</div>
 										<div class="col-lg-4 mt-3 mb-3 pr-2">
 											<h6 class="txt-up">Data do Pagamento</h6>
 											<p><b>10/10/2019</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Status do Pagamento</h6>
-											<p><b>Status do Pagamento</b></p>
 										</div>
 										<div class="col-lg-4 mt-3 mb-3 pr-2">
 											<h6 class="txt-up">Tipo de Pagamento</h6>
@@ -3177,7 +3180,7 @@
 										</div>
 										<div class="col-lg-4 mt-3 mb-3 pr-2">
 											<h6 class="txt-up">valor de ISS</h6>
-											<p><b>R$ ???</b></p>
+											<p><b>5%</b></p>
 										</div>
 									</div>
 									<hr>
@@ -4075,6 +4078,162 @@
 					</div>
 				</div>
 				<!-- Fim Modal Orçamentos -->
+				<!-- Modal Cadastro Beneficiário -->
+				<div class="modal fade bd-example-modal-lg" id="modal-beneficiario" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg w-1050">	
+						<div class="modal-content">
+							<div class="modal-header m-header">
+								<h5 class="modal-title" id="exampleModalLongTitle">Cadastrar Beneficiário</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body d-flex justify-content-center">
+								<div class="container-fluid">
+									<div class="row mb-4">
+										<div class="col-lg-6">
+											<label for="filtro">Tipo</label>							
+											<select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="" data-hide-disabled="true" data-actions-box="true">
+												<option value="1">Segurado</option>
+												<option value="2">Terceiro</option>
+												<option value="3">Despachante</option>
+												<option value="4">Financeira</option>
+												<option value="5">Hospital</option>
+												<option value="6">Outros</option>
+											</select>
+										</div>
+										<div class="col-lg-6">												
+											<div class="form-group">
+												<label for="text">CPF/CNPJ</label>
+												<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+											</div>
+										</div>
+										<div class="col-lg-10">												
+											<div class="form-group">
+												<label for="text">Nome</label>
+												<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+											</div>
+										</div>
+										<div class="col-lg-2 mt-4">
+											<button type="button" class="btn btn-salvar txt-up float-right mt-1 w-100">Cadastrar</button>
+										</div>
+									</div>
+									<div class="table-responsive bg-transparent p-0">
+										<form id="" class="tabela-itens-orcamento" name="" action="" method="post">
+											<table class="table table-striped t3" id="">
+												<thead>
+													<tr>
+														<th scope="col"></th>
+														<th scope="col">Tipo</th>
+														<th scope="col">CPF/CNPJ</th>
+														<th scope="col">Nome</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>
+															<div class="ex-checkbox chb2">
+																<input class="form-check-input" type="checkbox">
+																<label for="checkbox-table"></label>
+															</div>
+														</td>
+														<td>Tipo</td>
+														<td>CPF/CNPJ</td>                                                            
+														<td>Nome</td>														
+													</tr>
+												</tbody>
+											</table>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<div class="container-fluid">
+									<button type="button" class="btn btn-info txt-up float-right w-90" data-toggle="modal" data-target="#" data-dismiss="modal">Incluir</button>
+									<button type="button" class="btn btn-cancel txt-up float-left mr-2" data-toggle="modal" data-target="" data-dismiss="modal">Cancelar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fim Modal Cadastro Beneficiário -->
+
+				<!-- Modal Alterar Processo -->
+				<div class="modal fade bd-example-modal-lg" id="modal-alterar-processo" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg w-1050">	
+						<div class="modal-content">
+							<div class="modal-header m-header">
+								<h5 class="modal-title" id="exampleModalLongTitle">Alterar</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="container-fluid">
+									<div class="row mb-4">
+										<span id="modal-myvalue"></span> 
+										<div class="col-md-6">
+											<p>Apólice: <b class="color-b">132654987654</b></p>
+										</div>
+										<div class="col-md-6">
+											<p>Sinistro: <b class="color-b">2465879</b></p>
+										</div>
+									</div>
+									<div class="row mtop-10">
+										<div class="col-md-6">
+											<label for="cmpNaturezaSugerida">Natureza Sugerida</label> 
+											<select class="selectpicker form-control" id="naturezaSugerida" name="dadosAlterado.naturezaSugerida">
+												<option>Selecione...</option>
+												<option>Natureza 1</option>
+												<option>Natureza 2</option>
+												<option>Natureza 3</option>
+											</select>
+										</div>
+										<div class="col-md-6 ">
+												<label for="campoPrioridade">Prioridade</label> 
+												<select class="selectpicker form-control" id="prioridade" name="dadosAlterado.prioridade">
+													<option>Selecione...</option>
+													<option>Prioridade 1</option>
+													<option>Prioridade 2</option>
+													<option>Prioridade 3</option>
+												</select>
+													
+										</div>
+										
+										<div class="col-md-6 mt-3">
+											<label for="campoPosicaoAtual">Posição Atual</label> 
+											<select class="selectpicker form-control" id="situacaoProcesso" name="dadosAlterado.situacaoProcesso">
+												<option>Selecione...</option>
+												<option>Posição Atual 1</option>
+												<option>Posição Atual 2</option>
+												<option>Posição Atual 3</option>
+											</select>
+												
+										</div>
+										
+										<div class="col-md-6 mt-3">
+											<label for="campoFuncionario">Funcionário</label> 
+											<select class="selectpicker form-control" id="funcionario" name="dadosAlterado.codigoFuncionario">
+												<option>Selecione...</option>
+												<option>Funcionário 1</option>
+												<option>Funcionário 2</option>
+												<option>Funcionário 3</option>
+											</select>
+										</div>
+										
+									</div>	
+								</div>		
+							</div>
+							<div class="modal-footer">
+								<div class="container">
+									<button type="button" class="btn btn-cancel txt-up mr-3 float-left" data-dismiss="modal">Cancelar</button>
+									<button type="button" class="btn btn-salvar txt-up float-right">Salvar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fim Modal Alterar Processo -->				
 			</div>
 			<!-- fim container-->
 		</section>
