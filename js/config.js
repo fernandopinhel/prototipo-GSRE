@@ -281,6 +281,13 @@ $(document).ready(function(){
   $(".btn-mais-info").click(function(){
     $(".mais-info").removeClass("d-none");
     $(".btn-mais-info").addClass("d-none");
+    $(".btn-menos-info").removeClass("d-none");
+  });
+
+  $(".btn-menos-info").click(function(){
+    $(".mais-info").addClass("d-none");
+    $(".btn-menos-info").addClass("d-none"); 
+    $(".btn-mais-info").removeClass("d-none");    
   });
 });
 
@@ -297,9 +304,16 @@ $(document).ready(function(){
 
 // pop-up vincular documentos
 function abrir(URL) {
-  window.open(URL, 'janela', 'width=795, height=590, top=100, left=699, scrollbars=no, status=no, toolbar=no, location=no, menubar=no, resizable=no, fullscreen=no')
+  window.open(URL, 'janela', 'width=795, height=610, top=100, left=699, scrollbars=no, status=no, toolbar=no, location=no, menubar=no, resizable=no, fullscreen=no')
 }
 // fim pop-up vincular documentos
+
+$(document).ready(function(){
+  $("#tabelaProcesso tbody tr").dblclick(function(){
+    onclick="window.location.href = 'parecer.html'"
+  });
+});
+
 
 
 

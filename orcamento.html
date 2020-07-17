@@ -110,8 +110,11 @@
 									</div>
 								</button>
 								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-									<a class="dropdown-item" href="#">M123456 - Jeniffer</a> <a
-										class="dropdown-item" href="#">Minhas Configurações</a>
+									<a class="dropdown-item" href="#">M123456 - Jeniffer</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal-info-ambiente">Informações de Ambiente</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#">Minhas Configurações</a>
 									<div class="dropdown-divider"></div>
 									<a class="dropdown-item" href="#">Sair</a>
 								</div>
@@ -124,8 +127,8 @@
 			<div class="container-fluid">
 				<div class="row mb-2">
 					<div class="col-lg-12">
-						 <button type="button" class="btn btn-labeled btn-danger float-right" >
-							<i class="fa fa-power-off"></i><span class="btn-label"> Sair do Processo</span>
+						 <button type="button" class="btn btn-labeled btn-sair float-right" >
+							<span class="btn-label mr-2"> Sair do Processo</span><i class="fa fa-power-off"	></i>
 						 </button>
 					</div>     
 				</div>
@@ -247,7 +250,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="col-sm-12 col-md-6 col-lg-3">
+										<div class="col-sm-12 col-md-6 col-lg-3" data-toggle="modal" data-target="#modal-alterar-processo">
 											<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
 												<div class="box-item-text my-auto">
 													<p>Posição Atual do Processo</p>
@@ -328,6 +331,17 @@
 														<div class="card-body p-0">
 															<div class="container-fluid p-0">
 																<div class="row">
+																	<div class="col-sm-12 col-md-6 col-lg-3 mb-4" data-toggle="modal" data-target="#modal-tipo-de-salvado">
+																		<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
+																			<div class="box-item-text my-auto">
+																				<p>Classificação de Salvado</p>
+																				<span>Recuperável</span>
+																			</div>
+																			<div class="box-item-img my-auto">
+																				<img src="img/icon-salvado.png" alt="">
+																			</div>
+																		</div>
+																	</div>
 																	<div class="col-sm-12 col-md-6 col-lg-3 mb-4">
 																		<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
 																			<div class="box-item-text my-auto">
@@ -361,17 +375,6 @@
 																			</div>
 																		</div>
 																	</div>
-																	<div class="col-sm-12 col-md-6 col-lg-3 mb-4">
-																		<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
-																			<div class="box-item-text my-auto">
-																				<p>Prêmio Pendente</p>
-																				<span>teste</span>
-																			</div>
-																			<div class="box-item-img my-auto">
-																				<img src="img/icon-premio.png" alt="">
-																			</div>
-																		</div>
-																	</div>
 																</div>
 															</div>
 														</div>
@@ -379,6 +382,17 @@
 													<div id="collapseInfo" class="collapse" aria-labelledby="headingInfo" data-parent="#accordionExample">
 														<div class="container-fluid">
 															<div class="row">
+																<div class="col-sm-12 col-md-6 col-lg-3 mb-4">
+																	<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
+																		<div class="box-item-text my-auto">
+																			<p>Prêmio Pendente</p>
+																			<span>teste</span>
+																		</div>
+																		<div class="box-item-img my-auto">
+																			<img src="img/icon-premio.png" alt="">
+																		</div>
+																	</div>
+																</div>
 																<div class="col-sm-12 col-md-6 col-lg-3 mb-4">
 																	<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
 																		<div class="box-item-text my-auto">
@@ -486,7 +500,7 @@
 								<a class="nav-link orcamento-tab" id="orcamento-tab" href="#" onclick="abrir('cotacao.html')" data-toggle="tooltip" data-original-title="Cotação">
 									<i class="icon icon-doc-2a-via"></i>
 								</a>  
-								<a class="nav-link indenizacao-tab" id="indenizacao-tab" href="#" 	 data-toggle="tooltip" data-original-title="Indenização">
+								<a class="nav-link indenizacao-tab" id="indenizacao-tab" href="indenizacao.html" 	 data-toggle="tooltip" data-original-title="Indenização">
 									<i class="icon icon-fin-receber"></i>
 								</a>
 								<a class="nav-link comprovante-tab" id="comprovante-tab" href="compraovante-de-despesas.html" onclick="abrir('compraovante-de-despesas.html')"  data-toggle="tooltip" data-original-title="Comprovante de Despesas">
@@ -2562,7 +2576,7 @@
 																</div>
 																<div class="vincular-doc mt-4">
 																	<button class="btn btn-info mt-1" onclick="abrir('documentos-vinculados.html')">
-																		<div data-toggle="tooltip" data-original-title="Vincular Documentos"><img src="../img/vincular.svg" alt=""></div>
+																		<div data-toggle="tooltip" data-original-title="Vincular Documentos"><img src="img/vincular.svg" alt=""></div>
 																	</button>
 																</div>
 															</div>
@@ -3650,14 +3664,14 @@
 												</thead>
 												<tbody>
 													<tr>
-														<td>58 - I.I. Alagamento</td>
-														<td>R$ 36.897,00</td>
-														<td>R$ 563,89</td>
+														<td style="width: 30%;">58 - I.I. Alagamento</td>
+														<td style="width: 30%;">R$ 36.897,00</td>
+														<td style="width: 40%;">R$ 563,89</td>
 													</tr>
 													<tr>
-														<td>52 - I.I. Kit Gás</td>
-														<td>R$ 2.000,00</td>
-														<td>R$ 0,00</td>
+														<td style="width: 30%;">52 - I.I. Kit Gás</td>
+														<td style="width: 30%;">R$ 2.000,00</td>
+														<td style="width: 40%;">R$ 0,00</td>
 													</tr>
 												</tbody>
 											</table>
@@ -3830,12 +3844,115 @@
 						</div>
 					</div>
 				</div>
-				<!-- fim add cotação -->				
+				<!-- fim add cotação -->	
+				
+				<!-- Modal Alterar Processo -->
+				<div class="modal fade bd-example-modal-lg" id="modal-alterar-processo" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg">	
+						<div class="modal-content">
+							<div class="modal-header m-header">
+								<h5 class="modal-title" id="exampleModalLongTitle">Alterar</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="container-fluid">
+									<div class="row mtop-10">
+										<div class="col-12 mt-2">
+											<label for="campoPosicaoAtual">Posição Atual</label> 
+											<select class="selectpicker form-control" id="situacaoProcesso" name="dadosAlterado.situacaoProcesso">
+												<option>Selecione...</option>
+												<option>Posição Atual 1</option>
+												<option>Posição Atual 2</option>
+												<option>Posição Atual 3</option>
+											</select>
+										</div>
+									</div>	
+								</div>		
+							</div>
+							<div class="modal-footer">
+								<div class="container">
+									<button type="button" class="btn btn-cancel txt-up mr-3 float-left" data-dismiss="modal">Cancelar</button>
+									<button type="button" class="btn btn-salvar txt-up float-right">Salvar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fim Modal Alterar Processo -->		
+				<!-- modal tipo de salvado -->
+				<div class="modal fade" id="modal-tipo-de-salvado" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header m-header">
+								<h5 class="modal-title" id="exampleModalLongTitle">Classificação de Salvado</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body mbody-totalizadores mt-3 p-0 d-flex justify-content-center">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col-12">
+											<label for="filtro">Tipo</label>							
+											<select class="selectpicker form-control" id="filtro" name="" title="Selecione..." data-hide-disabled="true" data-actions-box="true">
+												<option value="0">Recuperável</option>
+											</select>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-12 text-right m-0 mt-5 bg-gray">
+											<button type="button" class="btn btn-cancel txt-up mr-3" data-dismiss="modal" aria-label="Close">Cancelar</button>
+											<button type="button" class="btn btn-salvar txt-up" data-dismiss="modal" aria-label="Close">Salvar</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- fim modal tipo de salvado -->
+				<!-- modal Informações de Ambiente -->
+				<div class="modal fade bd-example-modal-lg" id="modal-info-ambiente" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<div class="modal-header m-header">
+								<h5 class="modal-title" id="exampleModalLongTitle">Informações de Ambiente</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body mbody-detalhes d-flex justify-content-center">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Server Name</h6>
+											<p><b>Server Name</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Build Tag</h6>
+											<p><b>Build Tag</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Release Version</h6>
+											<p><b>Release Version</b></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fim modal Informações de Ambiente -->
 			</div>
 			<!-- fim container-->
 		</section>
-		<footer>
+		<footer class="position-absolute">
 			<img src="img/bg-footer.png" alt="" style="width:100%" >
+			<div class="versao">
+				<p>V.1.0</p>
+			</div>
 		</footer>
 
 		<!-- configs js -->		
