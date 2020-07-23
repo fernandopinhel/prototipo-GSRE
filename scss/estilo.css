@@ -1422,13 +1422,13 @@ tr:hover td {
 }
 
 .table-indenizacoes tbody tr td.ac-3 div > .menu-invisible {
-  width: 138px !important;
+  width: 30px !important;
   right: 0;
   top: -4px;
 }
 
 .table-indenizacoes tbody tr:hover td.ac-3 div > .menu-invisible {
-  width: 138px !important;
+  width: 30px !important;
   left: 2px;
   top: -4px;
 }
