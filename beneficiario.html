@@ -499,7 +499,7 @@
 								<a class="nav-link comprovante-tab" id="comprovante-tab" href="comprovante-de-despesas.html" data-toggle="tooltip" data-original-title="Comprovante de Despesas">
 									<i class="icon icon-doc-demonstrativo"></i>
 								</a>
-								<a class="nav-link benef-veiculo-tab active" id="benef-veiculo-tab" href="beneficiario.html" data-toggle="tooltip" data-original-title="Beneficiário/Veículo">
+								<a class="nav-link benef-veiculo-tab active" id="benef-veiculo-tab" href="beneficiario.html" data-toggle="tooltip" data-original-title="Beneficiário">
 									<i class="icon icon-info-vida"></i>
 								</a> 
 								<a class="nav-link coberturas-tab" id="coberturas" href="#" onclick="abrir('coberturas.html')" data-toggle="tooltip" data-original-title="Coberturas">
@@ -570,9 +570,12 @@
                                                                         </select>
                                                                     </div>
                                                                     <div class="col-lg-4 internas-buscas mt-2">
-                                                                        <label for="filtro">Tipo de Financeira</label>							
+                                                                        <label for="filtro">Restrição Financeira</label>							
                                                                         <select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="" data-hide-disabled="true" data-actions-box="true">
-                                                                            <option value="1">Alienação Fiduciária</option>
+																			<option value="1">Alienação Fiduciária</option>
+																			<option value="2">Arredamento Mercantil</option>
+																			<option value="3">Reserva de Domínio</option>
+																			<option value="4">Baixa do Gravame</option>
                                                                         </select>
                                                                     </div>
                                                                     <div class="col-lg-4 internas-buscas mt-2">											
@@ -879,7 +882,7 @@
 																		<span class="circle"></span>
 																	</div>
 																	<div class="menu-invisible">
-																		<a href="#" data-toggle="modal" data-target="#modalDetalhes" >
+																		<a href="#">
 																			<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes">
 																		</a>
 																	</div>
@@ -898,7 +901,7 @@
 																		<span class="circle"></span>
 																	</div>
 																	<div class="menu-invisible">
-																		<a href="#" data-toggle="modal" data-target="#modalDetalhes" >
+																		<a href="#">
 																			<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes">
 																		</a>
 																	</div>

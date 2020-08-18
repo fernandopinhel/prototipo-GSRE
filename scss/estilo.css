@@ -1846,6 +1846,10 @@ header .navbar {
   color: #499ED0;
 }
 
+.obrigatorio {
+  color: red;
+}
+
 .tab-content.white {
   padding: 20px 10px;
 }
@@ -2196,11 +2200,23 @@ span.btn-add {
 }
 
 .color-b {
-  color: #0B67BE;
+  color: #0B67BE !important;
 }
 
 .color-r {
-  color: #99000f;
+  color: #99000f !important;
+}
+
+.color-rl {
+  color: #e60935 !important;
+}
+
+.color-g {
+  color: #11C25D !important;
+}
+
+.bold {
+  font-weight: 600 !important;
 }
 
 .link-modais {

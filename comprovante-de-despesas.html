@@ -506,7 +506,7 @@
 								<a class="nav-link comprovante-tab active" id="comprovante-tab" href="comprovante-de-despesas.html" data-toggle="tooltip" data-original-title="Comprovante de Despesas">
 									<i class="icon icon-doc-demonstrativo"></i>
 								</a>
-								<a class="nav-link benef-veiculo-tab" id="benef-veiculo-tab" href="beneficiario.html" data-toggle="tooltip" data-original-title="Beneficiário/Veículo">
+								<a class="nav-link benef-veiculo-tab" id="benef-veiculo-tab" href="beneficiario.html" data-toggle="tooltip" data-original-title="Beneficiário">
 									<i class="icon icon-info-vida"></i>
 								</a> 
 								<a class="nav-link coberturas-tab" id="coberturas" href="#" onclick="abrir('coberturas.html')" data-toggle="tooltip" data-original-title="Coberturas">
@@ -766,12 +766,13 @@
 															<th scope="col"></th>
 															<th scope="col" style="width: 7%;">CNPJ</th>
 															<th scope="col" style="width: 7%;">Emitente</th>
-															<th scope="col" style="width: 7%;">Tipo Nota Fiscal</th>
-															<th scope="col">Valor Documento</th>
-															<th scope="col">Valor Serviço</th>
-															<th scope="col">Valor Pagar</th>
+															<th scope="col" style="width: 7%;">Tipo <br>Nota Fiscal</th>
+															<th scope="col">Valor <br>Documento</th>
+															<th scope="col">Valor <br>Serviço</th>
+															<th scope="col">Valor <br>Pagar</th>
 															<th scope="col">Número</th>
-															<th scope="col">Tipo Comprovante</th>
+															<th scope="col">Tipo <br>Comprovante</th>
+															<th scope="col">Pago</th>
 														</tr>
 													</thead>
 													<tbody>
@@ -784,14 +785,14 @@
 																		<span class="circle"></span>
 																	</div>
 																	<div class="menu-invisible">
-																		<a href="#" data-toggle="modal" data-target="#modalDetalhes" >
-																			<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes">
+																		<a href="#" data-toggle="modal" data-target="#modalDetalhes">
+																			<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes" width="25">
 																		</a>
 																		<a href="#" data-toggle="modal" data-target="#modalAnexoComprovantes" class="anexo-comprovantes">
-																			<img src="img/anexo-tabela.svg" data-toggle="tooltip" data-original-title="Documento anexado">
+																			<img src="img/anexo-tabela.svg" data-toggle="tooltip" data-original-title="Documento anexado"  width="25">
 																		</a>
-																		<a href="indenizacao-pagamento.html">
-																			<img src="img/pagar.svg" data-toggle="tooltip" data-original-title="Pagar">
+																		<a href="indenizacao-pagamento.html" >
+																			<img src="img/pagar.svg" data-toggle="tooltip" data-original-title="Pagar"  width="25">
 																		</a>
 																	</div>
 																</div>
@@ -803,7 +804,8 @@
 															<td>R$ 0,00</td>      
 															<td>R$ 100,00</td>    		   
 															<td>12320201</td>         
-															<td>Nota Fiscal</td>                                                                
+															<td>Nota Fiscal</td>  
+															<td class="color-rl bold">Não</td>                                                                
 														</tr>
 														<tr>
 															<td class="actions ac-3">
@@ -815,7 +817,10 @@
 																	</div>
 																	<div class="menu-invisible">
 																		<a href="#" data-toggle="modal" data-target="#modalDetalhes" >
-																			<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes">
+																			<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes" width="25">
+																		</a>
+																		<a href="#" data-toggle="modal" data-target="#modalAnexoComprovantes" class="anexo-comprovantes">
+																			<img src="img/anexo-tabela.svg" data-toggle="tooltip" data-original-title="Documento anexado" width="25">
 																		</a>
 																	</div>
 																</div>
@@ -827,7 +832,8 @@
 															<td>R$ 0,00</td>      
 															<td>R$ 50,00</td>    		   
 															<td>12320201</td>         
-															<td>Nota Fiscal</td>                                                                
+															<td>Nota Fiscal</td>      
+															<td class="color-g bold">Sim</td>                                                                
 														</tr>
 													</tbody>
 												</table>
