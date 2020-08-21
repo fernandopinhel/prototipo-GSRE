@@ -452,23 +452,32 @@
 				<!-- desktop -->
 				<div class="desktop mt-5">
 					<div class="row">
-						<!-- sidebar direita -->
+						<!-- sidebar esquerda -->
 						<div class="col-md-2 col-lg-2 col-xl-1"  id="tab-content-sidebar">
-							<div class="nav nav-tabs flex-column nav-pills white menu-itens" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-								<a class="nav-link acompanhamento-tab tab-pane" id="acompanhamento-tab" href="#">
-									<i class="icon icon-nav-visualizar" data-toggle="tooltip" data-original-title="Acompanhamento"></i>
+							<div class="nav flex-column nav-pills white menu-itens" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+								<a class="nav-link acompanhamento-tab" id="acompanhamento-tab" href="#" onclick="abrir('acompanhamento-de-sinistro.html')" data-toggle="tooltip" data-original-title="Acompanhamento">
+									<i class="icon icon-nav-visualizar"></i>
 								</a> 
-								<a class="nav-link orcamento-tab"  data-toggle="tab" href="#orcamento-tab">
-									<i class="icon icon-fin-nota-fiscal" data-toggle="tooltip" data-original-title="Orçamento"></i>
-								</a> 
-								<a class="nav-link parecer-tab tab-pane active" data-toggle="tab" href="#parecer-tab">
-									<i class="icon icon-doc-form" data-toggle="tooltip" data-original-title="Parecer"></i>
-								</a> 
-								<a class="nav-link indenizacao-tab" id="indenizacao-tab" href="#" 	 data-toggle="tooltip" data-original-title="Indenização">
+								<a class="nav-link parecer-tab" id="parecer-tab" href="parecer.html"   data-toggle="tooltip" data-original-title="Parecer">
+									<i class="icon icon-doc-form"></i>
+								</a>
+								<a class="nav-link orcamento-tab" id="orcamento-tab" href="orcamento.html" data-toggle="tooltip" data-original-title="Orçamento">
+									<i class="icon icon-fin-nota-fiscal"></i>
+								</a>  
+								<a class="nav-link orcamento-tab" id="orcamento-tab" href="#" onclick="abrir('cotacao.html')" data-toggle="tooltip" data-original-title="Cotação">
+									<i class="icon icon-doc-2a-via"></i>
+								</a>  
+								<a class="nav-link indenizacao-tab" id="indenizacao-tab" href="indenizacao.html" data-toggle="tooltip" data-original-title="Indenização">
 									<i class="icon icon-fin-receber"></i>
 								</a>
-								<a class="nav-link benef-veiculo-tab" id="benef-veiculo-tab" href="#" data-toggle="tooltip" data-original-title="Beneficiário/Veículo">
+								<a class="nav-link comprovante-tab active" id="comprovante-tab" href="comprovante-de-despesas.html" data-toggle="tooltip" data-original-title="Comprovante de Despesas">
+									<i class="icon icon-doc-demonstrativo"></i>
+								</a>
+								<a class="nav-link benef-veiculo-tab" id="benef-veiculo-tab" href="beneficiario.html" data-toggle="tooltip" data-original-title="Beneficiário">
 									<i class="icon icon-info-vida"></i>
+								</a> 
+								<a class="nav-link coberturas-tab" id="coberturas" href="#" onclick="abrir('coberturas.html')" data-toggle="tooltip" data-original-title="Coberturas">
+									<i class="icon icon-auto-coberturas-adicionais"></i>
 								</a> 
 								<a class="nav-link acompanhamento-tab" id="acompanhamento-tab" href="#" data-toggle="tooltip" data-original-title="Acompanhamento Histórico">
 									<i class="icon icon-fin-acompanhamento-proposta"></i>
@@ -478,7 +487,7 @@
 								</a>
 							</div>
 						</div>
-						<!-- fim sidebar direita -->
+						<!-- fim sidebar esquerda -->
 						<!-- conteudo principal -->
 						<div class="col-md-8 col-lg-8 col-xl-10 tab-content" id="tab-content-principal">
 							<div class="tab-pane active white" id="parecer-tab">

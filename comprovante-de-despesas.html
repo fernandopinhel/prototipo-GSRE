@@ -87,9 +87,9 @@
 								<a class="dropdown-item" id="pills-cadastro-usuario-tab"       href= 'usuario.html'>Usuário</a>
 								<a class="dropdown-item" id="pills-cadastro-usuario-tab"       href= 'prestador.html'>Prestador</a>
 								<a class="dropdown-item" id="pills-cadastro-instituicao-tab"   href= 'instituicoes.html'>Instituições</a>
-								<a class="dropdown-item" id="pills-cadastro-tabelas-tab"       href= '#'>Tabelas</a>
-								<a class="dropdown-item" id="pills-cadastro-cartas-tab"        href= '#'>Cartas</a>
-								<a class="dropdown-item" id="pills-cadastro-oficinas-tab"      href= '#'>Oficinas</a>
+								<a class="dropdown-item" id="pills-cadastro-tabelas-tab"       href= 'tabelas.html'>Tabelas</a>
+								<a class="dropdown-item" id="pills-cadastro-cartas-tab"        href= 'cartas.html'>Cartas</a>
+								<a class="dropdown-item" id="pills-cadastro-oficinas-tab"      href= 'oficinas.html'>Oficinas</a>
 								</div>
 								</li>
 								<li class="nav-item">
@@ -258,6 +258,21 @@
 												</div>
 												<div class="box-item-img my-auto">
 													<img src="img/icon-posicao-atual.png" alt="">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row mt-4">
+										<div class="col-sm-12 col-md-6 col-lg-3" data-toggle="modal" data-target="#modal-protocolos">
+											<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
+												<div class="box-item-text my-auto">
+													<p>Protocolos</p>
+													<span>9862678 /</span>
+													<span>7891357 /</span>
+													<span>8963567</span>
+												</div>
+												<div class="box-item-img my-auto">
+													<img src="img/icon-protocolos.png" alt="">
 												</div>
 											</div>
 										</div>
@@ -488,7 +503,7 @@
 						<!-- sidebar esquerda -->
 						<div class="col-md-2 col-lg-2 col-xl-1"  id="tab-content-sidebar">
 							<div class="nav flex-column nav-pills white menu-itens" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-								<a class="nav-link acompanhamento-tab" id="acompanhamento-tab" href="#" data-toggle="tooltip" data-original-title="Acompanhamento">
+								<a class="nav-link acompanhamento-tab" id="acompanhamento-tab" href="#" onclick="abrir('acompanhamento-de-sinistro.html')" data-toggle="tooltip" data-original-title="Acompanhamento">
 									<i class="icon icon-nav-visualizar"></i>
 								</a> 
 								<a class="nav-link parecer-tab" id="parecer-tab" href="parecer.html"   data-toggle="tooltip" data-original-title="Parecer">
@@ -508,6 +523,9 @@
 								</a>
 								<a class="nav-link benef-veiculo-tab" id="benef-veiculo-tab" href="beneficiario.html" data-toggle="tooltip" data-original-title="Beneficiário">
 									<i class="icon icon-info-vida"></i>
+								</a> 
+								<a class="nav-link nota-de-cobertura-web-tab" id="nota-de-cobertura-web" href="#" onclick="abrir('nota-de-cobertura-web.html')" data-toggle="tooltip" data-original-title="Nota de Cobertura Web">
+									<i class="icon icon-auto-sinistro"></i>
 								</a> 
 								<a class="nav-link coberturas-tab" id="coberturas" href="#" onclick="abrir('coberturas.html')" data-toggle="tooltip" data-original-title="Coberturas">
 									<i class="icon icon-auto-coberturas-adicionais"></i>
@@ -630,15 +648,15 @@
                                                                     </div>
 																</div>
 																<div class="row mt-3">
-																	<div class="col-lg-2 col-xl-3 internas-buscas mt-3">
+																	<div class="col-lg-2 internas-buscas mt-3">
 																		<label for="text">CNPJ/CPF</label>
 																		<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 																	</div>
-																	<div class="col-lg-4 col-xl-5 internas-buscas mt-3">
+																	<div class="col-lg-4 internas-buscas mt-3">
 																		<label for="text">Emitente</label>
 																		<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 																	</div>
-                                                                    <div class="col-lg-4 col-xl-4 internas-buscas mt-3">
+                                                                    <div class="col-lg-4 internas-buscas mt-3">
                                                                         <label for="filtro">Tipo</label>							
                                                                         <select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione..." data-hide-disabled="true" data-actions-box="true">
                                                                             <option value="0">Peças</option>
@@ -649,7 +667,7 @@
 																			<option value="5">Serviços</option>
                                                                         </select>
 																	</div>
-																	<div class="col-lg-4 col-xl-4 internas-buscas mt-4">
+																	<div class="col-lg-4  internas-buscas mt-4">
                                                                         <label for="filtro">Classificação</label>							
                                                                         <select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione..." data-hide-disabled="true" data-actions-box="true">
                                                                             <option value="0">Alimentação</option>
@@ -664,11 +682,11 @@
 																			<option value="9">Transporte</option>
                                                                         </select>
 																	</div>
-																	<div class="col-lg-2 col-xl-1 internas-buscas mt-4">
+																	<div class="col-lg-2 internas-buscas mt-4">
 																		<label for="text">Número</label>
 																		<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 																	</div>
-																	<div class="col-lg-2 col-xl-2 internas-buscas mt-4">
+																	<div class="col-lg-2 internas-buscas mt-4">
                                                                         <label for="filtro">Série</label>							
                                                                         <select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione..." data-hide-disabled="true" data-actions-box="true">
                                                                             <option value="0">0</option>
@@ -677,35 +695,35 @@
                                                                             <option value="3">B - 1</option>                                                                            
                                                                         </select>
 																	</div>
-																	<div class="col-lg-2 col-xl-2 internas-buscas mt-4">
+																	<div class="col-lg-2 internas-buscas mt-4">
 																		<label for="text">Sub-Série</label>
 																		<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 																	</div>
-																	<div class="col-lg-2 col-xl-2 internas-buscas mt-4">
+																	<div class="col-lg-2 internas-buscas mt-4">
 																		<label for="text">Alíquota ISS</label>
 																		<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 																	</div>
-																	<div class="col-lg-2 col-xl-2 internas-buscas mt-4">
+																	<div class="col-lg-2 internas-buscas mt-4">
 																		<label for="text">Data de Emisssão</label>
 																		<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 																	</div>
-																	<div class="col-lg-2 col-xl-2 internas-buscas mt-4">
+																	<div class="col-lg-2 internas-buscas mt-4">
 																		<label for="text">Prazo</label>
 																		<input type="text" name="" maxlength="8" value="5 dias" id="" class="form-control" autocomplete="off" disabled> 
 																	</div>
-																	<div class="col-lg-2 col-xl-2 internas-buscas mt-4">
+																	<div class="col-lg-2 internas-buscas mt-4">
 																		<label for="text">Vencimento</label>
 																		<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 																	</div>
-																	<div class="col-lg-2 col-xl-2 internas-buscas mt-4">
+																	<div class="col-lg-2 internas-buscas mt-4">
 																		<label for="text">Valor do Documento</label>
 																		<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 																	</div>
-																	<div class="col-lg-2 col-xl-2 internas-buscas mt-4">
+																	<div class="col-lg-2 internas-buscas mt-4">
 																		<label for="text">Serviço</label>
 																		<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 																	</div>
-																	<div class="col-lg-2 col-xl-2 internas-buscas mt-4">
+																	<div class="col-lg-2 internas-buscas mt-4">
 																		<label for="text">Valor a pagar</label>
 																		<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 																	</div>
@@ -777,25 +795,16 @@
 													</thead>
 													<tbody>
 														<tr>
-															<td class="actions ac-3">
-																<div class="float-right">
-																	<div class="menu-visible">
-																		<span class="circle"></span>
-																		<span class="circle"></span>
-																		<span class="circle"></span>
-																	</div>
-																	<div class="menu-invisible">
-																		<a href="#" data-toggle="modal" data-target="#modalDetalhes">
-																			<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes" width="25">
-																		</a>
-																		<a href="#" data-toggle="modal" data-target="#modalAnexoComprovantes" class="anexo-comprovantes">
-																			<img src="img/anexo-tabela.svg" data-toggle="tooltip" data-original-title="Documento anexado"  width="25">
-																		</a>
-																		<a href="indenizacao-pagamento.html" >
-																			<img src="img/pagar.svg" data-toggle="tooltip" data-original-title="Pagar"  width="25">
-																		</a>
-																	</div>
-																</div>
+															<td style="width: 7%;">
+																<a href="#" data-toggle="modal" data-target="#modalDetalhes">
+																	<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes" width="25">
+																</a>
+																<a href="#" data-toggle="modal" data-target="#modalAnexoComprovantes" class="anexo-comprovantes">
+																	<img src="img/anexo-tabela.svg" data-toggle="tooltip" data-original-title="Documento anexado"  width="25">
+																</a>
+																<a href="indenizacao-pagamento.html" >
+																	<img src="img/pagar.svg" data-toggle="tooltip" data-original-title="Pagar"  width="25">
+																</a>
 															</td>
 															<td style="width: 7%;">00.069.307/0001-49</td>   
 															<td style="width: 7%;">V M N Centro Automobilístico</td>   
@@ -808,22 +817,13 @@
 															<td class="color-rl bold">Não</td>                                                                
 														</tr>
 														<tr>
-															<td class="actions ac-3">
-																<div class="float-right">
-																	<div class="menu-visible">
-																		<span class="circle"></span>
-																		<span class="circle"></span>
-																		<span class="circle"></span>
-																	</div>
-																	<div class="menu-invisible">
-																		<a href="#" data-toggle="modal" data-target="#modalDetalhes" >
-																			<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes" width="25">
-																		</a>
-																		<a href="#" data-toggle="modal" data-target="#modalAnexoComprovantes" class="anexo-comprovantes">
-																			<img src="img/anexo-tabela.svg" data-toggle="tooltip" data-original-title="Documento anexado" width="25">
-																		</a>
-																	</div>
-																</div>
+															<td style="width: 7%;">
+																<a href="#" data-toggle="modal" data-target="#modalDetalhes">
+																	<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes" width="25">
+																</a>
+																<a href="#" data-toggle="modal" data-target="#modalAnexoComprovantes" class="anexo-comprovantes">
+																	<img src="img/anexo-tabela.svg" data-toggle="tooltip" data-original-title="Documento anexado"  width="25">
+																</a>
 															</td>
 															<td style="width: 7%;">00.069.307/0001-49</td>   
 															<td style="width: 7%;">V M N Centro Automobilístico</td>   
@@ -1880,7 +1880,104 @@
 						</div>
 					</div>
 				</div>
-				<!-- fim modal anexo Comprovantes -->			
+				<!-- fim modal anexo Comprovantes -->		
+				<!-- Modal protocolos -->
+				<div class="modal fade" id="modal-protocolos" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+					<div class="modal-dialog">	
+						<div class="modal-content">
+							<div class="modal-header m-header">
+								<h5 class="modal-title" id="exampleModalLongTitle">Protocolos</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body  d-flex justify-content-center">
+								<div class="container-fluid">
+									<div class="row">		
+										<div class="col-12 p-0">
+											<div class="bg-transparent">
+												<form id="" class="" name="" action="" method="post">
+													<table class="table table-striped" id="">
+														<thead>
+															<tr>
+																<th class="col" style="width: 5%;"></th>
+																<th class="col" style="width: 14%">Protocolo</th>
+																<th scope="col" style="width: 12%">Natureza</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td style="width: 5%">
+																	<a href="#" data-dismiss="modal" data-toggle="modal" data-target="#modal-protocolos-confirmar">
+																		<img src="img/reabrir.svg" data-toggle="tooltip" data-original-title="Reabrir Protocolo" width="25px">
+																	</a>
+																</td>
+																<td style="width: 15%">9862678</td>																
+																<td style="width: 80%">1</td>
+															</tr>
+															<tr>
+																<td style="width: 5%">
+																	<a href="#" data-dismiss="modal" data-toggle="modal" data-target="#modal-protocolos-confirmar">
+																		<img src="img/reabrir.svg" data-toggle="tooltip" data-original-title="Reabrir Protocolo" width="25px">
+																	</a>
+																</td>
+																<td style="width: 15%">7891357</td>																
+																<td style="width: 80%">3</td>
+															</tr>
+															<tr>
+																<td style="width: 5%">
+																</td>
+																<td style="width: 15%">8963567</td>																
+																<td style="width: 80%">8</td>
+															</tr>
+														</tbody>
+													</table>
+												</form>
+											</div>		
+										</div>					
+									</div>
+								</div>
+							</div>
+							<!-- <div class="modal-footer">
+								<div class="container-fluid">
+									<button type="button" class="btn btn-salvar txt-up float-right w-90" data-dismiss="modal">Ok</button>
+									<button type="button" class="btn btn-cancel txt-up float-left mr-2" data-dismiss="modal">Cancelar</button>
+								</div>
+							</div> -->
+						</div>
+					</div>
+				</div>
+				<!-- Fim Modal protocolos -->	
+				<!-- Modal protocolos Confirmar -->
+				<div class="modal fade" id="modal-protocolos-confirmar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+					<div class="modal-dialog">	
+						<div class="modal-content">
+							<div class="modal-header m-header">
+								<h5 class="modal-title" id="exampleModalLongTitle">Reabrir Protocolo</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body  d-flex justify-content-center">
+								<div class="container-fluid">
+									<div class="row">		
+										<div class="col-12 p-0">
+											<h6>Tem certeza que deseja reabrir esse protocolo?</h6>
+											<p class="color-b">9862678</p>
+										</div>					
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<div class="container-fluid">
+									<button type="button" class="btn btn-salvar txt-up float-right" data-dismiss="modal">Confirmar</button>
+									<button type="button" class="btn btn-cancel txt-up float-left mr-2" data-toggle="modal" data-target="#modal-protocolos" data-dismiss="modal">Cancelar</button>									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fim Modal Protocolos Confirmar -->	
 			</div>
 			<!-- fim container-->
 		</section>

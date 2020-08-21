@@ -622,12 +622,12 @@ label.form-check-label {
 }
 
 .box-item-text {
-  width: 50%;
+  width: 80%;
   text-align: left;
 }
 
 .box-item-img {
-  width: 50%;
+  width: 20%;
   text-align: right;
 }
 
@@ -1819,6 +1819,14 @@ header .navbar {
   padding: 5px;
   border-radius: 5px;
   height: 100%;
+}
+
+.pop-up {
+  background: #fff;
+  padding: 20px 5px;
+  border-radius: 5px;
+  height: 100%;
+  margin: 15px 0;
 }
 
 .i-add {

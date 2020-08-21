@@ -263,6 +263,21 @@
 										</div>
 									</div>
 									<div class="row mt-4">
+										<div class="col-sm-12 col-md-6 col-lg-3" data-toggle="modal" data-target="#modal-protocolos">
+											<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
+												<div class="box-item-text my-auto">
+													<p>Protocolos</p>
+													<span>9862678 /</span>
+													<span>7891357 /</span>
+													<span>8963567</span>
+												</div>
+												<div class="box-item-img my-auto">
+													<img src="img/icon-protocolos.png" alt="">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row mt-4">
 										<div class="col-12">
 											<div class="box-titulo-categorias">
 												<h6 class="titulo-categorias">Veículo</h6>
@@ -488,7 +503,7 @@
 						<!-- sidebar esquerda -->
 						<div class="col-md-2 col-lg-2 col-xl-1"  id="tab-content-sidebar">
 							<div class="nav flex-column nav-pills white menu-itens" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-								<a class="nav-link acompanhamento-tab" id="acompanhamento-tab" href="#" data-toggle="tooltip" data-original-title="Acompanhamento">
+								<a class="nav-link acompanhamento-tab" id="acompanhamento-tab" href="#" onclick="abrir('acompanhamento-de-sinistro.html')" data-toggle="tooltip" data-original-title="Acompanhamento">
 									<i class="icon icon-nav-visualizar"></i>
 								</a> 
 								<a class="nav-link parecer-tab" id="parecer-tab" href="parecer.html"   data-toggle="tooltip" data-original-title="Parecer">
@@ -500,14 +515,20 @@
 								<a class="nav-link orcamento-tab" id="orcamento-tab" href="#" onclick="abrir('cotacao.html')" data-toggle="tooltip" data-original-title="Cotação">
 									<i class="icon icon-doc-2a-via"></i>
 								</a>  
-								<a class="nav-link indenizacao-tab" id="indenizacao-tab" href="indenizacao.html" 	 data-toggle="tooltip" data-original-title="Indenização">
+								<a class="nav-link indenizacao-tab" id="indenizacao-tab" href="indenizacao.html" data-toggle="tooltip" data-original-title="Indenização">
 									<i class="icon icon-fin-receber"></i>
 								</a>
-								<a class="nav-link comprovante-tab" id="comprovante-tab" href="compraovante-de-despesas.html" onclick="abrir('compraovante-de-despesas.html')"  data-toggle="tooltip" data-original-title="Comprovante de Despesas">
+								<a class="nav-link comprovante-tab" id="comprovante-tab" href="comprovante-de-despesas.html" data-toggle="tooltip" data-original-title="Comprovante de Despesas">
 									<i class="icon icon-doc-demonstrativo"></i>
 								</a>
-								<a class="nav-link benef-veiculo-tab" id="benef-veiculo-tab" href="#" data-toggle="tooltip" data-original-title="Beneficiário/Veículo">
+								<a class="nav-link benef-veiculo-tab" id="benef-veiculo-tab" href="beneficiario.html" data-toggle="tooltip" data-original-title="Beneficiário">
 									<i class="icon icon-info-vida"></i>
+								</a> 
+								<a class="nav-link nota-de-cobertura-web-tab" id="nota-de-cobertura-web" href="#" onclick="abrir('nota-de-cobertura-web.html')" data-toggle="tooltip" data-original-title="Nota de Cobertura Web">
+									<i class="icon icon-auto-sinistro"></i>
+								</a> 
+								<a class="nav-link coberturas-tab" id="coberturas" href="#" onclick="abrir('coberturas.html')" data-toggle="tooltip" data-original-title="Coberturas">
+									<i class="icon icon-auto-coberturas-adicionais"></i>
 								</a> 
 								<a class="nav-link acompanhamento-tab" id="acompanhamento-tab" href="#" data-toggle="tooltip" data-original-title="Acompanhamento Histórico">
 									<i class="icon icon-fin-acompanhamento-proposta"></i>
@@ -3945,6 +3966,103 @@
 					</div>
 				</div>
 				<!-- Fim modal Informações de Ambiente -->
+								<!-- Modal protocolos -->
+								<div class="modal fade" id="modal-protocolos" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+									<div class="modal-dialog">	
+										<div class="modal-content">
+											<div class="modal-header m-header">
+												<h5 class="modal-title" id="exampleModalLongTitle">Protocolos</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body  d-flex justify-content-center">
+												<div class="container-fluid">
+													<div class="row">		
+														<div class="col-12 p-0">
+															<div class="bg-transparent">
+																<form id="" class="" name="" action="" method="post">
+																	<table class="table table-striped" id="">
+																		<thead>
+																			<tr>
+																				<th class="col" style="width: 5%;"></th>
+																				<th class="col" style="width: 14%">Protocolo</th>
+																				<th scope="col" style="width: 12%">Natureza</th>
+																			</tr>
+																		</thead>
+																		<tbody>
+																			<tr>
+																				<td style="width: 5%">
+																					<a href="#" data-dismiss="modal" data-toggle="modal" data-target="#modal-protocolos-confirmar">
+																						<img src="img/reabrir.svg" data-toggle="tooltip" data-original-title="Reabrir Protocolo" width="25px">
+																					</a>
+																				</td>
+																				<td style="width: 15%">9862678</td>																
+																				<td style="width: 80%">1</td>
+																			</tr>
+																			<tr>
+																				<td style="width: 5%">
+																					<a href="#" data-dismiss="modal" data-toggle="modal" data-target="#modal-protocolos-confirmar">
+																						<img src="img/reabrir.svg" data-toggle="tooltip" data-original-title="Reabrir Protocolo" width="25px">
+																					</a>
+																				</td>
+																				<td style="width: 15%">7891357</td>																
+																				<td style="width: 80%">3</td>
+																			</tr>
+																			<tr>
+																				<td style="width: 5%">
+																				</td>
+																				<td style="width: 15%">8963567</td>																
+																				<td style="width: 80%">8</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</form>
+															</div>		
+														</div>					
+													</div>
+												</div>
+											</div>
+											<!-- <div class="modal-footer">
+												<div class="container-fluid">
+													<button type="button" class="btn btn-salvar txt-up float-right w-90" data-dismiss="modal">Ok</button>
+													<button type="button" class="btn btn-cancel txt-up float-left mr-2" data-dismiss="modal">Cancelar</button>
+												</div>
+											</div> -->
+										</div>
+									</div>
+								</div>
+								<!-- Fim Modal protocolos -->	
+								<!-- Modal protocolos Confirmar -->
+								<div class="modal fade" id="modal-protocolos-confirmar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+									<div class="modal-dialog">	
+										<div class="modal-content">
+											<div class="modal-header m-header">
+												<h5 class="modal-title" id="exampleModalLongTitle">Reabrir Protocolo</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body  d-flex justify-content-center">
+												<div class="container-fluid">
+													<div class="row">		
+														<div class="col-12 p-0">
+															<h6>Tem certeza que deseja reabrir esse protocolo?</h6>
+															<p class="color-b">9862678</p>
+														</div>					
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<div class="container-fluid">
+													<button type="button" class="btn btn-salvar txt-up float-right" data-dismiss="modal">Confirmar</button>
+													<button type="button" class="btn btn-cancel txt-up float-left mr-2" data-toggle="modal" data-target="#modal-protocolos" data-dismiss="modal">Cancelar</button>									
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Fim Modal Protocolos Confirmar -->	
 			</div>
 			<!-- fim container-->
 		</section>
