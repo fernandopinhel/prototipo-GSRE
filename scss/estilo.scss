@@ -89,6 +89,26 @@ a{
   font-weight: 500;
 }
 
+.actions-menu-editar{
+  font-size: 14px;
+}
+
+.box-editar{
+  float: left;
+  margin-right: 10px;
+  text-transform: uppercase;
+  background: #f2f2f2;
+  padding: 8px;
+  border-radius: 5px;
+  background: #0B67BE;
+  width: 118px;
+  text-align: center;
+  border-radius: 100px;
+}
+
+.box-editar > a{
+  color: #fff;
+}
 
 .actions-menu-orcamento{
   font-size: 14px;
@@ -603,6 +623,8 @@ button.btn-second:hover{
 label.form-check-label{
   font-size: 16px;
 }
+
+.h-54{height: 54px;}
 // fim globais
 
 // accordion principais
