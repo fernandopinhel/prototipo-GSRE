@@ -193,6 +193,48 @@ $(document).ready(function(){
   });
 });
 
+// interação pedido de cobertura
+$(document).ready(function(){
+  $("#radio1").click(function(){
+    $(".alterar-pedido").removeClass("d-none");
+    $(".f-alterar").removeClass("d-none");
+  });
+  $("#radio2").click(function(){
+    $(".alterar-pedido").removeClass("d-none");
+    $(".f-alterar").removeClass("d-none");
+  });  
+});
+
+$(document).ready(function(){
+  $(".ativar-td-reabrir").click(function(){
+    $(".td-reabrir").removeClass("d-none");  
+    $(".td-cadeado-reabrir  ").addClass("d-none");  
+  });
+});
+
+$(document).ready(function(){
+  $(".b-incluir-cobertura").click(function(){
+    $(".alterar-pedido").addClass("d-none");
+    $(".f-alterar").addClass("d-none");
+    $(".incluir-pedido").removeClass("d-none");
+    $(".f-incluir").removeClass("d-none");    
+    $("#radio1").attr("checked", false);
+    $("#radio2").attr("checked", false);
+    $("#radio1").removeAttr('checked');
+    $("#radio2").removeAttr('checked');
+  });
+
+  $("#radio1").click(function(){
+    $(".incluir-pedido").addClass("d-none");
+    $(".f-incluir").addClass("d-none");
+  });
+  $("#radio2").click(function(){
+    $(".incluir-pedido").addClass("d-none");
+    $(".f-incluir").addClass("d-none");
+  });  
+});
+// fim interação pedido de cobertura
+
 
 
 

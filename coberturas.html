@@ -47,20 +47,25 @@
 		<link rel="stylesheet" type="text/css" href="css/timeline/timeline.css" />
 	</head>
 	<body>
-        <div class="container-fluid p-0">
+        <div class="container-fluid">
             <div class="row mb-4">
-                <div class="col-12 m-header">
+                <div class="col-md-6 col-lg-6 p-2 m-header">
                     <h5 class="title-pop-up">Coberturas</h5>
+                </div>
+                <div class="col-md-6 col-lg-6 p-2 m-header">
+                    <button type="button" name="button" class="btn btn-salvar b-incluir-cobertura float-right">
+                        Incluir Cobertura</button>
                 </div>
             </div>
         </div>
-        <div class="container-fluid">            
+        <div class="container-fluid">      
             <div class="table-responsive">
                 <form id="" name="" action="" method="post">
                     <table class="table table-striped table-comprovantes" id="">
                         <thead>
                             <tr>
                                 <th scope="col"></th>
+                                <th scope="col">Reabertura</th>
                                 <th scope="col">Natureza</th>
                                 <th scope="col">Resultado</th>
                                 <th scope="col">Nº Cobertura</th>
@@ -72,25 +77,31 @@
                             <tr>
                                 <td>
                                     <div class="form-group form-check form-check-inline" style="margin-top: 0px;">
-                                        <input type="radio" name="estrangeiro" id="nao" value="2" class="form-check-input" checked>
-                                        <label for="nao" class="form-check-input"></label>
+                                        <input type="radio" name="reabrir" id="radio1" value="2" class="form-check-input ">
+                                        <label for="radio1" class="form-check-input"></label>
                                     </div>
                                 </td>
-                                <td>001 - Colisão - Danos Parciais Casco</td>   
+                                <td style="width: 5%"></td>
+                                <td style="width: 15%">001 - Colisão - Danos Parciais Casco</td>   
                                 <td>Aceita</td>
                                 <td>57933588</td>   
                                 <td>05/04/2019</td>   
                                 <td>05/04/2019</td> 															                                                                                            
                             </tr>
                             <tr>
-                                <td>
-                                    <div class="form-group form-check form-check-inline" style="margin-top: 0px;">
-                                        <input type="radio" name="estrangeiro" id="nao" value="2" class="form-check-input">
-                                        <label for="nao" class="form-check-input"></label>
+                                <td class="">
+                                    <div class="form-group form-check form-check-inline td-reabrir d-none" style="margin-top: 0px;">
+                                        <input type="radio" name="reabrir" id="radio2" value="2" class="form-check-input ">
+                                        <label for="radio2" class="form-check-input"></label>
                                     </div>
                                 </td>
-                                <td>001 - Colisão - Danos Parciais Casco</td>   
-                                <td>Aceita</td>
+                                <td style="width: 5%">
+                                    <a href="#" class="td-cadeado-reabrir" data-dismiss="modal" data-toggle="modal" data-target="#modal-protocolos-confirmar">
+                                        <img src="img/reabrir.svg" width="25px">
+                                    </a>
+                                </td>
+                                <td style="width: 15%">003 - Furto/Roubo - Casco</td>   
+                                <td>Recusada</td>
                                 <td>57933588</td>   
                                 <td>10/04/2019</td>   
                                 <td>10/04/2019</td> 															                                                                                            
@@ -99,28 +110,92 @@
                     </table>
                 </form>
             </div>
-            <div class="row">
+            <div class="row alterar-pedido d-none">
                 <div class="col-12 mt-4">                    
-                    <h6 class="title-add-orcamento">Pedido de Cobertura</h6>
+                    <h6 class="title-coberturas">Alterar Pedido de Cobertura</h6>
                     <hr>
                 </div>
                 <div class="col-12">
                     <label for="filtro">Natureza</label>							
                     <select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="" data-hide-disabled="true" data-actions-box="true">
-                        <option value="0" selected>001 - Colisão - Danos Parciais Casco</option>
-                        <option value="1">001 - Incêndio - Danos Parciais Casco</option>
-                        <option value="2">003 - Furto/Roubo - Casco</option>                        
+                        <option value="0" selected>Selecione</option>
+                        <option value="1">001 - Colisão - Danos Parciais Casco</option>
+                        <option value="2">001 - Incêndio - Danos Parciais Casco</option>
+                        <option value="3">003 - Furto/Roubo - Casco</option>                        
                     </select>
                 </div>
+                <div class="col-md-4 col-lg-4">
+                    <div class="form-group mt-3">
+                        <label for="text">Reserva Inicial</label>
+                        <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+                    </div>
+                </div> 
             </div>
-            <div class="row footer-pop-up mt-5">
+            <div class="row footer-pop-up f-alterar mt-3 mb-3 d-none">
                 <div class="col-12">
                     <button type="button" class="btn btn-cancel txt-up float-left">Cancelar</button>
                     <button type="button" class="btn btn-salvar txt-up float-right">Confirmar</button>
                 </div>
             </div>
-        </div>
 
+            <div class="row incluir-pedido d-none">
+                <div class="col-12 mt-4">                    
+                    <h6 class="title-coberturas">Incluir Pedido de Cobertura</h6>
+                    <hr>
+                </div>
+                <div class="col-12">
+                    <label for="filtro">Natureza</label>							
+                    <select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="" data-hide-disabled="true" data-actions-box="true">
+                        <option value="0" selected>Selecione</option>
+                        <option value="1">001 - Colisão - Danos Parciais Casco</option>
+                        <option value="2">001 - Incêndio - Danos Parciais Casco</option>
+                        <option value="3">003 - Furto/Roubo - Casco</option>                        
+                    </select>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <div class="form-group mt-3">
+                        <label for="text">Reserva Inicial</label>
+                        <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+                    </div>
+                </div> 
+            </div>
+            <div class="row footer-pop-up f-incluir mt-3 mb-3 d-none">
+                <div class="col-12">
+                    <button type="button" class="btn btn-cancel txt-up float-left">Cancelar</button>
+                    <button type="button" class="btn btn-salvar txt-up float-right">Salvar</button>
+                </div>
+            </div>
+        </div>
+        <!-- Modal protocolos Confirmar -->
+        <div class="modal fade" id="modal-protocolos-confirmar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">	
+            <div class="modal-content">
+                <div class="modal-header m-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Reabrir Protocolo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body  d-flex justify-content-center">
+                    <div class="container-fluid">
+                        <div class="row">		
+                            <div class="col-12 p-0">
+                                <h6>Tem certeza que deseja reabrir esse protocolo?</h6>
+                                <p class="color-b">9862678</p>
+                            </div>					
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="container-fluid">
+                        <button type="button" class="btn btn-salvar txt-up float-right ativar-td-reabrir" data-dismiss="modal">Confirmar</button>
+                        <button type="button" class="btn btn-cancel txt-up float-left mr-2" ata-dismiss="modal">Cancelar</button>									
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- Fim Modal Protocolos Confirmar -->		
 
     	<!-- configs js -->		
 		<script type="text/javascript" src="js/p8/inportMenuP8.js"></script>

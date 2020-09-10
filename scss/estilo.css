@@ -1865,7 +1865,7 @@ header .navbar {
   text-transform: uppercase;
 }
 
-.title-add-orcamento, .title-cadastro-internas {
+.title-add-orcamento, .title-cadastro-internas, .title-coberturas {
   letter-spacing: 2px;
   color: #e60935;
   text-transform: uppercase;
