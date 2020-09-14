@@ -1913,12 +1913,16 @@ header .navbar {
   transition: all 0.8s;
 }
 
-.menu-itens > a > i {
-  font-size: 38px;
-}
-
 .menu-itens > a > i.icon-fin-acompanhamento-proposta, .menu-itens > a > i.icon-nav-visualizar, .menu-itens > a > i.icon-fin-receber, .menu-itens > a > i.icon-info-vida {
   font-size: 46px;
+}
+
+.menu-itens > a > i.icon-auto-coberturas-adicionais, .menu-itens > a > i.icon-auto-sinistro, .menu-itens > a > i.icon-doc-alerta {
+  font-size: 46px;
+}
+
+.menu-itens > a > i {
+  font-size: 38px;
 }
 
 .menu-itens > a:first-child {
