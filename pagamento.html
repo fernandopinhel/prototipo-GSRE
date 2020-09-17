@@ -69,7 +69,7 @@
 					<div class="navbar-collapse collapse" id="navbarCollapse">
 						<ul class="nav nav-pills" id="pills-tab" role="tablist">
 							<li class="nav-item">
-								<a class="nav-link active" 
+								<a class="nav-link" 
 								id="pills-consultas-tab" 
 								data-toggle="pill" 
 								href="listar-consulta.html"
@@ -91,34 +91,43 @@
 								<a class="dropdown-item" id="pills-cadastro-cartas-tab"        href= '#'>Cartas</a>
 								<a class="dropdown-item" id="pills-cadastro-oficinas-tab"      href= '#'>Oficinas</a>
 								</div>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" id="pills-relatorios-tab" 
-									data-toggle="pill" href="#pills-relatorios"
-									role="tab" aria-controls="pills-relatorios" 
-									aria-selected="false">Relatórios</a>
-								</li>
-							</ul>
-							<div class="dropdown user ml-auto">
-								<p class="welcome">Bem-vindo(a):<br>Igor - M123456</p>
-								<button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									<img src="img/user.svg">
-									<div class="options">
-										<span></span>
-										<span></span>
-										<span></span>
-									</div>
-								</button>
-								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-									<a class="dropdown-item" href="#">M123456 - Jeniffer</a>
-									<div class="dropdown-divider"></div>
-									<a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal-info-ambiente">Informações de Ambiente</a>
-									<div class="dropdown-divider"></div>
-									<a class="dropdown-item" href="#">Minhas Configurações</a>
-									<div class="dropdown-divider"></div>
-									<a class="dropdown-item" href="#">Sair</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle active"  
+									data-toggle="dropdown" 
+									href="#" role="tab" 
+									aria-selected="true">Tratamentos</a>
+								<div class="dropdown-menu">
+								<a class="dropdown-item" id="pills-pagamento-tab" href= 'pagamento.html'>Liberação de Pagamentos</a>
 								</div>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" id="pills-relatorios-tab" 
+								data-toggle="pill" href="#pills-relatorios"
+								role="tab" aria-controls="pills-relatorios" 
+								aria-selected="false">Relatórios</a>
+							</li>
+						</ul>
+						<div class="dropdown user ml-auto">
+							<p class="welcome">Bem-vindo(a):<br>Igor - M123456</p>
+							<button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<img src="img/user.svg">
+								<div class="options">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+							</button>
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+								<a class="dropdown-item" href="#">M123456 - Jeniffer</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal-info-ambiente">Informações de Ambiente</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Minhas Configurações</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Sair</a>
 							</div>
+						</div>						
 					</div>
 				</nav>
 			</div>
@@ -132,427 +141,17 @@
 						 </button>
 					</div>     
 				</div>
-				<div class="accordion accordion-desk" id="accordion" role="tablist" aria-multiselectable="true">
-					<div class="card">
-						<div class="card-header" id="headingOne" role="tab">
-							<h5 class="mb-0">
-								<button class="btn btn-link btn-one"
-								onclick="toggleFunctionDetalheProcesso(this)"  type="button"
-								data-toggle="collapse" data-target="#collapseOne" aria-expanded="false"
-								aria-controls="collapseOne" data-parent="#accordion">
-									Detalhe do Processo
-									<div class="bar-geral one-bar">
-										<div class="bar-1"></div>
-										<div class="bar-2"></div>
-									</div>
-								</button>
-							</h5>
-							<div class="card-body">
-								<div class="row">
-									<div class="col-12">
-										<div class="box-titulo-categorias">
-											<h6 class="titulo-categorias">Informações Principais</h6>
-										</div>
-									</div>
-									<div class="col-sm-12 col-md-6 col-lg-3">
-										<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
-											<div class="box-item-text my-auto">
-												<p>Sinistro/Processo</p>
-												<span>2465804-1</span>
-											</div>
-											<div class="box-item-img my-auto">
-												<img src="img/icon-sinistro.png" alt="">
-											</div>											
-										</div>
-									</div>
-									<div class="col-sm-12 col-md-6 col-lg-3">
-										<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
-											<div class="box-item-text my-auto">
-												<p>Natureza</p>
-												<span>1 - Colisão</span>
-											</div>
-											<div class="box-item-img my-auto">
-												<img src="img/icon-natureza.png" alt="">
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-12 col-md-6 col-lg-3">
-										<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
-											<div class="box-item-text my-auto">
-												<p>Nº do Aviso</p>
-												<span>14659876549873</span>
-											</div>
-											<div class="box-item-img my-auto">
-												<img src="img/icon-apolice.png" alt="">
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-12 col-md-6 col-lg-3">
-										<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
-											<div class="box-item-text my-auto">
-												<p>Nome Segurado</p>
-												<span>JACOB DE SOUSA FARIAS</span>
-											</div>
-											<div class="box-item-img my-auto">
-												<img src="img/icon-nome.png" alt="">
-											</div>
-										</div>
-									</div>
-									<!-- <div class="col-sm-12 col-md-6 col-lg-3">
-										<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
-											<div class="box-item-text my-auto">
-												<p>Nome Terceiro</p>
-												<span>teste</span>
-											</div>
-											<div class="box-item-img my-auto">
-												<img src="img/nome-terceiro.png" alt="">
-											</div>
-											<div class="clearfix"></div>
-										</div>
-									</div> -->
-								</div>
-							</div>
-						</div>
-						<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-							<div class="card-body">
-								<div class="container-fluid">
-									<div class="row">
-										<div class="col-sm-12 col-md-6 col-lg-3">
-											<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
-												<div class="box-item-text my-auto">
-													<p>Chave da Apólice</p>
-													<span>139 990 244 553333 0001</span>
-												</div>
-												<div class="box-item-img my-auto">
-													<img src="img/icon-naas.png" alt="">
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-12 col-md-6 col-lg-3">
-											<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
-												<div class="box-item-text my-auto">
-													<p>Data da Ocorrência</p>
-													<span>05/11/2019</span>
-												</div>
-												<div class="box-item-img my-auto">
-													<img src="img/icon-data.png" alt="">
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-12 col-md-6 col-lg-3" data-toggle="modal" data-target="#modal-is-segurado">
-											<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
-												<div class="box-item-text my-auto">
-													<p>Saldo da IS</p>
-													<span>R$ 120.000,00</span>
-												</div>
-												<div class="box-item-img my-auto">
-													<img src="img/icon-valor.png" alt="">
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-12 col-md-6 col-lg-3" data-toggle="modal" data-target="#modal-alterar-processo">
-											<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
-												<div class="box-item-text my-auto">
-													<p>Posição Atual do Processo</p>
-													<span>Sem orçamento</span>
-												</div>
-												<div class="box-item-img my-auto">
-													<img src="img/icon-posicao-atual.png" alt="">
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="row mt-4">
-										<div class="col-sm-12 col-md-6 col-lg-3" data-toggle="modal" data-target="#modal-protocolos">
-											<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
-												<div class="box-item-text my-auto">
-													<p>Protocolos</p>
-													<span>9862678 /</span>
-													<span>7891357 /</span>
-													<span>8963567</span>
-												</div>
-												<div class="box-item-img my-auto">
-													<img src="img/icon-protocolos.png" alt="">
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="row mt-4">
-										<div class="col-12">
-											<div class="box-titulo-categorias">
-												<h6 class="titulo-categorias">Veículo</h6>
-											</div>
-										</div>
-										<div class="col-sm-12 col-md-6 col-lg-3 mb-4" data-toggle="modal" data-target="#modal-veiculos">
-											<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
-												<div class="box-item-text my-auto">
-													<p>Marca/Tipo</p>
-													<span>Marca A - Tipo B</span>
-												</div>
-												<div class="box-item-img my-auto">
-													<img src="img/icon-carro.png" alt="">
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-12 col-md-6 col-lg-3 mb-4">
-											<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
-												<div class="box-item-text my-auto">
-													<p>Placa/UF</p>
-													<span>IBE2518/RJ</span>
-												</div>
-												<div class="box-item-img my-auto">
-													<img src="img/icon-placa.png" alt="">
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-12 col-md-6 col-lg-3 mb-4">
-											<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
-												<div class="box-item-text my-auto">
-													<p>Chassi</p>
-													<span>9BM386059PB989077</span>
-												</div>
-												<div class="box-item-img my-auto">
-													<img src="img/icon-chassi.png" alt="">
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-12 col-md-6 col-lg-3 mb-4" data-toggle="modal" data-target="#modal-veiculos">
-											<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
-												<div class="box-item-text my-auto">
-													<p>Modelo/Fabricação</p>
-													<span>2019/2020</span>
-												</div>
-												<div class="box-item-img my-auto">
-													<img src="img/icon-carro.png" alt="">
-												</div>
-											</div>
-										</div>
-										<div class="col-12 mt-1">
-											<div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
-												<div class="card p-0">
-													<div class="card-header pt-0" id="headingInfo" role="tab">
-														<h5 class="mb-0">
-															<button class="btn btn-link btn-one titulo-accordion-info d-flex w-100 pl-0" onclick="toggleFunctionDetalheProcesso(this)"  
-															type="button" data-toggle="collapse" data-target="#collapseInfo" aria-expanded="false"
-															aria-controls="collapseInfo" data-parent="#accordion">
-															<span class="my-auto w-100 pt-3 pl-2">Informações Complementares</span>
-															<div class="bar-geral one-bar my-auo">
-																<div class="bar-1"></div>
-																<div class="bar-2"></div>
-															</div>
-															</button>
-														</h5>
-														<hr class="mt-2">
-														<div class="card-body p-0">
-															<div class="container-fluid p-0">
-																<div class="row">
-																	<div class="col-sm-12 col-md-6 col-lg-3 mb-4" data-toggle="modal" data-target="#modal-tipo-de-salvado">
-																		<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
-																			<div class="box-item-text my-auto">
-																				<p>Classificação de Salvado</p>
-																				<span>Recuperável</span>
-																			</div>
-																			<div class="box-item-img my-auto">
-																				<img src="img/icon-salvado.png" alt="">
-																			</div>
-																		</div>
-																	</div>
-																	<div class="col-sm-12 col-md-6 col-lg-3 mb-4">
-																		<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
-																			<div class="box-item-text my-auto">
-																				<p>News</p>
-																				<span>teste</span>
-																			</div>
-																			<div class="box-item-img my-auto">
-																				<img src="img/icon-notificacao.png" alt="">
-																			</div>
-																		</div>
-																	</div>
-																	<div class="col-sm-12 col-md-6 col-lg-3 mb-4">
-																		<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
-																			<div class="box-item-text my-auto">
-																				<p>Status do Sinistro</p>
-																				<span>teste</span>
-																			</div>
-																			<div class="box-item-img my-auto">
-																				<img src="img/icon-status.png" alt="">
-																			</div>
-																		</div>
-																	</div>
-																	<div class="col-sm-12 col-md-6 col-lg-3 mb-4">
-																		<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
-																			<div class="box-item-text my-auto">
-																				<p>Ressarcimento</p>
-																				<span>teste</span>
-																			</div>
-																			<div class="box-item-img my-auto">
-																				<img src="img/icon-ressarcimento.png" alt="">
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div id="collapseInfo" class="collapse" aria-labelledby="headingInfo" data-parent="#accordionExample">
-														<div class="container-fluid">
-															<div class="row">
-																<div class="col-sm-12 col-md-6 col-lg-3 mb-4">
-																	<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
-																		<div class="box-item-text my-auto">
-																			<p>Prêmio Pendente</p>
-																			<span>teste</span>
-																		</div>
-																		<div class="box-item-img my-auto">
-																			<img src="img/icon-premio.png" alt="">
-																		</div>
-																	</div>
-																</div>
-																<div class="col-sm-12 col-md-6 col-lg-3 mb-4">
-																	<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
-																		<div class="box-item-text my-auto">
-																			<p>Despachante</p>
-																			<span>teste</span>
-																		</div>
-																		<div class="box-item-img my-auto">
-																			<img src="img/icon-despachante.png" alt="">
-																		</div>
-																	</div>
-																</div>
-																<div class="col-sm-12 col-md-6 col-lg-3 mb-4">
-																	<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
-																		<div class="box-item-text my-auto">
-																			<p>Alienação Fiduciária</p>
-																			<span>teste</span>
-																		</div>
-																		<div class="box-item-img my-auto">
-																			<img src="img/icon-alienacao.png" alt="">
-																		</div>
-																	</div>
-																</div>
-																<div class="col-sm-12 col-md-6 col-lg-3 mb-4">
-																	<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
-																		<div class="box-item-text my-auto">
-																			<p>Carro Reserva</p>
-																			<span>teste</span>
-																		</div>
-																		<div class="box-item-img my-auto">
-																			<img src="img/icon-reserva.png" alt="">
-																		</div>
-																	</div>
-																</div>
-																<div class="col-sm-12 col-md-6 col-lg-3 mb-4">
-																	<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
-																		<div class="box-item-text my-auto">
-																			<p>Pagamento Superior a IS</p>
-																			<span>teste</span>
-																		</div>
-																		<div class="box-item-img my-auto">
-																			<img src="img/icon-pgto-superior.png" alt="">
-																		</div>
-																	</div>
-																</div>
-																<div class="col-sm-12 col-md-6 col-lg-3 mb-4">
-																	<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
-																		<div class="box-item-text my-auto">
-																			<p>Processo Acionado por</p>
-																			<span>teste</span>
-																		</div>
-																		<div class="box-item-img my-auto">
-																			<img src="img/icon-acionar.png" alt="">
-																		</div>
-																	</div>
-																</div>
-																<div class="col-sm-12 col-md-6 col-lg-3 mb-4">
-																	<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
-																		<div class="box-item-text my-auto">
-																			<p>Processo Liquidado por</p>
-																			<span>teste</span>
-																		</div>
-																		<div class="box-item-img my-auto">
-																			<img src="img/icon-liquidado.png" alt="">
-																		</div>
-																	</div>
-																</div>
-																<div class="col-sm-12 col-md-6 col-lg-3 mb-4">
-																	<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
-																		<div class="box-item-text my-auto">
-																			<p>Processo Encerrado por</p>
-																			<span>teste</span>
-																		</div>
-																		<div class="box-item-img my-auto">
-																			<img src="img/icon-encerrado.png" alt="">
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 				<!-- desktop -->
-				<div class="desktop mt-5">
+				<div class="desktop mt-2">
 					<div class="row">
-						<!-- sidebar esquerda -->
-						<div class="col-md-2 col-lg-2 col-xl-1"  id="tab-content-sidebar">
-							<div class="nav flex-column nav-pills white menu-itens" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-								<a class="nav-link acompanhamento-tab" id="acompanhamento-tab" href="#" onclick="abrir('acompanhamento-de-sinistro.html')" data-toggle="tooltip" data-original-title="Acompanhamento">
-									<i class="icon icon-nav-visualizar"></i>
-								</a> 
-								<a class="nav-link parecer-tab" id="parecer-tab" href="parecer.html"   data-toggle="tooltip" data-original-title="Parecer">
-									<i class="icon icon-doc-form"></i>
-								</a>
-								<a class="nav-link orcamento-tab" id="orcamento-tab" href="orcamento.html" data-toggle="tooltip" data-original-title="Orçamento">
-									<i class="icon icon-fin-nota-fiscal"></i>
-								</a>  
-								<a class="nav-link orcamento-tab" id="orcamento-tab" href="#" onclick="abrir('cotacao.html')" data-toggle="tooltip" data-original-title="Cotação">
-									<i class="icon icon-doc-2a-via"></i>
-								</a>  
-								<a class="nav-link indenizacao-tab" id="indenizacao-tab" href="indenizacao.html" data-toggle="tooltip" data-original-title="Indenização">
-									<i class="icon icon-fin-receber"></i>
-								</a>
-								<a class="nav-link comprovante-tab" id="comprovante-tab" href="comprovante-de-despesas.html" data-toggle="tooltip" data-original-title="Comprovante de Despesas">
-									<i class="icon icon-doc-demonstrativo"></i>
-								</a>
-								<a class="nav-link benef-veiculo-tab" id="benef-veiculo-tab" href="beneficiario.html" data-toggle="tooltip" data-original-title="Beneficiário">
-									<i class="icon icon-info-vida"></i>
-								</a> 
-								<a class="nav-link pagamento-tab active" id="pagamento-tab" href="pagamento.html" data-toggle="tooltip" data-original-title="Pagamento">
-									<i class="icon icon-fin-dinheiro"></i>
-								</a> 
-								<a class="nav-link nota-de-cobertura-web-tab" id="nota-de-cobertura-web" href="#" onclick="abrir('nota-de-cobertura-web.html')" data-toggle="tooltip" data-original-title="Nota de Cobertura Web">
-									<i class="icon icon-auto-sinistro"></i>
-								</a> 
-								<a class="nav-link coberturas-tab" id="coberturas" href="#" onclick="abrir('coberturas.html')" data-toggle="tooltip" data-original-title="Coberturas">
-									<i class="icon icon-auto-coberturas-adicionais"></i>
-								</a> 
-								<a class="nav-link acompanhamento-tab" id="acompanhamento-tab" href="#" data-toggle="tooltip" data-original-title="Acompanhamento Histórico">
-									<i class="icon icon-fin-acompanhamento-proposta"></i>
-								</a> 
-								<a class="nav-link acompanhamentosaf-tab" id="acompanhamentosaf-tab"  href="#" data-toggle="tooltip" data-original-title="Acompanhamento SAF">
-									<i class="icon icon-nav-busca"></i>
-								</a>
-								<a class="nav-link sinistros-minhas-aplicações" id="sinistros-aplicacoes-tab"  href="#" data-toggle="tooltip" data-original-title="Sinistros em minhas Aplicações">
-									<i class="icon icon-doc-alerta"></i>
-								</a>
-							</div>
-						</div>
-						<!-- fim sidebar esquerda -->
 						<!-- conteudo principal -->
-						<div class="col-md-8 col-lg-8 col-xl-10" id="tab-content-principal">
+						<div class="col-md-12 col-lg-12 col-xl-12" id="tab-content-principal">
 							<div class="tab-content white" id="conteudo-principal">
 								<div class="header-conteudo-principal">
 									<div class="container-fluid">
 										<div class="row mb-4">
 											<div class="col-lg-12">
-												<h1 class="float-left mt-2">Pagamentos</h1>
+												<h1 class="float-left mt-2">Liberação de Pagamentos</h1>
 											</div>
 										</div>
 										<div class="row bg-gray m-0 h-54">
@@ -1030,138 +629,6 @@
 							</div>
 						</div>
 						<!-- fim conteudo principal -->
-						<!-- sidebar documentos -->
-						<div class="col-md-2 col-lg-2 col-xl-1" id="tab-documentos">
-							<a data-toggle="collapse" data-parent="#accordionExample" href="#collapseDoc">
-								<div class="tab-content white h-auto">					
-									<div id="link-docs" class="menu-doc" data-toggle="tooltip" data-original-title="Mostrar Documentos">
-										<i class="icon icon-doc-documento"></i>
-									</div>
-								</div>
-							</a>
-						</div>
-						<!-- fim sidebar documentos -->
-						<!-- tela documentos -->
-						<div class="col-md-6 col-lg-6 col-xl-7" id="tab-imagens" style="display:none">
-							<div class="tab-content white">
-								<div class="container-fluid">
-									<div class="row">
-										<div class="col-lg-12">
-											<div class="row">
-												<div class="col-lg-12">
-													<h1 class="float-left">Documentos</h1>
-													<a id="link-imagens" class="float-right" data-toggle="collapse" data-parent="#accordionExample" href="#collapseDoc">
-														<i class="icon icon-close"></i>
-													</a>
-												</div>
-												<div class="col-lg-12"><hr></div>
-											</div>
-										</div>
-										<div class="col-lg-12 mb-3">
-											<div class="class-docs" onclick="abrir('classificacao-de-documentos.html')">
-												<a href="#" class="classificacao-docs" data-toggle="tooltip" data-original-title="Classificar Documentos"></a>
-											</div>
-										</div>
-										<div class="col-md-10 mb-2">
-											<label for="filtro">Filtro</label>
-											<select class="selectpicker form-control" id="filtro" name="filtro.codigoNaturezaProcesso" data-live-search="true" title="Selecione..." data-hide-disabled="true" data-actions-box="true">
-												<option value="0" selected>Selecione</option>
-													<option value="300">A CPI SP</option>
-													<option value="233">Acionamento de Despachante</option>
-													<option value="781">Acionamento de Reguladora</option>
-											</select>
-										</div>
-										<div class="col-md-2 text-center">
-											<button type="button" name="button" class="btn btn-primary mr-3 mt-4">Buscar</button>
-										</div>
-										<div class="row container-imagens">
-											<div class="col-md-10 panel-main">
-												<div class="toolbar toolbar-principal toolbar-imagens">
-													<button title="Editar Imagem" class="toolbar-botao toolbar-botao-principal" id="editarImagem">
-														<span class="fa-ajuste fa fa-pencil"></span>
-													</button>
-													<button title="Abrir em uma nova janela" class="toolbar-botao toolbar-botao-principal" id="abrirPopUp">
-														<span class="fa-ajuste fa fa-search"></span>
-													</button>
-												</div>
-												<div class="toolbar toolbar-principal toolbar-arquivos" style="display: none;">
-													<button title="Fazer Download do Arquivo" class="toolbar-botao toolbar-botao-principal" id="download">
-														<span class="fa-ajuste fa fa-download"></span>
-													</button>
-													<button title="Abrir em uma nova janela" class="toolbar-botao toolbar-botao-principal" id="abrirPopUp">
-														<span class="fa-ajuste fa fa-search"></span>
-													</button>
-												</div>
-												<img src="imagens/img1.jpg" id="selected" data-codigodocumento="2"
-													data-tipodocumento="pdf">
-											</div>
-
-											<div class="col-md-2 thumbs">
-												<img src="imagens/img1.jpg">
-												<img src="imagens/image-pdf.png">
-												<img src="imagens/img2.jpg">
-												<img src="imagens/image-doc.png">
-												<img src="imagens/img3.jpg">
-												<img src="imagens/img5.jpg">
-												<img src="imagens/img1.jpg">
-												<img src="imagens/img2.jpg">
-												<img src="imagens/img3.jpg"> 
-												<!-- <img src="/GSRE-SinistroAuto/fileNetHandler/getFile.do?codigoDocumento=2"> -->
-											</div>
-										</div>
-										<div class="modal fade" id="modalAjusteImagem" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
-											aria-hidden="true" style="z-index: 2016;">
-											<div class="modal-dialog modal-lg" role="document">
-												<div class="modal-content">
-													<div class="modal-header">
-														<h5 class="modal-title" id="modalLabel">Editar Imagem</h5>
-														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-															<span aria-hidden="true">&times;</span>
-														</button>
-													</div>
-													<div class="modal-body">
-														<div class="img-container">
-															<div class="toolbar toolbar-modalAjuste">
-																<button title="Mover" class="toolbar-botao toolbar-botao-modalAjuste" id="mover">
-																	<span class="fa-modalAjuste fa fa-arrows"></span>
-																</button>
-																<button title="Cortar" class="toolbar-botao toolbar-botao-modalAjuste" id="cortar">
-																	<span class="fa-modalAjuste fa fa-crop"></span>
-																</button>
-																<button title="Zoom In" class="toolbar-botao toolbar-botao-modalAjuste" id="zoomIn">
-																	<span class="fa-modalAjuste fa fa-search-plus"></span>
-																</button>
-																<button title="Zoom Out" class="toolbar-botao toolbar-botao-modalAjuste" id="zoomOut">
-																	<span class="fa-modalAjuste fa fa-search-minus"></span>
-																</button>
-																<button title="Girar para esquerda" class="toolbar-botao toolbar-botao-modalAjuste"
-																	id="girarEsquerda">
-																	<span class="fa-modalAjuste fa fa-rotate-left"></span>
-																</button>
-																<button title="Girar pra direita" class="toolbar-botao toolbar-botao-modalAjuste"
-																	id="girarDireita">
-																	<span class="fa-modalAjuste fa fa-rotate-right"></span>
-																</button>
-															</div>
-															<div style="width: auto; height: 600px;">
-																<img id="image" src="https://avatars0.githubusercontent.com/u/3456749"
-																data-codigodocumento="2" data-tipodocumento="pdf"
-																style="width: 800; height: 600;">
-															</div>
-														</div>
-													</div>
-													<div class="modal-footer">
-														<button type="button" class="btn btn-cancel txt-up mr-3" data-dismiss="modal">Cancelar</button>
-														<button type="button" class="btn btn-primary txt-up" id="concluirEdicao">Concluir</button>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>				
-						<!-- fim tela documentos -->
 					</div>						
 				</div>
 				<!-- fim desktop -->
