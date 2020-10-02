@@ -156,6 +156,8 @@ a{
   margin-top: 2px;
 }
 
+footer{width: 100%;}
+
 // light box imagens vinculadas
 .lightbox-gallery {
   background: #f7f7f7;
@@ -1527,6 +1529,7 @@ tr:hover td {color: #89919F;}
 header{
   background:url(../img/bg-header.png) no-repeat;
   height: 117px;
+  background-size: 100%, cover;
 }
 
 header .logo{
