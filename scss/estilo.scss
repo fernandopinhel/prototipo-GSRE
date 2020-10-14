@@ -158,6 +158,80 @@ a{
 
 footer{width: 100%;}
 
+.box-thumbs{
+  width: 47%;
+  float:left;
+}
+
+.thumbs img{
+  width: 100% !important;
+}
+
+.f-14{font-size: 14px;}
+// page 404
+body.page-404{
+  background:#2365a7;
+  padding: 300px;
+  background-image: url('../img/bg-abstract.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body.page-404 > .interna div > div > div.img-404{
+  background-image: url('../img/bg-404.png');
+  background-repeat: no-repeat;
+  width: 160px;
+  height: 160px;
+  margin: 30px 0 0 50px;
+}
+
+body.page-404 > .interna div > div > div{
+  text-align: right;  
+}
+
+body.page-404 > .interna div > div > div h1{
+  color: #fff;
+  font-size: 130px;
+  font-weight: bold;
+}
+
+body.page-404 > .interna div > div > div h4{
+  color: #fff;
+}
+// fim page 404
+
+// page 403
+body.page-403{
+  background:#cc092f;
+  padding: 300px;
+  background-image: url('../img/bg-abstract.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body.page-403 > .interna div > div > div.img-403{
+  background-image: url('../img/bg-403.png');
+  background-repeat: no-repeat;
+  width: 180px;
+  height: 180px;
+  margin: 30px 0 0 50px;
+}
+
+body.page-403 > .interna div > div > div{
+  text-align: right;  
+}
+
+body.page-403 > .interna div > div > div h1{
+  color: #fff;
+  font-size: 130px;
+  font-weight: bold;
+}
+
+body.page-403 > .interna div > div > div h4{
+  color: #fff;
+}
+// fim page 403
+
 // light box imagens vinculadas
 .lightbox-gallery {
   background: #f7f7f7;
@@ -315,6 +389,17 @@ footer{width: 100%;}
   right: 94px;
   position: absolute;
   top: 4px;
+}
+
+.email{
+  background: url(../img/email.svg);
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  left: 64px;
+  position: absolute;
+  top: 5px;
 }
 
 .classificacao-docs{
