@@ -560,6 +560,10 @@ button.btn-second:hover {
   max-width: 90px !important;
 }
 
+.m-20 {
+  margin-top: 20px !important;
+}
+
 .txt-up {
   text-transform: uppercase;
 }
