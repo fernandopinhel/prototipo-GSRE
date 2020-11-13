@@ -322,6 +322,36 @@ body.page-403 > .interna div > div > div h4 {
   position: absolute;
 }
 
+.orcamento {
+  background: url(../img/reenviar-orcamento.svg);
+  width: 55px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+  right: 112px;
+  position: absolute;
+}
+
+.log-orcamento {
+  background: url(../img/log.svg);
+  width: 55px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+  right: 163px;
+  position: absolute;
+}
+
+.excluir-orcamento {
+  background: url(../img/excluir-orcamento.svg);
+  width: 55px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+  right: 216px;
+  position: absolute;
+}
+
 .sair {
   background: url(../img/sair.svg);
   width: 26px;
@@ -2377,11 +2407,31 @@ span.btn-add {
   cursor: inherit;
 }
 
+.icon-autorizado-2 {
+  background: url(../img/autorizado.svg);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: inherit;
+}
+
 .icon-nao-autorizado {
   background: url(../img/nao-autorizado.svg);
   width: 20px;
   height: 20px;
   right: 65px;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: inherit;
+}
+
+.icon-nao-autorizado-2 {
+  background: url(../img/nao-autorizado.svg);
+  width: 20px;
+  height: 20px;
   position: absolute;
   background-repeat: no-repeat;
   background-position: center;

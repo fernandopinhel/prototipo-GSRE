@@ -275,8 +275,8 @@
 										<div class="col-sm-12 col-md-6 col-lg-3" data-toggle="modal" data-target="#modal-is-segurado">
 											<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
 												<div class="box-item-text my-auto">
-													<p>Saldo da IS</p>
-													<span>R$ 120.000,00</span>
+													<p>Saldo da LMI</p>
+													<span>R$ 50.000,00</span>
 												</div>
 												<div class="box-item-img my-auto">
 													<img src="img/icon-valor.png" alt="">
@@ -420,6 +420,17 @@
 																			</div>
 																			<div class="box-item-img my-auto">
 																				<img src="img/icon-ressarcimento.png" alt="">
+																			</div>
+																		</div>
+																	</div>
+																	<div class="col-sm-12 col-md-6 col-lg-3 mb-4" data-toggle="modal" data-target="#modal-terceiros-menu">
+																		<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
+																			<div class="box-item-text my-auto">
+																				<p>Terceiros</p>
+																				<span>Sim</span>
+																			</div>
+																			<div class="box-item-img my-auto">
+																				<img src="img/icon-terceiros.png" alt="">
 																			</div>
 																		</div>
 																	</div>
@@ -1161,12 +1172,12 @@
 				</div>
 				<!-- fim desktop -->
 
-				<!-- modal IS Segurado -->
+				<!-- modal LMI TERCEIROS -->
 				<div class="modal fade bd-example-modal-lg" id="modal-is-segurado" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 					<div class="modal-dialog modal-lg w-1050">	
 						<div class="modal-content">
 							<div class="modal-header m-header">
-								<h5 class="modal-title" id="exampleModalLongTitle">Saldo Disponível da IS</h5>
+								<h5 class="modal-title" id="exampleModalLongTitle">Saldo Disponível da LMI</h5>
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 								</button>
@@ -1174,14 +1185,14 @@
 							<div class="modal-body mbody-totalizadores d-flex justify-content-center">
 								<div class="container-fluid">
 									<div class="row">
-										<div class="col-12">
+										<div class="col-6">
+											<h6 class="title-saldo float-left mr-4">11 - RCF</h6>
+										</div>
+										<div class="col-6">
 											<a href="#" onclick="abrir('saldo-detalhes-2.html')" class="float-right">
 												<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes" width="20px">
 											</a>
-											<h6 class="color-b float-right mt-1 mr-4">SALDO DISPONÍVEL DA IS: R$ 4.000,00</h6>
-										</div>
-										<div class="col-12">
-											<h6 class="title-saldo float-left mr-4">11 - RCF</h6>
+											<h6 class="color-b float-right mt-1 mr-4">SALDO DISPONÍVEL DA LMI: R$ 4.000,00</h6>
 										</div>
 										<div class="col-12">
 											<hr>
@@ -1221,8 +1232,16 @@
 										</div>
 									</div>
 									<div class="row mt-4">
-										<div class="col-12">
-											<h6 class="title-saldo">10 - Danos Corporais</h6>
+										<div class="col-6">
+											<h6 class="title-saldo float-left mr-4">10 - Danos Corporais</h6>
+										</div>
+										<div class="col-6">
+											<a href="#" onclick="abrir('saldo-detalhes-2.html')" class="float-right">
+												<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes" width="20px">
+											</a>
+											<h6 class="color-b float-right mt-1 mr-4">SALDO DISPONÍVEL DA LMI: R$ 4.000,00</h6>
+										</div>
+										<div class="col-12">											
 											<hr>
 											<div class="table-responsive bg-transparent p-0">
 												<form id="" class="tabela-itens-orcamento" name="" action="" method="post">
@@ -1260,8 +1279,16 @@
 										</div>
 									</div>
 									<div class="row mt-4">
-										<div class="col-12">
-											<h6 class="title-saldo">8 - APP Invalidez</h6>
+										<div class="col-6">
+											<h6 class="title-saldo float-left mr-4">8 - APP Invalidez</h6>
+										</div>
+										<div class="col-6">
+											<a href="#" onclick="abrir('saldo-detalhes-2.html')" class="float-right">
+												<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes" width="20px">
+											</a>
+											<h6 class="color-b float-right mt-1 mr-4">SALDO DISPONÍVEL DA LMI: R$ 4.000,00</h6>
+										</div>
+										<div class="col-12">											
 											<hr>
 											<div class="table-responsive bg-transparent p-0">
 												<form id="" class="tabela-itens-orcamento" name="" action="" method="post">
@@ -1303,7 +1330,7 @@
 						</div>
 					</div>
 				</div>
-				<!-- fim modal IS -->
+				<!-- fim LMI TERCEIROS -->
 				<!-- modal tipo de salvado -->
 				<div class="modal fade" id="modal-tipo-de-salvado" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 					<div class="modal-dialog">
@@ -2077,6 +2104,53 @@
 					</div>
 				</div>
 				<!-- fim modal editar veículos -->
+								<!-- modal MENU TERCEIROS -->
+								<div class="modal fade bd-example-modal-lg" id="modal-terceiros-menu" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+									<div class="modal-dialog modal-lg w-1050">	
+										<div class="modal-content">
+											<div class="modal-header m-header">
+												<h5 class="modal-title" id="exampleModalLongTitle">Terceiros</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body mbody-totalizadores d-flex justify-content-center">
+												<div class="container-fluid">
+													<div class="row mt-4">
+														<div class="col-12">																										
+															<div class="table-responsive bg-transparent p-0">
+																<form id="" class="tabela-itens-orcamento" name="" action="" method="post">
+																	<table class="table table-striped t3" id="">
+																		<thead>
+																			<tr>																				
+																				<th scope="col">Sinistro</th>
+																				<th scope="col">Processo</th>
+																				<th scope="col">Autorizado</th>
+																			</tr>
+																		</thead>
+																		<tbody>
+																			<tr>
+																				<td style="width:33%;">2465804</td>
+																				<td style="width:33%;">2</td>	
+																				<td style="width:33%;"><a href="#" class="icon-autorizado-2" data-toggle="tooltip" data-original-title="Orçamento Autorizado"></a></td>															
+																			</tr>
+																			<tr>
+																				<td style="width:33%;">2465804</td>
+																				<td style="width:33%;">3</td>		
+																				<td style="width:33%;"><a href="#" class="icon-autorizado-2" data-toggle="tooltip" data-original-title="Orçamento Autorizado"></a></td>															
+																			</tr>
+																		</tbody>
+																	</table>
+																</form>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- fim MENU TERCEIROS -->
 				<!-- modal consulta cotação -->
 				<div class="modal fade bd-example-modal-lg" id="modal-cotacao" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 					<div class="modal-dialog modal-lg w-1050">	
