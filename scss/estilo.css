@@ -426,7 +426,7 @@ body.page-403 > .interna div > div > div h4 {
   height: 30px;
   background-repeat: no-repeat;
   background-position: center;
-  left: 64px;
+  left: 104px;
   position: absolute;
   top: 5px;
 }
@@ -446,6 +446,17 @@ body.page-403 > .interna div > div > div h4 {
   background: #f9f9f9;
   padding: 22px;
   border-radius: 8px;
+}
+
+.docs-aguardados {
+  background: url(../img/docs-aguardados.svg);
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  left: 63px;
+  position: absolute;
+  top: 5px;
 }
 
 .bg-gray {

@@ -189,7 +189,7 @@
                                                 <div class="reenviar-orcamentos float-right">
 													<a href="#" class="orcamento" data-toggle="tooltip" data-original-title="Reenviar Orçamentos"></a>
                                                 </div>
-                                                <div class="log-orcamentos float-right">
+                                                <div class="log-orcamentos float-right" data-toggle="modal" data-target="#consultarModalLog">
 													<a href="#" class="log-orcamento" data-toggle="tooltip" data-original-title="Log Orçamentos"></a>
                                                 </div>
                                                 <div class="excluir-orcamentos float-right">
@@ -256,17 +256,20 @@
 																</div>
 															</td>
 															<td>
-																<div style="width: 70px;">
-																	<a href="#" data-toggle="modal" data-target="#alterarModalUmPagamento" class="mr-2">
+																<div style="width: 80px;">
+																	<!-- <a href="#" class="mr-2">
 																		<img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar" width="25px">
-																	</a>
-																	<a href="#" data-toggle="modal" data-target="#consultarModalPagamento" class="mr-2">
+																	</a> -->
+																	<a href="#" data-toggle="modal" data-target="#consultarModalDetalhes" class="mr-2">
 																		<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes" width="25px">
+																	</a>
+																	<a href="#">
+																		<img src="img/excluir.svg" data-toggle="tooltip" data-original-title="Excluir">
 																	</a>
 																</div>
 															</td>
 															<td>246578254549494169191</td>   
-															<td>155161119814919191191</td>   
+															<td>104201604220012</td>   
 															<td>850 990 244 14349 0001</td>     
 															<td>850</td>       
 															<td>Não Autorizado Cobertura</td>     
@@ -291,469 +294,55 @@
 					</div>						
 				</div>
 				<!-- fim desktop -->
-
-				<!-- modal IS Segurado -->
-				<div class="modal fade bd-example-modal-lg" id="modal-is-segurado" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+				<!-- modal histórico Log -->
+				<div class="modal fade bd-example-modal-lg" id="consultarModalLog" tabindex="-1" role="dialog" aria-labelledby="consultarModalLogLabel" aria-hidden="true">
 					<div class="modal-dialog modal-lg w-1050">	
 						<div class="modal-content">
 							<div class="modal-header m-header">
-								<h5 class="modal-title" id="exampleModalLongTitle">Saldo Disponível da IS</h5>
+								<h5 class="modal-title" id="consultarModalLogTitle">Visualização de Log do Orçamento</h5>
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 								</button>
 							</div>
-							<div class="modal-body mbody-totalizadores d-flex justify-content-center">
-								<div class="container-fluid">
-									<div class="row">
-										<div class="col-12">
-											<h6 class="title-saldo">58 - I.I. Alagamento</h6>
-											<hr>
-											<div class="table-responsive bg-transparent p-0">
-												<form id="" class="tabela-itens-orcamento" name="" action="" method="post">
-													<table class="table table-striped t3" id="">
-														<thead>
-															<tr>
-																<th></th>
-																<th scope="col">Processo</th>
-																<th scope="col">Valor da IS</th>
-																<th scope="col">Saldo Disponível da IS</th>
-															</tr>
-														</thead>
-														<tbody>
-															<tr>
-																<td>
-																	<a href="#" onclick="abrir('saldo-detalhes.html')">
-																		<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes" width="25px">
-																	</a>
-																</td>
-																<td style="width: 30%;">Processo 1</td>
-																<td style="width: 30%;">R$ 36.897,00</td>
-																<td style="width: 40%;">R$ 563,89</td>
-															</tr>
-															<tr>
-																<td>
-																	<a href="#" onclick="abrir('saldo-detalhes.html')">
-																		<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes" width="25px">
-																	</a>
-																</td>
-																<td style="width: 30%;">Processo 2</td>
-																<td style="width: 30%;">R$ 2.000,00</td>
-																<td style="width: 40%;">R$ 0,00</td>
-															</tr>
-														</tbody>
-													</table>
-												</form>
-											</div>
-										</div>
-									</div>
-									<div class="row mt-4">
-										<div class="col-12">
-											<h6 class="title-saldo">4 - I.I. Colisão</h6>
-											<hr>
-											<div class="table-responsive bg-transparent p-0">
-												<form id="" class="tabela-itens-orcamento" name="" action="" method="post">
-													<table class="table table-striped t3" id="">
-														<thead>
-															<tr>
-																<th></th>
-																<th scope="col">Processo</th>
-																<th scope="col">Valor da IS</th>
-																<th scope="col">Saldo Disponível da IS</th>
-															</tr>
-														</thead>
-														<tbody>
-															<tr>
-																<td>
-																	<a href="#" onclick="abrir('saldo-detalhes.html')">
-																		<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes" width="25px">
-																	</a>
-																</td>
-																<td style="width: 30%;">Processo 1</td>
-																<td style="width: 30%;">R$ 36.897,00</td>
-																<td style="width: 40%;">R$ 563,89</td>
-															</tr>
-															<tr>
-																<td>
-																	<a href="#" onclick="abrir('saldo-detalhes.html')">
-																		<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes" width="25px">
-																	</a>
-																</td>
-																<td style="width: 30%;">Processo 2</td>
-																<td style="width: 30%;">R$ 2.000,00</td>
-																<td style="width: 40%;">R$ 0,00</td>
-															</tr>
-														</tbody>
-													</table>
-												</form>
-											</div>
-										</div>
-									</div>
-									<div class="row mt-4">
-										<div class="col-12">
-											<h6 class="title-saldo">8 - APP Invalidez</h6>
-											<hr>
-											<div class="table-responsive bg-transparent p-0">
-												<form id="" class="tabela-itens-orcamento" name="" action="" method="post">
-													<table class="table table-striped t3" id="">
-														<thead>
-															<tr>
-																<th></th>
-																<th scope="col">Processo</th>
-																<th scope="col">Valor da IS</th>
-																<th scope="col">Saldo Disponível da IS</th>
-															</tr>
-														</thead>
-														<tbody>
-															<tr>
-																<td>
-																	<a href="#" onclick="abrir('saldo-detalhes.html')">
-																		<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes" width="25px">
-																	</a>
-																</td>
-																<td style="width: 30%;">Processo 1</td>
-																<td style="width: 30%;">R$ 36.897,00</td>
-																<td style="width: 40%;">R$ 563,89</td>
-															</tr>
-															<tr>
-																<td>
-																	<a href="#" onclick="abrir('saldo-detalhes.html')">
-																		<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes" width="25px">
-																	</a>
-																</td>
-																<td style="width: 30%;">Processo 2</td>
-																<td style="width: 30%;">R$ 2.000,00</td>
-																<td style="width: 40%;">R$ 0,00</td>
-															</tr>
-														</tbody>
-													</table>
-												</form>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- fim modal IS -->
-				<!-- modal tipo de salvado -->
-				<div class="modal fade" id="modal-tipo-de-salvado" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header m-header">
-								<h5 class="modal-title" id="exampleModalLongTitle">Classificação de Salvado</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body mbody-totalizadores mt-3 p-0 d-flex justify-content-center">
-								<div class="container-fluid">
-									<div class="row">
-										<div class="col-12">
-											<label for="filtro">Tipo</label>							
-											<select class="selectpicker form-control" id="filtro" name="" title="Selecione..." data-hide-disabled="true" data-actions-box="true">
-												<option value="0">Recuperável</option>
-											</select>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-lg-12 text-right m-0 mt-5 bg-gray">
-											<button type="button" class="btn btn-cancel txt-up mr-3" data-dismiss="modal" aria-label="Close">Cancelar</button>
-											<button type="button" class="btn btn-salvar txt-up" data-dismiss="modal" aria-label="Close">Salvar</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- fim modal tipo de salvado -->
-				<!-- Modal Alterar Processo -->
-				<div class="modal fade bd-example-modal-lg" id="modal-alterar-processo" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-					<div class="modal-dialog modal-lg">	
-						<div class="modal-content">
-							<div class="modal-header m-header">
-								<h5 class="modal-title" id="exampleModalLongTitle">Alterar</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body">
-								<div class="container-fluid">
-									<div class="row mtop-10">
-										<div class="col-12 mt-2">
-											<label for="campoPosicaoAtual">Posição Atual</label> 
-											<select class="selectpicker form-control" id="situacaoProcesso" name="dadosAlterado.situacaoProcesso">
-												<option>Selecione...</option>
-												<option>Posição Atual 1</option>
-												<option>Posição Atual 2</option>
-												<option>Posição Atual 3</option>
-											</select>
-										</div>
-									</div>	
-								</div>		
-							</div>
-							<div class="modal-footer">
-								<div class="container">
-									<button type="button" class="btn btn-cancel txt-up mr-3 float-left" data-dismiss="modal">Cancelar</button>
-									<button type="button" class="btn btn-salvar txt-up float-right">Salvar</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- Fim Modal Alterar Processo -->				
-				<!-- modal associar -->
-				<div class="modal fade bd-example-modal-lg" id="modal-associar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">				
-					<div class="modal-dialog modal-lg">
-						<div class="modal-content">
-							<div class="modal-header m-header">
-							<h5 class="modal-title" id="exampleModalLabel">Associar Documentos</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-							</div>
-							<div class="modal-body bg-light-gray p-0">		
-								<div class="container-fluid m-0">
-									<div class="row bg-white">
-										<div class="col-12 mt-2 mb-2">
-											<h6 class="">Deseja associar algum documento?</h6>
-										</div>
-									</div>
-									<div class="row mt-2 mb-3">
-										<div class="col-12 mt-2">
-											<div class="ex-checkbox d-flex my-auto">
-												<input type="checkbox" class="check-todos" id="checkbox_todos">
-												<label for="checkbox_todos" class="check-estilo">Selecionar todos</label>
-											</div>
-										</div>
-									</div>
-									<div class="lightbox-gallery">
-										<div class="container">
-											<div class="row mt-3">
-												<div class="col-12">
-													<p>2 Documentos selecionados</p>
-												</div>
-											</div>
-											<div class="row photos">
-												<div class="col-sm-6 col-md-4 col-lg-3 item">
-													<div class="ex-checkbox check-img">
-														<input type="checkbox" class="" id="checkbox_1">
-														<label for="checkbox_1" class="check-estilo"></label>
-													</div>
-													<a href="imagens/img1.jpg" data-lightbox="photos">
-														<img class="img-fluid" src="imagens/img1.jpg">
-													</a>
-												</div>
-												<div class="col-sm-6 col-md-4 col-lg-3 item">
-													<div class="ex-checkbox check-img">
-														<input type="checkbox" class="" id="checkbox_2">
-														<label for="checkbox_2" class="check-estilo"></label>
-													</div>
-													<a href="imagens/img5.jpg" data-lightbox="photos">
-														<img class="img-fluid" src="imagens/img5.jpg">
-													</a>
-												</div>
-												<div class="col-sm-6 col-md-4 col-lg-3 item">
-													<div class="ex-checkbox check-img">
-														<input type="checkbox" class="" id="checkbox_3">
-														<label for="checkbox_3" class="check-estilo"></label>
-													</div>
-													<a href="imagens/img1.jpg" data-lightbox="photos">
-														<img class="img-fluid" src="imagens/img1.jpg">
-													</a>
-												</div>
-												<div class="col-sm-6 col-md-4 col-lg-3 item">
-													<div class="ex-checkbox check-img">
-														<input type="checkbox" class="" id="checkbox_4">
-														<label for="checkbox_4" class="check-estilo"></label>
-													</div>
-													<a href="imagens/img5.jpg" data-lightbox="photos">
-														<img class="img-fluid" src="imagens/img5.jpg">
-													</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="modal-footer">
-								<div class="row mt-4 mb-4">
-									<div class="col-lg-12 text-right">
-										<button type="button" class="btn btn-cancel txt-up mr-3" data-dismiss="modal">Cancelar</button>
-										<button type="button" class="btn btn-salvar txt-up" data-dismiss="modal">Associar</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- fim modal associar -->
-				<!-- modal anexo novo doc-->
-				<div class="modal fade" id="modal-anexar-novo-doc" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header m-header">
-						<h5 class="modal-title" id="exampleModalLabel">Anexar Documentos</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-						</div>
-						<div class="modal-body doc-anexos-parecer">
-							<div class="container-fluid">
-								<div class="row">
-									<div class="col-12">
-										<label for="filtro">Tipo do Documento</label>
-										<select class="selectpicker form-control" id="filtro" name="filtro.codigoNaturezaProcesso" data-live-search="true" title="Selecione..." data-hide-disabled="true" data-actions-box="true">
-											<option value="0" selected>Selecione</option>
-												<option value="300">A CPI SP</option>
-												<option value="233">Acionamento de Despachante</option>
-												<option value="781">Acionamento de Reguladora</option>
-										</select>
-									</div>
-									<div class="col-12">
-										<form>
-											<div class="input-arquivo">
-												<label for="arquivo">Enviar Arquivo</label>
-												<input type="file" name="arquivo" id="arquivo">
-											</div>
+							<div class="modal-body  d-flex justify-content-center">
+									<div class="table-responsive">
+										<form id="" class="" name="" action="" method="post">
+											<table class="table table-striped" id="">
+												<thead>
+													<tr>
+														<th scope="col">Atendimento</th>
+														<th scope="col">CNPJ</th>
+														<th scope="col">Sinistro</th>
+														<th scope="col">Processo</th>
+														<th scope="col">Oficina</th>
+														<th scope="col">Status do Perfil</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>246578254549494169191</td>
+														<td>67.666.988/0001-99</td>
+														<td>2465782</td>
+														<td>1</td>
+														<td>56588</td>
+														<td>Ativo</td>
+													</tr>
+												</tbody>
+											</table>
 										</form>
 									</div>
-									<div class="col-12 mt-2">
-										<div class="anexos-novo-parecer my-auto">
-											<p>Anexos:
-												<span class="anexo-parecer mr-2">
-													<a href="#"><img src="../img/excluir.svg" alt="" width="22px" data-toggle="tooltip" data-title="Excluir Anexo" data-original-title="" title=""></a>
-													imagem.jpg
-												</span>
-												<!-- <span class="anexo-parecer">
-													<a href="#"><img src="../img/excluir.svg" alt="" width="22px" data-toggle="tooltip" data-title="Excluir Anexo"></a>
-													documento.pdf
-												</span> -->
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="modal-footer">
-						<button type="button" class="btn btn-cancel mr-2" data-dismiss="modal">Cancelar</button>
-						<button type="button" class="btn btn-salvar txt-up" data-dismiss="modal">Confirmar</button>
-						</div>
-					</div>
-					</div>
-				</div>
-				<!-- fim modal anexo novo doc -->
-				<!-- modal alterar pagamentos -->
-				<div class="modal fade" id="alterarModalPagamento" tabindex="-1" role="dialog" aria-labelledby="alterarModalPagamentoTitle" aria-hidden="true">
-					<div class="modal-dialog modal-dialog-centered" role="document">
-						<div class="modal-content">
-							<div class="modal-header m-header">
-								<h5 class="modal-title" id="alterarModalPagamentoTitle"><b>2</b> Pagamentos Selecionados</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body">
-								<div class="container-fluid">
-									<div class="row">
-										<div class="col-lg-6 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Total Pago</h6>
-											<p><b>1</b></p>
-										</div>
-										<div class="col-lg-6 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Total não Pago</h6>
-											<p><b>1</b></p>
-										</div>
-										<div class="col-lg-12"><hr></div>
-									</div>
-									<div class="row">
-										<div class="col-lg-12 mt-3 mb-3 pr-2">
-											<!-- <h6 class="txt-up"></h6> -->
-											<p><b>O montante de indenização já liberadas para esse Sinistro.</b></p>
-										</div>
-										<div class="col-lg-12"><hr></div>
-										<div class="col-lg-12 mt-3 mb-3 pr-2">
-											<!-- <h6 class="txt-up"></h6> -->
-											<p><b>Processo somado ao valor dessa indenização que está querendo liberar, supera seu valor de Alçada de Pagamento.</b></p>
-										</div>
-										<div class="col-lg-12"><hr></div>
-										<div class="col-lg-12 mt-3 mb-3 pr-2">
-											<!-- <h6 class="txt-up"></h6> -->
-											<p><b>Sinistro (3076984).</b></p>
-										</div>
-										<div class="col-lg-12"><hr></div>
-									</div>
-									<div class="row">
-										<div class="col-lg-12 mt-3">												
-											<label for="filtro" class="text-left w-100">Status</label>
-											<select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione..." data-hide-disabled="true" data-actions-box="true">
-												<option value="1">1 -  Aguardando Liberação</option>
-												<option value="2">2</option>
-												<option value="3">3</option>
-												<option value="4">4</option>
-											</select>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="modal-footer d-flex justify-content-center">
-								<div class="container-fluid">
-									<button type="button" class="btn btn-cancel mr-4 float-left" data-dismiss="modal">Cancelar</button>
-									<button type="button" class="btn btn-salvar btn-salvar-modal float-right txt-up">Salvar</button>
-								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<!-- fim modal alterar pagamentos -->
-				<!-- modal alterar um pagamento -->
-				<div class="modal fade" id="alterarModalUmPagamento" tabindex="-1" role="dialog" aria-labelledby="alterarModalUmPagamentoTitle" aria-hidden="true">
-					<div class="modal-dialog modal-dialog-centered" role="document">
-						<div class="modal-content">
-							<div class="modal-header m-header">
-								<h5 class="modal-title" id="alterarModalUmPagamentoTitle">Pagamento Selecionado</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body">
-								<div class="container-fluid">
-									<div class="row">
-										<div class="col-lg-12">												
-											<div class="form-group mt-3">
-												<label for="text" class="text-left w-100">Data Prog.</label>
-												<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-											</div>
-										</div>
-										<div class="col-lg-12 mt-3">												
-											<label for="filtro" class="text-left w-100">Status</label>
-											<select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione..." data-hide-disabled="true" data-actions-box="true">
-												<option value="1">1 -  Aguardando Liberação</option>
-												<option value="2">2</option>
-												<option value="3">3</option>
-												<option value="4">4</option>
-											</select>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="modal-footer">
-								<div class="container-fluid">								
-									<button type="button" class="btn btn-cancel float-left mr-4" data-dismiss="modal">Cancelar</button>
-									<button type="button" class="btn btn-salvar float-right btn-salvar-modal txt-up">Salvar</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- fim modal alterar um pagamento -->
-				<!-- modal consultar pagamento -->
-				<div class="modal fade" id="consultarModalPagamento" tabindex="-1" role="dialog" aria-labelledby="consultarModalPagamentoTitle" aria-hidden="true">
+				<!-- fim histórico Log -->
+
+				<!-- modal detalhes erro orçamento -->
+				<div class="modal fade" id="consultarModalDetalhes" tabindex="-1" role="dialog" aria-labelledby="consultarModalDetalhesTitle" aria-hidden="true">
 					<div class="modal-dialog modal-lg" role="document">
 						<div class="modal-content">
 							<div class="modal-header m-header">
-								<h5 class="modal-title" id="consultarModalPagamentoTitle">Consulta/Alteração - Data Prog e Status</h5>
+								<h5 class="modal-title" id="consultarModalDetalhesTitle">Detalhes Erro Orçamento</h5>
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 								</button>
@@ -762,11 +351,11 @@
 								<div class="container-fluid">
 									<div class="row">
 										<div class="col-lg-12">
-											<h6 class="color-r txt-up">Informações</h6>
+											<h6 class="color-r txt-up">Atendimento</h6>
 										</div>
 										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Suc/Ramo/Cia/Apólice/Item</h6>
-											<p><b>919 990 244 054507 0001</b></p>
+											<h6 class="txt-up">Código</h6>
+											<p><b>23115615616516161651156</b></p>
 										</div>
 										<div class="col-lg-4 mt-3 mb-3 pr-2">
 											<h6 class="txt-up">Sinistro</h6>
@@ -779,170 +368,164 @@
 									</div>
 									<hr>
 									<div class="row">
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Natureza</h6>
-											<p><b>45</b></p>
+										<div class="col-lg-12">
+											<h6 class="color-r txt-up">Oficina</h6>
 										</div>
 										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Protocolo</h6>
+											<h6 class="txt-up">CNPJ</h6>
+											<p><b>99.999.999/9999-99</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Oficina</h6>
 											<p><b>56588</b></p>
 										</div>
 										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Indenização</h6>
-											<p><b>816104</b></p>
-										</div>
-									</div>
-									<hr>
-									<div class="row">
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Vencimento</h6>
-											<p><b>15/05/2020</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Valor</h6>
-											<p><b>R$ 0,01</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Beneficiário</h6>
-											<p><b>Mauricio Alves da Silva</b></p>
-										</div>
-									</div>
-									<hr>
-									<div class="row">
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">CPF</h6>
-											<p><b>084-388-278-88</b></p>
+											<h6 class="txt-up">Entrada na Oficina</h6>
+											<p><b>27/10/2020</b></p>
 										</div>
 									</div>
 									<hr>
 									<div class="row">
 										<div class="col-lg-12">
-											<h6 class="color-r txt-up">Alterações</h6>
+											<h6 class="color-r txt-up">Regulação</h6>
 										</div>
-										<div class="col-lg-6">												
-											<div class="form-group mt-3">
-												<label for="text" class="text-left w-100">Data Prog.</label>
-												<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-											</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Data</h6>
+											<p><b>20/10/2020</b></p>
 										</div>
-										<div class="col-lg-6 mt-3">												
-											<label for="filtro" class="text-left w-100">Status</label>
-											<select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione..." data-hide-disabled="true" data-actions-box="true">
-												<option value="1">1 -  Aguardando Liberação</option>
-												<option value="2">2</option>
-												<option value="3">3</option>
-												<option value="4">4</option>
-											</select>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Empresa</h6>
+											<p><b>1</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Funcionário</h6>
+											<p><b>2798</b></p>
 										</div>
 									</div>
 									<hr>
 									<div class="row">
-										<div class="col-lg-12 text-center mb-2">
-											<a href="#" class="txt-up btn-mais-info">
-												<span>Mostrar Documentos Anexados</span>
-												<i class="fa fa-chevron-down"></i>
-											</a>
-											<a href="#" class="txt-up btn-menos-info d-none">
-												<span>Esconder Documentos Anexados</span>
-												<i class="fa fa-chevron-up"></i>
-											</a>
+										<div class="col-lg-12 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Observações</h6>
+											<p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam commodo, metus et congue tempus, ex erat accumsan mauris, eget commodo mauris dui vel est.</b></p>
 										</div>
 									</div>
-									<div class="row mais-info d-none">
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Documento</h6>
-											<p><b>-</b></p>
+									<hr>
+									<div class="row">
+										<div class="col-lg-12">
+											<h6 class="color-r txt-up">Orçamento</h6>
 										</div>
 										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Nota Fiscal</h6>
-											<p><b>-</b></p>
+											<h6 class="txt-up">Número</h6>
+											<p><b>5</b></p>
 										</div>
 										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Série</h6>
-											<p><b>-</b></p>
+											<h6 class="txt-up">Data</h6>
+											<p><b>03/11/2020</b></p>
 										</div>
-										<div class="col-lg-12"><hr></div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Oficina</h6>
-											<p><b>-</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Data Emissão</h6>
-											<p><b>-</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Data Vencimento</h6>
-											<p><b>-</b></p>
-										</div>
-										<div class="col-lg-12"><hr></div>
 										<div class="col-lg-4 mt-3 mb-3 pr-2">
 											<h6 class="txt-up">Valor</h6>
-											<p><b>-</b></p>
+											<p><b>R$ 3.741,25</b></p>
+										</div>
+										<div class="col-lg-12"><hr></div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Liberação</h6>
+											<p><b>Não Autorizada Cobertura</b></p>
 										</div>
 										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">VLMão</h6>
-											<p><b>-</b></p>
+											<h6 class="txt-up">Conclusão</h6>
+											<p><b>Perda Parcial</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Valor Peças Orçadas</h6>
+											<p><b>R$ 3.172,05</b></p>
+										</div>
+										<div class="col-lg-12"><hr></div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Valor Mão de Obra Orçado</h6>
+											<p><b>R$ 569,20</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Valor de Peças Auto</h6>
+											<p><b>R$ 3.172,05</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Valor Mão de Obra Autorizado</h6>
+											<p><b>R$ 569,20</b></p>
+										</div>
+										<div class="col-lg-12"><hr></div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Valor Desconto Peças Orçadas</h6>
+											<p><b>R$ 352,45</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Percentual Desconto Peças Orçadas</h6>
+											<p><b>0</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Valor Desconto Peças Autorizadas</h6>
+											<p><b>R$ 252,45</b></p>
+										</div>
+										<div class="col-lg-12"><hr></div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Percentual Desconto Peças Autorizadas</h6>
+											<p><b>0</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Valor Despesas Mão de Obra Orçado</h6>
+											<p><b>0</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Percentual Despesas Mão de Obra Orçado</h6>
+											<p><b>0</b></p>
+										</div>
+										<div class="col-lg-12"><hr></div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Valor Desconto Mão de Obra Autorizado</h6>
+											<p><b>0</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Percentual Despesas Mão de Obra Autorizado</h6>
+											<p><b>0</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Valor Avaria Deduzida</h6>
+											<p><b>0</b></p>
+										</div>
+										<div class="col-lg-12"><hr></div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Valor da Franquia Deduzida</h6>
+											<p><b>0</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Valor do DPVAT</h6>
+											<p><b>0</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Valor Outras Deduções</h6>
+											<p><b>0</b></p>
 										</div>
 									</div>
-								</div>
-							</div>
-							<div class="modal-footer">
-								<div class="container-fluid">
-									<button type="button" class="btn btn-cancel mr-4 float-left" data-dismiss="modal">Cancelar</button>
-									<button type="button" class="btn btn-salvar btn-salvar-modal float-right txt-up" data-dismiss="modal">Salvar</button>
+									<hr>
+									<div class="row">
+										<div class="col-lg-12">
+											<h6 class="color-r txt-up">Motivo do Erro</h6>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Data</h6>
+											<p><b>06/11/2020</b></p>
+										</div>
+										<div class="col-lg-8 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Descrição</h6>
+											<p><b>Orçamento para Natureza Inexistente</b></p>
+										</div>
+									</div>									
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<!-- fim modal consultar pagamento -->
-				<!-- modal detalhes -->
-				<div class="modal fade bd-example-modal-lg" id="modalDetalhes" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-					<div class="modal-dialog modal-lg">
-						<div class="modal-content">
-							<div class="modal-header m-header">
-								<h5 class="modal-title" id="exampleModalLongTitle">Detalhes do Orçamento</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body mbody-detalhes d-flex justify-content-center">
-								<div class="container-fluid">
-									<div class="row">
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">CNPJ/CPF</h6>
-											<p><b>00.069.307/0001-49</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Nome</h6>
-											<p><b>Britt Serviços Automotivos</b></p>
-										</div>
-									</div>
-									<hr>
-									<div class="row">
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Valor</h6>
-											<p><b>R$ 150,00</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Saldo</h6>
-											<p><b>R$ 0,00</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Pagando</h6>
-											<p><b>R$ 150,00</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Total Avaliado</h6>
-											<p><b>R$ 0,00</b></p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- fim modal detalhes -->
+				<!-- fim modal erro orçamento -->
+
 				<!-- modal Informações de Ambiente -->
 				<div class="modal fade bd-example-modal-lg" id="modal-info-ambiente" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 					<div class="modal-dialog modal-lg">
@@ -974,599 +557,7 @@
 						</div>
 					</div>
 				</div>
-				<!-- Fim modal Informações de Ambiente -->
-				<!-- modal itens -->
-				<div class="modal fade bd-example-modal-lg" id="modal-itens" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-					<div class="modal-dialog modal-lg w-1050">
-						<div class="modal-content">
-							<div class="modal-header m-header">
-								<h5 class="modal-title" id="exampleModalLongTitle">Itens</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body mbody-totalizadores pb-0 d-flex justify-content-center">
-								<div class="container-fluid">
-									<div class="row">
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Valor Total de Peças</h6>
-											<h5><b class="color-b">R$ ?????</b></h5>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Valor Total da Mão de Obra:</h6>
-											<h5><b class="color-b">R$ ?????</b></h5>
-										</div>
-									</div>
-									<hr>
-									<div class="table-responsive p-0 mb-3">
-										<form id="" class="tabela-itens-orcamento" name="" action="" method="post">
-											<table class="table table-striped" id="">
-												<thead>
-													<tr>
-														<th scope="col"></th>
-														<th scope="col">Tipo</th>
-														<th scope="col">Descrição</th>
-														<th scope="col">Valor</th>
-														<th scope="col">Quantidade</th> 															
-														<th scope="col">Desconto</th>
-														<th scope="col">Total</th>
-														<th scope="col">Observações</th>																					
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td class="actions ac-3">
-															<div class="float-right">
-																<div class="menu-visible">
-																	<span class="circle"></span>
-																	<span class="circle"></span>
-																	<span class="circle"></span>
-																</div>
-																<div class="menu-invisible">
-																	<a href="#" class="editar-itens">
-																		<img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar Item">
-																	</a>
-																	<a href="#">
-																		<img src="img/excluir.svg" data-toggle="tooltip" data-original-title="Excluir Item">
-																	</a>
-																</div>
-															</div>
-														</td>
-														<td>Peça</td>
-														<td>Pneu</td>
-														<td>?</td>
-														<td>R$ ????</td>
-														<td>R$ ????</td>
-														<td>R$ ????</td>
-														<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-													</tr>
-													<tr>
-														<td class="actions ac-3">
-															<div class="float-right">
-																<div class="menu-visible">
-																	<span class="circle"></span>
-																	<span class="circle"></span>
-																	<span class="circle"></span>
-																</div>
-																<div class="menu-invisible">
-																	<a href="#" class="editar-itens">
-																		<img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar Item">
-																	</a>
-																	<a href="#">
-																		<img src="img/excluir.svg" data-toggle="tooltip" data-original-title="Excluir Item">
-																	</a>
-																</div>
-															</div>
-														</td>
-														<td>Mão de Obra</td>
-														<td>???</td>
-														<td>?</td>
-														<td>R$ ????</td>
-														<td>R$ ????</td>
-														<td>R$ ????</td>
-														<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-													</tr>
-												</tbody>
-											</table>
-										</form>
-									</div>
-									<div class="row mt-4 form-editar-itens d-none info-orcamento">
-										<div class="container-fluid">
-											<div class="row">
-												<div class="col-lg-4 internas-buscas">
-													<label for="text">Descrição</label>
-													<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-												</div>
-												<div class="col-lg-4 internas-buscas">
-													<label for="text">Valor</label>
-													<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-												</div>
-												<div class="col-lg-4 internas-buscas">
-													<label for="text">Quantidade</label>
-													<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-												</div>
-												<div class="col-lg-4 internas-buscas mt-4">
-													<label for="text">Desconto</label>
-													<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-												</div>
-												<div class="col-lg-4 internas-buscas mt-4">
-													<label for="text">Total</label>
-													<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-												</div>
-												<div class="col-lg-12 internas-buscas mt-4">
-													<label for="comment">Observações</label>
-													<textarea class="form-control" rows="3" id="comment"></textarea>
-												</div>
-											</div>
-											<div class="col-lg-12 text-right m-0 mt-4 bg-gray">
-												<button type="button" class="btn btn-cancel txt-up mr-3">Cancelar</button>
-												<button type="button" class="btn btn-salvar txt-up">Salvar</button>
-											</div>											
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- fim modal itens -->
-				<!-- modal totalizadores -->
-				<div class="modal fade bd-example-modal-lg" id="modal-totalizadores" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-					<div class="modal-dialog modal-lg w-1050">
-						<div class="modal-content">						
-							<div class="modal-header m-header">
-								<h5 class="modal-title" id="exampleModalLongTitle">Orçamentos Autorizados</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body mbody-totalizadores d-flex justify-content-center">
-								<div class="container-fluid">
-									<div class="row">
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Total de Orçamentos</h6>
-											<h5><b class="color-b">R$ ?????</b></h5>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Valor Total da Natureza 1:</h6>
-											<h5><b class="color-b">R$ ?????</b></h5>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Valor Total da Natureza 2:</h6>
-											<h5><b class="color-b">R$ ?????</b></h5>
-										</div>
-									</div>
-									<hr>
-									<div class="table-responsive bg-transparent p-0">
-										<form id="" class="tabela-itens-orcamento" name="" action="" method="post">
-											<table class="table table-striped t3" id="">
-												<thead>
-													<tr>
-														<th scope="col">Natureza</th>
-														<th scope="col">CNPJ</th> 															
-														<th scope="col">Nome da Oficina</th>
-														<th scope="col">Valor Total</th>																					
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>1</td>
-														<td>99.999.999/0001-99</td>
-														<td>Oficina 1</td>
-														<td>R$ ????</td>
-													</tr>
-													<tr>
-														<td>1</td>
-														<td>99.999.999/0001-99</td>
-														<td>Oficina 2</td>
-														<td>R$ ????</td>
-													</tr>
-													<tr>
-														<td>2</td>
-														<td>99.999.999/0001-99</td>
-														<td>Oficina 3</td>
-														<td>R$ ????</td>
-													</tr>
-												</tbody>
-											</table>
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- fim modal totalizadores -->
-				<!-- modal IS -->
-				<div class="modal fade bd-example-modal-lg" id="modal-is" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-					<div class="modal-dialog modal-lg w-1050">	
-						<div class="modal-content">
-							<div class="modal-header m-header">
-								<h5 class="modal-title" id="exampleModalLongTitle">Detalhes IS</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body mbody-totalizadores d-flex justify-content-center">
-								<div class="container-fluid">
-									<div class="row">
-										<div class="col-lg-3 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Quantidade de Apólices</h6>
-											<h5><b class="color-b">?????</b></h5>
-										</div>
-										<div class="col-lg-3 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Valor Total das Apólices</h6>
-											<h5><b class="color-b">R$ ?????</b></h5>
-										</div>
-									</div>
-									<hr>
-									<div class="table-responsive bg-transparent p-0">
-										<form id="" class="tabela-itens-orcamento" name="" action="" method="post">
-											<table class="table table-striped t3" id="">
-												<thead>
-													<tr>
-														<th scope="col">Casco</th>
-														<th scope="col">Carroceria</th> 															
-														<th scope="col">Equipamentos</th>
-														<th scope="col">Acessórios</th>		
-														<th scope="col">Blindagem</th>	
-														<th scope="col">RCF-DM</th>
-														<th scope="col">RCF-DP</th>
-														<th scope="col">Diária</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>R$ ????</td>
-														<td>R$ ????</td>
-														<td>R$ ????</td>
-														<td>R$ ????</td>
-														<td>R$ ????</td>
-														<td>R$ ????</td>
-														<td>R$ ????</td>
-														<td>R$ ????</td>
-													</tr>
-												</tbody>
-											</table>
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- fim modal IS -->
-				<!-- modal IS Segurado -->
-				<div class="modal fade bd-example-modal-lg" id="modal-is-segurado" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-					<div class="modal-dialog modal-lg w-1050">	
-						<div class="modal-content">
-							<div class="modal-header m-header">
-								<h5 class="modal-title" id="exampleModalLongTitle">Saldo Disponível da IS</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body mbody-totalizadores d-flex justify-content-center">
-								<div class="container-fluid">
-									<div class="table-responsive bg-transparent p-0">
-										<form id="" class="tabela-itens-orcamento" name="" action="" method="post">
-											<table class="table table-striped t3" id="">
-												<thead>
-													<tr>
-														<th scope="col">Natureza</th>
-														<th scope="col">Valor da IS</th>
-														<th scope="col">Saldo Disponível da IS</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>58 - I.I. Alagamento</td>
-														<td>R$ 36.897,00</td>
-														<td>R$ 563,89</td>
-													</tr>
-													<tr>
-														<td>52 - I.I. Kit Gás</td>
-														<td>R$ 2.000,00</td>
-														<td>R$ 0,00</td>
-													</tr>
-												</tbody>
-											</table>
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- fim modal IS -->
-				<!-- modal editar veículos -->
-				<div class="modal fade" id="modal-veiculos" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header m-header">
-								<h5 class="modal-title" id="exampleModalLongTitle">Editar Marca/Tipo do Veículo</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body mbody-totalizadores mt-3 p-0 d-flex justify-content-center">
-								<div class="container-fluid">
-									<div class="row">
-										<div class="col-12">
-											<label for="filtro">Marca</label>							
-											<select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione..." data-hide-disabled="true" data-actions-box="true">
-												<option value="0">Marca 1</option>
-												<option value="1">Marca 2</option>
-											</select>
-										</div>
-										<div class="col-12 mt-2">
-											<label for="filtro">Tipo</label>							
-											<select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione..." data-hide-disabled="true" data-actions-box="true">
-												<option value="0">Tipo 1</option>
-												<option value="1">Tipo 2</option>
-											</select>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-lg-12 text-right m-0 mt-5 bg-gray">
-											<button type="button" class="btn btn-cancel txt-up mr-3">Cancelar</button>
-											<button type="button" class="btn btn-salvar txt-up">Salvar</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- fim modal editar veículos -->
-				<!-- modal consulta cotação -->
-				<div class="modal fade bd-example-modal-lg" id="modal-cotacao" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-					<div class="modal-dialog modal-lg w-1050">	
-						<div class="modal-content">
-							<div class="modal-header m-header">
-								<h5 class="modal-title" id="exampleModalLongTitle">Cotação de Veículo</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body mbody-totalizadores d-flex justify-content-center">
-								<div class="container-fluid">
-									<div class="row">
-										<div class="col-12">
-											<label for="filtro">Tipo de Cotação</label>							
-											<select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="RCF/DM" data-hide-disabled="true" data-actions-box="true">
-												<option value="0">Todos</option>
-												<option value="1">RCF/DM</option>
-												<option value="2">Lucros Cessantes</option>
-												<option value="3">Processo Judicial</option>
-												<option value="4">SOS</option>
-												<option value="5">Outros</option>
-											</select>
-										</div>
-									</div>
-									<div class="table-responsive bg-transparent p-0">
-										<form id="" class="tabela-itens-orcamento" name="" action="" method="post">
-											<table class="table table-striped t3" id="">
-												<thead>
-													<tr>
-														<th scope="col"></th>
-														<th scope="col">Natureza</th>
-														<th scope="col">Fonte</th>
-														<th scope="col">Valor</th>
-														<th scope="col">Data</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td class="actions">
-															<div class="float-right">
-																<div class="menu-visible">
-																	<span class="circle"></span>
-																	<span class="circle"></span>
-																	<span class="circle"></span>
-																</div>
-																<div class="menu-invisible">
-																	<a href="#">
-																		<img src="img/excluir.svg" data-toggle="tooltip" data-original-title="Excluir">
-																	</a>
-																</div>
-															</div>
-														</td>
-														<td>43</td>
-														<td>Jornal do Carro</td>                                                            
-														<td>R$ 30.000,00</td>
-														<td>05/09/2019</td>
-													</tr>
-												</tbody>
-											</table>
-										</form>
-									</div>
-								</div>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-salvar txt-up" data-toggle="modal" data-target="#modal-add-cotacao" data-dismiss="modal">Incluir Cotação</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- fim consulta cotação -->
-				<!-- modal add cotação -->
-				<div class="modal fade bd-example-modal-lg" id="modal-add-cotacao" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-					<div class="modal-dialog modal-lg w-1050">	
-						<div class="modal-content">
-							<div class="modal-header m-header">
-								<h5 class="modal-title" id="exampleModalLongTitle">Cadastro de Cotação</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body mbody-totalizadores d-flex justify-content-center">
-								<div class="container-fluid">
-									<div class="row">
-										<div class="col-12">
-											<p>Tipo de Cotação: <b class="color-b">RCF/DM</b></p>
-										</div>
-										<div class="col-lg-6 mt-3">
-											<label for="filtro">Protocolo/Natureza</label>							
-											<select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="00061271-72" data-hide-disabled="true" data-actions-box="true">
-												<option value="0">00061271-73</option>
-												<option value="1">00061271-74</option>
-												<option value="2">00061271-75</option>
-												<option value="3">00061271-76</option>
-											</select>
-										</div>
-										<div class="col-lg-6 mt-3">
-											<label for="filtro">Fonte</label>							
-											<select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="FIPE" data-hide-disabled="true" data-actions-box="true">
-												<option value="0">FIPE</option>
-												<option value="1">SOS</option>
-												<option value="2">Outros</option>
-											</select>
-										</div>
-										<div class="col-lg-6 mt-3">
-											<label for="text">Valor</label>
-											<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-										</div>
-										<div class="col-lg-6 mt-3">
-											<label for="text">Data</label>
-											<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-salvar txt-up" data-dismiss="modal">Salvar</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- fim add cotação -->	
-				<!-- modal anexo pagamentos -->
-				<div class="modal fade bd-example-modal-lg" id="modalAnexoPagamentos" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">				
-					<div class="modal-dialog modal-lg">
-						<div class="modal-content">
-							<div class="modal-header m-header">
-							<h5 class="modal-title" id="exampleModalLabel">Documentos Anexados</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">×</span>
-							</button>
-							</div>
-							<div class="modal-body bg-light-gray p-0">		
-								<div class="container-fluid m-0">
-									<div class="lightbox-gallery">
-										<div class="container">
-											<div class="row photos mt-3 mb-3">
-												<div class="col-sm-6 col-md-4 col-lg-3 item">
-													<a href="imagens/img1.jpg" data-lightbox="photos">
-														<img class="img-fluid" src="imagens/img1.jpg">
-													</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- fim modal anexo pagamentos -->		
-				<!-- Modal protocolos -->
-				<div class="modal fade" id="modal-protocolos" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-					<div class="modal-dialog">	
-						<div class="modal-content">
-							<div class="modal-header m-header">
-								<h5 class="modal-title" id="exampleModalLongTitle">Protocolos</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body  d-flex justify-content-center">
-								<div class="container-fluid">
-									<div class="row">		
-										<div class="col-12 p-0">
-											<div class="bg-transparent">
-												<form id="" class="" name="" action="" method="post">
-													<table class="table table-striped" id="">
-														<thead>
-															<tr>
-																<th class="col" style="width: 5%;"></th>
-																<th class="col" style="width: 14%">Protocolo</th>
-																<th scope="col" style="width: 12%">Natureza</th>
-															</tr>
-														</thead>
-														<tbody>
-															<tr>
-																<td style="width: 5%">
-																	<a href="#" data-dismiss="modal" data-toggle="modal" data-target="#modal-protocolos-confirmar">
-																		<img src="img/reabrir.svg" data-toggle="tooltip" data-original-title="Reabrir Protocolo" width="25px">
-																	</a>
-																</td>
-																<td style="width: 15%">9862678</td>																
-																<td style="width: 80%">1</td>
-															</tr>
-															<tr>
-																<td style="width: 5%">
-																	<a href="#" data-dismiss="modal" data-toggle="modal" data-target="#modal-protocolos-confirmar">
-																		<img src="img/reabrir.svg" data-toggle="tooltip" data-original-title="Reabrir Protocolo" width="25px">
-																	</a>
-																</td>
-																<td style="width: 15%">7891357</td>																
-																<td style="width: 80%">3</td>
-															</tr>
-															<tr>
-																<td style="width: 5%">
-																</td>
-																<td style="width: 15%">8963567</td>																
-																<td style="width: 80%">8</td>
-															</tr>
-														</tbody>
-													</table>
-												</form>
-											</div>		
-										</div>					
-									</div>
-								</div>
-							</div>
-							<!-- <div class="modal-footer">
-								<div class="container-fluid">
-									<button type="button" class="btn btn-salvar txt-up float-right w-90" data-dismiss="modal">Ok</button>
-									<button type="button" class="btn btn-cancel txt-up float-left mr-2" data-dismiss="modal">Cancelar</button>
-								</div>
-							</div> -->
-						</div>
-					</div>
-				</div>
-				<!-- Fim Modal protocolos -->	
-				<!-- Modal protocolos Confirmar -->
-				<div class="modal fade" id="modal-protocolos-confirmar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-					<div class="modal-dialog">	
-						<div class="modal-content">
-							<div class="modal-header m-header">
-								<h5 class="modal-title" id="exampleModalLongTitle">Reabrir Protocolo</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body  d-flex justify-content-center">
-								<div class="container-fluid">
-									<div class="row">		
-										<div class="col-12 p-0">
-											<h6>Tem certeza que deseja reabrir esse protocolo?</h6>
-											<p class="color-b">9862678</p>
-										</div>					
-									</div>
-								</div>
-							</div>
-							<div class="modal-footer">
-								<div class="container-fluid">
-									<button type="button" class="btn btn-salvar txt-up float-right" data-dismiss="modal">Confirmar</button>
-									<button type="button" class="btn btn-cancel txt-up float-left mr-2" data-toggle="modal" data-target="#modal-protocolos" data-dismiss="modal">Cancelar</button>									
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- Fim Modal Protocolos Confirmar -->		
+				<!-- Fim modal Informações de Ambiente -->	
 			</div>
 			<!-- fim container-->
 		</section>
