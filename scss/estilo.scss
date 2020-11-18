@@ -168,6 +168,15 @@ footer{width: 100%;}
 }
 
 .f-14{font-size: 14px;}
+
+.score-alto{color: #cc092f;}
+.score-medio{color: #FFBC00;}
+.score-baixo{color: #11C25D;}
+
+textarea{
+  padding: 5px;
+}
+
 // page 404
 body.page-404{
   background:#2365a7;
@@ -339,7 +348,7 @@ body.page-403 > .interna div > div > div h4{
   height: 35px;
   background-repeat: no-repeat;
   background-position: center;
-  right: 163px;
+  right: 107px;
   position: absolute;
 }
 
@@ -389,9 +398,9 @@ body.page-403 > .interna div > div > div h4{
   height: 33px;
   background-repeat: no-repeat;
   background-position: center;
-  right: 54px;
   position: absolute;
   top: 4px;
+  right: 50px;
 }
 
 .btn-pagamento-visited{

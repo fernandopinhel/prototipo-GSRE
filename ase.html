@@ -605,63 +605,31 @@
 												<div class="info-parecer novo-parecer">
 													<div class="container-fluid">														
 														<div class="row header-parecer mt-4">
-															<div class="col-lg-12 col-xl-2 mt-3">												
+															<div class="col-lg-12 col-xl-3 mt-3">												
 																<h6>Data: <span class="color-b">12/11/2020 - 17:37</span></h6>
 															</div>
-															<div class="col-lg-12 col-xl-2 mt-3">												
+															<div class="col-lg-12 col-xl-3 mt-3">												
 																<h6>Funcionário: <span class="color-b">Marcelo</span></h6>
-															</div>
-															<div class="col-lg-12 col-xl-4">												
-																<div class="enviar-anexo">
-																	<button class="btn mt-1" data-toggle="modal" data-target="#modal-anexar-novo-doc">
-																		<div data-toggle="tooltip" data-original-title="Anexar Documentos"><i class="icon icon-nav-anexar" style="font-weight: 600;"></i></div>
-																	</button>
-																</div>
-																<div class="vincular-doc">
-																	<button class="btn btn-info mt-1" onclick="abrir('documentos-vinculados.html')">
-																		<div data-toggle="tooltip" data-original-title="Vincular Documentos"><img src="img/vincular.svg" alt=""></div>
-																	</button>
-																</div>
 															</div>
 														</div>
 														<div class="row mt-4 mb-4">
 															<div class="col-lg-12 col-xl-12">
 																<div class="form-group">
-																	<label for="comment">Escreva aqui seu Parecer:</label>
+																	<label for="comment">Escreva aqui a sua Informação:</label>
 																	<textarea class="form-control" rows="5" id="comment"></textarea>
 																</div>
 															</div>
 														</div>
 														<div class="row mb-4">
-															<div class="col-lg-6 d-flex">
-																<div class="anexos-novo-parecer my-auto mr-3">
-																	<p>Anexos:
-																		<span class="anexo-parecer mr-2">
-																			<a href="#"><img src="../img/excluir.svg" alt="" width="22px" data-toggle="tooltip" data-title="Excluir Anexo"></a>
-																			imagem.jpg
-																		</span>
-																		<!-- <span class="anexo-parecer">
-																			<a href="#"><img src="../img/excluir.svg" alt="" width="22px" data-toggle="tooltip" data-title="Excluir Anexo"></a>
-																			documento.pdf
-																		</span> -->
-																	</p>
-																</div>
-																<div class="anexos-novo-parecer my-auto">
-																	<p>Vinculados:
-																		<span class="anexo-parecer mr-2">
-																			<a href="#"><img src="../img/excluir.svg" alt="" width="22px" data-toggle="tooltip" data-title="Excluir Anexo"></a>
-																			imagem.jpg
-																		</span>
-																		<!-- <span class="anexo-parecer">
-																			<a href="#"><img src="../img/excluir.svg" alt="" width="22px" data-toggle="tooltip" data-title="Excluir Anexo"></a>
-																			documento.pdf
-																		</span> -->
-																	</p>
-																</div>
+															<div class="col-lg-6">
+																<h6>Último Score:</h6>
+																<h6 class="score-alto">Data: 12/11/2020 / Percentual: 0,0% (ALTO)</h6>
+																<h6 class="score-medio">Data: 11/11/2020 / Percentual: 0,0% (MÉDIO)</h6>
+																<h6 class="score-baixo">Data: 10/11/2020 / Percentual: 0,0% (BAIXO)</h6>
 															</div>
 															<div class="col-lg-6">
-																<button class="btn btn-salvar float-right b-salvar-parecer">Salvar</button>
-																<button class="btn btn-cancel float-right b-cancelar-parecer">cancelar</button>
+																<button class="btn btn-info txt-up float-right" data-toggle="modal" data-target="#modal-historico-ase">Visualizar Histórico</button>
+																<button class="btn btn-primary float-right mr-4">Calcular Score</button>
 															</div>
 														</div>
 													</div>													
@@ -1508,103 +1476,144 @@
 					</div>
 				</div>
 				<!-- Fim modal Informações de Ambiente -->
-								<!-- Modal protocolos -->
-								<div class="modal fade" id="modal-protocolos" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-									<div class="modal-dialog">	
-										<div class="modal-content">
-											<div class="modal-header m-header">
-												<h5 class="modal-title" id="exampleModalLongTitle">Protocolos</h5>
-												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-												<span aria-hidden="true">&times;</span>
-												</button>
-											</div>
-											<div class="modal-body  d-flex justify-content-center">
-												<div class="container-fluid">
-													<div class="row">		
-														<div class="col-12 p-0">
-															<div class="bg-transparent">
-																<form id="" class="" name="" action="" method="post">
-																	<table class="table table-striped" id="">
-																		<thead>
-																			<tr>
-																				<th class="col" style="width: 5%;"></th>
-																				<th class="col" style="width: 14%">Protocolo</th>
-																				<th scope="col" style="width: 12%">Natureza</th>
-																			</tr>
-																		</thead>
-																		<tbody>
-																			<tr>
-																				<td style="width: 5%">
-																					<a href="#" data-dismiss="modal" data-toggle="modal" data-target="#modal-protocolos-confirmar">
-																						<img src="img/reabrir.svg" data-toggle="tooltip" data-original-title="Reabrir Protocolo" width="25px">
-																					</a>
-																				</td>
-																				<td style="width: 15%">9862678</td>																
-																				<td style="width: 80%">1</td>
-																			</tr>
-																			<tr>
-																				<td style="width: 5%">
-																					<a href="#" data-dismiss="modal" data-toggle="modal" data-target="#modal-protocolos-confirmar">
-																						<img src="img/reabrir.svg" data-toggle="tooltip" data-original-title="Reabrir Protocolo" width="25px">
-																					</a>
-																				</td>
-																				<td style="width: 15%">7891357</td>																
-																				<td style="width: 80%">3</td>
-																			</tr>
-																			<tr>
-																				<td style="width: 5%">
-																				</td>
-																				<td style="width: 15%">8963567</td>																
-																				<td style="width: 80%">8</td>
-																			</tr>
-																		</tbody>
-																	</table>
-																</form>
-															</div>		
-														</div>					
-													</div>
-												</div>
-											</div>
-											<!-- <div class="modal-footer">
-												<div class="container-fluid">
-													<button type="button" class="btn btn-salvar txt-up float-right w-90" data-dismiss="modal">Ok</button>
-													<button type="button" class="btn btn-cancel txt-up float-left mr-2" data-dismiss="modal">Cancelar</button>
-												</div>
-											</div> -->
-										</div>
+				
+				<!-- Modal protocolos -->
+				<div class="modal fade" id="modal-historico-ase" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+					<div class="modal-dialog">	
+						<div class="modal-content">
+							<div class="modal-header m-header">
+								<h5 class="modal-title" id="exampleModalLongTitle">Histórico de Score CFM</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body  d-flex justify-content-center">
+								<div class="container-fluid">
+									<div class="row">		
+										<div class="col-12 p-0">
+											<div class="bg-transparent">
+												<form id="" class="" name="" action="" method="post">
+													<table class="table table-striped" id="">
+														<thead>
+															<tr>																
+																<th class="col" style="width: 50%;">Data</th>
+																<th scope="col" style="width: 50%;">Percentual</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td style="width: 50%;">12/11/2020</td>																
+																<td style="width: 50%;">0,0%</td>
+															</tr>
+														</tbody>
+													</table>
+												</form>
+											</div>		
+										</div>					
 									</div>
 								</div>
-								<!-- Fim Modal protocolos -->	
-								<!-- Modal protocolos Confirmar -->
-								<div class="modal fade" id="modal-protocolos-confirmar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-									<div class="modal-dialog">	
-										<div class="modal-content">
-											<div class="modal-header m-header">
-												<h5 class="modal-title" id="exampleModalLongTitle">Reabrir Protocolo</h5>
-												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-												<span aria-hidden="true">&times;</span>
-												</button>
-											</div>
-											<div class="modal-body  d-flex justify-content-center">
-												<div class="container-fluid">
-													<div class="row">		
-														<div class="col-12 p-0">
-															<h6>Tem certeza que deseja reabrir esse protocolo?</h6>
-															<p class="color-b">9862678</p>
-														</div>					
-													</div>
-												</div>
-											</div>
-											<div class="modal-footer">
-												<div class="container-fluid">
-													<button type="button" class="btn btn-salvar txt-up float-right" data-dismiss="modal">Confirmar</button>
-													<button type="button" class="btn btn-cancel txt-up float-left mr-2" data-toggle="modal" data-target="#modal-protocolos" data-dismiss="modal">Cancelar</button>									
-												</div>
-											</div>
-										</div>
+							</div>						
+						</div>
+					</div>
+				</div>
+				<!-- Fim Modal protocolos -->	
+				<!-- Modal protocolos -->
+				<div class="modal fade" id="modal-protocolos" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+					<div class="modal-dialog">	
+						<div class="modal-content">
+							<div class="modal-header m-header">
+								<h5 class="modal-title" id="exampleModalLongTitle">Protocolos</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body  d-flex justify-content-center">
+								<div class="container-fluid">
+									<div class="row">		
+										<div class="col-12 p-0">
+											<div class="bg-transparent">
+												<form id="" class="" name="" action="" method="post">
+													<table class="table table-striped" id="">
+														<thead>
+															<tr>
+																<th class="col" style="width: 5%;"></th>
+																<th class="col" style="width: 14%">Protocolo</th>
+																<th scope="col" style="width: 12%">Natureza</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td style="width: 5%">
+																	<a href="#" data-dismiss="modal" data-toggle="modal" data-target="#modal-protocolos-confirmar">
+																		<img src="img/reabrir.svg" data-toggle="tooltip" data-original-title="Reabrir Protocolo" width="25px">
+																	</a>
+																</td>
+																<td style="width: 15%">9862678</td>																
+																<td style="width: 80%">1</td>
+															</tr>
+															<tr>
+																<td style="width: 5%">
+																	<a href="#" data-dismiss="modal" data-toggle="modal" data-target="#modal-protocolos-confirmar">
+																		<img src="img/reabrir.svg" data-toggle="tooltip" data-original-title="Reabrir Protocolo" width="25px">
+																	</a>
+																</td>
+																<td style="width: 15%">7891357</td>																
+																<td style="width: 80%">3</td>
+															</tr>
+															<tr>
+																<td style="width: 5%">
+																</td>
+																<td style="width: 15%">8963567</td>																
+																<td style="width: 80%">8</td>
+															</tr>
+														</tbody>
+													</table>
+												</form>
+											</div>		
+										</div>					
 									</div>
 								</div>
-								<!-- Fim Modal Protocolos Confirmar -->	
+							</div>
+							<!-- <div class="modal-footer">
+								<div class="container-fluid">
+									<button type="button" class="btn btn-salvar txt-up float-right w-90" data-dismiss="modal">Ok</button>
+									<button type="button" class="btn btn-cancel txt-up float-left mr-2" data-dismiss="modal">Cancelar</button>
+								</div>
+							</div> -->
+						</div>
+					</div>
+				</div>
+				<!-- Fim Modal protocolos -->	
+				<!-- Modal protocolos Confirmar -->
+				<div class="modal fade" id="modal-protocolos-confirmar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+					<div class="modal-dialog">	
+						<div class="modal-content">
+							<div class="modal-header m-header">
+								<h5 class="modal-title" id="exampleModalLongTitle">Reabrir Protocolo</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body  d-flex justify-content-center">
+								<div class="container-fluid">
+									<div class="row">		
+										<div class="col-12 p-0">
+											<h6>Tem certeza que deseja reabrir esse protocolo?</h6>
+											<p class="color-b">9862678</p>
+										</div>					
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<div class="container-fluid">
+									<button type="button" class="btn btn-salvar txt-up float-right" data-dismiss="modal">Confirmar</button>
+									<button type="button" class="btn btn-cancel txt-up float-left mr-2" data-toggle="modal" data-target="#modal-protocolos" data-dismiss="modal">Cancelar</button>									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fim Modal Protocolos Confirmar -->	
 
 
 			</div>

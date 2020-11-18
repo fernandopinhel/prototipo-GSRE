@@ -175,37 +175,24 @@
 									<div class="container-fluid">
 										<div class="row mb-4">
 											<div class="col-lg-12">
-												<h1 class="float-left mt-2">Erro de Orçamento</h1>
+												<h1 class="float-left mt-2">Erro Captura</h1>
 											</div>
 										</div>
 										<div class="row bg-gray m-0 h-54">
 											<div class="col-lg-12">
-                                                <div class="pdf-orcamentos float-right">
-													<a href="#" class="pdf" data-toggle="tooltip" data-original-title="Exportar PDF"></a>
-                                                </div>
 												<div class="exportar-orcamentos float-right">
 													<a href="#" class="excel" data-toggle="tooltip" data-original-title="Exportar Excel"></a>
                                                 </div>
-                                                <!-- <div class="reenviar-orcamentos float-right">
-													<a href="#" class="orcamento" data-toggle="tooltip" data-original-title="Reenviar Orçamentos"></a>
-                                                </div> -->
-                                                <div class="log-orcamentos float-right" data-toggle="modal" data-target="#consultarModalLog">
-													<a href="#" class="log-orcamento" data-toggle="tooltip" data-original-title="Log Orçamentos"></a>
-                                                </div>
 											</div>
 										</div>
-										<!-- Orçamentos -->
+										<!-- Erros -->
 										<div class="row buscas-gerais mt-4">
                                             <div class="col-lg-2 internas-buscas mt-3">
-                                                <label for="text">CNPJ/CPF</label>
+                                                <label for="text">Apólice</label>
                                                 <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
                                             </div>
-                                            <div class="col-lg-5 internas-buscas mt-3">
-                                                <label for="text">Razão Social</label>
-                                                <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-                                            </div>
-                                            <div class="col-lg-3 internas-buscas mt-3">
-                                                <label for="text">Nº AVAS</label>
+                                            <div class="col-lg-2 internas-buscas mt-3">
+                                                <label for="text">Item</label>
                                                 <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
                                             </div>
 											<div class="col-lg-2 mt-4">
@@ -214,7 +201,7 @@
 										</div>
 										<div class="row mt-5">
 											<div class="col-lg-10 internas-buscas d-flex my-auto">
-												<p><strong>?</strong> Orçamentos encontrados</p>
+												<p><strong>?</strong> Avisos encontrados</p>
 											</div>
 											<div class="col-lg-12"><hr></div>
 										</div>                                            
@@ -223,63 +210,82 @@
 												<table class="table table-striped" id="tabela-pagamentos">
 													<thead>
 														<tr>
-															<th scope="col">
-																<div class="ex-checkbox chb2">
-																	<input class="form-check-input check-todos" onclick="marcarTodos(this.checked)" id="checkbox_one" type="checkbox" data-toggle="tooltip" data-original-title="Selecionar todos">
-																	<label for="checkbox_one" class="check-estilo"></label>
-																</div>
-															</th>
 															<th scope="col" class="por-20"></th>
-															<th scope="col">Atendimento</th>
-															<th scope="col">Nº Avas</th>
-															<th scope="col">Chave da Apólice</th>
-															<th scope="col">Sucursal da Apólice</th>
-															<th scope="col">Status de Autorização de Orçamento</th>
-															<th scope="col">CNPJ</th>
-															<th scope="col">Razão Social</th>
-															<th scope="col">Orçamento</th>
-															<th scope="col">Data do Orçamento</th>
-															<th scope="col">Valor</th>
-															<th scope="col">Motivo do Erro</th>
-															<th scope="col">Data do Erro</th>
+															<th scope="col">Sucursal</th>
+															<th scope="col">Ramo</th>																																													
+															<th scope="col">CIA</th>
+															<th scope="col">Apólice</th>
+															<th scope="col">Item</th>															
+															<th scope="col">Data Ocorrência</th>
+															<th scope="col">Data Aviso</th>
+															<th scope="col">Data Vencimento</th>
+															<th scope="col">Valor Indenização</th>
+															<th scope="col">Código Natureza</th>
+															<th scope="col">Cobertura</th>
+															<th scope="col">Caixa</th>
+															<th scope="col">FL Tipo</th>
+															<th scope="col">CPF/CNPJ</th>
+															<th scope="col">Complemento</th>
+															<th scope="col">FLAGAUTO</th>
+															<th scope="col">NMBAT</th>
+															<th scope="col">Tipo Veículo</th>
+															<th scope="col">FLNAC</th>
+															<th scope="col">SUCRE</th>
+															<th scope="col">SUCRE</th>
+															<th scope="col">DE_NAT</th>
+															<th scope="col">DTEXC</th>
+															<th scope="col">MOTEX</th>
+															<th scope="col">CDATE</th>
+															<th scope="col">Placa</th>
+															<th scope="col">UF</th>
+															<th scope="col">Chassi</th>
+															<th scope="col">ID_ERRO_CAPT</th>
 														</tr>
 													</thead>
 													<tbody>
-														<tr>
+														<tr>															
 															<td>
-																<div class="ex-checkbox chb2">
-																	<input type="checkbox" class="marcar" id="checkbox_single">
-																	<label for="checkbox_single" class="check-estilo" data-toggle="tooltip" data-original-title="Selecionar Orçamento"></label>
-																</div>
-															</td>
-															<td>
-																<div style="width: 120px;">
+																<div style="width: 80px;">
 																	<!-- <a href="#" class="mr-2">
 																		<img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar" width="25px">
 																	</a> -->
-																	<a href="#" class="mr-2">
-																		<img src="img/reenviar-orcamento.svg" data-toggle="tooltip" data-original-title="Reenviar" width="25px">																		
-                                                					</a>
 																	<a href="#" data-toggle="modal" data-target="#consultarModalDetalhes" class="mr-2">
-																		<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes" width="25px">
+																		<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes/Editar" width="25px">
 																	</a>
 																	<a href="#">
 																		<img src="img/excluir.svg" data-toggle="tooltip" data-original-title="Excluir">
 																	</a>
 																</div>
-															</td>
-															<td>246578254549494169191</td>   
-															<td>104201604220012</td>   
-															<td>850 990 244 14349 0001</td>     
-															<td>850</td>       
-															<td>Não Autorizado Cobertura</td>     
-															<td>67.666.988/0001-99</td>     
-															<td>Pereira Auto Peças LTDA</td>     
-															<td>8</td>     
-															<td>03/11/2016</td>     
-															<td>R$ 2.741.25</td>     
-															<td>Orçamento para natureza inexistente</td>     
-															<td>06/11/2016</td>     
+															</td>															
+															<td>139</td>   
+															<td>990</td>     																																													     
+															<td>244</td>     
+															<td>555749</td>  
+															<td>1</td>  
+															<td>05/11/2020</td>
+															<td>06/11/2020</td>
+															<td>-</td>
+															<td>-</td>
+															<td>-</td>
+															<td>-</td>
+															<td>-</td>
+															<td>-</td>
+															<td>-</td>
+															<td>-</td>
+															<td>-</td>
+															<td>-</td>
+															<td>-</td>
+															<td>-</td>
+															<td>-</td>
+															<td>-</td>
+															<td>-</td>
+															<td>-</td>
+															<td>-</td>
+															<td>-</td>
+															<td>-</td>
+															<td>-</td>
+															<td>-</td>
+															<td>-</td>
 														</tr>
 													</tbody>
 												</table>
@@ -315,11 +321,7 @@
 														<th scope="col">Sinistro</th>
 														<th scope="col">Processo</th>
 														<th scope="col">Oficina</th>
-														<th scope="col">Orçamento</th>
-														<th scope="col">Data</th>
-														<th scope="col">Valor</th>
-														<th scope="col">Liberação</th>
-														<th scope="col">Funcionário</th>
+														<th scope="col">Status do Perfil</th>
 													</tr>
 												</thead>
 												<tbody>
@@ -329,11 +331,7 @@
 														<td>2465782</td>
 														<td>1</td>
 														<td>56588</td>
-														<td>1</td>
-														<td>28/04/2005</td>
-														<td>R$ 9.084,00</td>
-														<td>07/06/2005</td>
-														<td>Alexandre José Barbosa</td>
+														<td>Ativo</td>
 													</tr>
 												</tbody>
 											</table>
@@ -350,183 +348,156 @@
 					<div class="modal-dialog modal-lg" role="document">
 						<div class="modal-content">
 							<div class="modal-header m-header">
-								<h5 class="modal-title" id="consultarModalDetalhesTitle">Detalhes Erro Orçamento</h5>
+								<h5 class="modal-title" id="consultarModalDetalhesTitle">Editar/Detalhes Erro Captura</h5>
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 								</button>
 							</div>
 							<div class="modal-body mbody-detalhes d-flex justify-content-center">
-								<div class="container-fluid">
+								<div class="container-fluid">									
 									<div class="row">
 										<div class="col-lg-12">
-											<h6 class="color-r txt-up">Atendimento</h6>
+											<h6 class="color-r txt-up">Mensagem de Erro em 16/11/2020</h6>
 										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Código</h6>
-											<p><b>23115615616516161651156</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Sinistro</h6>
-											<p><b>2465782</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Processo</h6>
-											<p><b>1</b></p>
+										<div class="col-lg-12 mt-2 mb-3 pr-2">
+											<textarea name="" id="" cols="90" rows="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam commodo, metus et congue tempus, ex erat accumsan mauris, eget commodo mauris dui vel est.</textarea>											
+											<!-- <p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam commodo, metus et congue tempus, ex erat accumsan mauris, eget commodo mauris dui vel est.</b></p> -->
 										</div>
 									</div>
 									<hr>
 									<div class="row">
 										<div class="col-lg-12">
-											<h6 class="color-r txt-up">Oficina</h6>
+											<h6 class="color-r txt-up">Dados do Sinistro</h6>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">                                            
+											<label for="text">Ocorrência</label>
+											<input type="text" name="" maxlength="8" value="05/11/2020" id="" class="form-control" autocomplete="off"> 
 										</div>
 										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">CNPJ</h6>
-											<p><b>99.999.999/9999-99</b></p>
+											<label for="text">Caixa</label>
+											<input type="text" name="" maxlength="8" value="ASA" id="" class="form-control" autocomplete="off"> 
 										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Oficina</h6>
-											<p><b>56588</b></p>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">                                            
+											<label for="text">Aviso</label>
+											<input type="text" name="" maxlength="8" value="06/11/2020" id="" class="form-control" autocomplete="off"> 
 										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Entrada na Oficina</h6>
-											<p><b>27/10/2020</b></p>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">                                            
+											<label for="text">Cobertura</label>
+											<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 										</div>
-									</div>
-									<hr>
-									<div class="row">
-										<div class="col-lg-12">
-											<h6 class="color-r txt-up">Regulação</h6>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">     
+											<label for="filtro">Tipo de Documentação</label>
+											<select class="selectpicker form-control" data-live-search="true" title="Selecione..." data-hide-disabled="true" data-actions-box="true">
+												<option value="0">Selecione</option>
+													<option value="1" selected>Abertura de Processo</option>
+											</select>
 										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Data</h6>
-											<p><b>20/10/2020</b></p>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">                                            
+											<label for="text">1º Vencimento</label>
+											<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Empresa</h6>
-											<p><b>1</b></p>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">                                            
+											<label for="text">Código Natureza</label>
+											<input type="text" name="" maxlength="8" value="1" id="" class="form-control" autocomplete="off"> 
 										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Funcionário</h6>
-											<p><b>2798</b></p>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">                                            
+											<label for="text">Valor Indenizado</label>
+											<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 										</div>
-									</div>
-									<hr>
-									<div class="row">
 										<div class="col-lg-12 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Observações</h6>
-											<p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam commodo, metus et congue tempus, ex erat accumsan mauris, eget commodo mauris dui vel est.</b></p>
+											<div class="ex-checkbox">
+												<input class="form-check-input" type="checkbox" value="true">
+												<label class="form-check-label" for="cmpNewsOrcamento">Documentos Segurado enviados pelo terceiro</label>
+											</div>
 										</div>
 									</div>
 									<hr>
 									<div class="row">
 										<div class="col-lg-12">
-											<h6 class="color-r txt-up">Orçamento</h6>
+											<h6 class="color-r txt-up">Apólice Sinistrada</h6>
 										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Número</h6>
-											<p><b>5</b></p>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">                                            
+											<label for="text">Suc</label>
+											<input type="text" name="" maxlength="8" value="139" id="" class="form-control" autocomplete="off"> 
 										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Data</h6>
-											<p><b>03/11/2020</b></p>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">                                            
+											<label for="text">Ramo</label>
+											<input type="text" name="" maxlength="8" value="990" id="" class="form-control" autocomplete="off"> 
 										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Valor</h6>
-											<p><b>R$ 3.741,25</b></p>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">                                            
+											<label for="text">CIA</label>
+											<input type="text" name="" maxlength="8" value="244" id="" class="form-control" autocomplete="off"> 
 										</div>
-										<div class="col-lg-12"><hr></div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Liberação</h6>
-											<p><b>Não Autorizada Cobertura</b></p>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">                                            
+											<label for="text">Apólice</label>
+											<input type="text" name="" maxlength="8" value="555749" id="" class="form-control" autocomplete="off"> 
 										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Conclusão</h6>
-											<p><b>Perda Parcial</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Valor Peças Orçadas</h6>
-											<p><b>R$ 3.172,05</b></p>
-										</div>
-										<div class="col-lg-12"><hr></div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Valor Mão de Obra Orçado</h6>
-											<p><b>R$ 569,20</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Valor de Peças Auto</h6>
-											<p><b>R$ 3.172,05</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Valor Mão de Obra Autorizado</h6>
-											<p><b>R$ 569,20</b></p>
-										</div>
-										<div class="col-lg-12"><hr></div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Valor Desconto Peças Orçadas</h6>
-											<p><b>R$ 352,45</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Percentual Desconto Peças Orçadas</h6>
-											<p><b>0</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Valor Desconto Peças Autorizadas</h6>
-											<p><b>R$ 252,45</b></p>
-										</div>
-										<div class="col-lg-12"><hr></div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Percentual Desconto Peças Autorizadas</h6>
-											<p><b>0</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Valor Despesas Mão de Obra Orçado</h6>
-											<p><b>0</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Percentual Despesas Mão de Obra Orçado</h6>
-											<p><b>0</b></p>
-										</div>
-										<div class="col-lg-12"><hr></div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Valor Desconto Mão de Obra Autorizado</h6>
-											<p><b>0</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Percentual Despesas Mão de Obra Autorizado</h6>
-											<p><b>0</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Valor Avaria Deduzida</h6>
-											<p><b>0</b></p>
-										</div>
-										<div class="col-lg-12"><hr></div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Valor da Franquia Deduzida</h6>
-											<p><b>0</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Valor do DPVAT</h6>
-											<p><b>0</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Valor Outras Deduções</h6>
-											<p><b>0</b></p>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">                                            
+											<label for="text">Item</label>
+											<input type="text" name="" maxlength="8" value="1" id="" class="form-control" autocomplete="off"> 
 										</div>
 									</div>
 									<hr>
 									<div class="row">
 										<div class="col-lg-12">
-											<h6 class="color-r txt-up">Motivo do Erro</h6>
+											<h6 class="color-r txt-up">Informações sobre Terceiro</h6>
+										</div>
+										<div class="col-lg-3 mt-3 mb-3 pr-2">     
+											<label for="filtro">Tipo de Terceiro</label>
+											<select class="selectpicker form-control" data-live-search="true" title="Selecione..." data-hide-disabled="true" data-actions-box="true">
+												<option value="0">Selecione</option>
+													<option value="1" selected>Física</option>
+											</select>
+										</div>
+										<div class="col-lg-3 mt-3 mb-3 pr-2">                                            
+											<label for="text">CPF</label>
+											<input type="text" name="" maxlength="8" value="999.999.999-99" id="" class="form-control" autocomplete="off"> 
+										</div>
+										<div class="col-lg-2 mt-4 mb-3 pr-2">										
+											<div class="form-group form-check form-check-inline mt-4">
+												<input type="radio" name="tipo" id="" value="1" class="form-check-input">
+												<label for="auto" class="form-check-input">Auto</label>
+											</div>
+										</div>
+										<div class="col-lg-4 mt-4 mb-3 pr-2">										
+											<div class="form-group form-check form-check-inline mt-4">
+												<input type="radio" name="tipo" id="" value="1" class="form-check-input">
+												<label for="outro" class="form-check-input">Outro (Não veículo)</label>
+											</div>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">                                            
+											<label for="text">Placa</label>
+											<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 										</div>
 										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Data</h6>
-											<p><b>06/11/2020</b></p>
+											<label for="filtro">UF</label>
+											<select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione...">
+												<option value="0" selected>RJ</option>
+												<option value="0">SP</option>
+												<option value="0">MG</option>
+											</select>
 										</div>
-										<div class="col-lg-8 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Descrição</h6>
-											<p><b>Orçamento para Natureza Inexistente</b></p>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">                                            
+											<label for="text">Chassi</label>
+											<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 										</div>
-									</div>									
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<label for="filtro">Tipo Veículo</label>
+											<select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione...">
+												<option value="0" selected>Selecione</option>
+											</select>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">                                            
+											<label for="text">Complemento</label>
+											<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+										</div>
+									</div>								
+								</div>
+							</div>
+							<div class="modal-footer">
+								<div class="container-fluid">
+									<button type="button" class="btn btn-cancel mr-4 float-left" data-dismiss="modal">Cancelar</button>
+									<button type="button" class="btn btn-salvar btn-salvar-modal float-right txt-up" data-dismiss="modal">Salvar</button>
 								</div>
 							</div>
 						</div>
