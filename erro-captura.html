@@ -88,7 +88,7 @@
 								<a class="dropdown-item" id="pills-cadastro-usuario-tab"       href= 'prestador.html'>Prestador</a>
 								<a class="dropdown-item" id="pills-cadastro-instituicao-tab"   href= 'instituicoes.html'>Instituições</a>
 								<a class="dropdown-item" id="pills-cadastro-tabelas-tab"       href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaTabelas.do'>Tabelas</a>
-								<a class="dropdown-item" id="pills-cadastro-cartas-tab"        href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaCartas.do'>Cartas</a>
+								<a class="dropdown-item" id="pills-cadastro-cartas-tab"        href= 'cartas.html'>Cartas</a>
 								<a class="dropdown-item" id="pills-cadastro-oficinas-tab"      href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaOficinas.do'>Oficinas</a>
 								</div>
 							</li>
@@ -175,10 +175,13 @@
 									<div class="container-fluid">
 										<div class="row mb-4">
 											<div class="col-lg-12">
-												<h1 class="float-left mt-2">Erro Captura</h1>
+												<h1 class="float-left mt-2">Erro de Captura</h1>
 											</div>
 										</div>
 										<div class="row bg-gray m-0 h-54">
+											<div class="excluir-lotes float-right">
+												<a href="#" class="excluir-lote-2" data-toggle="tooltip" data-original-title="Excluir Erros"></a>
+											</div>
 											<div class="col-lg-12">
 												<div class="exportar-orcamentos float-right">
 													<a href="#" class="excel" data-toggle="tooltip" data-original-title="Exportar Excel"></a>
@@ -245,10 +248,13 @@
 													<tbody>
 														<tr>															
 															<td>
-																<div style="width: 80px;">
+																<div style="width: 100px;">
 																	<!-- <a href="#" class="mr-2">
 																		<img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar" width="25px">
 																	</a> -->
+																	<a href="#" data-toggle="modal" data-target="#modalAnexos" class="anexos-comprovantes">
+																		<img src="img/anexo-tabela.svg" data-toggle="tooltip" data-original-title="Documento anexado" width="25">
+																	</a>
 																	<a href="#" data-toggle="modal" data-target="#consultarModalDetalhes" class="mr-2">
 																		<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes/Editar" width="25px">
 																	</a>
@@ -342,6 +348,36 @@
 					</div>
 				</div>
 				<!-- fim histórico Log -->
+
+				<!-- modal anexo Comprovantes -->
+				<div class="modal fade bd-example-modal-lg" id="modalAnexos" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">				
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<div class="modal-header m-header">
+							<h5 class="modal-title" id="exampleModalLabel">Documentos Anexados</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							</div>
+							<div class="modal-body bg-light-gray p-0">		
+								<div class="container-fluid m-0">
+									<div class="lightbox-gallery">
+										<div class="container">
+											<div class="row photos mt-3 mb-3">
+												<div class="col-sm-6 col-md-4 col-lg-3 item">
+													<a href="imagens/img1.jpg" data-lightbox="photos">
+														<img class="img-fluid" src="imagens/img1.jpg">
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- fim modal anexo Comprovantes -->	
 
 				<!-- modal detalhes erro orçamento -->
 				<div class="modal fade" id="consultarModalDetalhes" tabindex="-1" role="dialog" aria-labelledby="consultarModalDetalhesTitle" aria-hidden="true">

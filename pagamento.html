@@ -88,7 +88,7 @@
 								<a class="dropdown-item" id="pills-cadastro-usuario-tab"       href= 'prestador.html'>Prestador</a>
 								<a class="dropdown-item" id="pills-cadastro-instituicao-tab"   href= 'instituicoes.html'>Instituições</a>
 								<a class="dropdown-item" id="pills-cadastro-tabelas-tab"       href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaTabelas.do'>Tabelas</a>
-								<a class="dropdown-item" id="pills-cadastro-cartas-tab"        href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaCartas.do'>Cartas</a>
+								<a class="dropdown-item" id="pills-cadastro-cartas-tab"        href= 'cartas.html'>Cartas</a>
 								<a class="dropdown-item" id="pills-cadastro-oficinas-tab"      href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaOficinas.do'>Oficinas</a>
 								</div>
 							</li>
@@ -225,7 +225,7 @@
 																					<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 																				</div>
 																			</div> 
-																			<div class="col-lg-4 internas-buscas my-auto">
+																			<div class="col-lg-2 internas-buscas my-auto">
 																				<div class="form-group mt-3">
 																					<label for="text">Item</label>
 																					<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
@@ -237,7 +237,7 @@
 																					<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 																				</div>
 																			</div>
-																			<div class="col-lg-4 internas-buscas my-auto">
+																			<div class="col-lg-2 internas-buscas my-auto">
                                                                                 <label for="ramo">Natureza</label> 
                                                                                 <select class="selectpicker form-control" id="" 
                                                                                         data-live-search="true"
@@ -250,7 +250,7 @@
                                                                                         </option>
                                                                                 </select>
                                                                             </div>  
-																			<div class="col-lg-5 internas-buscas my-auto">
+																			<div class="col-lg-2 internas-buscas my-auto">
                                                                                 <label for="suc">Sucursal</label> 
                                                                                 <select class="selectpicker form-control" id="" 
                                                                                         data-live-search="true"
@@ -263,7 +263,7 @@
                                                                                         </option>
                                                                                 </select>
                                                                             </div>                  
-																			<div class="col-lg-5 internas-buscas my-auto">
+																			<div class="col-lg-2 internas-buscas my-auto">
                                                                                 <label for="ramo">Ramo</label> 
                                                                                 <select class="selectpicker form-control" id="" 
                                                                                         data-live-search="true"
@@ -303,24 +303,24 @@
                                                                 <div class="card-body">
                                                                     <div class="container-fluid">
                                                                         <div class="row">
-                                                                            <div class="col-lg-6 internas-buscas-3 mt-2">
+                                                                            <div class="col-lg-5 internas-buscas-3 mt-2">
 																				<div class="row p-0">
 																					<div class="col-lg-12">
 																						<p>Pagamentos</p>
 																					</div>
-																					<div class="col-lg-4">
+																					<div class="col-lg-4 internas-buscas my-auto">
 																						<div class="form-group form-check form-check-inline mt-3">
 																							<input type="radio" name="pgtos" id="" value="1" class="form-check-input">
 																							<label for="na-data" class="form-check-input">Na Data Solicitada</label>
 																						</div>
 																					</div>
-																					<div class="col-lg-4">
+																					<div class="col-lg-4 internas-buscas my-auto">
 																						<div class="form-group form-check form-check-inline  mt-3">
 																							<input type="radio" name="pgtos" id="" value="2" class="form-check-input">
 																							<label for="apos-data" class="form-check-input">Após Data Solicitada</label>
 																						</div>
 																					</div>     
-																					<div class="col-lg-4">
+																					<div class="col-lg-2 internas-buscas my-auto">
 																						<div class="form-group form-check form-check-inline  mt-3">
 																							<input type="radio" name="pgtos" id="" value="2" class="form-check-input">
 																							<label for="ambos" class="form-check-input">Ambos</label>
@@ -328,7 +328,7 @@
 																					</div>   
 																				</div>
 																			</div>   
-																			<div class="col-lg-4 internas-buscas mt-2">
+																			<div class="col-lg-2 internas-buscas mt-2">
                                                                                 <label for="ramo">Forma de Pagamento</label> 
                                                                                 <select class="selectpicker form-control" id="" 
                                                                                         data-live-search="true"
@@ -340,10 +340,8 @@
                                                                                             Todos
                                                                                         </option>
                                                                                 </select>
-																			</div>     
-																		</div>
-																		<div class="row d-flex mt-4">
-																			<div class="col-lg-4 internas-buscas my-auto">
+																			</div>   
+																			<div class="col-lg-3 internas-buscas my-auto">
                                                                                 <label for="ramo">Status</label> 
                                                                                 <select class="selectpicker form-control" id="" 
                                                                                         data-live-search="true"
@@ -355,7 +353,9 @@
                                                                                             Todos - Aguardando Pagamento
                                                                                         </option>
                                                                                 </select>
-																			</div>    
+																			</div>      
+																		</div>
+																		<div class="row d-flex mt-4">
 																			<div class="col-lg-4 internas-buscas my-auto">
 																				<div class="row">
 																					<div class="col-lg-12">
@@ -389,7 +389,7 @@
 																					<div class="col-lg-1 my-auto">											
 																						<label for="text" class="mt-4">De</label>
 																					</div> 
-																					<div class="col-lg-4 internas-buscas-4 my-auto">											
+																					<div class="col-lg-3 internas-buscas-4 my-auto">											
 																						<div class="form-group">
 																							<label for="text"></label>
 																							<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
@@ -398,7 +398,7 @@
 																					<div class="col-lg-1 my-auto">
 																						<label for="text" class="mt-4">a</label>
 																					</div> 
-																					<div class="col-lg-4 internas-buscas-4 my-auto">										
+																					<div class="col-lg-3 internas-buscas-4 my-auto">										
 																						<div class="form-group">
 																							<label for="text"></label>
 																							<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
@@ -406,6 +406,12 @@
 																					</div> 
 																				</div>
 																			</div>    
+																			<div class="col-lg-4 mt-4">
+																				<div class="ex-checkbox mt-4">
+																					<input class="form-check-input" type="checkbox">
+																					<label class="form-check-label" for="cmpNewsOrcamento">Somente pagamentos na alçada do usuários logado</label>
+																				</div>
+																			</div>
 																		</div>
                                                                     </div>
                                                                 </div>
@@ -427,7 +433,7 @@
                                                                 <div class="card-body">
                                                                     <div class="container-fluid">
                                                                         <div class="row d-flex mt-4">
-																			<div class="col-lg-4 internas-buscas my-auto">
+																			<div class="col-lg-3 internas-buscas my-auto">
                                                                                 <label for="ramo">Liberado por</label> 
                                                                                 <select class="selectpicker form-control" id="" 
                                                                                         data-live-search="true"
@@ -440,7 +446,7 @@
                                                                                         </option>
                                                                                 </select>
 																			</div>      
-																			<div class="col-lg-4 internas-buscas my-auto">
+																			<div class="col-lg-2 internas-buscas my-auto">
                                                                                 <label for="ramo">Mostrado por</label> 
                                                                                 <select class="selectpicker form-control" id="" 
                                                                                         data-live-search="true"
@@ -453,18 +459,18 @@
                                                                                         </option>
                                                                                 </select>
 																			</div>    
-																			<div class="col-lg-4 internas-buscas-3 my-auto">
+																			<div class="col-lg-2 internas-buscas-3 my-auto">
 																				<div class="row p-0">
 																					<div class="col-lg-12">
 																						<p>Data de</p>
 																					</div>
-																					<div class="col-lg-4">
+																					<div class="col-lg-6">
 																						<div class="form-group form-check form-check-inline mt-3">
 																							<input type="radio" name="data-de" id="" value="1" class="form-check-input">
 																							<label for="liberacao" class="form-check-input">Liberação</label>
 																						</div>
 																					</div>
-																					<div class="col-lg-4">
+																					<div class="col-lg-6">
 																						<div class="form-group form-check form-check-inline  mt-3">
 																							<input type="radio" name="data-de" id="" value="2" class="form-check-input">
 																							<label for="pagamento" class="form-check-input">Pagamento</label>
@@ -515,7 +521,7 @@
                                                                 <div class="card-body">
                                                                     <div class="container-fluid">
                                                                         <div class="row mt-4">
-																			<div class="col-lg-5 internas-buscas my-auto">
+																			<div class="col-lg-3 internas-buscas my-auto">
                                                                                 <label for="ramo">Cia</label> 
                                                                                 <select class="selectpicker form-control" id="" 
                                                                                         data-live-search="true"
