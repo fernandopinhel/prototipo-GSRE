@@ -786,6 +786,29 @@ label.form-check-label{
 }
 
 .h-54{height: 54px;}
+
+p.legendas{
+  color: #fff;
+}
+
+p.legendas > span{
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+p.legendas > span:first-child{
+  color: #9acaba;
+}
+
+p.legendas > span:last-child{
+  color: #ffe293;
+}
+
+.box-legendas {
+  background: #2365a7;
+  border: 1px solid #2365a7;
+  border-radius: 5px;
+}
 // fim globais
 
 // accordion principais
@@ -1552,6 +1575,57 @@ tr:hover td {color: #89919F;}
   width: 5%;
   padding-right: 70px;
 }
+
+/* tabela  header fixo */
+.tableFixHead{
+  overflow-y: auto;
+  height: 400px;
+  padding-top:0 !important;
+}
+
+.tableFixHeadDois{
+  overflow-y: auto;
+  height: 400px;
+  padding-top:0 !important;
+}
+
+.tableFixHeadTres{
+  overflow-y: auto;
+  height: 400px;
+  padding-top:0 !important;
+}
+
+.tableFixHead > form > table > thead > tr > th{
+  position: relative !important;
+  z-index: 999 !important;
+}
+
+.tableFixHead > form > table > tbody > tr > td{
+  position: relative !important;
+  z-index: 0 !important;
+}
+
+.tableFixHeadDois > form > table > thead > tr > th{
+  position: relative !important;
+  z-index: 999 !important;
+}
+
+.tableFixHeadDois > form > table > tbody > tr > td{
+  position: relative !important;
+  z-index: 0 !important;
+}
+
+.tableFixHeadTres > form > table > thead > tr > th{
+  position: relative !important;
+  z-index: 999 !important;
+}
+
+.tableFixHeadTres > form > table > tbody > tr > td{
+  position: relative !important;
+  z-index: 0 !important;
+}
+/* fim tabela  header fixo */
+
 // tabela prestadores
 .table-prestadores tbody tr td:nth-child(1){width:1%;}
 .table-prestadores tbody tr td:nth-child(2){width:15%;}

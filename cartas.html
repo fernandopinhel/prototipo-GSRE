@@ -179,20 +179,16 @@
 											</div>
 										</div>
 										<div class="row bg-gray  mb-4 m-0 h-54">
-											<div class="col-lg-6 pl-0">
+											<div class="col-lg-12 pl-0">
 												<button type="button" name="button"
 												class="btn btn-salvar mr-5 b-parecer txt-up">
 												Incluir Cartas</button>
 											</div>
-											<div class="col-lg-6">
-												<div class="float-right">
-													<a href="#" class="excel" data-toggle="tooltip" data-original-title="Exportar Todos Pagamentos"></a>
-												</div>
-											</div>
                                         </div>
+                                        <!-- novas cartas -->
                                         <div class="row mt-4">
 											<div class="col-lg-12">
-												<div class="info-parecer novo-parecer">
+												<div class="info-parecer novo-parecer d-none">
 													<div class="container-fluid">
 														<div class="row">
 															<div class="col-lg-12">
@@ -216,7 +212,7 @@
                                                                         data-container="body"
                                                                         name=""
                                                                         data-actions-box="true">
-                                                                        <option value="" selected>Auto - Manutenção de Negativa</option>
+                                                                        <option value="">Auto - Manutenção de Negativa</option>
                                                                         <option value="">Auto - Sem Claúsula de Acessórios</option>
                                                                 </select>
                                                             </div>    
@@ -228,19 +224,256 @@
                                                                         data-container="body"
                                                                         name=""
                                                                         data-actions-box="true">
-                                                                        <option value="" selected>Auto - Manutenção de Negativa</option>
-                                                                        <option value="">Auto - Sem Claúsula de Acessórios</option>
+                                                                        <option value="">Tipo 1</option>
+                                                                        <option value="">Tipo 2</option>
                                                                 </select>
                                                             </div>    
                                                         </div>
                                                         <div class="row header-parecer mt-4">
-                                                            <div class="col-lg-6 mt-3">
-                                                                
+                                                            <div class="col-lg-4 mt-3">
+                                                                <div class="table-responsive tableFixHead">
+                                                                    <form id="" name="" action="" method="post">
+                                                                        <table class="table table-striped">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th scope="col" style="width: 5%;">
+                                                                                        <div class="ex-checkbox chb2">
+                                                                                            <input class="form-check-input check-todos" onclick="marcarTodos(this.checked)" id="checkbox_one" type="checkbox" data-toggle="tooltip" data-original-title="Selecionar todos">
+                                                                                            <label for="checkbox_one" class="check-estilo"></label>
+                                                                                        </div>
+                                                                                    </th>
+                                                                                    <th  style="width: 95%;">Tipo de Sinistro</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>		
+                                                                                    <td>
+                                                                                        <div class="ex-checkbox chb2">
+                                                                                            <input type="checkbox" class="marcar" id="checkbox_single">
+                                                                                            <label for="checkbox_single" class="check-estilo"></label>
+                                                                                        </div>
+                                                                                    </td>													
+                                                                                  <td>APP</td>                                                                                
+                                                                                </tr>
+                                                                                <tr>		
+                                                                                    <td>
+                                                                                        <div class="ex-checkbox chb2">
+                                                                                            <input type="checkbox" class="marcar" id="checkbox_single">
+                                                                                            <label for="checkbox_single" class="check-estilo"></label>
+                                                                                        </div>
+                                                                                    </td>													                                                                                  
+                                                                                  <td>COLISÃO / DANOS PARCIAIS</td>                                                                                  
+                                                                                </tr>
+                                                                                <tr>		
+                                                                                    <td>
+                                                                                        <div class="ex-checkbox chb2">
+                                                                                            <input type="checkbox" class="marcar" id="checkbox_single">
+                                                                                            <label for="checkbox_single" class="check-estilo"></label>
+                                                                                        </div>
+                                                                                    </td>													
+                                                                                  <td>DANOS CORPORAIS</td>
+                                                                                </tr>
+                                                                                <tr>		
+                                                                                    <td>
+                                                                                        <div class="ex-checkbox chb2">
+                                                                                            <input type="checkbox" class="marcar" id="checkbox_single">
+                                                                                            <label for="checkbox_single" class="check-estilo"></label>
+                                                                                        </div>
+                                                                                    </td>													
+                                                                                  <td>DERRAPAGEM</td>                                                                                
+                                                                                </tr>
+                                                                                <tr>		
+                                                                                    <td>
+                                                                                        <div class="ex-checkbox chb2">
+                                                                                            <input type="checkbox" class="marcar" id="checkbox_single">
+                                                                                            <label for="checkbox_single" class="check-estilo"></label>
+                                                                                        </div>
+                                                                                    </td>												                                                                                  
+                                                                                  <td>DIÁRIAS DE PARALISAÇÃO</td>
+                                                                                </tr>
+                                                                                <tr>		
+                                                                                    <td>
+                                                                                        <div class="ex-checkbox chb2">
+                                                                                            <input type="checkbox" class="marcar" id="checkbox_single">
+                                                                                            <label for="checkbox_single" class="check-estilo"></label>
+                                                                                        </div>
+                                                                                    </td>												                                                                                                                                                                    
+                                                                                  <td>PERDA TOTAL</td>                                                                                 
+                                                                                </tr>
+                                                                                <tr>		
+                                                                                    <td>
+                                                                                        <div class="ex-checkbox chb2">
+                                                                                            <input type="checkbox" class="marcar" id="checkbox_single">
+                                                                                            <label for="checkbox_single" class="check-estilo"></label>
+                                                                                        </div>
+                                                                                    </td>												                                                                                                                                                                                                                                                      
+                                                                                  <td>RCF DANOS MATERIAIS AUTO</td>
+                                                                                </tr>
+                                                                                <tr>		
+                                                                                    <td>
+                                                                                        <div class="ex-checkbox chb2">
+                                                                                            <input type="checkbox" class="marcar" id="checkbox_single">
+                                                                                            <label for="checkbox_single" class="check-estilo"></label>
+                                                                                        </div>
+                                                                                    </td>												                                                                                                                                                                                                                                                                                                                                                                                                                          
+                                                                                  <td>RCF PERDA TOTAL AUTO</td>
+                                                                                </tr>
+                                                                                <tr>		
+                                                                                    <td>
+                                                                                        <div class="ex-checkbox chb2">
+                                                                                            <input type="checkbox" class="marcar" id="checkbox_single">
+                                                                                            <label for="checkbox_single" class="check-estilo"></label>
+                                                                                        </div>
+                                                                                    </td>												                                                                                                                                                                                                                                                                                                                                                                                                                          
+                                                                                  <td>RCF PERDA TOTAL AUTO</td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </form>
+                                                                </div>
                                                             </div>    
-                                                            <div class="col-lg-6 mt-3">
-                                                           
+                                                            <div class="col-lg-4 mt-3">
+                                                                <div class="table-responsive tableFixHeadDois">
+                                                                    <form id="" name="" action="" method="post">
+                                                                        <table class="table table-striped">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th scope="col" style="width: 5%;">
+                                                                                        <div class="ex-checkbox chb2">
+                                                                                            <input class="form-check-input check-todos" onclick="marcarTodos(this.checked)" id="checkbox_one" type="checkbox" data-toggle="tooltip" data-original-title="Selecionar todos">
+                                                                                            <label for="checkbox_one" class="check-estilo"></label>
+                                                                                        </div>
+                                                                                    </th>
+                                                                                    <th  style="width: 95%;">Campos utilizados na impressão da Carta</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>		
+                                                                                    <td>
+                                                                                        <div class="ex-checkbox chb2">
+                                                                                            <input type="checkbox" class="marcar" id="checkbox_single">
+                                                                                            <label for="checkbox_single" class="check-estilo"></label>
+                                                                                        </div>
+                                                                                    </td>													
+                                                                                  <td>Ano de Fabricação do Veículo</td>                                                                                
+                                                                                </tr>
+                                                                                <tr>		
+                                                                                    <td>
+                                                                                        <div class="ex-checkbox chb2">
+                                                                                            <input type="checkbox" class="marcar" id="checkbox_single">
+                                                                                            <label for="checkbox_single" class="check-estilo"></label>
+                                                                                        </div>
+                                                                                    </td>													                                                                                  
+                                                                                    <td>Ano do Modelo do Veículo</td>                                                                              
+                                                                                </tr>
+                                                                                <tr>		
+                                                                                    <td>
+                                                                                        <div class="ex-checkbox chb2">
+                                                                                            <input type="checkbox" class="marcar" id="checkbox_single">
+                                                                                            <label for="checkbox_single" class="check-estilo"></label>
+                                                                                        </div>
+                                                                                    </td>													
+                                                                                  <td>Ano Veículo</td>
+                                                                                </tr>
+                                                                                <tr>		
+                                                                                    <td>
+                                                                                        <div class="ex-checkbox chb2">
+                                                                                            <input type="checkbox" class="marcar" id="checkbox_single">
+                                                                                            <label for="checkbox_single" class="check-estilo"></label>
+                                                                                        </div>
+                                                                                    </td>													
+                                                                                  <td>Bairro do Proponente</td>                                                                                
+                                                                                </tr>
+                                                                                <tr>		
+                                                                                    <td>
+                                                                                        <div class="ex-checkbox chb2">
+                                                                                            <input type="checkbox" class="marcar" id="checkbox_single">
+                                                                                            <label for="checkbox_single" class="check-estilo"></label>
+                                                                                        </div>
+                                                                                    </td>												                                                                                  
+                                                                                  <td>Cidade do Proponente</td>
+                                                                                </tr>
+                                                                                <tr>		
+                                                                                    <td>
+                                                                                        <div class="ex-checkbox chb2">
+                                                                                            <input type="checkbox" class="marcar" id="checkbox_single">
+                                                                                            <label for="checkbox_single" class="check-estilo"></label>
+                                                                                        </div>
+                                                                                    </td>												                                                                                                                                                                    
+                                                                                  <td>Código da agência do Beneficiário</td>                                                                                 
+                                                                                </tr>
+                                                                                <tr>		
+                                                                                    <td>
+                                                                                        <div class="ex-checkbox chb2">
+                                                                                            <input type="checkbox" class="marcar" id="checkbox_single">
+                                                                                            <label for="checkbox_single" class="check-estilo"></label>
+                                                                                        </div>
+                                                                                    </td>												                                                                                                                                                                                                                                                      
+                                                                                  <td>Código da Carta</td>
+                                                                                </tr>
+                                                                                <tr>		
+                                                                                    <td>
+                                                                                        <div class="ex-checkbox chb2">
+                                                                                            <input type="checkbox" class="marcar" id="checkbox_single">
+                                                                                            <label for="checkbox_single" class="check-estilo"></label>
+                                                                                        </div>
+                                                                                    </td>												                                                                                                                                                                                                                                                                                                                                                                                                                          
+                                                                                  <td>Código da Carta anterior</td>
+                                                                                </tr>
+                                                                                <tr>		
+                                                                                    <td>
+                                                                                        <div class="ex-checkbox chb2">
+                                                                                            <input type="checkbox" class="marcar" id="checkbox_single">
+                                                                                            <label for="checkbox_single" class="check-estilo"></label>
+                                                                                        </div>
+                                                                                    </td>												                                                                                                                                                                                                                                                                                                                                                                                                                          
+                                                                                  <td>Código do Banco do Beneficiário</td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </form>
+                                                                </div>
                                                             </div>    
-														</div>
+                                                            <div class="col-lg-4 mt-3">
+                                                                <div class="table-responsive tableFixHeadTres">
+                                                                    <form id="" name="" action="" method="post">
+                                                                        <table class="table table-striped">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th scope="col" style="width: 5%;">
+                                                                                        <div class="ex-checkbox chb2">
+                                                                                            <input class="form-check-input check-todos" onclick="marcarTodos(this.checked)" id="checkbox_one" type="checkbox" data-toggle="tooltip" data-original-title="Selecionar todos">
+                                                                                            <label for="checkbox_one" class="check-estilo"></label>
+                                                                                        </div>
+                                                                                    </th>
+                                                                                    <th  style="width: 95%;">Imagens</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>		
+                                                                                    <td>
+                                                                                        <div class="ex-checkbox chb2">
+                                                                                            <input type="checkbox" class="marcar" id="checkbox_single">
+                                                                                            <label for="checkbox_single" class="check-estilo"></label>
+                                                                                        </div>
+                                                                                    </td>													
+                                                                                  <td>Logo_Bradesco_Seguros</td>                                                                                
+                                                                                </tr>
+                                                                                <tr>		
+                                                                                    <td>
+                                                                                        <div class="ex-checkbox chb2">
+                                                                                            <input type="checkbox" class="marcar" id="checkbox_single">
+                                                                                            <label for="checkbox_single" class="check-estilo"></label>
+                                                                                        </div>
+                                                                                    </td>													                                                                                  
+                                                                                    <td>Assinatura_Carlos_Oliva</td>                                                                              
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </form>
+                                                                </div>
+                                                            </div>    
+                                                        </div>                                                       
 														<div class="row mt-4 mb-4">
 															<div class="col-lg-12 col-xl-12">
 																<div class="form-group">
@@ -248,11 +481,19 @@
 																	<textarea class="form-control" name="text-cartas" id="comment"></textarea>
 																</div>
 															</div>
+                                                        </div>
+                                                        <div class="row mb-4">
+															<div class="col-lg-12">
+                                                                <button class="btn btn-info float-left txt-up">Preview</button>
+																<button class="btn btn-salvar float-right b-salvar-parecer">Salvar</button>
+																<button class="btn btn-cancel float-right b-cancelar-parecer">cancelar</button>
+															</div>
 														</div>
 													</div>													
 												</div>
 											</div>
-										</div>
+                                        </div>
+                                        <!-- fim novas cartas -->
 										<!-- cartas -->
                                         <div class="row buscas-gerais">
                                             <div class="col-lg-1 mt-3">
@@ -295,10 +536,10 @@
 														<tr>
 															<td style="width: 10%">
                                                                 <div>
-                                                                    <a href="#" data-toggle="modal" data-target="#consultarModalPagamento" class="mr-2">
+                                                                    <a href="#" class="mr-2">
 																		<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes" width="25px">
 																	</a>
-																	<a href="#" data-toggle="modal" data-target="#alterarModalUmPagamento" class="mr-2">
+																	<a href="#" class="mr-2">
 																		<img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar" width="25px">
                                                                     </a>
                                                                     <a href="#" style="cursor: auto;">
@@ -312,10 +553,10 @@
                                                         <tr>
 															<td style="width: 10%">
                                                                 <div>
-                                                                    <a href="#" data-toggle="modal" data-target="#consultarModalPagamento" class="mr-2">
+                                                                    <a href="#" class="mr-2">
 																		<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes" width="25px">
 																	</a>
-																	<a href="#" data-toggle="modal" data-target="#alterarModalUmPagamento" class="mr-2">
+																	<a href="#" class="mr-2">
 																		<img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar" width="25px">
                                                                     </a>
                                                                     <a href="#">
@@ -330,7 +571,7 @@
 												</table>
 											</form>
 										</div>
-										<!-- Fim Pagamentos -->
+										<!-- Fim Cartas -->
 									</div>
 								</div>
 							</div>
@@ -638,6 +879,32 @@
         <script src="ckeditor/ckeditor.js"></script>
         <script>
             CKEDITOR.replace('text-cartas')
+        </script>
+        <script>
+            // tabela com header fixo
+            var $th = $('.tableFixHead').find('thead th')
+            $('.tableFixHead').on('scroll', function() {
+            $th.css('transform', 'translateY('+ this.scrollTop +'px)');  
+            });
+            // fim tabela com header fixo
+        </script>
+
+        <script>
+            // tabela com header fixo
+            var $th2 = $('.tableFixHeadDois').find('thead th')
+            $('.tableFixHeadDois').on('scroll', function() {
+            $th2.css('transform', 'translateY('+ this.scrollTop +'px)');  
+            });
+            // fim tabela com header fixo
+        </script>
+
+        <script>
+            // tabela com header fixo
+            var $th3 = $('.tableFixHeadTres').find('thead th')
+            $('.tableFixHeadTres').on('scroll', function() {
+            $th3.css('transform', 'translateY('+ this.scrollTop +'px)');  
+            });
+            // fim tabela com header fixo
         </script>
 	</body>
 </html>
