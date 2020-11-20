@@ -213,6 +213,12 @@
 												<table class="table table-striped" id="tabela-pagamentos">
 													<thead>
 														<tr>
+															<th scope="col">
+																<div class="ex-checkbox chb2">
+																	<input class="form-check-input check-todos" onclick="marcarTodos(this.checked)" id="checkbox_one" type="checkbox" data-toggle="tooltip" data-original-title="Selecionar todos">
+																	<label for="checkbox_one" class="check-estilo"></label>
+																</div>
+															</th>
 															<th scope="col" class="por-20"></th>
 															<th scope="col">Sucursal</th>
 															<th scope="col">Ramo</th>																																													
@@ -246,13 +252,19 @@
 														</tr>
 													</thead>
 													<tbody>
-														<tr>															
+														<tr>		
+															<td>
+																<div class="ex-checkbox chb2">
+																	<input type="checkbox" class="marcar" id="checkbox_single">
+																	<label for="checkbox_single" class="check-estilo" data-toggle="tooltip" data-original-title="Selecionar Orçamento"></label>
+																</div>
+															</td>													
 															<td>
 																<div style="width: 100px;">
 																	<!-- <a href="#" class="mr-2">
 																		<img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar" width="25px">
 																	</a> -->
-																	<a href="#" data-toggle="modal" data-target="#modalAnexos" class="anexos-comprovantes">
+																	<a href="#" data-toggle="modal" data-target="#modalAnexos" class="anexos-comprovantes" class="mr-2">
 																		<img src="img/anexo-tabela.svg" data-toggle="tooltip" data-original-title="Documento anexado" width="25">
 																	</a>
 																	<a href="#" data-toggle="modal" data-target="#consultarModalDetalhes" class="mr-2">
