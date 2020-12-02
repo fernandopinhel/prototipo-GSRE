@@ -219,36 +219,15 @@
 																	<label for="checkbox_one" class="check-estilo"></label>
 																</div>
 															</th>
-															<th scope="col" class="por-20"></th>
+															<th scope="col" class=""></th>
 															<th scope="col">Sucursal</th>
 															<th scope="col">Ramo</th>																																													
 															<th scope="col">CIA</th>
 															<th scope="col">Apólice</th>
-															<th scope="col">Item</th>															
+															<th scope="col">Item</th>		
+															<th scope="col">Código Natureza</th>													
 															<th scope="col">Data Ocorrência</th>
 															<th scope="col">Data Aviso</th>
-															<th scope="col">Data Vencimento</th>
-															<th scope="col">Valor Indenização</th>
-															<th scope="col">Código Natureza</th>
-															<th scope="col">Cobertura</th>
-															<th scope="col">Caixa</th>
-															<th scope="col">FL Tipo</th>
-															<th scope="col">CPF/CNPJ</th>
-															<th scope="col">Complemento</th>
-															<th scope="col">FLAGAUTO</th>
-															<th scope="col">NMBAT</th>
-															<th scope="col">Tipo Veículo</th>
-															<th scope="col">FLNAC</th>
-															<th scope="col">SUCRE</th>
-															<th scope="col">SUCRE</th>
-															<th scope="col">DE_NAT</th>
-															<th scope="col">DTEXC</th>
-															<th scope="col">MOTEX</th>
-															<th scope="col">CDATE</th>
-															<th scope="col">Placa</th>
-															<th scope="col">UF</th>
-															<th scope="col">Chassi</th>
-															<th scope="col">ID_ERRO_CAPT</th>
 														</tr>
 													</thead>
 													<tbody>
@@ -260,7 +239,7 @@
 																</div>
 															</td>													
 															<td>
-																<div style="width: 120px;">
+																<div>
 																	<!-- <a href="#" class="mr-2">
 																		<img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar" width="25px">
 																	</a> -->
@@ -280,30 +259,9 @@
 															<td>244</td>     
 															<td>555749</td>  
 															<td>1</td>  
+															<td>1</td>  
 															<td>05/11/2020</td>
 															<td>06/11/2020</td>
-															<td>-</td>
-															<td>-</td>
-															<td>-</td>
-															<td>-</td>
-															<td>-</td>
-															<td>-</td>
-															<td>-</td>
-															<td>-</td>
-															<td>-</td>
-															<td>-</td>
-															<td>-</td>
-															<td>-</td>
-															<td>-</td>
-															<td>-</td>
-															<td>-</td>
-															<td>-</td>
-															<td>-</td>
-															<td>-</td>
-															<td>-</td>
-															<td>-</td>
-															<td>-</td>
-															<td>-</td>
 														</tr>
 													</tbody>
 												</table>
@@ -539,7 +497,111 @@
 											<label for="text">Complemento</label>
 											<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
 										</div>
-									</div>								
+									</div>		
+									<hr>
+									<div class="row">
+										<div class="col-lg-12 text-center mb-2">
+											<a href="#" class="txt-up btn-mais-info">
+												<span>Mais Informações</span>
+												<i class="fa fa-chevron-down"></i>
+											</a>										
+											<a href="#" class="txt-up btn-menos-info d-none">
+												<span>Menos Informações</span>
+												<i class="fa fa-chevron-up"></i>
+											</a>
+										</div>
+									</div>
+									<div class="row mais-info d-none">
+										<div class="col-lg-12">
+											<h6 class="color-r txt-up">Mais Informações</h6>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Data Vencimento</h6>
+											<p><b>05/06/20</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Valor Indenização</h6>
+											<p><b>-</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Cobertura</h6>
+											<p><b>-</b></p>
+										</div>
+										<div class="col-lg-12"><hr></div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Caixa</h6>
+											<p><b>-</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">FL Tipo</h6>
+											<p><b>-</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">CPF/CNPJ</h6>
+											<p><b>-</b></p>
+										</div>
+										<div class="col-lg-12"><hr></div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Complemento</h6>
+											<p><b>-</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">FLAGAUTO</h6>
+											<p><b>-</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">NMBAT</h6>
+											<p><b>-</b></p>
+										</div>
+										<div class="col-lg-12"><hr></div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Tipo Veículo</h6>
+											<p><b>-</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">FLNAC</h6>
+											<p><b>-</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">SUCRE</h6>
+											<p><b>-</b></p>
+										</div>
+										<div class="col-lg-12"><hr></div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">DE_NAT</h6>
+											<p><b>-</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">DTEXC</h6>
+											<p><b>-</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">MOTEX</h6>
+											<p><b>-</b></p>
+										</div>
+										<div class="col-lg-12"><hr></div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">CDATE</h6>
+											<p><b>-</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Placa</h6>
+											<p><b>-</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">UF</h6>
+											<p><b>-</b></p>
+										</div>
+										<div class="col-lg-12"><hr></div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">Chassi</h6>
+											<p><b>-</b></p>
+										</div>
+										<div class="col-lg-4 mt-3 mb-3 pr-2">
+											<h6 class="txt-up">ID_ERRO_CAPT</h6>
+											<p><b>-</b></p>
+										</div>
+									</div>						
 								</div>
 							</div>
 							<div class="modal-footer">

@@ -586,6 +586,9 @@
 								<a class="nav-link aviso-sinistro-especiais active" id="ase-tab"  href="#" data-toggle="tooltip" data-original-title="Informações ASE">
 									<i class="icon icon-motorista-amigo"></i>
 								</a>
+								<a class="nav-link cartas" id="cartas-tab"  href="emissao-cartas.html" data-toggle="tooltip" data-original-title="Cartas">
+									<i class="icon icon-fin-cartoes"></i>
+								</a>
 							</div>
 						</div>
 						<!-- fim sidebar esquerda -->
@@ -602,35 +605,42 @@
 										<!-- ASE -->
 										<div class="row mt-4">
 											<div class="col-lg-12">
-												<div class="info-parecer novo-parecer">
+												<div class="info-parecer novo-parecer p-0">
 													<div class="container-fluid">														
 														<div class="row header-parecer mt-4">
-															<div class="col-lg-12 col-xl-3 mt-3">												
+															<div class="col-lg-2 internas-buscas mt-2">												
 																<h6>Data: <span class="color-b">12/11/2020 - 17:37</span></h6>
 															</div>
-															<div class="col-lg-12 col-xl-3 mt-3">												
+															<div class="col-lg-2 internas-buscas mt-2">												
 																<h6>Funcionário: <span class="color-b">Marcelo</span></h6>
+															</div>
+															<div class="col-lg-8 internas-buscas">
+																<div class="float-right text-right">
+																	<h6>Último Score:</h6>
+																	<h6 class="score-alto">Data: 12/11/2020 / Percentual: 0,0% (ALTO)</h6>
+																	<h6 class="score-medio">Data: 11/11/2020 / Percentual: 0,0% (MÉDIO)</h6>
+																	<h6 class="score-baixo">Data: 10/11/2020 / Percentual: 0,0% (BAIXO)</h6>
+																</div>
 															</div>
 														</div>
 														<div class="row mt-4 mb-4">
 															<div class="col-lg-12 col-xl-12">
 																<div class="form-group">
 																	<label for="comment">Escreva aqui a sua Informação:</label>
-																	<textarea class="form-control" rows="5" id="comment"></textarea>
+																	<textarea class="form-control" rows="5" id="comment" value="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu mattis ante, sit amet aliquet dui.&#10;Etiam lacus purus, accumsan at leo eget, feugiat vestibulum arcu.</textarea>
 																</div>
 															</div>
 														</div>
 														<div class="row mb-4">
 															<div class="col-lg-6">
-																<h6>Último Score:</h6>
-																<h6 class="score-alto">Data: 12/11/2020 / Percentual: 0,0% (ALTO)</h6>
-																<h6 class="score-medio">Data: 11/11/2020 / Percentual: 0,0% (MÉDIO)</h6>
-																<h6 class="score-baixo">Data: 10/11/2020 / Percentual: 0,0% (BAIXO)</h6>
+																<button class="btn btn-info mr-4 txt-up mt-2" data-toggle="modal" data-target="#modal-historico-ase">Visualizar Histórico</button>
+																<button class="btn btn-primary mt-2">Calcular Score</button>
 															</div>
 															<div class="col-lg-6">
-																<button class="btn btn-info txt-up float-right" data-toggle="modal" data-target="#modal-historico-ase">Visualizar Histórico</button>
-																<button class="btn btn-primary float-right mr-4">Calcular Score</button>
+																<button class="btn btn-salvar float-right txt-up w-90">Salvar</button>
+																<button class="btn btn-cancel float-right">cancelar</button>
 															</div>
+															
 														</div>
 													</div>													
 												</div>
