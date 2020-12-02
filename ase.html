@@ -602,50 +602,146 @@
 												<h1 class="float-left mt-2">Informações ASE</h1>
 											</div>
 										</div>
-										<!-- ASE -->
-										<div class="row mt-4">
+										<div class="row bg-gray m-0">
+											<div class="col-12 pl-0">
+												<button type="button" name="button"
+												class="btn btn-salvar mr-5 b-parecer txt-up">
+												Incluir Informação ASE</button>
+											</div>
+										</div>
+										<!-- Nova Info -->
+										<div class="row mt-4 mb-4 d-flex">
 											<div class="col-lg-12">
-												<div class="info-parecer novo-parecer p-0">
-													<div class="container-fluid">														
-														<div class="row header-parecer mt-4">
-															<div class="col-lg-2 internas-buscas mt-2">												
-																<h6>Data: <span class="color-b">12/11/2020 - 17:37</span></h6>
+												<div class="info-parecer novo-parecer d-none">
+													<div class="container-fluid">
+														<div class="row">
+															<div class="col-lg-12">
+																<h5 class="float-left m-0 title-novo">Nova Informação ASE</h5>
+																<a href="#" class="float-right close-parecer">
+																	<i class="icon icon-close"></i>
+																</a>
 															</div>
-															<div class="col-lg-2 internas-buscas mt-2">												
-																<h6>Funcionário: <span class="color-b">Marcelo</span></h6>
-															</div>
-															<div class="col-lg-8 internas-buscas">
-																<div class="float-right text-right">
-																	<h6>Último Score:</h6>
-																	<h6 class="score-alto">Data: 12/11/2020 / Percentual: 0,0% (ALTO)</h6>
-																	<h6 class="score-medio">Data: 11/11/2020 / Percentual: 0,0% (MÉDIO)</h6>
-																	<h6 class="score-baixo">Data: 10/11/2020 / Percentual: 0,0% (BAIXO)</h6>
-																</div>
-															</div>
+															<div class="col-lg-12"><hr></div>
 														</div>
-														<div class="row mt-4 mb-4">
-															<div class="col-lg-12 col-xl-12">
-																<div class="form-group">
-																	<label for="comment">Escreva aqui a sua Informação:</label>
-																	<textarea class="form-control" rows="5" id="comment" value="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu mattis ante, sit amet aliquet dui.&#10;Etiam lacus purus, accumsan at leo eget, feugiat vestibulum arcu.</textarea>
-																</div>
+														<div class="row mt-4">
+															<div class="col-lg-12">																
+																<div class="container-fluid">														
+																	<div class="row header-parecer mt-4">
+																		<div class="col-lg-2 internas-buscas mt-2">												
+																			<h6>Data: <span class="color-b">12/11/2020 - 17:37</span></h6>
+																		</div>
+																		<div class="col-lg-2 internas-buscas mt-2">												
+																			<h6>Funcionário: <span class="color-b">Marcelo</span></h6>
+																		</div>
+																		<div class="col-lg-8 internas-buscas">
+																			<div class="float-right text-right">
+																				<h6>Último Score:</h6>
+																				<h6 class="score-alto">Data: 12/11/2020 / Percentual: 0,0% (ALTO)</h6>
+																				<h6 class="score-medio">Data: 11/11/2020 / Percentual: 0,0% (MÉDIO)</h6>
+																				<h6 class="score-baixo">Data: 10/11/2020 / Percentual: 0,0% (BAIXO)</h6>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="row mt-4 mb-4">
+																		<div class="col-lg-12 col-xl-12">
+																			<div class="form-group">
+																				<label for="comment">Escreva aqui a sua Informação:</label>
+																				<textarea class="form-control" rows="5" id="comment" value="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu mattis ante, sit amet aliquet dui.&#10;Etiam lacus purus, accumsan at leo eget, feugiat vestibulum arcu.</textarea>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="row mb-4">
+																		<div class="col-lg-6">
+																			<button class="btn btn-info mr-4 txt-up mt-2" data-toggle="modal" data-target="#modal-historico-ase">Visualizar Histórico</button>
+																			<button class="btn btn-primary mt-2">Calcular Score</button>
+																		</div>
+																		<div class="col-lg-6">
+																			<button class="btn btn-salvar float-right b-salvar-parecer txt-up w-90">Salvar</button>
+																			<button class="btn btn-cancel b-cancelar-parecer float-right">cancelar</button>
+																		</div>
+																		
+																	</div>
+																</div>													
 															</div>
-														</div>
-														<div class="row mb-4">
-															<div class="col-lg-6">
-																<button class="btn btn-info mr-4 txt-up mt-2" data-toggle="modal" data-target="#modal-historico-ase">Visualizar Histórico</button>
-																<button class="btn btn-primary mt-2">Calcular Score</button>
-															</div>
-															<div class="col-lg-6">
-																<button class="btn btn-salvar float-right txt-up w-90">Salvar</button>
-																<button class="btn btn-cancel float-right">cancelar</button>
-															</div>
-															
 														</div>
 													</div>													
 												</div>
 											</div>
 										</div>
+										<!-- Fim Nova Info -->
+										<div class="row buscas-gerais">
+											<div class="col-lg-3 internas-buscas">
+												<label for="text">Funcionário</label>
+												<input type="text" name="" maxlength=""  id="" class="form-control" autocomplete="off"> 
+											</div>
+											<div class="col-lg-2 internas-buscas">
+												<label for="text">Data</label>
+												<input type="text" name="" maxlength=""  id="" class="form-control" autocomplete="off"> 
+											</div>
+											<div class="col-lg-2 mt-2">
+												<button type="button" name="button" class="btn btn-primary mt-4">Buscar</button>
+											</div>
+										</div>
+										<div class="row mt-5">
+											<div class="col-lg-12 d-flex my-auto">
+												<p><strong>3</strong> Informações ASE encontrada</p>
+											</div>
+											<div class="col-lg-12"><hr></div>
+										</div>                                            
+										<div class="table-responsive">
+											<form id="" name="" action="" method="post">
+												<table class="table table-striped table-comprovantes" id="">
+													<thead>
+														<tr>
+															<th scope="col" style="width: 5%;"></th>
+															<th scope="col" style="width: 10%;">Funcionário</th>
+															<th scope="col" style="width: 10%;">Data</th>
+															<th scope="col" style="width: 10%;">Último Score</th>
+															<th scope="col" style="width: 65%;">Informação</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>
+																<a href="#" class="mr-2" data-toggle="modal" data-target="#modal-historico-ase">
+																	<img src="img/historico.svg" data-toggle="tooltip" data-original-title="Histórico de Score CFM" width="25">
+																</a>
+															</td>
+															<td>Marcelo</td>   
+															<td>12/11/2020 - 17:37</td>   
+															<td class="score-alto bold">0,0% - ALTO</td>    															
+															<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu mattis ante, sit amet aliquet dui.
+																Etiam lacus purus, accumsan at leo eget, feugiat vestibulum arcu.</td>                                                                    
+														</tr>
+														<tr>
+															<td>
+																<a href="#" class="mr-2" data-toggle="modal" data-target="#modal-historico-ase">
+																	<img src="img/historico.svg" data-toggle="tooltip" data-original-title="Histórico de Score CFM" width="25">
+																</a>
+															</td>
+															<td>Marcelo</td>   
+															<td>12/11/2020 - 17:37</td>   
+															<td class="score-medio bold">0,0% - MÉDIO</td>    															
+															<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu mattis ante, sit amet aliquet dui.
+																Etiam lacus purus, accumsan at leo eget, feugiat vestibulum arcu.</td>                                                                    
+														</tr>
+														<tr>
+															<td>
+																<a href="#" class="mr-2" data-toggle="modal" data-target="#modal-historico-ase">
+																	<img src="img/historico.svg" data-toggle="tooltip" data-original-title="Histórico de Score CFM" width="25">
+																</a>
+															</td>
+															<td>Marcelo</td>   
+															<td>12/11/2020 - 17:37</td>   
+															<td class="score-baixo bold">0,0% - BAIXO</td>    															
+															<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu mattis ante, sit amet aliquet dui.
+																Etiam lacus purus, accumsan at leo eget, feugiat vestibulum arcu.</td>                                                                    
+														</tr>
+													</tbody>
+												</table>
+											</form>
+										</div>
+										<!-- ASE -->
 									</div>
 								</div>
 							</div>

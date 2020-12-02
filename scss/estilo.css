@@ -173,15 +173,15 @@ footer {
 }
 
 .score-alto {
-  color: #cc092f;
+  color: #cc092f !important;
 }
 
 .score-medio {
-  color: #FFBC00;
+  color: #FFBC00 !important;
 }
 
 .score-baixo {
-  color: #11C25D;
+  color: #11C25D !important;
 }
 
 textarea {
