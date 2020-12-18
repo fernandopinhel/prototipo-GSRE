@@ -627,6 +627,10 @@ button.btn-second:hover{
   max-width: 1050px !important;
 }
 
+.w-1100{
+  max-width: 1100px !important;
+}
+
 .w-90{
   width: 90px !important;
   max-width: 90px !important;
@@ -2402,6 +2406,12 @@ span.btn-add{
   background-color: transparent !important;
   color: #0B67BE !important;
   border-color: #0B67BE !important;
+}
+
+.close-preview{
+    top: -6px;
+    position: absolute;
+    right: 0;
 }
 
 // modal

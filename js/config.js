@@ -78,7 +78,23 @@ $(document).ready(function(){
 });
 
 
+$(document).ready(function(){
+  $(".btn-preview").click(function(){
+    $(".box-cartas-preview").removeClass("d-none");
+  });
 
+  $(".close-preview").click(function(){
+    $(".box-cartas-preview").addClass("d-none");
+  });
+});
+
+
+$(document).ready(function(){
+  $(".btn-processar").click(function(){
+    $(".etapa-1-pp").addClass("d-none");
+    $(".etapa-2-pp").removeClass("d-none");
+  });
+});
 // // select box
 // $(".custom-select").each(function() {
 // var classes = $(this).attr("class"),

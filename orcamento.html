@@ -96,19 +96,6 @@
 								<a class="nav-link dropdown-toggle"  
 									data-toggle="dropdown" 
 									href="#" role="tab" 
-									aria-selected="true">Relatórios</a>
-								<div class="dropdown-menu">
-								<a class="dropdown-item" id="pills-apolice-emissao-tab" href= 'apolice-emissao.html'>Apólice em Emissão</a>
-								<a class="dropdown-item" id="pills-ressarcimento-tab" href= 'ressarcimento.html'>Ressarcimento</a>
-								<a class="dropdown-item" id="pills-estatisticas-news-tab" href= 'estatisticas-news.html'>Estatísticas de News</a>
-								<a class="dropdown-item" id="pills-relatorio-susep-tab" href= 'relatorio-susep.html'>Relatório Susep 445</a>
-								<a class="dropdown-item" id="pills-relatorios-gerenciais-tab" href= 'relatorios-gerenciais.html'>Relatórios Gerenciais</a>
-								</div>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle"  
-									data-toggle="dropdown" 
-									href="#" role="tab" 
 									aria-selected="true">Tratamentos</a>
 								<div class="dropdown-menu">
 								<a class="dropdown-item" id="pills-erro-captura-tab" href= 'erro-captura.html'>Erro Captura</a>
@@ -128,7 +115,8 @@
 								<a class="dropdown-item" id="pills-ressarcimento-tab" href= 'ressarcimento.html'>Ressarcimento</a>
 								<a class="dropdown-item" id="pills-estatisticas-news-tab" href= 'estatisticas-news.html'>Estatísticas de News</a>
 								<a class="dropdown-item" id="pills-relatorio-susep-tab" href= 'relatorio-susep.html'>Relatório Susep 445</a>
-								<a class="dropdown-item" id="pills-relatorios-gerenciais-tab" href= 'relatorios-gerenciais.html'>Relatórios Gerenciais</a>
+                                <a class="dropdown-item" id="pills-relatorios-gerenciais-tab" href= 'relatorios-gerenciais.html'>Relatórios Gerenciais</a>
+                                <a class="dropdown-item" id="pills-relatorios-gerenciais-tab" href= 'relatorios-pendencias.html'>Relatórios de Pendências</a>
 								</div>
 							</li>
 							</ul>
@@ -441,11 +429,11 @@
 													<div id="collapseInfo" class="collapse" aria-labelledby="headingInfo" data-parent="#accordionExample">
 														<div class="container-fluid">
 															<div class="row">
-																<div class="col-sm-12 col-md-6 col-lg-3 mb-4">
+																<div class="col-sm-12 col-md-6 col-lg-3 mb-4" data-toggle="modal" data-target="#modalPremioPendente">
 																	<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
 																		<div class="box-item-text my-auto">
 																			<p>Prêmio Pendente</p>
-																			<span>teste</span>
+																			<span>Sim</span>
 																		</div>
 																		<div class="box-item-img my-auto">
 																			<img src="img/icon-premio.png" alt="">
@@ -4193,6 +4181,69 @@
 					</div>
 				</div>
 				<!-- Fim Modal Alterar Processo -->		
+								<!-- modal premio pendente -->
+								<div class="modal fade" id="modalPremioPendente" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+									<div class="modal-dialog w-1050">
+										<div class="modal-content">
+											<div class="modal-header m-header">
+												<h5 class="modal-title" id="exampleModalLongTitle">Consulta Prêmio Pendente</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body mbody-totalizadores mt-3 p-0 d-flex justify-content-center">
+												<div class="container-fluid">
+													<div class="row">
+														<div class="col-12 etapa-1-pp">		
+															<table class="table" id="">
+																<thead>
+																	<tr>
+																		<th scope="col"></th>
+																		<th scope="col"></th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<td style="width: 5%;">
+																			<div class="ex-checkbox chb2">
+																				<input class="form-check-input" id="" name="" type="checkbox">
+																				<label for="checkbox-table"></label>
+																			</div>
+																		</td>
+																		<td style="width: 95%;">Valor do Prêmio Pendente é R$ 1249,46. Deseja desagendar as próximas parcelas?</td>															
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+														<div class="col-12 mt-3 etapa-1-pp">
+															<p class="color-r">
+																<span class="mr-2"><img src="img/aviso.svg" width="17px" height="17px" alt=""></span>ATENÇÃO! Deseja realmente desagendar as próximas parcelas de Prêmio Pendente? Após a confirmação, as parcelas serão DESAGENDADAS DEFINITIVAMENTE!
+															</p>
+														</div>
+													</div>
+													<div class="row etapa-2-pp d-none">
+														<div class="col-12 mt-3">
+															<p class="text-center">
+																<span class="mr-2"><img src="img/aviso.svg" width="17px" height="17px" alt=""></span> Processo Realizado com Sucesso!
+															</p>
+														</div>
+													</div>
+													<div class="row etapa-1-pp">
+														<div class="col-lg-12 text-right m-0 mt-5 bg-gray">
+															<button type="button" class="btn btn-salvar txt-up btn-processar">Processar</button>
+														</div>
+													</div>
+													<div class="row etapa-2-pp d-none mt-3">
+														<div class="col-lg-12 bg-gray">
+															<button type="button" class="btn btn-second txt-up float-right w-90" data-dismiss="modal" aria-label="Close">Sair</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- fim modal premio pendente -->
 				<!-- modal tipo de salvado -->
 				<div class="modal fade" id="modal-tipo-de-salvado" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 					<div class="modal-dialog">
