@@ -1,3 +1,99 @@
+$(document).ready(function(){
+  $("#oficinas").click(function(){
+    $('#oficinas').addClass('active');
+    $('#centro-automotivo').removeClass('active');
+    $('#configuracoes').removeClass('active');
+    $('.ofi').removeClass('hidden');
+    $('.ofi').addClass('active');
+    $('.ca').addClass('hidden');
+    $('.conf').addClass('hidden');
+  });
+
+  $("#centro-automotivo").click(function(){
+    $('#centro-automotivo').addClass('active');
+    $('#oficinas').removeClass('active');
+    $('#configuracoes').removeClass('active');
+    $('.ca').removeClass('hidden');
+    $('.ca').addClass('active');
+    $('.ofi').addClass('hidden');    
+    $('.conf').addClass('hidden');
+  });
+
+  $("#configuracoes").click(function(){
+    $('#configuracoes').addClass('active');
+    $('#centro-automotivo').removeClass('active');
+    $('#oficinas').removeClass('active');
+    $('.conf').removeClass('hidden');
+    $('.conf').addClass('active');
+    $('.ofi').addClass('hidden');    
+    $('.ca').addClass('hidden');
+  });
+
+
+
+  $("#caracteristicas").click(function(){
+    $('#caracteristicas').addClass('active');
+    $('#pagamento-classificacao').removeClass('active');
+    $('#dados-cadastrais').removeClass('active');
+    $('.carac').removeClass('hidden');
+    $('.carac').addClass('active');
+    $('.dc').addClass('hidden');    
+    $('.pc').addClass('hidden');
+  });
+
+
+  $("#dados-cadastrais").click(function(){
+    $('#dados-cadastrais').addClass('active');
+    $('#pagamento-classificacao').removeClass('active');
+    $('#caracteristicas').removeClass('active');
+    $('.dc').removeClass('hidden');
+    $('.dc').addClass('active');
+    $('.carac').addClass('hidden');    
+    $('.pc').addClass('hidden');
+  });
+
+  $("#pagamento-classificacao").click(function(){
+    $('#pagamento-classificacao').addClass('active');
+    $('#dados-cadastrais').removeClass('active');
+    $('#caracteristicas').removeClass('active');
+    $('.pc').removeClass('hidden');
+    $('.pc').addClass('active');
+    $('.carac').addClass('hidden');    
+    $('.dc').addClass('hidden');
+  });
+
+
+  $("#caracteristicas2").click(function(){
+    $('#caracteristicas2').addClass('active');
+    $('#pagamento-classificacao2').removeClass('active');
+    $('#dados-cadastrais2').removeClass('active');
+    $('.carac').removeClass('hidden');
+    $('.carac').addClass('active');
+    $('.dc').addClass('hidden');    
+    $('.pc').addClass('hidden');
+  });
+
+  $("#dados-cadastrais2").click(function(){
+    $('#dados-cadastrais2').addClass('active');
+    $('#pagamento-classificacao2').removeClass('active');
+    $('#caracteristicas2').removeClass('active');
+    $('.dc').removeClass('hidden');
+    $('.dc').addClass('active');
+    $('.carac').addClass('hidden');    
+    $('.pc').addClass('hidden');
+  });
+
+  $("#pagamento-classificacao2").click(function(){
+    $('#pagamento-classificacao2').addClass('active');
+    $('#dados-cadastrais2').removeClass('active');
+    $('#caracteristicas2').removeClass('active');
+    $('.pc').removeClass('hidden');
+    $('.pc').addClass('active');
+    $('.carac').addClass('hidden');    
+    $('.dc').addClass('hidden');
+  });
+});
+
 // tabela com header fixo
 var $th = $('.tableFixHead').find('thead th')
 $('.tableFixHead').on('scroll', function() {

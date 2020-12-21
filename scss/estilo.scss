@@ -403,6 +403,15 @@ body.page-403 > .interna div > div > div h4{
   position: absolute;
 }
 
+.alterar-lote{
+  background: url(../img/alterar.svg);
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  right: 160px;  
+  position: absolute;
+}
 .orcamentos-autorizados{
   background: url(../img/orcamentos.svg);
   width: 35px;
@@ -2458,6 +2467,75 @@ span.btn-add{
 .footer-carta-emissao{padding: 10px 10px 30px 10px; text-align: center;}
 .footer-carta-emissao > div:first-child > p{ margin: 20px 0;}
 // fim Cartas
+
+// Oficinas
+
+.hidden{
+  overflow: hidden;
+  visibility: hidden;
+  display: none;
+}
+
+.tabs-contents > div{
+  display: inline-flex;
+  margin: 0 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.tabs-contents > div > h6{
+  font-size: 13px;
+  color: #d7d7d7;
+  margin: 0;
+}
+
+.tabs-contents > div > h6:hover{
+  color: red;
+  transition: ease all 0.6s;
+}
+
+.tabs-contents > div.active > h6{color: red;}
+
+.tabs-contents > div.active{
+  border: 1px solid red;
+  border-radius: 10px;
+}
+
+
+.tabs-contents2{
+  margin: 10px 0;
+}
+
+.tabs-contents2 > div{
+  display: inline-flex;
+  margin: 0 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.tabs-contents2 > div > h6{
+  font-size: 12px;
+  color: #d7d7d7;
+  margin: 0;
+}
+
+.tabs-contents2 > div > h6:hover{
+  color: #0B67BE;
+  transition: ease all 0.6s;
+}
+
+.tabs-contents2 > div.active > h6{color: #0B67BE;}
+
+.tabs-contents2 > div.active{
+  border-bottom: 2px solid #0B67BE;
+  padding-bottom: 12px;
+  
+}
+// Fim Oficinas
 
 .user{display: block;}
 .interna .mobile{display: none;}

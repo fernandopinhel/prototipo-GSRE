@@ -89,7 +89,7 @@
 								<a class="dropdown-item" id="pills-cadastro-instituicao-tab"   href= 'instituicoes.html'>Instituições</a>
 								<a class="dropdown-item" id="pills-cadastro-tabelas-tab"       href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaTabelas.do'>Tabelas</a>
 								<a class="dropdown-item" id="pills-cadastro-cartas-tab"        href= 'cartas.html'>Cartas</a>
-								<a class="dropdown-item" id="pills-cadastro-oficinas-tab"      href= '/GSRE-SinistroAuto/modulo-consulta/redirecionaOficinas.do'>Oficinas</a>
+								<a class="dropdown-item" id="pills-cadastro-oficinas-tab"      href= 'oficinas.html'>Oficinas</a>
 								</div>
 							</li>							
 							<li class="nav-item dropdown">
@@ -167,19 +167,22 @@
 											</div>
 										</div>
 										<div class="row bg-gray m-0 h-54">
-											<div class=" float-right">
+											<div class="float-right mt-1" data-toggle="modal" data-target="#modal-editar-lote">
+												<a href="#" class="alterar-lote" data-toggle="tooltip" data-original-title="Alterar Status"></a>
+											</div>
+											<div class="float-right">
 												<a href="#" class="pdf" data-toggle="tooltip" data-original-title="Exportar PDF" style="right: 110px; width: 35px; height: 35px;"></a>
 											</div>
-											<div class="col-lg-12">
-												<div class="exportar-orcamentos float-right">
-													<a href="#" class="excel" data-toggle="tooltip" data-original-title="Exportar Excel"></a>
+											<div class="float-right">
+												<div class="exportar-orcamentos">
+													<a href="#" class="excel" data-toggle="tooltip" data-original-title="Exportar Excel" style="right: 56px; width: 35px; height: 35px;"></a>
                                                 </div>
 											</div>
 										</div>
 										<!-- Erros -->
 										<div class="row buscas-gerais mt-4">
-                                            <div class="col-lg-3 internas-buscas">
-                                                <label for="ramo">Tipo de Pendências</label> 
+                                            <div class="col-lg-2 internas-buscas">
+                                                <label for="ramo">Sucursal do Aviso</label> 
                                                 <select class="selectpicker form-control" id="" 
                                                         data-live-search="true"
                                                         title="Selecione..." data-hide-disabled="true"
@@ -190,47 +193,143 @@
                                                             Todos
                                                         </option>
                                                 </select>
-                                            </div>   
-                                            <div class="col-lg-3 internas-buscas-3">
-                                                <div class="row d-flex position-relative">
-                                                    <div class="col-lg-12">
-                                                        <p>Período (Data da geração dpo News)</p>
-                                                    </div>
-                                                    <div class="col-lg-1 my-auto" style="top: -18px;">											
-                                                        <label for="text" class="mt-4">De</label>
-                                                    </div> 
-                                                    <div class="col-lg-5 internas-buscas-4 my-auto" style="top: -18px;">											
-                                                        <div class="form-group">
-                                                            <label for="text"></label>
-                                                            <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-                                                        </div>
-                                                    </div> 
-                                                    <div class="col-lg-1 my-auto" style="top: -18px;">
-                                                        <label for="text" class="mt-4">a</label>
-                                                    </div> 
-                                                    <div class="col-lg-5 internas-buscas-4 my-auto" style="top: -18px;">										
-                                                        <div class="form-group">
-                                                            <label for="text"></label>
-                                                            <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-                                                        </div>
-                                                    </div> 
-                                                </div>
-                                            </div>    
-                                            <div class="col-lg-2 internas-buscas">
-                                                <label for="text">Sucursal Emissora</label>
+											</div>   
+											<div class="col-lg-2 internas-buscas">
+                                                <label for="text">Sinistro</label>
+                                                <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
+											</div>
+											<div class="col-lg-2 internas-buscas">
+                                                <label for="ramo">Processo do</label> 
+                                                <select class="selectpicker form-control" id="" 
+                                                        data-live-search="true"
+                                                        title="Selecione..." data-hide-disabled="true"
+                                                        data-container="body"
+                                                        name=""
+                                                        data-actions-box="true">
+                                                        <option value="" selected>
+                                                            Todos
+                                                        </option>
+                                                </select>
+											</div>   
+											<div class="col-lg-2 internas-buscas">
+                                                <label for="ramo">Status</label> 
+                                                <select class="selectpicker form-control" id="" 
+                                                        data-live-search="true"
+                                                        title="Selecione..." data-hide-disabled="true"
+                                                        data-container="body"
+                                                        name=""
+                                                        data-actions-box="true">
+                                                        <option value="" selected>
+                                                            Todos
+                                                        </option>
+                                                </select>
+											</div>   
+											<div class="col-lg-3 internas-buscas-3">
+												<div class="row p-0">
+													<div class="col-lg-12">
+														<p>Data de</p>
+													</div>
+													<div class="col-lg-2 internas-buscas my-auto">
+														<div class="form-group form-check form-check-inline mt-3">
+															<input type="radio" name="data-de" id="" value="1" class="form-check-input">
+															<label for="ind" class="form-check-input">Ind.</label>
+														</div>
+													</div>
+													<div class="col-lg-2 internas-buscas my-auto">
+														<div class="form-group form-check form-check-inline  mt-3">
+															<input type="radio" name="data-de" id="" value="2" class="form-check-input">
+															<label for="lib" class="form-check-input">Lib.</label>
+														</div>
+													</div>     
+													<div class="col-lg-2 internas-buscas my-auto">
+														<div class="form-group form-check form-check-inline  mt-3">
+															<input type="radio" name="data-de" id="" value="2" class="form-check-input">
+															<label for="env" class="form-check-input">Env.</label>
+														</div>
+													</div>   
+													<div class="col-lg-2 internas-buscas my-auto">
+														<div class="form-group form-check form-check-inline  mt-3">
+															<input type="radio" name="data-de" id="" value="2" class="form-check-input">
+															<label for="resp" class="form-check-input">Resp.</label>
+														</div>
+													</div>   
+												</div>
+											</div>
+											<div class="col-lg-3 internas-buscas-3 position-relative  mt-4">
+												<div class="row d-flex">
+													<div class="col-lg-1" style="top: 14px;">											
+														<label for="text" class="mt-4">De</label>
+													</div> 
+													<div class="col-lg-4 internas-buscas-4">											
+														<div class="form-group">
+															<label for="text"></label>
+															<input type="text" name="" maxlength="" value="" id="" class="form-control" autocomplete="off"> 
+														</div>
+													</div> 
+													<div class="col-lg-1" style="top: 14px;">
+														<label for="text" class="mt-4">Até</label>
+													</div> 
+													<div class="col-lg-4 internas-buscas-4 ">										
+														<div class="form-group">
+															<label for="text"></label>
+															<input type="text" name="" maxlength="" value="" id="" class="form-control" autocomplete="off"> 
+														</div>
+													</div> 
+												</div>
+											</div>
+											<div class="col-lg-2 internas-buscas mt-4">
+                                                <label for="ramo">Liberado por</label> 
+                                                <select class="selectpicker form-control" id="" 
+                                                        data-live-search="true"
+                                                        title="Selecione..." data-hide-disabled="true"
+                                                        data-container="body"
+                                                        name=""
+                                                        data-actions-box="true">
+                                                        <option value="">
+                                                            Todos
+                                                        </option>
+                                                </select>
+											</div>   
+											<div class="col-lg-3 internas-buscas-3 mt-5 position-relative">
+												<div class="row p-0">
+													<div class="col-lg-4 internas-buscas my-auto" style="left: 50px;">
+														<div class="form-group form-check form-check-inline mt-3">
+															<input type="radio" name="tipo" id="" value="1" class="form-check-input">
+															<label for="sup" class="form-check-input">Supervisor</label>
+														</div>
+													</div>
+													<div class="col-lg-4 internas-buscas my-auto" style="left: 50px;">
+														<div class="form-group form-check form-check-inline  mt-3">
+															<input type="radio" name="tipo" id="" value="2" class="form-check-input">
+															<label for="ana" class="form-check-input">Analista</label>
+														</div>
+													</div>     
+												</div>
+											</div>
+											<div class="col-lg-2 internas-buscas mt-4">
+                                                <label for="ramo"></label> 
+                                                <select class="selectpicker form-control mt-2" id="" 
+                                                        data-live-search="true"
+                                                        title="Selecione..." data-hide-disabled="true"
+                                                        data-container="body"
+                                                        name=""
+                                                        data-actions-box="true">
+                                                        <option value="">
+                                                            Todos
+                                                        </option>
+                                                </select>
+											</div>   
+                                            <div class="col-lg-2 internas-buscas mt-4">
+                                                <label for="text">Ressarcimento Superior a</label>
                                                 <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
                                             </div>
-                                            <div class="col-lg-2 internas-buscas">
-                                                <label for="text">Avas</label>
-                                                <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-                                            </div>
-											<div class="col-lg-2 mt-2">
-												<button type="button" name="button" class="btn btn-primary  mt-4">Buscar</button>
+											<div class="col-lg-12 mt-5">
+												<button type="button" name="button" class="btn btn-primary mt-2 float-right">Buscar</button>
 											</div>
 										</div>
 										<div class="row mt-5">
 											<div class="col-lg-10 internas-buscas d-flex my-auto">
-												<p><strong>1</strong> Relatórios de Pendências Encontrados</p>
+												<p><strong>1</strong> Ressarcimento Encontrado</p>
 											</div>
 											<div class="col-lg-12"><hr></div>
 										</div>                                            
@@ -244,26 +343,28 @@
 																	<input class="form-check-input check-todos" onclick="marcarTodos(this.checked)" id="checkbox_one" type="checkbox" data-toggle="tooltip" data-original-title="Selecionar todos">
 																	<label for="checkbox_one" class="check-estilo"></label>
 																</div>
-															</th>															
+															</th>					
+															<th></th>										
+															<th scope="col">Sucursal</th>
+															<th scope="col">Ramo</th>																																													
+															<th scope="col">Cia</th>
 															<th scope="col">Apólice</th>
-															<th scope="col">Ocorrência</th>																																													
-															<th scope="col">Avas</th>
-															<th scope="col">Sinistro</th>
-															<th scope="col">Processo</th>		
-															<th scope="col">Natureza</th>													
-															<th scope="col">Placa</th>
-                                                            <th scope="col">Usuário</th>
-                                                            <th scope="col">Situação</th>
-                                                            <th scope="col">Sucursal</th>
-                                                            <th scope="col">Aviso</th>
-                                                            <th scope="col">Segurado</th>
-                                                            <th scope="col">Chassi</th>
-                                                            <th scope="col">Tipo</th>
-                                                            <th scope="col">Agravo</th>
-                                                            <th scope="col">CEP Avisado</th>
-                                                            <th scope="col">CPF Condutor</th>
-                                                            <th scope="col">Condutor</th>
-                                                            <th scope="col">Idade</th>
+															<th scope="col">Item</th>		
+															<th scope="col">Nome Segurado</th>													
+															<th scope="col">CPF/CNPJ Segurado</th>
+                                                            <th scope="col">Sinistro</th>
+                                                            <th scope="col">Proc.</th>
+                                                            <th scope="col">Natureza</th>
+                                                            <th scope="col">Ocorrência</th>
+                                                            <th scope="col">Seq.</th>
+                                                            <th scope="col">Status</th>
+                                                            <th scope="col">Inclusão</th>
+															<th scope="col">Liberação</th>
+															<th scope="col">Culpado</th>
+                                                            <th scope="col">Orçado</th>                                                            
+                                                            <th scope="col">Indenizado</th>
+															<th scope="col">Incluído por</th>
+															<th scope="col">Liberado por</th>
 														</tr>
 													</thead>
 													<tbody>
@@ -273,26 +374,37 @@
 																	<input type="checkbox" class="marcar" id="checkbox_single">
 																	<label for="checkbox_single" class="check-estilo" data-toggle="tooltip" data-original-title="Selecionar Orçamento"></label>
 																</div>
-															</td>																									
-															<td style="width: 10%;">867 990 244 206162 0001</td>   
-															<td>15/12/2020</td>     																																													     
-															<td>104202012163413</td>     
-															<td>3139052</td>  
+															</td>		
+															<td>
+																<div style="width: 70px;">
+																	<a href="#" data-toggle="modal" data-target="#modal-editar" class="mr-2">
+																		<img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar" width="25px">
+																	</a>
+																	<a href="#" data-toggle="modal" data-target="#modal-detalhes" class="mr-2">
+																		<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes" width="25px">
+																	</a>
+																</div>
+															</td>																							
+															<td>940</td>   
+															<td>990</td>     																																													     
+															<td>244</td>     
+															<td>94202</td>  
 															<td>1</td>  
-															<td>69</td>  
-															<td>PDG3300</td>
-                                                            <td>Analista Dano Parcial</td>
-                                                            <td>Em Análise</td>
-                                                            <td>867</td>
-                                                            <td>16/12/2020</td>
-                                                            <td>Ivo Luis de Melo</td>
-                                                            <td>9BD57831FKY287858</td>
-                                                            <td>CEP de Pernoite</td>
-                                                            <td>8.88%</td>
-                                                            <td>53510000</td>
-                                                            <td>99999999999</td>
-                                                            <td>Carlos Alberto Felicio</td>
-                                                            <td>38</td>
+															<td>JJ Empreendimentos</td>  															
+                                                            <td>53.211.504/0001-17</td>
+                                                            <td>3139600</td>
+                                                            <td>1</td>
+                                                            <td>1</td>
+                                                            <td>03/12/2020</td>
+                                                            <td>1</td>
+                                                            <td>1 - Aguardando Liberação</td>
+                                                            <td>17/12/2020</td>
+															<td>-</td>															
+                                                            <td>LNW0676</td>
+                                                            <td>R$ 12.973,06</td>
+															<td>R$ 12.973,06</td>
+															<td>Analista Dano Parcial</td>
+															<td>-</td>
 														</tr>
 													</tbody>
 												</table>
@@ -307,70 +419,62 @@
 					</div>						
 				</div>
 				<!-- fim desktop -->
-				<!-- modal histórico Log -->
-				<div class="modal fade bd-example-modal-lg" id="consultarModalLog" tabindex="-1" role="dialog" aria-labelledby="consultarModalLogLabel" aria-hidden="true">
-					<div class="modal-dialog modal-lg w-1050">	
-						<div class="modal-content">
-							<div class="modal-header m-header">
-								<h5 class="modal-title" id="consultarModalLogTitle">Visualização de Log do Orçamento</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body  d-flex justify-content-center">
-									<div class="table-responsive">
-										<form id="" class="" name="" action="" method="post">
-											<table class="table table-striped" id="">
-												<thead>
-													<tr>
-														<th scope="col">Atendimento</th>
-														<th scope="col">CNPJ</th>
-														<th scope="col">Sinistro</th>
-														<th scope="col">Processo</th>
-														<th scope="col">Oficina</th>
-														<th scope="col">Status do Perfil</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>246578254549494169191</td>
-														<td>67.666.988/0001-99</td>
-														<td>2465782</td>
-														<td>1</td>
-														<td>56588</td>
-														<td>Ativo</td>
-													</tr>
-												</tbody>
-											</table>
-										</form>
-									</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- fim histórico Log -->
-
-				<!-- modal anexo Comprovantes -->
-				<div class="modal fade bd-example-modal-lg" id="modalAnexos" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">				
-					<div class="modal-dialog modal-lg">
-						<div class="modal-content">
-							<div class="modal-header m-header">
-							<h5 class="modal-title" id="exampleModalLabel">Documentos Anexados</h5>
+			<!-- modal editar -->
+			<div class="modal fade bd-example-modal-lg" id="modal-editar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-header m-header">
+							<h5 class="modal-title" id="exampleModalLongTitle">Alterar Status</h5>
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
+							<span aria-hidden="true">&times;</span>
 							</button>
-							</div>
-							<div class="modal-body bg-light-gray p-0">		
-								<div class="container-fluid m-0">
-									<div class="lightbox-gallery">
-										<div class="container">
-											<div class="row photos mt-3 mb-3">
-												<div class="col-sm-6 col-md-4 col-lg-3 item">
-													<a href="imagens/img1.jpg" data-lightbox="photos">
-														<img class="img-fluid" src="imagens/img1.jpg">
-													</a>
-												</div>
-											</div>
+						</div>
+						<div class="modal-body mbody-detalhes d-flex justify-content-center">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-lg-3 mt-3 mb-3 pr-2">
+										<h6 class="txt-up">Sinistro</h6>
+										<p><b>3139214</b></p>
+									</div>
+									<div class="col-lg-3 mt-3 mb-3 pr-2">
+										<h6 class="txt-up">Proc.</h6>
+										<p><b>1</b></p>
+									</div>
+									<div class="col-lg-3 mt-3 mb-3 pr-2">
+										<h6 class="txt-up">Seq.</h6>
+										<p><b>1</b></p>
+									</div>
+									<div class="col-lg-3 mt-3 mb-3 pr-2">
+										<h6 class="txt-up">Culpado</h6>
+										<p><b>1</b></p>
+									</div>
+									<div class="col-12"><hr></div>
+									<div class="col-lg-12 mt-3 mb-3 pr-2">
+										<h6 class="txt-up">Status</h6>
+										<select class="selectpicker form-control" id="" 
+												data-live-search="true"
+												title="Selecione..." data-hide-disabled="true"
+												data-container="body"
+												name=""
+												data-actions-box="true">
+												<option value="" selected>
+													1 - Aguardando Liberação
+												</option>
+										</select>
+									</div>   
+									<div class="col-12"><hr></div>
+									<div class="col-lg-12 mt-3 mb-3 pr-2">
+										<h6 class="txt-up">Observação</h6>
+										<p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultrices eu nunc a efficitur. Quisque laoreet eleifend neque, vitae luctus lectus mollis in. Fusce eleifend lacus augue, ut elementum metus suscipit quis.</b></p>
+									</div>
+									<div class="col-12"><hr></div>
+								</div>
+								<div class="container-fluid mt-3 p-0">
+									<div class="row">
+										<div class="col-lg-12">
+											<button type="button" class="btn btn-info txt-up mr-3 float-left" data-dismiss="modal">Próximo</button>
+											<button type="button" class="btn btn-salvar txt-up float-right" data-dismiss="modal">Salvar/Próximo</button>
+											<button type="button" class="btn btn-salvar txt-up float-right mr-3" data-dismiss="modal">Salvar</button>
 										</div>
 									</div>
 								</div>
@@ -378,306 +482,94 @@
 						</div>
 					</div>
 				</div>
-				<!-- fim modal anexo Comprovantes -->	
+			</div>
+			<!-- fim modal editar -->
+			<!-- modal editar lote -->
+			<div class="modal fade bd-example-modal-lg" id="modal-editar-lote" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-header m-header">
+							<h5 class="modal-title" id="exampleModalLongTitle">Alterar Status</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body mbody-detalhes d-flex justify-content-center">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-lg-12">
+										<p class="color-r">Foram selecionados 18 ressarcimentos para serem alterados.</p>
+									</div>
+									<div class="col-lg-12 mt-3 mb-3 pr-2">
+										<h6 class="txt-up">Status</h6>
+										<select class="selectpicker form-control" id="" 
+												data-live-search="true"
+												title="Selecione..." data-hide-disabled="true"
+												data-container="body"
+												name=""
+												data-actions-box="true">
+												<option value="" selected>
+													1 - Aguardando Liberação
+												</option>
+										</select>
+									</div>   
+								</div>
+								<div class="container-fluid mt-3 p-0">
+									<div class="row">
+										<div class="col-lg-12">											
+											<button type="button" class="btn btn-salvar txt-up float-right" data-dismiss="modal">Salvar</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- fim modal editar lote -->
 
-				<!-- modal detalhes erro orçamento -->
-				<div class="modal fade" id="consultarModalDetalhes" tabindex="-1" role="dialog" aria-labelledby="consultarModalDetalhesTitle" aria-hidden="true">
-					<div class="modal-dialog modal-lg" role="document">
-						<div class="modal-content">
-							<div class="modal-header m-header">
-								<h5 class="modal-title" id="consultarModalDetalhesTitle">Editar/Detalhes Erro Captura</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body mbody-detalhes d-flex justify-content-center">
-								<div class="container-fluid">									
-									<div class="row">
-										<div class="col-lg-12">
-											<h6 class="color-r txt-up">Mensagem de Erro em 16/11/2020</h6>
-										</div>
-										<div class="col-lg-12 mt-2 mb-3 pr-2">
-											<textarea name="" id="" cols="90" rows="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam commodo, metus et congue tempus, ex erat accumsan mauris, eget commodo mauris dui vel est.</textarea>											
-											<!-- <p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam commodo, metus et congue tempus, ex erat accumsan mauris, eget commodo mauris dui vel est.</b></p> -->
-										</div>
+						<!-- modal detalhes -->
+						<div class="modal fade bd-example-modal-lg" id="modal-detalhes" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+							<div class="modal-dialog modal-lg w-1050">	
+								<div class="modal-content">
+									<div class="modal-header m-header">
+										<h5 class="modal-title" id="exampleModalLongTitle">Processos</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+										</button>
 									</div>
-									<hr>
-									<div class="row">
-										<div class="col-lg-12">
-											<h6 class="color-r txt-up">Dados do Sinistro</h6>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">                                            
-											<label for="text">Ocorrência</label>
-											<input type="text" name="" maxlength="8" value="05/11/2020" id="" class="form-control" autocomplete="off"> 
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<label for="text">Caixa</label>
-											<input type="text" name="" maxlength="8" value="ASA" id="" class="form-control" autocomplete="off"> 
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">                                            
-											<label for="text">Aviso</label>
-											<input type="text" name="" maxlength="8" value="06/11/2020" id="" class="form-control" autocomplete="off"> 
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">                                            
-											<label for="text">Cobertura</label>
-											<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">     
-											<label for="filtro">Tipo de Documentação</label>
-											<select class="selectpicker form-control" data-live-search="true" title="Selecione..." data-hide-disabled="true" data-actions-box="true">
-												<option value="0">Selecione</option>
-													<option value="1" selected>Abertura de Processo</option>
-											</select>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">                                            
-											<label for="text">1º Vencimento</label>
-											<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">                                            
-											<label for="text">Código Natureza</label>
-											<input type="text" name="" maxlength="8" value="1" id="" class="form-control" autocomplete="off"> 
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">                                            
-											<label for="text">Valor Indenizado</label>
-											<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-										</div>
-										<div class="col-lg-12 mt-3 mb-3 pr-2">
-											<div class="ex-checkbox">
-												<input class="form-check-input" type="checkbox" value="true">
-												<label class="form-check-label" for="cmpNewsOrcamento">Documentos Segurado enviados pelo terceiro</label>
+									<div class="modal-body  d-flex justify-content-center">
+											<div class="table-responsive">
+												<form id="" class="" name="" action="" method="post">
+													<table class="table table-striped" id="">
+														<thead>
+															<tr>																
+																<th scope="col" style="width:20%;">Usuário</th>
+																<th scope="col" style="width:6%;">Na</th>
+																<th scope="col" style="width:18%;">Status</th>
+																<th scope="col" style="width:19%;">Segurado / Terceiro</th>
+																<th scope="col" style="width:18%;">Placa</th>
+																<th scope="col" style="width:19%;">Chassi</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>															
+																<td>Analista Dano Parcial</td>
+																<td>1</td>
+																<td>Em Análise</td>
+																<td>JJ Empreendimentos</td>
+																<td>GBJ2887</td>
+																<td>9BD5781FFHY157136</td>
+															</tr>
+														</tbody>
+													</table>
+												</form>
 											</div>
-										</div>
-									</div>
-									<hr>
-									<div class="row">
-										<div class="col-lg-12">
-											<h6 class="color-r txt-up">Apólice Sinistrada</h6>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">                                            
-											<label for="text">Suc</label>
-											<input type="text" name="" maxlength="8" value="139" id="" class="form-control" autocomplete="off"> 
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">                                            
-											<label for="text">Ramo</label>
-											<input type="text" name="" maxlength="8" value="990" id="" class="form-control" autocomplete="off"> 
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">                                            
-											<label for="text">CIA</label>
-											<input type="text" name="" maxlength="8" value="244" id="" class="form-control" autocomplete="off"> 
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">                                            
-											<label for="text">Apólice</label>
-											<input type="text" name="" maxlength="8" value="555749" id="" class="form-control" autocomplete="off"> 
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">                                            
-											<label for="text">Item</label>
-											<input type="text" name="" maxlength="8" value="1" id="" class="form-control" autocomplete="off"> 
-										</div>
-									</div>
-									<hr>
-									<div class="row">
-										<div class="col-lg-12">
-											<h6 class="color-r txt-up">Informações sobre Terceiro</h6>
-										</div>
-										<div class="col-lg-3 mt-3 mb-3 pr-2">     
-											<label for="filtro">Tipo de Terceiro</label>
-											<select class="selectpicker form-control" data-live-search="true" title="Selecione..." data-hide-disabled="true" data-actions-box="true">
-												<option value="0">Selecione</option>
-													<option value="1" selected>Física</option>
-											</select>
-										</div>
-										<div class="col-lg-3 mt-3 mb-3 pr-2">                                            
-											<label for="text">CPF</label>
-											<input type="text" name="" maxlength="8" value="999.999.999-99" id="" class="form-control" autocomplete="off"> 
-										</div>
-										<div class="col-lg-2 mt-4 mb-3 pr-2">										
-											<div class="form-group form-check form-check-inline mt-4">
-												<input type="radio" name="tipo" id="" value="1" class="form-check-input">
-												<label for="auto" class="form-check-input">Auto</label>
-											</div>
-										</div>
-										<div class="col-lg-4 mt-4 mb-3 pr-2">										
-											<div class="form-group form-check form-check-inline mt-4">
-												<input type="radio" name="tipo" id="" value="1" class="form-check-input">
-												<label for="outro" class="form-check-input">Outro (Não veículo)</label>
-											</div>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">                                            
-											<label for="text">Placa</label>
-											<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<label for="filtro">UF</label>
-											<select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione...">
-												<option value="0" selected>RJ</option>
-												<option value="0">SP</option>
-												<option value="0">MG</option>
-											</select>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">                                            
-											<label for="text">Chassi</label>
-											<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<label for="filtro">Tipo Veículo</label>
-											<select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione...">
-												<option value="0" selected>Selecione</option>
-											</select>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">                                            
-											<label for="text">Complemento</label>
-											<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-										</div>
-									</div>		
-									<hr>
-									<div class="row">
-										<div class="col-lg-12 text-center mb-2">
-											<a href="#" class="txt-up btn-mais-info">
-												<span>Mais Informações</span>
-												<i class="fa fa-chevron-down"></i>
-											</a>										
-											<a href="#" class="txt-up btn-menos-info d-none">
-												<span>Menos Informações</span>
-												<i class="fa fa-chevron-up"></i>
-											</a>
-										</div>
-									</div>
-									<div class="row mais-info d-none">
-										<div class="col-lg-12">
-											<h6 class="color-r txt-up">Mais Informações</h6>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Data Vencimento</h6>
-											<p><b>05/06/20</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Valor Indenização</h6>
-											<p><b>-</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Cobertura</h6>
-											<p><b>-</b></p>
-										</div>
-										<div class="col-lg-12"><hr></div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Caixa</h6>
-											<p><b>-</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">FL Tipo</h6>
-											<p><b>-</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">CPF/CNPJ</h6>
-											<p><b>-</b></p>
-										</div>
-										<div class="col-lg-12"><hr></div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Complemento</h6>
-											<p><b>-</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">FLAGAUTO</h6>
-											<p><b>-</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">NMBAT</h6>
-											<p><b>-</b></p>
-										</div>
-										<div class="col-lg-12"><hr></div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Tipo Veículo</h6>
-											<p><b>-</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">FLNAC</h6>
-											<p><b>-</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">SUCRE</h6>
-											<p><b>-</b></p>
-										</div>
-										<div class="col-lg-12"><hr></div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">DE_NAT</h6>
-											<p><b>-</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">DTEXC</h6>
-											<p><b>-</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">MOTEX</h6>
-											<p><b>-</b></p>
-										</div>
-										<div class="col-lg-12"><hr></div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">CDATE</h6>
-											<p><b>-</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Placa</h6>
-											<p><b>-</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">UF</h6>
-											<p><b>-</b></p>
-										</div>
-										<div class="col-lg-12"><hr></div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Chassi</h6>
-											<p><b>-</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">ID_ERRO_CAPT</h6>
-											<p><b>-</b></p>
-										</div>
-									</div>						
-								</div>
-							</div>
-							<div class="modal-footer">
-								<div class="container-fluid">
-									<button type="button" class="btn btn-cancel mr-4 float-left" data-dismiss="modal">Cancelar</button>
-									<button type="button" class="btn btn-salvar btn-salvar-modal float-right txt-up" data-dismiss="modal">Salvar</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- fim modal erro orçamento -->
-
-				<!-- modal Informações de Ambiente -->
-				<div class="modal fade bd-example-modal-lg" id="modal-info-ambiente" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-					<div class="modal-dialog modal-lg">
-						<div class="modal-content">
-							<div class="modal-header m-header">
-								<h5 class="modal-title" id="exampleModalLongTitle">Informações de Ambiente</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body mbody-detalhes d-flex justify-content-center">
-								<div class="container-fluid">
-									<div class="row">
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Server Name</h6>
-											<p><b>Server Name</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Build Tag</h6>
-											<p><b>Build Tag</b></p>
-										</div>
-										<div class="col-lg-4 mt-3 mb-3 pr-2">
-											<h6 class="txt-up">Release Version</h6>
-											<p><b>Release Version</b></p>
-										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-				<!-- Fim modal Informações de Ambiente -->	
+						<!-- fim detalhes -->
 			</div>
 			<!-- fim container-->
 		</section>
