@@ -1,4 +1,9 @@
 $(document).ready(function(){
+  $("#busca-avancada").click(function(){
+    $('.busca-avancada').toggleClass('d-none');
+    $('.btn-busca-um').toggleClass('d-none');
+  });
+
   $("#oficinas").click(function(){
     $('#oficinas').addClass('active');
     $('#centro-automotivo').removeClass('active');
