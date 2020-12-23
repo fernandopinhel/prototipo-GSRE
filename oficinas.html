@@ -197,7 +197,7 @@
 											</div>
 										</div>
                                         <div class="row mt-3 d-none busca-avancada">
-                                            <div class="col-lg-1 internas-buscas mt-2">
+                                            <div class="col-lg-1 internas-buscas">
                                                 <label for="ramo">UF</label> 
                                                 <select class="selectpicker form-control" id="" 
                                                         data-live-search="true"
@@ -210,7 +210,7 @@
                                                         </option>
                                                 </select>
                                             </div>   
-                                            <div class="col-lg-3 internas-buscas mt-2">
+                                            <div class="col-lg-3 internas-buscas">
                                                 <label for="ramo">Cidade</label> 
                                                 <select class="selectpicker form-control" id="" 
                                                         data-live-search="true"
@@ -223,20 +223,7 @@
                                                         </option>
                                                 </select>
                                             </div>   
-                                            <div class="col-lg-3 internas-buscas mt-2">
-                                                <label for="ramo">Bairro</label> 
-                                                <select class="selectpicker form-control" id="" 
-                                                        data-live-search="true"
-                                                        title="Selecione..." data-hide-disabled="true"
-                                                        data-container="body"
-                                                        name=""
-                                                        data-actions-box="true">
-                                                        <option value="">
-                                                            Tijuca
-                                                        </option>
-                                                </select>
-                                            </div>   
-                                            <div class="col-lg-3 internas-buscas mt-2">
+                                            <div class="col-lg-2 internas-buscas">
                                                 <label for="ramo">Bandeira</label> 
                                                 <select class="selectpicker form-control" id="" 
                                                         data-live-search="true"
@@ -249,7 +236,7 @@
                                                         </option>
                                                 </select>
                                             </div>   
-                                            <div class="col-lg-3 internas-buscas mt-4">
+                                            <div class="col-lg-2 internas-buscas">
                                                 <label for="ramo">Tipo Oficina</label> 
                                                 <select class="selectpicker form-control" id="" 
                                                         data-live-search="true"
@@ -262,7 +249,7 @@
                                                         </option>
                                                 </select>
                                             </div>   
-                                            <div class="col-lg-3 internas-buscas mt-4">
+                                            <div class="col-lg-2 internas-buscas">
                                                 <label for="ramo">Categoria</label> 
                                                 <select class="selectpicker form-control" id="" 
                                                         data-live-search="true"
@@ -275,7 +262,7 @@
                                                         </option>
                                                 </select>
                                             </div>   
-                                            <div class="col-lg-3 internas-buscas mt-4">
+                                            <div class="col-lg-2 internas-buscas">
                                                 <label for="ramo">Status</label> 
                                                 <select class="selectpicker form-control" id="" 
                                                         data-live-search="true"
@@ -288,8 +275,8 @@
                                                         </option>
                                                 </select>
                                             </div>   
-											<div class="col-lg-2 col-xl-2 mt-2">
-												<button type="button" name="button" class="btn btn-primary mr-3 mt-5">Buscar</button>
+											<div class="col-12 mt-3">
+												<button type="button" name="button" class="btn btn-primary float-right">Buscar</button>
 											</div>
 										</div>
 										<!-- Oficinas -->
@@ -309,52 +296,37 @@
                                                             <thead>
                                                                 <tr>
                                                                     <th scope="col"></th>
-                                                                    <th scope="col">CNPJ</th>
-                                                                    <th scope="col">Razão Social</th>
-                                                                    <th scope="col">Nome Fantasia</th>
                                                                     <th scope="col">UF</th>
-                                                                    <th scope="col">Cidade</th> 
-                                                                    <th scope="col">Bairro</th> 	
-                                                                    <th scope="col">Características</th>
-                                                                    <th scope="col">Bandeira</th>
-                                                                    <th scope="col">Tipo Oficina</th>
-                                                                    <th scope="col">Categoria</th>
+                                                                    <th scope="col">CNPJ</th>
+                                                                    <th scope="col">Nome Fantasia</th>
                                                                     <th scope="col">Status</th>
+                                                                    <th scope="col">Tipo Oficina</th> 
+                                                                    <th scope="col">Bandeira</th> 	
+                                                                    <th scope="col">Categoria</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
                                                                 <tr>
-                                                                    <td class="actions ac-3">
-                                                                        <div class="float-right ml-3">
-                                                                            <div class="menu-visible">
-                                                                                <span class="circle"></span>
-                                                                                <span class="circle"></span>
-                                                                                <span class="circle"></span>
-                                                                            </div>
-                                                                            <div class="menu-invisible" style="top: -5px;">
-																				<a href="#" data-toggle="modal" data-target="#modal-historico" >
-                                                                                    <img src="img/historico.svg" data-toggle="tooltip" data-original-title="Histórico">
-                                                                                </a>
-                                                                                <a href="cadastro-oficinas.html">
-                                                                                    <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar">
-                                                                                </a>
-                                                                                <a href="cadastro-oficinas.html">
-                                                                                    <img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes">
-                                                                                </a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
+                                                                    <td style="width: 9%;">
+																		<div>
+																			<a href="#" data-toggle="modal" data-target="#modal-historico" >
+																				<img src="img/historico.svg" data-toggle="tooltip" data-original-title="Histórico" width="25px" style="float: left; margin-right: 9px;">
+																			</a>
+																			<a href="cadastro-oficinas.html">
+																				<img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar" width="25px" style="float: left; margin-right: 8px;">
+																			</a>
+																			<a href="cadastro-oficinas.html">
+																				<img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes" width="25px" style="float: left;">
+																			</a>
+																		</div>
+																	</td>
+																	<td>RJ</td> 
                                                                     <td>65.884.002/0001-36</td>
                                                                     <td>JJ Empreendimentos</td>
-                                                                    <td>JJ</td>
-                                                                    <td>RJ</td> 
-                                                                    <td>Rio de Janeiro</td>   
-                                                                    <td>Tijuca</td>   
-                                                                    <td>Características</td>     
-                                                                    <td>Bandeira</td>   
-                                                                    <td>Tipo Oficina</td>                                                    
-                                                                    <td>Categoria</td>   
-                                                                    <td>Status</td>   
+																	<td>Status</td>   
+																	<td>Tipo Oficina</td>    
+																	<td>Bandeira</td>   
+																	<td>Categoria</td>   
                                                                 </tr>
                                                             </tbody>
                                                         </table>
