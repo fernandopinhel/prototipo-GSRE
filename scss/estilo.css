@@ -872,6 +872,20 @@ p.welcome {
   font-size: 14px;
 }
 
+#modalPremioPendente > div > div > div > div > div > div > table > tbody > tr > td {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.etapa-1-pp > p {
+  font-size: 13px;
+}
+
+.etapa-1-pp > p > span {
+  position: relative;
+  top: -1px;
+}
+
 .menu-doc {
   text-align: center;
   color: #AFC5DB;
