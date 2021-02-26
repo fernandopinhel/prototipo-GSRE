@@ -831,6 +831,14 @@ label.form-check-label {
   height: 54px;
 }
 
+.h-58 {
+  height: 58px;
+}
+
+.h-64 {
+  height: 64px;
+}
+
 p.legendas {
   color: #fff;
 }
@@ -2385,7 +2393,7 @@ span.btn-add {
   background-position: center;
 }
 
-.info-parecer, .info-orcamento {
+.info-parecer, .info-orcamento, .info-tabelas {
   background: #f9f9f9;
   padding: 15px 10px 10px 10px;
   border-radius: 10px;
@@ -3014,5 +3022,44 @@ span.btn-add {
   .thumbs img {
     width: 100% !important;
   }
+}
+
+.info-tabelas ul div div > li {
+  list-style: none !important;
+  padding: 5px 0;
+}
+
+.info-tabelas ul div div > li > a {
+  color: #8A9EB2;
+  -webkit-animation: all 0.8s;
+          animation: all 0.8s;
+}
+
+.info-tabelas ul div div > li:hover > a {
+  color: #0F81ED;
+  border-bottom: 2px solid #0F81ED;
+  padding-left: 2px;
+  -webkit-animation: all 0.8s;
+          animation: all 0.8s;
+}
+
+.space-li {
+  height: 44px;
+}
+
+.toggle.ios, .toggle-on.ios, .toggle-off.ios {
+  border-radius: 20px;
+}
+
+.toggle.ios .toggle-handle {
+  border-radius: 20px;
+}
+
+.toggle.android {
+  border-radius: 0px;
+}
+
+.toggle.android .toggle-handle {
+  border-radius: 0px;
 }
 /*# sourceMappingURL=estilo.css.map */

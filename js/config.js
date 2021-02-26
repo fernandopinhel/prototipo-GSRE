@@ -261,6 +261,53 @@ $(document).ready(function(){
   });
 });
 
+
+$(document).ready(function(){
+  $(".s-tabela").click(function(){
+    $('.sel-tabela').removeClass('d-none');
+    $('.s-tabela').addClass('d-none');
+    $('.t-tabela').addClass('d-none');
+    $('.b-incluir-tabela').addClass('d-none');
+    $('.sel-tabela-encontrada').addClass('d-none');
+    $('.nova-tabela').addClass('d-none');
+  });
+  $(".b-salvar-tabela").click(function(){
+    $('.sel-tabela').addClass('d-none');
+  });
+  $(".b-cancelar-tabela").click(function(){
+    $('.sel-tabela').addClass('d-none');
+  });
+  $(".close-tabela").click(function(){
+    $('.sel-tabela').addClass('d-none');
+  });
+});
+
+$(document).ready(function(){
+  $(".pagina-exemplo").click(function(){
+    $('.b-incluir-tabela').removeClass('d-none');
+    $('.s-tabela').removeClass('d-none');
+    $('.sel-tabela').addClass('d-none');
+    $('.t-tabela').removeClass('d-none');
+    $('.sel-tabela-encontrada').removeClass('d-none');
+  });
+
+  $(".b-incluir-tabela").click(function(){
+    $('.nova-tabela').removeClass('d-none');
+  });
+
+  $(".close-nova-tabela").click(function(){
+    $('.nova-tabela').addClass('d-none');
+  });
+
+  $(".b-cancelar-tabela").click(function(){
+    $('.nova-tabela').addClass('d-none');
+  });  
+
+  $(".b-salvar-tabela").click(function(){
+    $('.nova-tabela').addClass('d-none');
+  });  
+});
+
 $(document).ready(function() {
   // Documentos
   $('#link-docs').click(function() {
