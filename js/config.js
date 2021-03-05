@@ -1,4 +1,64 @@
 $(document).ready(function(){
+  var dsl = $('#dualSelectExampleDois').DualSelectList({
+    'candidateItems' : ['Aguardando Doc', 'Em Processo', 'Não Autorizado'],
+    // 'selectionItems' : ['Igor Carneiro', 'Diego Mello', 'Marcio Yamamoto'],
+    'colors' : {
+      'itemText' : '#212529',
+      'itemBackground' : '#f2f2f2',
+      'itemHoverBackground' : '#d9edff'
+    }
+  });
+
+  var dsl = $('#dualSelectExample').DualSelectList({
+    'candidateItems' : ['João Carlos', 'Carlos Alberto', 'Carolina Siqueira', 'Marcelo Barreto', 'Everton Santos'],
+    'selectionItems' : ['Igor Carneiro', 'Diego Mello', 'Marcio Yamamoto'],
+    'colors' : {
+      'itemText' : '#212529',
+      'itemBackground' : '#f2f2f2',
+      'itemHoverBackground' : '#d9edff'
+    }
+  });
+
+  $('#getSel').click(function(){
+    var res = dsl.getSelection();
+    var str = '';
+    for (var n=0; n<res.length; ++n) str += res[n] + '\n';
+    $('#selResult').val(str);
+  });
+
+  $('#addSel').click(function(){
+    var items = $('#addIterms').val().split('\n');
+    var res = dsl.setCandidate(items);
+    $('#addIterms').val('');
+  });
+
+  $('#setColor').click(function(){
+    var clrName = $('#colorSelector').val();
+    var clrValue = $('#colorValue').val();
+    dsl.setColor(clrName, clrValue);
+  });
+
+  $('#resetColor').click(function(){
+    var clrName = $('#colorSelector').val();
+    dsl.resetColor(clrName);
+  });
+});
+
+$(document).ready(function(){
+  $("#grupos").click(function(){
+    $('#grupos').addClass('active');
+    $('#analistas').removeClass('active');
+    $('.tab-grupos').removeClass('hidden');    
+    $('.tab-analistas').addClass('hidden');        
+  });
+
+  $("#analistas").click(function(){
+    $('#analistas').addClass('active');
+    $('#grupos').removeClass('active');
+    $('.tab-analistas').removeClass('hidden');
+    $('.tab-grupos').addClass('hidden');  
+  });
+
   $("#busca-avancada").click(function(){
     $('.busca-avancada').toggleClass('d-none');
     $('.btn-busca-um').toggleClass('d-none');
