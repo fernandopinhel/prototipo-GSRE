@@ -193,17 +193,17 @@
                                 <div class="container-fluid">
                                     <div class="row mb-4">
                                         <div class="col-lg-12">
-                                            <h1 class="float-left mt-2">DISTRIBUIÇÃO AUTOMÁTICA</h1>
+                                            <h1 class="float-left mt-2">Configurações da DISTRIBUIÇÃO AUTOMÁTICA</h1>
                                         </div>
                                     </div>
                                     <div class="row bg-gray m-0 h-54">
                                         <div class="col-lg-12">
                                             <div class="tabs-contents">
-                                                <div class="grupos active" id="grupos">
-                                                    <h6>Grupos</h6>
-                                                </div>
-                                                <div class="analistas" id="analistas">
+                                                <div class="analistas active" id="analistas">
                                                     <h6>Analistas</h6>
+                                                </div>
+                                                <div class="grupos" id="grupos">
+                                                    <h6>Grupos</h6>
                                                 </div>
                                                 <!-- <div class="configuracoes" id="configuracoes"><h6>Configurações</h6></div> -->
                                             </div>
@@ -212,8 +212,8 @@
                                     <!-- Opções -->
                                     <div id="tabs-group">
                                         <!-- Grupos -->
-                                        <div class="container-fluid tab-grupos mt-2">
-                                            <div class="row buscas-gerais tab-sub-grupos active">
+                                        <div class="container-fluid tab-grupos mt-2 hidden">
+                                            <div class="row buscas-gerais tab-sub-grupos">
                                                 <div class="col-12 mt-2 mb-1">
                                                     <h6 class="title-cadastro-internas mb-3 c-blue">Selecione o Grupo
                                                         para configurar</h6>
@@ -266,41 +266,41 @@
                                                 <div class="col-12 mt-5 mb-1">
                                                     <h6 class="title-cadastro-internas c-blue">Prioridade de Posições do
                                                         Grupo Selecionado</h6>
-                                                    <small class="mb-3">Escolha a data dos processos, selecione os desejados e no quadro ao lado pressione o processo e arraste para cima ou para
+                                                    <small class="mb-3">Selecione os itens da fila e no quadro ao lado
+                                                        pressione o item e arraste para cima ou para
                                                         baixo na ordem de prioridade que desejar.</small>
                                                     <hr>
                                                 </div>
                                                 <div class="col-lg-6 mt-2 mb-1">
-                                                    <p class="mb-2 font-16">Mostrar processos por data</p>					
-                                                    <div class="form-group form-check form-check-inline mt-0">
-                                                        <input type="radio" name="processos" id="mais-antigos" class="form-check-input">
-                                                        <label for="processos" class="form-check-input">Mais antigos</label>
+                                                    <div class="form-check-inline d-flex my-auto">
+                                                        <div class="ex-checkbox">
+                                                            <input type="checkbox" id="checkbox_one" checked>
+                                                            <label for="checkbox_one" class="check-estilo mr-3">Mais
+                                                                antigos</label>
+                                                        </div>
+                                                        <div class="ex-checkbox">
+                                                            <input type="checkbox" id="checkbox_two">
+                                                            <label for="checkbox_two" class="check-estilo">Mais
+                                                                recentes</label>
+                                                        </div>
                                                     </div>
-                                                    <div class="form-group form-check form-check-inline mt-0">
-                                                        <input type="radio" name="processos" id="mais-novos" class="form-check-input">
-                                                        <label for="processos" class="form-check-input">Mais novos</label>
-                                                    </div>
-                                                    <div class="form-group form-check form-check-inline mt-0">
-                                                        <input type="radio" name="processos" id="todos" class="form-check-input" checked>
-                                                        <label for="processos" class="form-check-input">Todos</label>
-                                                    </div>
-                                                    <div class="clearfix mt-2"></div>
-                                                    <label for="cmpPosicaoAtual">Selecionar os Processos</label>
+                                                    <div class="clearfix mt-4"></div>
+                                                    <label for="cmpPosicaoAtual">Selecionar itens da fila</label>
                                                     <select class="selectpicker form-control" id="cmpPosicaoAtual"
                                                         data-live-search="true" title="Selecione..."
-                                                        data-hide-disabled="true" data-container="body"
-                                                        name="" data-actions-box="true" multiple>
+                                                        data-hide-disabled="true" data-container="body" name=""
+                                                        data-actions-box="true" multiple>
                                                         <option value="1">
-                                                           Sem Orçamento
+                                                            Sem Orçamento
                                                         </option>
                                                         <option value="2" selected>
-                                                           Em processo
+                                                            Em processo
                                                         </option>
                                                         <option value="3" selected>
-                                                           Aguardando DOC
+                                                            Aguardando DOC
                                                         </option>
                                                         <option value="4" selected>
-                                                           Não Autorizado
+                                                            Não Autorizado
                                                         </option>
                                                     </select>
                                                 </div>
@@ -311,7 +311,7 @@
                                         </div>
                                         <!-- Fim Grupos -->
                                         <!-- Analistas -->
-                                        <div class="container-fluid tab-analistas mt-2 hidden">
+                                        <div class="container-fluid tab-analistas mt-2">
                                             <div class="row buscas-gerais tab-sub-analistas active">
                                                 <div class="col-lg-12 mt-3">
                                                     <select multiple="multiple" size="20" name="duallistbox_demo2"
@@ -345,6 +345,9 @@
                                         <div class="container-fluid mt-5 bg-gray p-3">
                                             <div class="row">
                                                 <div class="col-lg-12">
+                                                    <button type="button"
+                                                        class="btn btn-secondary mr-4 float-left txt-up w-90"
+                                                        onclick="window.location.href='distribuicao-automatica.html'">Voltar</button>
                                                     <button type="button"
                                                         class="btn btn-salvar btn-salvar-modal float-right txt-up">Salvar</button>
                                                     <button type="reset"

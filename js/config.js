@@ -1,6 +1,34 @@
+$(document).ready(function(){  
+  $('.btn-ex-pareceres').click(function(){
+    $('.accordion-pareceres > .card > .card-header > h5 > button').toggleClass('change');    
+    $('.accordion-pareceres > .card > .card-header > h5 > button').attr('aria-expanded', 'true');    
+
+    $('.accordion-pareceres > div > .card > .card-header > h5 > button').toggleClass('change');    
+    $('.accordion-pareceres > div > .card > .card-header > h5 > button').attr('aria-expanded', 'true');    
+
+    $('.accordion-pareceres > .card > .collapse').toggleClass('show');    
+    $('.accordion-pareceres > div > .card > .collapse').toggleClass('show');
+    $('.btn-ex-pareceres').addClass('d-none');
+    $('.btn-remo-pareceres').removeClass('d-none');
+  });
+
+  $('.btn-remo-pareceres').click(function(){
+    $('.accordion-pareceres > .card > .card-header > h5 > button').toggleClass('change');    
+    $('.accordion-pareceres > .card > .card-header > h5 > button').attr('aria-expanded', 'false');    
+
+    $('.accordion-pareceres > div > .card > .card-header > h5 > button').toggleClass('change');    
+    $('.accordion-pareceres > div > .card > .card-header > h5 > button').attr('aria-expanded', 'false');    
+
+    $('.accordion-pareceres > .card > .collapse').toggleClass('show');
+    $('.accordion-pareceres > div > .card > .collapse').toggleClass('show');
+    $('.btn-ex-pareceres').removeClass('d-none');
+    $('.btn-remo-pareceres').addClass('d-none');
+  });
+});
+
 $(document).ready(function(){
   var dsl = $('#dualSelectExampleDois').DualSelectList({
-    'candidateItems' : ['Aguardando Doc', 'Em Processo', 'Não Autorizado'],
+    'candidateItems' : ['1 - Aguardando Doc', '2 - Em Processo', '3 - Não Autorizado'],
     // 'selectionItems' : ['Igor Carneiro', 'Diego Mello', 'Marcio Yamamoto'],
     'colors' : {
       'itemText' : '#212529',
@@ -45,6 +73,40 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
+  $("#nat-claus").click(function(){
+    $('#nat-claus').addClass('active');
+    $('#sindicantes').removeClass('active');
+    $('#sucursal').removeClass('active');
+    $('.tab-nat-claus').removeClass('hidden');    
+    $('.tab-sindicantes').addClass('hidden');      
+    $('.tab-sucursal').addClass('hidden');        
+  });
+
+  $("#sindicantes").click(function(){
+    $('#sindicantes').addClass('active');
+    $('#nat-claus').removeClass('active');
+    $('#sucursal').removeClass('active');
+    $('.tab-nat-claus').addClass('hidden');    
+    $('.tab-sindicantes').removeClass('hidden');      
+    $('.tab-sucursal').addClass('hidden');        
+  });
+
+  $("#sucursal").click(function(){
+    $('#sucursal').addClass('active');
+    $('#nat-claus').removeClass('active');
+    $('#sindicantes').removeClass('active');
+    $('.tab-nat-claus').addClass('hidden');    
+    $('.tab-sindicantes').addClass('hidden');      
+    $('.tab-sucursal').removeClass('hidden');        
+  });
+
+
+
+
+
+
+
+
   $("#grupos").click(function(){
     $('#grupos').addClass('active');
     $('#analistas').removeClass('active');

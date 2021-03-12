@@ -45,6 +45,10 @@ a {
   list-style: none !important;
 }
 
+.form-check-inline {
+  margin-top: 17px !important;
+}
+
 .titulo h1 {
   font-size: 16px;
   text-transform: uppercase;
@@ -537,6 +541,25 @@ body.page-403 > .interna div > div > div h4 {
   float: right;
   text-transform: uppercase;
   font-size: 12px;
+  padding: 2px 9px;
+  border: 1px solid;
+  border-radius: 10px;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  color: #212529;
+}
+
+.conteudo-associar:hover {
+  float: right;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 2px 9px;
+  color: #fff;
+  background: #007bff;
+  border: 1px solid;
+  border-radius: 10px;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
 }
 
 .btn-warning, .btn-warning:hover {
@@ -644,6 +667,10 @@ button.btn-second:hover {
   width: 103px;
 }
 
+.w-1700 {
+  max-width: 1700px !important;
+}
+
 .w-1050 {
   max-width: 1050px !important;
 }
@@ -679,6 +706,11 @@ button.btn-second:hover {
 
 .form-check-inline label.form-check-input {
   margin: 0 0 0 6px;
+}
+
+input.form-check-input {
+  width: 17px !important;
+  height: 17px !important;
 }
 
 .nav-item .dropdown-toggle::after {
@@ -740,8 +772,8 @@ button.btn-second:hover {
   margin: 0;
   opacity: 0;
   cursor: pointer;
-  width: 15px;
-  height: 15px;
+  width: 20px !important;
+  height: 20px !important;
   z-index: 10;
   position: absolute;
   top: 2px;
@@ -770,8 +802,8 @@ button.btn-second:hover {
 
 .ex-checkbox input[type=checkbox] + label::before {
   border: 1px solid #9f9f9f;
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   content: '';
   position: absolute;
   left: 0;
@@ -2418,7 +2450,14 @@ span.btn-add {
   line-height: 17px;
 }
 
-.conteudo-parecer, .conteudo-orcamento {
+.conteudo-parecer {
+  background: #fff;
+  margin: -20px 0 0 0;
+  padding: 0 10px 5px 10px;
+  border-radius: 10px;
+}
+
+.conteudo-orcamento {
   background: #fff;
   margin: 20px 0;
   padding: 10px 0;
@@ -3120,5 +3159,62 @@ span.btn-add {
 
 .active-ce {
   border: 1px solid;
+}
+
+.accordion-pareceres > .card > .card-header {
+  background: #fff;
+  padding: 0;
+  border-bottom: 0;
+}
+
+.accordion-pareceres > .card > .card-header > .card-body {
+  background: #fff;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.accordion-pareceres > .card > .card-header > h5 > button {
+  color: #212529;
+  font-weight: 400 !important;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 2px;
+}
+
+.accordion-pareceres > .card > .card-header:hover > h5 > button {
+  list-style: none !important;
+  text-decoration: none !important;
+}
+
+.accordion-pareceres > .card > .card-header > h5 > button > div > div > div > p > span {
+  font-weight: 600 !important;
+}
+
+.accordion-pareceres > div > .card > .card-header {
+  background: #fff;
+  padding: 0;
+  border-bottom: 0;
+}
+
+.accordion-pareceres > div > .card > .card-header > h5 > button {
+  color: #212529;
+  font-weight: 400 !important;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 2px;
+}
+
+.accordion-pareceres > div > .card > .card-header:hover > h5 > button {
+  list-style: none !important;
+  text-decoration: none !important;
+}
+
+.accordion-pareceres > div > .card > .card-header > h5 > button > div > div > div > p > span {
+  font-weight: 600 !important;
+}
+
+.btn-ex-pareceres, .btn-remo-pareceres {
+  padding: 2px 8px;
+  font-size: 14px;
 }
 /*# sourceMappingURL=estilo.css.map */

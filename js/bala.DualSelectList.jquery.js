@@ -23,8 +23,9 @@
 
 		this.init = function () {
 			// Initialize DualSelectList content
-			this.append(				
-				'<div class="dsl-filter left-panel" style="width:100%;" ><input class="dsl-filter-input" style="width: 100%;" value="Pesquisar..."></div>' +
+			this.append(	
+				'<p class="mb-2">Prioridade dos itens da fila</p>' +
+				// '<div class="dsl-filter left-panel" style="width:100%;" ><input class="dsl-filter-input" style="width: 100%;" value="Pesquisar..."></div>' +
 				// '<div class="dsl-filter right-panel"><p class="mb-3 txt-up" style="letter-spacing: 2px;">Grupo Danos Parciais</p><input class="dsl-filter-input" tyle="text" value="Pesquisar..."></div>' +				
 				'<div class="dsl-panel left-panel" />' +
 				'<div class="dsl-panel-item-null">&nbsp;</div>'
