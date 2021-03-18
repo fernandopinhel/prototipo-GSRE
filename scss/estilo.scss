@@ -752,7 +752,10 @@ input.form-check-input{
 
 .chb2{
   position: relative;
-  margin: -8px 0 0 0 !important;
+  margin: 0 auto !important;
+  width: 20px;
+  height: 20px;
+  top: -14px;
 }
 
 .chb2 input[type=checkbox]{
@@ -2775,6 +2778,17 @@ span.btn-add{
   }
 }
 
+@media (max-width: 1363px){
+  header ul li a{
+    font-size: 12px;
+  }
+
+  p.welcome {
+    margin: 12px 18px 0 0;
+    font-size: 11px;
+  }
+}
+
 @media (max-width: 992px){
   .class-docs{
     width: 100%;
@@ -2955,4 +2969,200 @@ span.btn-add{
 .btn-ex-pareceres, .btn-remo-pareceres{
   padding: 2px 8px;
   font-size: 14px;
+}
+
+// input number
+.ctrl {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #D5DCE6;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 30px;
+}
+.ctrl__counter {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  color: #333C48;
+  text-align: center;
+  overflow: hidden;
+}
+.ctrl__counter.is-input .ctrl__counter-num {
+  visability: hidden;
+  opacity: 0;
+  transition: opacity 100ms ease-in;
+}
+.ctrl__counter.is-input .ctrl__counter-input {
+  visability: visible;
+  opacity: 1;
+  transition: opacity 100ms ease-in;
+}
+.ctrl__counter-input {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  color: #333C48;
+  font-size: 30px;
+  line-height: 100px;
+  text-align: center;
+  visability: hidden;
+  opacity: 0;
+  transition: opacity 100ms ease-in;
+}
+.ctrl__counter-num {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  line-height: 100px;
+  visability: visible;
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+.ctrl__counter-num.is-increment-hide {
+  opacity: 0;
+  transform: translateY(-50px);
+  -webkit-animation: increment-prev 100ms ease-in;
+          animation: increment-prev 100ms ease-in;
+}
+.ctrl__counter-num.is-increment-visible {
+  opacity: 1;
+  transform: translateY(0);
+  -webkit-animation: increment-next 100ms ease-out;
+          animation: increment-next 100ms ease-out;
+}
+.ctrl__counter-num.is-decrement-hide {
+  opacity: 0;
+  transform: translateY(50px);
+  -webkit-animation: decrement-prev 100ms ease-in;
+          animation: decrement-prev 100ms ease-in;
+}
+.ctrl__counter-num.is-decrement-visible {
+  opacity: 1;
+  transform: translateY(0);
+  -webkit-animation: decrement-next 100ms ease-out;
+          animation: decrement-next 100ms ease-out;
+}
+.ctrl__button {
+  width: 100px;
+  line-height: 100px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  background-color: #8498a7;
+  transition: background-color 100ms ease-in;
+}
+.ctrl__button:hover {
+  background-color: #90a2b0;
+  transition: background-color 100ms ease-in;
+}
+.ctrl__button:active {
+  background-color: #778996;
+  transition: background-color 100ms ease-in;
+}
+.ctrl__button--decrement {
+  border-radius: 5px 0 0 5px;
+}
+.ctrl__button--increment {
+  border-radius: 0 5px 5px 0;
+}
+
+@-webkit-keyframes decrement-prev {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes decrement-prev {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes decrement-next {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+@keyframes decrement-next {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+@-webkit-keyframes increment-prev {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes increment-prev {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes increment-next {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+}
+@keyframes increment-next {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+}
+
+// Cards Paineis
+.box-periodo > p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 13px;
+  margin: 0;
+}
+
+.total-grupo {
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 7px;
+  position: relative;
+  padding: 12px;
+  background: #3487a1;
+  background-image: url(../img/bg-cards.png),linear-gradient(90deg, #3487a1 0%, #37a0b9 35%, #1e9ac2 100%);
+  background-position: 100%;
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+}
+
+.title-dash {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.content-processos{text-align: center;}
+
+.content-processos > span {
+  text-align: center;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #fff;
 }

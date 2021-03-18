@@ -71,6 +71,16 @@
 				</button>
 				<div class="navbar-collapse collapse" id="navbarCollapse">
 					<ul class="nav nav-pills" id="pills-tab" role="tablist">
+						<li class="nav-item position-relative">
+							<a class="nav-link active-ce" id="pills-consultas-tab" data-toggle="pill"
+								href='caixa-de-entrada.html' role="tab" aria-controls="pills-consultas"
+								onclick="window.location.href = 'caixa-de-entrada.html'" aria-selected="false">Caixa de
+								Entrada</a>
+							<div class="aviso-animado">
+								<div class="alerta-ce"><span>5</span></div>
+								<div class="pulse"></div>
+							</div>
+						</li>
 						<li class="nav-item">
 							<a class="nav-link" id="pills-consultas-tab" data-toggle="pill"
 								href='consulta-sinistro.html' role="tab" aria-controls="pills-consultas"
@@ -128,6 +138,12 @@
 									href='relatorios-pendencias.html'>Relatórios de Pendências</a>
 							</div>
 						</li>
+						<li class="nav-item position-relative">
+							<a class="nav-link" id="pills-consultas-tab" data-toggle="pill"
+								href='distribuicao-automatica.html' role="tab" aria-controls="pills-consultas"
+								onclick="window.location.href = 'distribuicao-automatica.html'"
+								aria-selected="false">Distribuição Automática</a>
+						</li>
 					</ul>
 					<div class="dropdown user ml-auto">
 						<p class="welcome">Bem-vindo(a):<br>Igor - M123456</p>
@@ -175,7 +191,7 @@
 									<div class="row mb-4">
 										<div class="col-lg-6">
 											<h1 class="float-left mt-2">Tabelas <span class="d-none t-tabela">-
-												"Título da tabela selecionada"</span></h1>
+													"Título da tabela selecionada"</span></h1>
 										</div>
 										<div class="col-lg-6">
 											<button type="button" name="button"
@@ -269,9 +285,8 @@
 												</ul>
 											</div>
 										</div>
-										<div class="col-12 bg-gray h-58 mb-3 b-incluir-tabela d-none">											
-											<button type="button" name="button"
-												class="btn btn-salvar txt-up">
+										<div class="col-12 bg-gray h-58 mb-3 b-incluir-tabela d-none">
+											<button type="button" name="button" class="btn btn-salvar txt-up">
 												Incluir Tabela</button>
 										</div>
 										<div class="col-lg-12 nova-tabela d-none  mb-4">
@@ -304,9 +319,8 @@
 																	<div class="col-lg-9">
 																		<div class="form-group">
 																			<label for="text">Descrição</label>
-																			<input type="text" name=""
-																				value="" id="" class="form-control"
-																				autocomplete="off">
+																			<input type="text" name="" value="" id=""
+																				class="form-control" autocomplete="off">
 																		</div>
 																	</div>
 																	<div class="col-lg-1" style="margin-top: 27px;">
@@ -338,11 +352,14 @@
 									<div class="row buscas-gerais sel-tabela-encontrada d-none">
 										<div class="col-lg-2 internas-buscas">
 											<label for="text">Código</label>
-											<input type="text" name="" maxlength="" value="123" id="" class="form-control" autocomplete="off"> 
+											<input type="text" name="" maxlength="" value="123" id=""
+												class="form-control" autocomplete="off">
 										</div>
-										<div class="col-lg-2">												
+										<div class="col-lg-2">
 											<label for="filtro">Status</label>
-											<select class="selectpicker form-control" id="filtro" name="" data-live-search="true" title="Selecione" data-hide-disabled="true" data-actions-box="true">
+											<select class="selectpicker form-control" id="filtro" name=""
+												data-live-search="true" title="Selecione" data-hide-disabled="true"
+												data-actions-box="true">
 												<option value="1" selected>Todos</option>
 												<option value="2">Ativo</option>
 												<option value="3">Inativo</option>
@@ -355,7 +372,8 @@
 									</div>
 									<div class="row mt-5 sel-tabela-encontrada d-none">
 										<div class="col-lg-10 internas-buscas d-flex my-auto">
-											<p><strong>3</strong> Tabelas de "Título da tabela selecionada" encontradas</p>
+											<p><strong>3</strong> Tabelas de "Título da tabela selecionada" encontradas
+											</p>
 										</div>
 										<div class="col-lg-12">
 											<hr>
@@ -449,8 +467,7 @@
 																<input type="checkbox" data-toggle="toggle"
 																	data-on="Ativo" data-off="Inativo" data-width="65"
 																	data-height="25" data-size="xs"
-																	data-onstyle="success" data-offstyle="danger"
-																	>
+																	data-onstyle="success" data-offstyle="danger">
 																<a href="#" class="ml-2">
 																	<img src="img/alterar.svg" data-toggle="tooltip"
 																		data-original-title="Alterar" width="25px">

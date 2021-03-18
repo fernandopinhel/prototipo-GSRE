@@ -68,6 +68,16 @@
 				</button>
 				<div class="navbar-collapse collapse" id="navbarCollapse">
 					<ul class="nav nav-pills" id="pills-tab" role="tablist">
+						<li class="nav-item position-relative">
+							<a class="nav-link active-ce" id="pills-consultas-tab" data-toggle="pill"
+								href='caixa-de-entrada.html' role="tab" aria-controls="pills-consultas"
+								onclick="window.location.href = 'caixa-de-entrada.html'" aria-selected="false">Caixa de
+								Entrada</a>
+							<div class="aviso-animado">
+								<div class="alerta-ce"><span>5</span></div>
+								<div class="pulse"></div>
+							</div>
+						</li>
 						<li class="nav-item">
 							<a class="nav-link active" id="pills-consultas-tab" data-toggle="pill"
 								href='consulta-sinistro.html' role="tab" aria-controls="pills-consultas"
@@ -123,6 +133,12 @@
 								<a class="dropdown-item" id="pills-relatorios-gerenciais-tab"
 									href='relatorios-pendencias.html'>Relatórios de Pendências</a>
 							</div>
+						</li>
+						<li class="nav-item position-relative">
+							<a class="nav-link" id="pills-consultas-tab" data-toggle="pill"
+								href='distribuicao-automatica.html' role="tab" aria-controls="pills-consultas"
+								onclick="window.location.href = 'distribuicao-automatica.html'"
+								aria-selected="false">Distribuição Automática</a>
 						</li>
 					</ul>
 					<div class="dropdown user ml-auto">
@@ -590,8 +606,8 @@
 								data-original-title="Acompanhamento">
 								<i class="icon icon-nav-visualizar"></i>
 							</a>
-							<a class="nav-link parecer-tab" id="parecer-tab" href="parecer.html"
-								data-toggle="tooltip" data-original-title="Parecer">
+							<a class="nav-link parecer-tab" id="parecer-tab" href="parecer.html" data-toggle="tooltip"
+								data-original-title="Parecer">
 								<i class="icon icon-doc-form"></i>
 							</a>
 							<a class="nav-link orcamento-tab" id="orcamento-tab" href="orcamento.html"
@@ -644,8 +660,8 @@
 								data-original-title="Cartas">
 								<i class="icon icon-fin-cartoes"></i>
 							</a>
-							<a class="nav-link tabelas active" id="tabelas-tab" href="tabelas-processos.html" data-toggle="tooltip"
-								data-original-title="Tabelas">
+							<a class="nav-link tabelas active" id="tabelas-tab" href="tabelas-processos.html"
+								data-toggle="tooltip" data-original-title="Tabelas">
 								<i class="icon icon-nav-servicos"></i>
 							</a>
 						</div>
@@ -661,32 +677,34 @@
 											<h1 class="float-left mt-2">Tabelas</h1>
 										</div>
 									</div>
-                                    <div class="row bg-gray m-0 h-54">
-                                        <div class="col-lg-12">
-                                            <div class="tabs-contents">
-                                                <div class="nat-claus active" id="nat-claus">
-                                                    <h6>Natureza Cláusula</h6>
-                                                </div>
-                                                <div class="sindicantes" id="sindicantes">
-                                                    <h6>Sindicantes</h6>
-                                                </div>
-                                                <div class="sucursal" id="sucursal"><h6>Sucursal</h6></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Opções -->
-                                    <div id="tabs-group">
-                                        <!-- Natureza Cláusula -->
-                                        <div class="container-fluid tab-nat-claus mt-2">
+									<div class="row bg-gray m-0 h-54">
+										<div class="col-lg-12">
+											<div class="tabs-contents">
+												<div class="nat-claus active" id="nat-claus">
+													<h6>Natureza Cláusula</h6>
+												</div>
+												<div class="sindicantes" id="sindicantes">
+													<h6>Sindicantes</h6>
+												</div>
+												<div class="sucursal" id="sucursal">
+													<h6>Sucursal</h6>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Opções -->
+									<div id="tabs-group">
+										<!-- Natureza Cláusula -->
+										<div class="container-fluid tab-nat-claus mt-2">
 											<div class="row mt-4 active">
-                                                <div class="col-lg-12">
-                                                    <div class="">
-                                                        <button type="button" name="button"
-                                                            class="btn btn-salvar mr-5 b-parecer txt-up">Incluir
-                                                            Tabela</button>											
-                                                    </div>
-                                                </div>
-                                            </div>
+												<div class="col-lg-12">
+													<div class="">
+														<button type="button" name="button"
+															class="btn btn-salvar mr-5 b-parecer txt-up">Incluir
+															Tabela</button>
+													</div>
+												</div>
+											</div>
 											<!-- Nova Tabela -->
 											<div class="row mt-4">
 												<div class="col-lg-12">
@@ -694,7 +712,8 @@
 														<div class="container-fluid">
 															<div class="row">
 																<div class="col-lg-12">
-																	<h5 class="float-left m-0 title-novo">Nova Tabela Natureza Cláusula</h5>
+																	<h5 class="float-left m-0 title-novo">Nova Tabela
+																		Natureza Cláusula</h5>
 																	<a href="#" class="float-right close-parecer">
 																		<i class="icon icon-close"></i>
 																	</a>
@@ -704,14 +723,17 @@
 															<div class="row header-parecer mt-4">
 																<div class="col-lg-4 internas-buscas mt-3">
 																	<label for="text">Código</label>
-																	<input type="text" name="" maxlength="8" value="12 - Colisão - Danos Parciais" id="" class="form-control" autocomplete="off" disabled> 
+																	<input type="text" name="" maxlength="8"
+																		value="12 - Colisão - Danos Parciais" id=""
+																		class="form-control" autocomplete="off"
+																		disabled>
 																</div>
 															</div>
 															<div class="row header-parecer mt-4">
 																<div class="col-lg-6 internas-buscas mt-3">
 																	<label for="filtro">Cláusula</label>
-																	<select class="selectpicker form-control" id="filtro" name=""
-																		title="Selecione...">
+																	<select class="selectpicker form-control"
+																		id="filtro" name="" title="Selecione...">
 																		<option value="0" selected>Cláusula 1</option>
 																		<option value="1">Cláusula 2</option>
 																		<option value="2">Cláusula 3</option>
@@ -719,29 +741,33 @@
 																		<option value="4">Cláusula 5</option>
 																		<option value="5">Cláusula 6</option>
 																	</select>
-																</div>         
+																</div>
 																<div class="col-lg-3 internas-buscas mt-3">
-																	<div>Gerar nas Despesas da Seguradora</div>			
-																	<div class="form-check-inline">															
+																	<div>Gerar nas Despesas da Seguradora</div>
+																	<div class="form-check-inline">
 																		<label class="form-check-label">
-																		  <input type="radio" class="form-check-input" name="optradio">Redução
+																			<input type="radio" class="form-check-input"
+																				name="optradio">Redução
 																		</label>
-																	  </div>
-																	  <div class="form-check-inline">
+																	</div>
+																	<div class="form-check-inline">
 																		<label class="form-check-label">
-																		  <input type="radio" class="form-check-input" name="optradio">Aumento
+																			<input type="radio" class="form-check-input"
+																				name="optradio">Aumento
 																		</label>
-																	  </div>
-																	  <div class="form-check-inline">
+																	</div>
+																	<div class="form-check-inline">
 																		<label class="form-check-label">
-																		  <input type="radio" class="form-check-input" name="optradio">Não afeta
+																			<input type="radio" class="form-check-input"
+																				name="optradio">Não afeta
 																		</label>
-																	  </div>
-																</div>      
+																	</div>
+																</div>
 																<div class="col-lg-2 internas-buscas mt-3">
 																	<label for="text">Data de Início da Operação</label>
-																	<input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-																</div>                                            
+																	<input type="text" name="" maxlength="8" value=""
+																		id="" class="form-control" autocomplete="off">
+																</div>
 															</div>
 															<div class="row mb-4 mt-5">
 																<div class="col-lg-12">
@@ -756,468 +782,609 @@
 												</div>
 											</div>
 											<!-- Fim Nova Tabela -->
-                                            <div class="row buscas-gerais mt-3 active">
-                                                <div class="col-lg-4">
-                                                    <label for="filtro">Natureza</label>
-                                                    <select class="selectpicker form-control" id="filtro" name=""
-                                                        title="Selecione...">
-                                                        <option value="0" selected>Natureza 1</option>
-                                                        <option value="1">Natureza 2</option>
-                                                        <option value="2">Natureza 3</option>
-                                                        <option value="3">Natureza 4</option>
-                                                        <option value="4">Natureza 5</option>
-                                                        <option value="5">Natureza 6</option>
-                                                    </select>
-                                                </div>
-                                                <div class="mt-4">
-                                                    <button type="button" name="button" class="btn btn-primary mr-3 mt-1">Buscar</button>
-                                                </div>
-                                            </div>
+											<div class="row buscas-gerais mt-3 active">
+												<div class="col-lg-4">
+													<label for="filtro">Natureza</label>
+													<select class="selectpicker form-control" id="filtro" name=""
+														title="Selecione...">
+														<option value="0" selected>Natureza 1</option>
+														<option value="1">Natureza 2</option>
+														<option value="2">Natureza 3</option>
+														<option value="3">Natureza 4</option>
+														<option value="4">Natureza 5</option>
+														<option value="5">Natureza 6</option>
+													</select>
+												</div>
+												<div class="mt-4">
+													<button type="button" name="button"
+														class="btn btn-primary mr-3 mt-1">Buscar</button>
+												</div>
+											</div>
 											<div class="row mt-5 buscas-gerais">
-                                                <div class="col-lg-12">
-                                                    <p><strong>5</strong> Tabelas encontradas</p>                                                   
-                                                </div>
-                                                <div class="col-lg-12"><hr></div>
-                                            </div>   
-                                            <div class="row buscas-gerais">                                         
-                                                <div class="table-responsive">
-                                                    <form id="" name="" action="" method="post">
-                                                        <table class="table table-striped" id="">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th scope="col" style="width: 5%;"></th>
-                                                                    <th scope="col" style="width: 10%;">Cód. Cláusula</th>
-                                                                    <th scope="col" style="width: 55%;">Descrição</th>    
-																	<th scope="col" style="width: 15%;">Operação</th>     
-																	<th scope="col" style="width: 15%;">Data</th>                                                                   
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>
-                                                                        <a class="mr-1" style="cursor: pointer;">
-                                                                            <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar" width="25">
-                                                                        </a>
-                                                                    </td>
-                                                                    <td>18</td>   
-                                                                    <td>Criada pela Apólice: 227.990.244.727324.1 - 08/03/2021 - Natureza 1 - NatSug: 39 - Batch: AI104201710090011</td>                                                            
-																	<td>Redução</td>
-																	<td>08/03/2021</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <a class="mr-1" style="cursor: pointer;">
-                                                                            <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar" width="25">
-                                                                        </a>
-                                                                    </td>
-                                                                    <td>18</td>   
-                                                                    <td>Criada pela Apólice: 227.990.244.727324.1 - 08/03/2021 - Natureza 1 - NatSug: 39 - Batch: AI104201710090011</td>                                                            
-																	<td>Redução</td>
-																	<td>08/03/2021</td>
-                                                                </tr>
+												<div class="col-lg-12">
+													<p><strong>5</strong> Tabelas encontradas</p>
+												</div>
+												<div class="col-lg-12">
+													<hr>
+												</div>
+											</div>
+											<div class="row buscas-gerais">
+												<div class="table-responsive">
+													<form id="" name="" action="" method="post">
+														<table class="table table-striped" id="">
+															<thead>
 																<tr>
-                                                                    <td>
-                                                                        <a class="mr-1" style="cursor: pointer;">
-                                                                            <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar" width="25">
-                                                                        </a>
-                                                                    </td>
-                                                                    <td>18</td>   
-                                                                    <td>Criada pela Apólice: 227.990.244.727324.1 - 08/03/2021 - Natureza 1 - NatSug: 39 - Batch: AI104201710090011</td>                                                            
-																	<td>Redução</td>
-																	<td>08/03/2021</td>
-                                                                </tr>
+																	<th scope="col" style="width: 5%;"></th>
+																	<th scope="col" style="width: 10%;">Cód. Cláusula
+																	</th>
+																	<th scope="col" style="width: 55%;">Descrição</th>
+																	<th scope="col" style="width: 15%;">Operação</th>
+																	<th scope="col" style="width: 15%;">Data</th>
+																</tr>
+															</thead>
+															<tbody>
 																<tr>
-                                                                    <td style="width: 5%">
-                                                                        <a class="mr-1" style="cursor: pointer;">
-                                                                            <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar" width="25">
-                                                                        </a>
-                                                                    </td>
-                                                                    <td>18</td>   
-                                                                    <td>Criada pela Apólice: 227.990.244.727324.1 - 08/03/2021 - Natureza 1 - NatSug: 39 - Batch: AI104201710090011</td>                                                            
+																	<td>
+																		<a class="mr-1" style="cursor: pointer;">
+																			<img src="img/alterar.svg"
+																				data-toggle="tooltip"
+																				data-original-title="Alterar"
+																				width="25">
+																		</a>
+																	</td>
+																	<td>18</td>
+																	<td>Criada pela Apólice: 227.990.244.727324.1 -
+																		08/03/2021 - Natureza 1 - NatSug: 39 - Batch:
+																		AI104201710090011</td>
 																	<td>Redução</td>
 																	<td>08/03/2021</td>
-                                                                </tr>
+																</tr>
 																<tr>
-                                                                    <td>
-                                                                        <a class="mr-1" style="cursor: pointer;">
-                                                                            <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar" width="25">
-                                                                        </a>
-                                                                    </td>
-                                                                    <td>18</td>   
-                                                                    <td>Criada pela Apólice: 227.990.244.727324.1 - 08/03/2021 - Natureza 1 - NatSug: 39 - Batch: AI104201710090011</td>                                                            
+																	<td>
+																		<a class="mr-1" style="cursor: pointer;">
+																			<img src="img/alterar.svg"
+																				data-toggle="tooltip"
+																				data-original-title="Alterar"
+																				width="25">
+																		</a>
+																	</td>
+																	<td>18</td>
+																	<td>Criada pela Apólice: 227.990.244.727324.1 -
+																		08/03/2021 - Natureza 1 - NatSug: 39 - Batch:
+																		AI104201710090011</td>
 																	<td>Redução</td>
 																	<td>08/03/2021</td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Fim Natureza Cláusula -->
-                                        <!-- Sindicantes -->
-                                        <div class="container-fluid tab-sindicantes mt-2 hidden">
-                                            <div class="row mt-4">
-                                                <div class="col-lg-12">
-                                                    <div class="">
-                                                        <button type="button" name="button"
-                                                            class="btn btn-salvar mr-5 b-parecer txt-up">Incluir
-                                                            Tabela</button>											
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- Nova Tabela -->
-                                            <div class="row mt-4">
-                                                <div class="col-lg-12">
-                                                    <div class="info-parecer novo-parecer d-none">
-                                                        <div class="container-fluid">
-                                                            <div class="row">
-                                                                <div class="col-lg-12">
-                                                                    <h5 class="float-left m-0 title-novo">Nova Tabela Sindicantes</h5>
-                                                                    <a href="#" class="float-right close-parecer">
-                                                                        <i class="icon icon-close"></i>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <hr>
-                                                            <div class="row header-parecer mt-4">
-                                                                <div class="col-lg-2 internas-buscas mt-3">
-                                                                    <label for="text">Código</label>
-                                                                    <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-                                                                </div>
-                                                                <div class="col-lg-4 internas-buscas mt-3">
-                                                                    <label for="text">Nome Sindicante</label>
-                                                                    <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-                                                                </div>                                                               
-                                                            </div>
-                                                            <div class="row mb-4 mt-5">
-                                                                <div class="col-lg-12">
-                                                                    <button
-                                                                        class="btn btn-salvar float-right b-salvar-parecer">Salvar</button>
-                                                                    <button
-                                                                        class="btn btn-cancel b-cancelar-parecer">cancelar</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- Fim Nova Tabela -->
-                                            <div class="row mt-4 buscas-gerais">
-                                                <div class="col-lg-2 internas-buscas mt-3">
-                                                    <label for="text">Código</label>
-                                                    <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-                                                </div>
-                                                <div class="col-lg-4 internas-buscas mt-3">
-                                                    <label for="text">Nome Sindicante</label>
-                                                    <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-                                                </div>
-                                                <div class="col-lg-2 mt-4">
-                                                    <button type="button" name="button" class="btn btn-primary  mt-4">Buscar</button>
-                                                </div>
-                                            </div>
-                                            <div class="row mt-5 buscas-gerais">
-                                                <div class="col-lg-6">
-                                                    <p><strong>5</strong> Tabelas encontradas</p>                                                   
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <a href="#" class="float-right">
-                                                        <img src="img/excluir.svg" data-toggle="tooltip" data-original-title="Excluir selecionados">
-                                                    </a>
-                                                </div>
-                                                <div class="col-lg-12"><hr></div>
-                                            </div>   
-                                            <div class="row buscas-gerais">                                         
-                                                <div class="table-responsive">
-                                                    <form id="" name="" action="" method="post">
-                                                        <table class="table table-striped" id="">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th scope="col">
-                                                                        <div class="ex-checkbox chb2">
-                                                                            <input class="form-check-input check-todos" onclick="marcarTodos(this.checked)" id="checkbox_one" type="checkbox" data-toggle="tooltip" data-original-title="Selecionar todos">
-                                                                            <label for="checkbox_one" class="check-estilo"></label>
-                                                                        </div>
-                                                                    </th>
-                                                                    <th scope="col"></th>
-                                                                    <th scope="col">Código</th>
-                                                                    <th scope="col">Nome Sindicante</th>                                                                    
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="ex-checkbox chb2">
-                                                                            <input type="checkbox" class="marcar" id="checkbox_single">
-                                                                            <label for="checkbox_single" class="check-estilo" data-toggle="tooltip" data-original-title="Selecionar"></label>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td style="width: 10%">
-                                                                        <a class="mr-1" style="cursor: pointer;">
-                                                                            <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar" width="25">
-                                                                        </a>
-                                                                        <a href="#">
-                                                                            <img src="img/excluir.svg" data-toggle="tooltip" data-original-title="Excluir">
-                                                                        </a>
-                                                                    </td>
-                                                                    <td style="width: 5%">102708</td>   
-                                                                    <td style="width: 85%">Vector Assessoria de Sinistros de Seguros LTDA</td>                                                            
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="ex-checkbox chb2">
-                                                                            <input type="checkbox" class="marcar" id="checkbox_single">
-                                                                            <label for="checkbox_single" class="check-estilo" data-toggle="tooltip" data-original-title="Selecionar"></label>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td style="width: 10%">
-                                                                        <a class="mr-1" style="cursor: pointer;">
-                                                                            <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar" width="25">
-                                                                        </a>
-                                                                        <a href="#">
-                                                                            <img src="img/excluir.svg" data-toggle="tooltip" data-original-title="Excluir">
-                                                                        </a>
-                                                                    </td>
-                                                                    <td style="width: 5%">102708</td>   
-                                                                    <td style="width: 85%">Vector Assessoria de Sinistros de Seguros LTDA</td>                                                            
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="ex-checkbox chb2">
-                                                                            <input type="checkbox" class="marcar" id="checkbox_single">
-                                                                            <label for="checkbox_single" class="check-estilo" data-toggle="tooltip" data-original-title="Selecionar"></label>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td style="width: 10%">
-                                                                        <a class="mr-1" style="cursor: pointer;">
-                                                                            <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar" width="25">
-                                                                        </a>
-                                                                        <a href="#">
-                                                                            <img src="img/excluir.svg" data-toggle="tooltip" data-original-title="Excluir">
-                                                                        </a>
-                                                                    </td>
-                                                                    <td style="width: 5%">102708</td>   
-                                                                    <td style="width: 85%">Vector Assessoria de Sinistros de Seguros LTDA</td>                                                            
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="ex-checkbox chb2">
-                                                                            <input type="checkbox" class="marcar" id="checkbox_single">
-                                                                            <label for="checkbox_single" class="check-estilo" data-toggle="tooltip" data-original-title="Selecionar"></label>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td style="width: 10%">
-                                                                        <a class="mr-1" style="cursor: pointer;">
-                                                                            <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar" width="25">
-                                                                        </a>
-                                                                        <a href="#">
-                                                                            <img src="img/excluir.svg" data-toggle="tooltip" data-original-title="Excluir">
-                                                                        </a>
-                                                                    </td>
-                                                                    <td style="width: 5%">102708</td>   
-                                                                    <td style="width: 85%">Vector Assessoria de Sinistros de Seguros LTDA</td>                                                            
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="ex-checkbox chb2">
-                                                                            <input type="checkbox" class="marcar" id="checkbox_single">
-                                                                            <label for="checkbox_single" class="check-estilo" data-toggle="tooltip" data-original-title="Selecionar"></label>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td style="width: 10%">
-                                                                        <a class="mr-1" style="cursor: pointer;">
-                                                                            <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar" width="25">
-                                                                        </a>
-                                                                        <a href="#">
-                                                                            <img src="img/excluir.svg" data-toggle="tooltip" data-original-title="Excluir">
-                                                                        </a>
-                                                                    </td>
-                                                                    <td style="width: 5%">102708</td>   
-                                                                    <td style="width: 85%">Vector Assessoria de Sinistros de Seguros LTDA</td>                                                            
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Fim Sindicantes -->
-                                        <!-- Sucursal -->
-                                        <div class="container-fluid tab-sucursal mt-2 hidden">
-                                            <div class="row mt-4">
-                                                <div class="col-lg-12">
-                                                    <div class="">
-                                                        <button type="button" name="button"
-                                                            class="btn btn-salvar mr-5 b-parecer txt-up">Incluir
-                                                            Tabela</button>											
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- Nova Tabela -->
-                                            <div class="row mt-4">
-                                                <div class="col-lg-12">
-                                                    <div class="info-parecer novo-parecer d-none">
-                                                        <div class="container-fluid">
-                                                            <div class="row">
-                                                                <div class="col-lg-12">
-                                                                    <h5 class="float-left m-0 title-novo">Nova Tabela Sucursal</h5>
-                                                                    <a href="#" class="float-right close-parecer">
-                                                                        <i class="icon icon-close"></i>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <hr>
-                                                            <div class="row header-parecer mt-4">
-                                                                <div class="col-lg-2 internas-buscas mt-3">
-                                                                    <label for="text">Cód. Sucursal</label>
-                                                                    <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-                                                                </div>
-                                                                <div class="col-lg-4 internas-buscas mt-3">
-                                                                    <label for="text">Nome Sucursal</label>
-                                                                    <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-                                                                </div>                                                               
-                                                            </div>
-                                                            <div class="row mb-4 mt-5">
-                                                                <div class="col-lg-12">
-                                                                    <button
-                                                                        class="btn btn-salvar float-right b-salvar-parecer">Salvar</button>
-                                                                    <button
-                                                                        class="btn btn-cancel b-cancelar-parecer">cancelar</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- Fim Nova Tabela -->
-                                            <div class="row mt-4 buscas-gerais">
-                                                <div class="col-lg-2 internas-buscas mt-3">
-                                                    <label for="text">Cód. Sucursal</label>
-                                                    <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-                                                </div>
-                                                <div class="col-lg-4 internas-buscas mt-3">
-                                                    <label for="text">Nome Sucursal</label>
-                                                    <input type="text" name="" maxlength="8" value="" id="" class="form-control" autocomplete="off"> 
-                                                </div>
-                                                <div class="col-lg-2 mt-4">
-                                                    <button type="button" name="button" class="btn btn-primary  mt-4">Buscar</button>
-                                                </div>
-                                            </div>
-                                            <div class="row mt-5 buscas-gerais">
-                                                <div class="col-lg-12 d-flex my-auto">
-                                                    <p><strong>5</strong> Tabelas encontradas</p>
-                                                </div>
-                                                <div class="col-lg-12"><hr></div>
-                                            </div>   
-                                            <div class="row buscas-gerais">                                         
-                                                <div class="table-responsive">
-                                                    <form id="" name="" action="" method="post">
-                                                        <table class="table table-striped" id="">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th scope="col">
-                                                                        <div class="ex-checkbox chb2">
-                                                                            <input class="form-check-input check-todos" onclick="marcarTodos(this.checked)" id="checkbox_one" type="checkbox" data-toggle="tooltip" data-original-title="Selecionar todos">
-                                                                            <label for="checkbox_one" class="check-estilo"></label>
-                                                                        </div>
-                                                                    </th>
-                                                                    <th scope="col"></th>
-                                                                    <th scope="col">Cód. Sucursal</th>
-                                                                    <th scope="col">Nome Sucursal</th>
-                                                                    <th scope="col">Recolha Automática de Salvados</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="ex-checkbox chb2">
-                                                                            <input type="checkbox" class="marcar" id="checkbox_single">
-                                                                            <label for="checkbox_single" class="check-estilo" data-toggle="tooltip" data-original-title="Selecionar"></label>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td style="width: 8%">
-                                                                        <a class="mr-1" style="cursor: pointer;">
-                                                                            <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar" width="25">
-                                                                        </a>
-                                                                    </td>
-                                                                    <td style="width: 15%">1</td>   
-                                                                    <td style="width: 20%">Rio de Janeiro</td>   
-                                                                    <td style="width: 65%">Sim</td>                                                                  
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="ex-checkbox chb2">
-                                                                            <input type="checkbox" class="marcar" id="checkbox_single">
-                                                                            <label for="checkbox_single" class="check-estilo" data-toggle="tooltip" data-original-title="Selecionar"></label>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td style="width: 8%">
-                                                                        <a class="mr-1" style="cursor: pointer;">
-                                                                            <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar" width="25">
-                                                                        </a>
-                                                                    </td>
-                                                                    <td style="width: 15%">2</td>   
-                                                                    <td style="width: 20%">Rio de Janeiro</td>   
-                                                                    <td style="width: 65%">Sim</td>                                                                  
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="ex-checkbox chb2">
-                                                                            <input type="checkbox" class="marcar" id="checkbox_single">
-                                                                            <label for="checkbox_single" class="check-estilo" data-toggle="tooltip" data-original-title="Selecionar"></label>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td style="width: 8%">
-                                                                        <a class="mr-1" style="cursor: pointer;">
-                                                                            <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar" width="25">
-                                                                        </a>
-                                                                    </td>
-                                                                    <td style="width: 15%">3</td>   
-                                                                    <td style="width: 20%">Rio de Janeiro</td>   
-                                                                    <td style="width: 65%">Sim</td>                                                                  
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="ex-checkbox chb2">
-                                                                            <input type="checkbox" class="marcar" id="checkbox_single">
-                                                                            <label for="checkbox_single" class="check-estilo" data-toggle="tooltip" data-original-title="Selecionar"></label>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td style="width: 8%">
-                                                                        <a class="mr-1" style="cursor: pointer;">
-                                                                            <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar" width="25">
-                                                                        </a>
-                                                                    </td>
-                                                                    <td style="width: 15%">4</td>   
-                                                                    <td style="width: 20%">Rio de Janeiro</td>   
-                                                                    <td style="width: 65%">Sim</td>                                                                  
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="ex-checkbox chb2">
-                                                                            <input type="checkbox" class="marcar" id="checkbox_single">
-                                                                            <label for="checkbox_single" class="check-estilo" data-toggle="tooltip" data-original-title="Selecionar"></label>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td style="width: 8%">
-                                                                        <a class="mr-1" style="cursor: pointer;">
-                                                                            <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar" width="25">
-                                                                        </a>
-                                                                    </td>
-                                                                    <td style="width: 15%">5</td>   
-                                                                    <td style="width: 20%">Rio de Janeiro</td>   
-                                                                    <td style="width: 65%">Sim</td>                                                                  
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Fim Sucursal -->
+																</tr>
+																<tr>
+																	<td>
+																		<a class="mr-1" style="cursor: pointer;">
+																			<img src="img/alterar.svg"
+																				data-toggle="tooltip"
+																				data-original-title="Alterar"
+																				width="25">
+																		</a>
+																	</td>
+																	<td>18</td>
+																	<td>Criada pela Apólice: 227.990.244.727324.1 -
+																		08/03/2021 - Natureza 1 - NatSug: 39 - Batch:
+																		AI104201710090011</td>
+																	<td>Redução</td>
+																	<td>08/03/2021</td>
+																</tr>
+																<tr>
+																	<td style="width: 5%">
+																		<a class="mr-1" style="cursor: pointer;">
+																			<img src="img/alterar.svg"
+																				data-toggle="tooltip"
+																				data-original-title="Alterar"
+																				width="25">
+																		</a>
+																	</td>
+																	<td>18</td>
+																	<td>Criada pela Apólice: 227.990.244.727324.1 -
+																		08/03/2021 - Natureza 1 - NatSug: 39 - Batch:
+																		AI104201710090011</td>
+																	<td>Redução</td>
+																	<td>08/03/2021</td>
+																</tr>
+																<tr>
+																	<td>
+																		<a class="mr-1" style="cursor: pointer;">
+																			<img src="img/alterar.svg"
+																				data-toggle="tooltip"
+																				data-original-title="Alterar"
+																				width="25">
+																		</a>
+																	</td>
+																	<td>18</td>
+																	<td>Criada pela Apólice: 227.990.244.727324.1 -
+																		08/03/2021 - Natureza 1 - NatSug: 39 - Batch:
+																		AI104201710090011</td>
+																	<td>Redução</td>
+																	<td>08/03/2021</td>
+																</tr>
+															</tbody>
+														</table>
+													</form>
+												</div>
+											</div>
+										</div>
+										<!-- Fim Natureza Cláusula -->
+										<!-- Sindicantes -->
+										<div class="container-fluid tab-sindicantes mt-2 hidden">
+											<div class="row mt-4">
+												<div class="col-lg-12">
+													<div class="">
+														<button type="button" name="button"
+															class="btn btn-salvar mr-5 b-parecer txt-up">Incluir
+															Tabela</button>
+													</div>
+												</div>
+											</div>
+											<!-- Nova Tabela -->
+											<div class="row mt-4">
+												<div class="col-lg-12">
+													<div class="info-parecer novo-parecer d-none">
+														<div class="container-fluid">
+															<div class="row">
+																<div class="col-lg-12">
+																	<h5 class="float-left m-0 title-novo">Nova Tabela
+																		Sindicantes</h5>
+																	<a href="#" class="float-right close-parecer">
+																		<i class="icon icon-close"></i>
+																	</a>
+																</div>
+															</div>
+															<hr>
+															<div class="row header-parecer mt-4">
+																<div class="col-lg-2 internas-buscas mt-3">
+																	<label for="text">Código</label>
+																	<input type="text" name="" maxlength="8" value=""
+																		id="" class="form-control" autocomplete="off">
+																</div>
+																<div class="col-lg-4 internas-buscas mt-3">
+																	<label for="text">Nome Sindicante</label>
+																	<input type="text" name="" maxlength="8" value=""
+																		id="" class="form-control" autocomplete="off">
+																</div>
+															</div>
+															<div class="row mb-4 mt-5">
+																<div class="col-lg-12">
+																	<button
+																		class="btn btn-salvar float-right b-salvar-parecer">Salvar</button>
+																	<button
+																		class="btn btn-cancel b-cancelar-parecer">cancelar</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- Fim Nova Tabela -->
+											<div class="row mt-4 buscas-gerais">
+												<div class="col-lg-2 internas-buscas mt-3">
+													<label for="text">Código</label>
+													<input type="text" name="" maxlength="8" value="" id=""
+														class="form-control" autocomplete="off">
+												</div>
+												<div class="col-lg-4 internas-buscas mt-3">
+													<label for="text">Nome Sindicante</label>
+													<input type="text" name="" maxlength="8" value="" id=""
+														class="form-control" autocomplete="off">
+												</div>
+												<div class="col-lg-2 mt-4">
+													<button type="button" name="button"
+														class="btn btn-primary  mt-4">Buscar</button>
+												</div>
+											</div>
+											<div class="row mt-5 buscas-gerais">
+												<div class="col-lg-6">
+													<p><strong>5</strong> Tabelas encontradas</p>
+												</div>
+												<div class="col-lg-6">
+													<a href="#" class="float-right">
+														<img src="img/excluir.svg" data-toggle="tooltip"
+															data-original-title="Excluir selecionados">
+													</a>
+												</div>
+												<div class="col-lg-12">
+													<hr>
+												</div>
+											</div>
+											<div class="row buscas-gerais">
+												<div class="table-responsive">
+													<form id="" name="" action="" method="post">
+														<table class="table table-striped" id="">
+															<thead>
+																<tr>
+																	<th scope="col">
+																		<div class="ex-checkbox chb2">
+																			<input class="form-check-input check-todos"
+																				onclick="marcarTodos(this.checked)"
+																				id="checkbox_one" type="checkbox"
+																				data-toggle="tooltip"
+																				data-original-title="Selecionar todos">
+																			<label for="checkbox_one"
+																				class="check-estilo"></label>
+																		</div>
+																	</th>
+																	<th scope="col"></th>
+																	<th scope="col">Código</th>
+																	<th scope="col">Nome Sindicante</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>
+																		<div class="ex-checkbox chb2">
+																			<input type="checkbox" class="marcar"
+																				id="checkbox_single">
+																			<label for="checkbox_single"
+																				class="check-estilo"
+																				data-toggle="tooltip"
+																				data-original-title="Selecionar"></label>
+																		</div>
+																	</td>
+																	<td style="width: 10%">
+																		<a class="mr-1" style="cursor: pointer;">
+																			<img src="img/alterar.svg"
+																				data-toggle="tooltip"
+																				data-original-title="Alterar"
+																				width="25">
+																		</a>
+																		<a href="#">
+																			<img src="img/excluir.svg"
+																				data-toggle="tooltip"
+																				data-original-title="Excluir">
+																		</a>
+																	</td>
+																	<td style="width: 5%">102708</td>
+																	<td style="width: 85%">Vector Assessoria de
+																		Sinistros de Seguros LTDA</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="ex-checkbox chb2">
+																			<input type="checkbox" class="marcar"
+																				id="checkbox_single">
+																			<label for="checkbox_single"
+																				class="check-estilo"
+																				data-toggle="tooltip"
+																				data-original-title="Selecionar"></label>
+																		</div>
+																	</td>
+																	<td style="width: 10%">
+																		<a class="mr-1" style="cursor: pointer;">
+																			<img src="img/alterar.svg"
+																				data-toggle="tooltip"
+																				data-original-title="Alterar"
+																				width="25">
+																		</a>
+																		<a href="#">
+																			<img src="img/excluir.svg"
+																				data-toggle="tooltip"
+																				data-original-title="Excluir">
+																		</a>
+																	</td>
+																	<td style="width: 5%">102708</td>
+																	<td style="width: 85%">Vector Assessoria de
+																		Sinistros de Seguros LTDA</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="ex-checkbox chb2">
+																			<input type="checkbox" class="marcar"
+																				id="checkbox_single">
+																			<label for="checkbox_single"
+																				class="check-estilo"
+																				data-toggle="tooltip"
+																				data-original-title="Selecionar"></label>
+																		</div>
+																	</td>
+																	<td style="width: 10%">
+																		<a class="mr-1" style="cursor: pointer;">
+																			<img src="img/alterar.svg"
+																				data-toggle="tooltip"
+																				data-original-title="Alterar"
+																				width="25">
+																		</a>
+																		<a href="#">
+																			<img src="img/excluir.svg"
+																				data-toggle="tooltip"
+																				data-original-title="Excluir">
+																		</a>
+																	</td>
+																	<td style="width: 5%">102708</td>
+																	<td style="width: 85%">Vector Assessoria de
+																		Sinistros de Seguros LTDA</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="ex-checkbox chb2">
+																			<input type="checkbox" class="marcar"
+																				id="checkbox_single">
+																			<label for="checkbox_single"
+																				class="check-estilo"
+																				data-toggle="tooltip"
+																				data-original-title="Selecionar"></label>
+																		</div>
+																	</td>
+																	<td style="width: 10%">
+																		<a class="mr-1" style="cursor: pointer;">
+																			<img src="img/alterar.svg"
+																				data-toggle="tooltip"
+																				data-original-title="Alterar"
+																				width="25">
+																		</a>
+																		<a href="#">
+																			<img src="img/excluir.svg"
+																				data-toggle="tooltip"
+																				data-original-title="Excluir">
+																		</a>
+																	</td>
+																	<td style="width: 5%">102708</td>
+																	<td style="width: 85%">Vector Assessoria de
+																		Sinistros de Seguros LTDA</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="ex-checkbox chb2">
+																			<input type="checkbox" class="marcar"
+																				id="checkbox_single">
+																			<label for="checkbox_single"
+																				class="check-estilo"
+																				data-toggle="tooltip"
+																				data-original-title="Selecionar"></label>
+																		</div>
+																	</td>
+																	<td style="width: 10%">
+																		<a class="mr-1" style="cursor: pointer;">
+																			<img src="img/alterar.svg"
+																				data-toggle="tooltip"
+																				data-original-title="Alterar"
+																				width="25">
+																		</a>
+																		<a href="#">
+																			<img src="img/excluir.svg"
+																				data-toggle="tooltip"
+																				data-original-title="Excluir">
+																		</a>
+																	</td>
+																	<td style="width: 5%">102708</td>
+																	<td style="width: 85%">Vector Assessoria de
+																		Sinistros de Seguros LTDA</td>
+																</tr>
+															</tbody>
+														</table>
+													</form>
+												</div>
+											</div>
+										</div>
+										<!-- Fim Sindicantes -->
+										<!-- Sucursal -->
+										<div class="container-fluid tab-sucursal mt-2 hidden">
+											<div class="row mt-4">
+												<div class="col-lg-12">
+													<div class="">
+														<button type="button" name="button"
+															class="btn btn-salvar mr-5 b-parecer txt-up">Incluir
+															Tabela</button>
+													</div>
+												</div>
+											</div>
+											<!-- Nova Tabela -->
+											<div class="row mt-4">
+												<div class="col-lg-12">
+													<div class="info-parecer novo-parecer d-none">
+														<div class="container-fluid">
+															<div class="row">
+																<div class="col-lg-12">
+																	<h5 class="float-left m-0 title-novo">Nova Tabela
+																		Sucursal</h5>
+																	<a href="#" class="float-right close-parecer">
+																		<i class="icon icon-close"></i>
+																	</a>
+																</div>
+															</div>
+															<hr>
+															<div class="row header-parecer mt-4">
+																<div class="col-lg-2 internas-buscas mt-3">
+																	<label for="text">Cód. Sucursal</label>
+																	<input type="text" name="" maxlength="8" value=""
+																		id="" class="form-control" autocomplete="off">
+																</div>
+																<div class="col-lg-4 internas-buscas mt-3">
+																	<label for="text">Nome Sucursal</label>
+																	<input type="text" name="" maxlength="8" value=""
+																		id="" class="form-control" autocomplete="off">
+																</div>
+															</div>
+															<div class="row mb-4 mt-5">
+																<div class="col-lg-12">
+																	<button
+																		class="btn btn-salvar float-right b-salvar-parecer">Salvar</button>
+																	<button
+																		class="btn btn-cancel b-cancelar-parecer">cancelar</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- Fim Nova Tabela -->
+											<div class="row mt-4 buscas-gerais">
+												<div class="col-lg-2 internas-buscas mt-3">
+													<label for="text">Cód. Sucursal</label>
+													<input type="text" name="" maxlength="8" value="" id=""
+														class="form-control" autocomplete="off">
+												</div>
+												<div class="col-lg-4 internas-buscas mt-3">
+													<label for="text">Nome Sucursal</label>
+													<input type="text" name="" maxlength="8" value="" id=""
+														class="form-control" autocomplete="off">
+												</div>
+												<div class="col-lg-2 mt-4">
+													<button type="button" name="button"
+														class="btn btn-primary  mt-4">Buscar</button>
+												</div>
+											</div>
+											<div class="row mt-5 buscas-gerais">
+												<div class="col-lg-12 d-flex my-auto">
+													<p><strong>5</strong> Tabelas encontradas</p>
+												</div>
+												<div class="col-lg-12">
+													<hr>
+												</div>
+											</div>
+											<div class="row buscas-gerais">
+												<div class="table-responsive">
+													<form id="" name="" action="" method="post">
+														<table class="table table-striped" id="">
+															<thead>
+																<tr>
+																	<th scope="col">
+																		<div class="ex-checkbox chb2">
+																			<input class="form-check-input check-todos"
+																				onclick="marcarTodos(this.checked)"
+																				id="checkbox_one" type="checkbox"
+																				data-toggle="tooltip"
+																				data-original-title="Selecionar todos">
+																			<label for="checkbox_one"
+																				class="check-estilo"></label>
+																		</div>
+																	</th>
+																	<th scope="col"></th>
+																	<th scope="col">Cód. Sucursal</th>
+																	<th scope="col">Nome Sucursal</th>
+																	<th scope="col">Recolha Automática de Salvados</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>
+																		<div class="ex-checkbox chb2">
+																			<input type="checkbox" class="marcar"
+																				id="checkbox_single">
+																			<label for="checkbox_single"
+																				class="check-estilo"
+																				data-toggle="tooltip"
+																				data-original-title="Selecionar"></label>
+																		</div>
+																	</td>
+																	<td style="width: 8%">
+																		<a class="mr-1" style="cursor: pointer;">
+																			<img src="img/alterar.svg"
+																				data-toggle="tooltip"
+																				data-original-title="Alterar"
+																				width="25">
+																		</a>
+																	</td>
+																	<td style="width: 15%">1</td>
+																	<td style="width: 20%">Rio de Janeiro</td>
+																	<td style="width: 65%">Sim</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="ex-checkbox chb2">
+																			<input type="checkbox" class="marcar"
+																				id="checkbox_single">
+																			<label for="checkbox_single"
+																				class="check-estilo"
+																				data-toggle="tooltip"
+																				data-original-title="Selecionar"></label>
+																		</div>
+																	</td>
+																	<td style="width: 8%">
+																		<a class="mr-1" style="cursor: pointer;">
+																			<img src="img/alterar.svg"
+																				data-toggle="tooltip"
+																				data-original-title="Alterar"
+																				width="25">
+																		</a>
+																	</td>
+																	<td style="width: 15%">2</td>
+																	<td style="width: 20%">Rio de Janeiro</td>
+																	<td style="width: 65%">Sim</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="ex-checkbox chb2">
+																			<input type="checkbox" class="marcar"
+																				id="checkbox_single">
+																			<label for="checkbox_single"
+																				class="check-estilo"
+																				data-toggle="tooltip"
+																				data-original-title="Selecionar"></label>
+																		</div>
+																	</td>
+																	<td style="width: 8%">
+																		<a class="mr-1" style="cursor: pointer;">
+																			<img src="img/alterar.svg"
+																				data-toggle="tooltip"
+																				data-original-title="Alterar"
+																				width="25">
+																		</a>
+																	</td>
+																	<td style="width: 15%">3</td>
+																	<td style="width: 20%">Rio de Janeiro</td>
+																	<td style="width: 65%">Sim</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="ex-checkbox chb2">
+																			<input type="checkbox" class="marcar"
+																				id="checkbox_single">
+																			<label for="checkbox_single"
+																				class="check-estilo"
+																				data-toggle="tooltip"
+																				data-original-title="Selecionar"></label>
+																		</div>
+																	</td>
+																	<td style="width: 8%">
+																		<a class="mr-1" style="cursor: pointer;">
+																			<img src="img/alterar.svg"
+																				data-toggle="tooltip"
+																				data-original-title="Alterar"
+																				width="25">
+																		</a>
+																	</td>
+																	<td style="width: 15%">4</td>
+																	<td style="width: 20%">Rio de Janeiro</td>
+																	<td style="width: 65%">Sim</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="ex-checkbox chb2">
+																			<input type="checkbox" class="marcar"
+																				id="checkbox_single">
+																			<label for="checkbox_single"
+																				class="check-estilo"
+																				data-toggle="tooltip"
+																				data-original-title="Selecionar"></label>
+																		</div>
+																	</td>
+																	<td style="width: 8%">
+																		<a class="mr-1" style="cursor: pointer;">
+																			<img src="img/alterar.svg"
+																				data-toggle="tooltip"
+																				data-original-title="Alterar"
+																				width="25">
+																		</a>
+																	</td>
+																	<td style="width: 15%">5</td>
+																	<td style="width: 20%">Rio de Janeiro</td>
+																	<td style="width: 65%">Sim</td>
+																</tr>
+															</tbody>
+														</table>
+													</form>
+												</div>
+											</div>
+										</div>
+										<!-- Fim Sucursal -->
 
-                                    </div><!-- Fim tabs group -->
-                                    <!-- Fim Opções -->
+									</div><!-- Fim tabs group -->
+									<!-- Fim Opções -->
 								</div>
 							</div>
 						</div>
@@ -2135,10 +2302,28 @@
 									</div>
 								</div>
 								<div class="row">
-									<div class="col-12"><hr></div>
 									<div class="col-12">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc est ante, accumsan ac libero posuere, viverra suscipit nisi. Cras scelerisque sem in malesuada facilisis. Sed consectetur dapibus quam. Maecenas tempus, orci nec egestas suscipit, mi felis lobortis sem, in consequat lacus magna et odio. Ut euismod risus nibh, et mollis magna convallis a. Integer varius aliquam rutrum. Sed mollis eleifend congue. Integer vestibulum lobortis magna vitae pellentesque. Curabitur vulputate libero vitae nibh scelerisque, et finibus ligula venenatis. Nam in blandit est. Nulla finibus, arcu ac egestas elementum, dui libero sagittis lectus, vel interdum diam erat et ligula. Aenean leo nulla, malesuada at pharetra vel, cursus imperdiet diam. Suspendisse tellus erat, imperdiet id neque ac, vulputate ornare nisi.
-											Nam pulvinar mollis accumsan. Nunc dignissim purus nec faucibus congue. Maecenas nisi eros, scelerisque at dui et, pulvinar euismod nunc. Curabitur porta porta eros, sed luctus sem. Ut turpis mauris, malesuada eget efficitur at, placerat a tellus. Curabitur vestibulum sodales tellus, vel gravida tortor tempus non. Integer fringilla turpis vitae urna accumsan, nec lobortis nunc semper. Curabitur vehicula arcu in porta dictum. Aliquam lacus mi, euismod in eros ac, tristique mollis nisi.	
+										<hr>
+									</div>
+									<div class="col-12">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc est ante,
+											accumsan ac libero posuere, viverra suscipit nisi. Cras scelerisque sem in
+											malesuada facilisis. Sed consectetur dapibus quam. Maecenas tempus, orci nec
+											egestas suscipit, mi felis lobortis sem, in consequat lacus magna et odio.
+											Ut euismod risus nibh, et mollis magna convallis a. Integer varius aliquam
+											rutrum. Sed mollis eleifend congue. Integer vestibulum lobortis magna vitae
+											pellentesque. Curabitur vulputate libero vitae nibh scelerisque, et finibus
+											ligula venenatis. Nam in blandit est. Nulla finibus, arcu ac egestas
+											elementum, dui libero sagittis lectus, vel interdum diam erat et ligula.
+											Aenean leo nulla, malesuada at pharetra vel, cursus imperdiet diam.
+											Suspendisse tellus erat, imperdiet id neque ac, vulputate ornare nisi.
+											Nam pulvinar mollis accumsan. Nunc dignissim purus nec faucibus congue.
+											Maecenas nisi eros, scelerisque at dui et, pulvinar euismod nunc. Curabitur
+											porta porta eros, sed luctus sem. Ut turpis mauris, malesuada eget efficitur
+											at, placerat a tellus. Curabitur vestibulum sodales tellus, vel gravida
+											tortor tempus non. Integer fringilla turpis vitae urna accumsan, nec
+											lobortis nunc semper. Curabitur vehicula arcu in porta dictum. Aliquam lacus
+											mi, euismod in eros ac, tristique mollis nisi.
 										</p>
 									</div>
 								</div>

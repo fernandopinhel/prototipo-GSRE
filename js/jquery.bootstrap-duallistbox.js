@@ -29,12 +29,12 @@
   // Create the defaults once
   var pluginName = 'bootstrapDualListbox',
     defaults = {
-      filterTextClear: 'show all',
+      filterTextClear: 'Mostrar todos',
       filterPlaceHolder: 'Pesquisar...',
-      moveSelectedLabel: 'Move selected',
-      moveAllLabel: 'Move all',
-      removeSelectedLabel: 'Remove selected',
-      removeAllLabel: 'Remove all',
+      moveSelectedLabel: 'Mover selecionado',
+      moveAllLabel: 'Mover todos',
+      removeSelectedLabel: 'Remover selecionado',
+      removeAllLabel: 'Remover todos',
       moveOnSelect: true,                                                                 // true/false (forced true on androids, see the comment later)
       moveOnDoubleClick: true,                                                            // true/false (forced false on androids, cause moveOnSelect is forced to true)
       preserveSelectionOnMove: false,                                                     // 'all' / 'moved' / false

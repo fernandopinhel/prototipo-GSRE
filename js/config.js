@@ -101,10 +101,32 @@ $(document).ready(function(){
   });
 
 
+  $("#painel-acompanhamento").click(function(){
+    $('#painel-acompanhamento').addClass('active');
+    $('#relatorio-gerencial-acompanhamento').removeClass('active');
+    $('#painel-gerencial').removeClass('active');
+    $('.tab-pa').removeClass('hidden');
+    $('.tab-rga').addClass('hidden');  
+    $('.tab-pg').addClass('hidden');  
+  });
 
+  $("#relatorio-gerencial-acompanhamento").click(function(){
+    $('#relatorio-gerencial-acompanhamento').addClass('active');
+    $('#painel-acompanhamento').removeClass('active');
+    $('#painel-gerencial').removeClass('active');
+    $('.tab-rga').removeClass('hidden');
+    $('.tab-pa').addClass('hidden');  
+    $('.tab-pg').addClass('hidden');  
+  });
 
-
-
+  $("#painel-gerencial").click(function(){
+    $('#painel-gerencial').addClass('active');
+    $('#painel-acompanhamento').removeClass('active');
+    $('#relatorio-gerencial-acompanhamento').removeClass('active');
+    $('.tab-pg').removeClass('hidden');
+    $('.tab-pa').addClass('hidden');  
+    $('.tab-rga').addClass('hidden');  
+  });
 
 
   $("#grupos").click(function(){
@@ -661,9 +683,5 @@ $(document).ready(function(){
     onclick="window.location.href = 'parecer.html'"
   });
 });
-
-
-
-
 
 
