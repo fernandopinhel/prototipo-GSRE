@@ -3127,12 +3127,39 @@ span.btn-add{
 }
 
 // Cards Paineis
+.box-event > div > div{
+  border: 2px solid #fff;
+}
+.box-event > div > div:hover{
+  cursor: pointer;
+  transition: all 0.5s ease;
+  -webkit-box-shadow: -2px -1px 43px -21px rgba(0,0,0,0.54);
+  -moz-box-shadow: -2px -1px 43px -21px rgba(0,0,0,0.54);
+  box-shadow: -2px -1px 43px -21px rgba(0,0,0,0.54);
+  border: 2px solid #343a40;
+}
+
 .box-periodo > p {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 600;
   font-size: 13px;
   margin: 0;
+}
+
+.total-grupo-geral {
+  width: 100%;
+  border-radius: 7px;
+  position: relative;
+  padding: 12px;
+  background: #59a134;
+  background-image: url(../img/bg-cards.png),linear-gradient(
+90deg
+, #59a134 0%, #37b944 35%, #1ec23b 100%);
+  background-position: 0% 70%;
+  // background-repeat: no-repeat;
+  background-size: auto;
+  margin: 0 auto;
 }
 
 .total-grupo {
@@ -3165,4 +3192,28 @@ span.btn-add{
   justify-content: center;
   font-size: 28px;
   color: #fff;
+}
+
+.acc-consulta-grupos{
+  border: 2px solid #f2f2f2;
+  margin-top: 10px;
+}
+
+.acc-consulta-grupos .card .card-header{
+  border-top: none;
+  background: #f2f2f2;
+  padding: 0;
+}
+
+.box-grupos-consulta{
+  padding: 14px;
+  border: 1px solid #f2f2f2;
+  height: 210px;
+  overflow: auto;
+}
+
+.box-grupos-consulta > p{
+  padding: 5px;
+  background: #f2f2f2;
+  margin: 2px 0;
 }

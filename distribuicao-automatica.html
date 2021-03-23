@@ -81,7 +81,7 @@
                                 onclick="window.location.href = 'caixa-de-entrada.html'" aria-selected="false">Caixa de
                                 Entrada</a>
                             <div class="aviso-animado">
-                                <div class="alerta-ce"><span>5</span></div>
+                                <div class="alerta-ce"><span>1</span></div>
                                 <div class="pulse"></div>
                             </div>
                         </li>
@@ -176,98 +176,230 @@
     </header>
     <section class="interna">
         <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-lg-12">
-                    <button type="button" class="btn btn-labeled btn-sair float-right">
-                        <span class="btn-label mr-2"> Sair do Processo</span><i class="fa fa-power-off"></i>
-                    </button>
-                </div>
-            </div>
             <!-- desktop -->
             <div class="desktop mt-2">
                 <div class="row">
                     <!-- conteudo principal -->
-                    <div class="col-12 tab-content" id="tab-content-principal">
-                        <div class="tab-content tab-pane active white" id="parecer-tab">
+                    <div class="col-12" id="tab-content-principal">
+                        <div class="tab-content white" id="conteudo-principal">
                             <div class="header-conteudo-principal">
                                 <div class="container-fluid">
                                     <div class="row mb-4">
                                         <div class="col-lg-12">
-                                            <h1 class="float-left mt-2">DISTRIBUIÇÃO AUTOMÁTICA</h1>
+                                            <h1 class="float-left mt-2">Configurações da DISTRIBUIÇÃO AUTOMÁTICA</h1>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="bg-gray">
-                                                <button type="button" name="button"  onclick="window.location.href = 'distribuicao-automatica-config.html'" class="btn btn-salvar mr-5 b-parecer txt-up">Configurações</button>
+                                    <div class="container-fluid mt-2">
+                                        <div class="row buscas-gerais">
+                                            <div class="col-12 mt-2 mb-1">
+                                                <h6 class="title-cadastro-internas mb-3 c-blue">Selecione o Grupo
+                                                    para configurar</h6>
+                                                <hr>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-4">
-                                        <div class="col-lg-3">
-                                            <label for="filtro">Grupos</label>
-                                            <select class="selectpicker form-control" id="filtro" name=""
-                                                title="Selecione...">
-                                                <option value="0" selected>Análise Danos Parciais</option>
-                                                <option value="1">Análise Indenização Integral</option>
-                                                <option value="2">Danos...</option>
-                                                <option value="3">Danos...</option>
-                                                <option value="4">Danos...</option>
-                                                <option value="5">Danos...</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-lg-3 mt-2">
-                                            <button type="button" name="button"
-                                                class="btn btn-primary mr-3 mt-4">Buscar</button>
-                                        </div>
-                                    </div>
-                                    <!-- Distribuições -->
-                                    <div class="row mt-2 d-flex">
-                                        <div class="col-lg-12 my-auto">
-                                            <p class="mt-4"><strong>4</strong> Grupos encontrados</p>
-                                        </div>
-                                        <div class="col-12">
-                                            <hr>
-                                        </div>
-                                    </div>
-                                    <div class="row resultado-filtro">
-                                        <div class="col-12">
-                                            <div class="table-responsive">
-                                                <form id="" name="" action="" method="post">
-                                                    <table class="table table-striped table-perfil" id="">
-                                                        <thead>
-                                                            <tr>
-                                                                <th scope="col"></th>
-                                                                <th scope="col" style="width: 15%;">Grupo</th>
-                                                                <th scope="col" style="width: 15%;">Analistas</th>
-                                                                <th scope="col" style="width: 70%;">Prioridade de Itens</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td style="width: 5%;">
-                                                                    <div>
-                                                                        <a href="distribuicao-automatica-config.html">
-                                                                            <img src="img/alterar.svg" data-toggle="tooltip" data-original-title="Alterar" width="25px" style="float: left; margin-right: 8px;">
-                                                                        </a>
-                                                                        <a href="distribuicao-automatica-config.html">
-                                                                            <img src="img/visualizar.svg" data-toggle="tooltip" data-original-title="Detalhes" width="25px" style="float: left;">
-                                                                        </a>
+                                            <div class="col-lg-3">
+                                                <label for="filtro">Grupo</label>
+                                                <select class="selectpicker form-control" id="filtro" name=""
+                                                    title="Selecione...">
+                                                    <option value="0" selected>Análise Danos Parciais</option>
+                                                    <option value="1">Análise Indenização Integral</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 mt-5 mb-1">
+                                                <h6 class="title-cadastro-internas c-blue">Escolha os Analistas para
+                                                    o grupo selecionado</h6>
+                                                <!-- <small class="mb-3">Selecione os analistas e aperte os botões para
+                                                    enviar ou retirar do grupo selecionado.</small> -->
+                                                <hr>
+                                            </div>
+                                            <div class="col-lg-12 mt-2">
+                                                <select multiple="multiple" size="20" name="duallistbox_demo2"
+                                                    class="demo2" title="duallistbox_demo2" style="height: 200px;">
+                                                    <option value="option1">João Carlos</option>
+                                                    <option value="option2">Carlos Alberto</option>
+                                                    <option value="option3" selected="selected">Igor
+                                                        Carneiro</option>
+                                                    <option value="option4" selected="selected">Diego Mello
+                                                    </option>
+                                                    <option value="option5" selected="selected">Marcio
+                                                        Yamamoto</option>
+                                                    <option value="option6">Carolina Siqueira</option>
+                                                    <option value="option7">Marcelo Barreto</option>
+                                                    <option value="option8">Everton Santos</option>
+                                                </select>
+                                                <script>
+                                                    var demo2 = $('.demo2').bootstrapDualListbox({
+                                                        nonSelectedListLabel: '<h6 class="color-r txt-up">ANALISTAS DISPONÍVEIS</h6>',
+                                                        selectedListLabel: '<h6 class="color-r txt-up">Análise Danos Parciais</h6>',
+                                                        preserveSelectionOnMove: 'moved',
+                                                        moveOnSelect: false,
+                                                        nonSelectedFilter: ''
+                                                    });
+                                                </script>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="accordion acc-consulta-grupos" id="accordion" role="tablist"
+                                                    aria-multiselectable="true">
+                                                    <form id="" name="" action="">
+                                                        <div class="card">
+                                                            <div class="card-header" id="headingInforBuscaOne" role="tab">
+                                                                <h5 class="mb-0">
+                                                                    <button class="btn btn-link btn-One"
+                                                                        onclick="toggleFunctionNews(this)" type="button"
+                                                                        data-toggle="collapse"
+                                                                        data-target="#collapseInforBuscaOne"
+                                                                        aria-expanded="true"
+                                                                        aria-controls="collapseInforBuscaOne"
+                                                                        data-parent="#accordion">
+                                                                        Consultar Grupos
+                                                                        <div class="bar-geral One-bar">
+                                                                            <div class="bar1"></div>
+                                                                            <div class="bar2"></div>
+                                                                        </div>
+                                                                    </button>
+                                                                </h5>
+                                                            </div>
+                                                            <div id="collapseInforBuscaOne" class="collapse show"
+                                                                aria-labelledby="headingInforBuscaOne"
+                                                                data-parent="#accordionExample">
+                                                                <div class="card-body">
+                                                                    <div class="container-fluid">
+                                                                        <div class="row">
+                                                                            <div class="col-lg-4">
+                                                                                <div class="box-grupos-consulta">
+                                                                                    <h6 class="txt-up color-r">Outro Grupo</h6>
+                                                                                    <p>Carlos Roberto</p>
+                                                                                    <p>Marcelo Rosa</p>
+                                                                                    <p>Hélio Santos</p>
+                                                                                    <p>Roberta Florenzo</p>
+                                                                                    <p>Carla Mendonça</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-lg-4">
+                                                                                <div class="box-grupos-consulta">
+                                                                                    <h6 class="txt-up color-r">Outro Grupo</h6>
+                                                                                    <p>Carlos Roberto</p>
+                                                                                    <p>Marcelo Rosa</p>
+                                                                                    <p>Hélio Santos</p>
+                                                                                    <p>Roberta Florenzo</p>
+                                                                                    <p>Carla Mendonça</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-lg-4">
+                                                                                <div class="box-grupos-consulta">
+                                                                                    <h6 class="txt-up color-r">Outro Grupo</h6>
+                                                                                    <p>Carlos Roberto</p>
+                                                                                    <p>Marcelo Rosa</p>
+                                                                                    <p>Hélio Santos</p>
+                                                                                    <p>Roberta Florenzo</p>
+                                                                                    <p>Carla Mendonça</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
-                                                                </td>
-                                                                <td>Análise Indenização Integral</td>
-                                                                <td>João Carlos<br>Carlos Alberto<br>Carolina Siqueira</td>
-                                                                <td>1 - Aguardando Doc<br>2 - Em Processo<br>3 -  Não Autorizado</td>                                                                
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 mt-5 mb-1">
+                                                <h6 class="title-cadastro-internas c-blue">Prioridade de Posições do
+                                                    Grupo Selecionado</h6>
+                                                <!-- <small class="mb-3">Selecione os itens da fila e no quadro ao lado
+                                                    pressione o item e arraste para cima ou para
+                                                    baixo na ordem de prioridade que desejar.</small> -->
+                                                <hr>
+                                            </div>
+                                            <div class="col-lg-6 mt-2 mb-1">
+                                                <div class="form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="inlineRadio1" value="option1"
+                                                        checked>
+                                                    <label class="form-check-label" for="inlineRadio1">Mais
+                                                        antigos</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                    <label class="form-check-label" for="inlineRadio2">Mais
+                                                        recentes</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                                    <label class="form-check-label" for="inlineRadio3">Todos</label>
+                                                </div>
+                                                <div class="clearfix mt-4"></div>
+                                                <label for="cmpPosicaoAtual">Selecionar itens da fila</label>
+                                                <select class="selectpicker form-control" id="cmpPosicaoAtual"
+                                                    data-live-search="true" title="Selecione..."
+                                                    data-hide-disabled="true" data-container="body" name=""
+                                                    data-actions-box="true">
+                                                    <option value="1">
+                                                        Sem Orçamento
+                                                    </option>
+                                                    <option value="2">
+                                                        Em processo
+                                                    </option>
+                                                    <option value="3" selected>
+                                                        Aguardando DOC
+                                                    </option>
+                                                    <option value="4">
+                                                        Não Autorizado
+                                                    </option>
+                                                </select>
+                                                <div class="clearfix mt-4"></div>
+                                                <p class="mb-1">Selecionar NEWS</p>
+                                                <hr class="m-0">
+                                                <div class="form-check-inline ex-checkbox mr-3">
+                                                    <input class="form-check-input" type="checkbox">
+                                                    <label for="">Orçamentos não autorizados</label>
+                                                </div>
+                                                <div class="form-check-inline ex-checkbox mr-3">
+                                                    <input class="form-check-input" type="checkbox" checked>
+                                                    <label for="">Notas Fiscais</label>
+                                                </div>
+                                                <div class="form-check-inline ex-checkbox mr-3">
+                                                    <input class="form-check-input" type="checkbox">
+                                                    <label for="">Novos Documentos</label>
+                                                </div>
+                                                <div class="form-check-inline ex-checkbox mr-3">
+                                                    <input class="form-check-input" type="checkbox">
+                                                    <label for="">Parecer</label>
+                                                </div>
+                                                <div class="form-check-inline ex-checkbox mr-3">
+                                                    <input class="form-check-input" type="checkbox">
+                                                    <label for="">News ASE</label>
+                                                </div>
+                                                <div class="form-check-inline ex-checkbox mr-3">
+                                                    <input class="form-check-input" type="checkbox">
+                                                    <label for="">Despachantes</label>
+                                                </div>
+                                                <div class="form-check-inline ex-checkbox mr-3">
+                                                    <input class="form-check-input" type="checkbox">
+                                                    <label for="">Paralelismo</label>
+                                                </div>
+                                                <div class="clearfix mt-4"></div>
+                                                <button type="button" name="button" class="btn btn-outline-primary mr-3">Enviar para Prioridade dos itens da fila</button>
+                                            </div>
+                                            <div class="col-6 mt-2 mb-1">
+                                                <div id="dualSelectExampleDois"></div>
                                             </div>
                                         </div>
                                     </div>
-
+                                    <!-- btns -->
+                                    <div class="container-fluid mt-5 bg-gray p-3">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <button type="button"
+                                                    class="btn btn-salvar btn-salvar-modal float-right txt-up">Salvar</button>
+                                                <button type="reset"
+                                                    class="btn btn-second mr-4 float-right txt-up w-90">Limpar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- fim btns -->
                                 </div>
-                                <!-- Fim Perfis -->
                             </div>
                         </div>
                     </div>
