@@ -59,6 +59,13 @@
                 format: 'DD/MM/YYYY'
             });
         });
+        $('#datepickerHorasMinutos').datetimepicker({
+            language: 'pt-BR',
+            format: 'HH:ii',
+            startView: 1,
+            minView: 0,
+            forceParse: 0
+        });
     </script>
 </head>
 
@@ -139,6 +146,26 @@
                                     href='relatorios-gerenciais.html'>Relatórios Gerenciais</a>
                                 <a class="dropdown-item" id="pills-relatorios-gerenciais-tab"
                                     href='relatorios-pendencias.html'>Relatórios de Pendências</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="tab"
+                                aria-selected="true">Painéis</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" id="pills-painel-acompanhamento-tab"
+                                    href='painel-de-acompanhamento.html'>Acompanhamento</a>
+                                <a class="dropdown-item" id="pills-relatorio-gerencial-acompanhamento-tab"
+                                    href='relatorio-gerencial-de-acompanhamento.html'>Relatório Gerencial de Acompanhamento</a>
+                                <a class="dropdown-item" id="pills-tempo-medio-pag-sinistro-tab"
+                                    href='tempo-medio-pag-sinistro.html'>Tempo Médio de Pagamento do Sinistro</a>
+                                <a class="dropdown-item" id="pills-qtd-valor-total-pag-tab"
+                                    href='qtd-valor-total-pag.html'>Quantidade e Valor Total de Pagamentos</a>
+                                <a class="dropdown-item" id="pills-qtd-valor-total-pag-nat-tab"
+                                    href='qtd-valor-total-pag-nat.html'>Quantidade e Valor Total de Pagamentos por Natureza</a>
+                                <a class="dropdown-item" id="pills-qtd-processo-pag-tab"
+                                    href='qtd-processo-pag.html'>Quantidade de Processo com Pagamentos</a>
+                                <a class="dropdown-item" id="pills-tempo-analise-fila-tab"
+                                href='tempo-analise-fila.html'>Tempo de Análise por Fila</a>
                             </div>
                         </li>
                         <li class="nav-item position-relative">
@@ -241,7 +268,8 @@
                                                     aria-multiselectable="true">
                                                     <form id="" name="" action="">
                                                         <div class="card">
-                                                            <div class="card-header" id="headingInforBuscaOne" role="tab">
+                                                            <div class="card-header" id="headingInforBuscaOne"
+                                                                role="tab">
                                                                 <h5 class="mb-0">
                                                                     <button class="btn btn-link btn-One"
                                                                         onclick="toggleFunctionNews(this)" type="button"
@@ -266,7 +294,8 @@
                                                                         <div class="row">
                                                                             <div class="col-lg-4">
                                                                                 <div class="box-grupos-consulta">
-                                                                                    <h6 class="txt-up color-r">Outro Grupo</h6>
+                                                                                    <h6 class="txt-up color-r">Outro
+                                                                                        Grupo</h6>
                                                                                     <p>Carlos Roberto</p>
                                                                                     <p>Marcelo Rosa</p>
                                                                                     <p>Hélio Santos</p>
@@ -276,7 +305,8 @@
                                                                             </div>
                                                                             <div class="col-lg-4">
                                                                                 <div class="box-grupos-consulta">
-                                                                                    <h6 class="txt-up color-r">Outro Grupo</h6>
+                                                                                    <h6 class="txt-up color-r">Outro
+                                                                                        Grupo</h6>
                                                                                     <p>Carlos Roberto</p>
                                                                                     <p>Marcelo Rosa</p>
                                                                                     <p>Hélio Santos</p>
@@ -286,7 +316,8 @@
                                                                             </div>
                                                                             <div class="col-lg-4">
                                                                                 <div class="box-grupos-consulta">
-                                                                                    <h6 class="txt-up color-r">Outro Grupo</h6>
+                                                                                    <h6 class="txt-up color-r">Outro
+                                                                                        Grupo</h6>
                                                                                     <p>Carlos Roberto</p>
                                                                                     <p>Marcelo Rosa</p>
                                                                                     <p>Hélio Santos</p>
@@ -311,46 +342,90 @@
                                                 <hr>
                                             </div>
                                             <div class="col-lg-6 mt-2 mb-1">
-                                                <div class="form-check-inline">
-                                                    <input class="form-check-input" type="radio"
-                                                        name="inlineRadioOptions" id="inlineRadio1" value="option1"
-                                                        checked>
-                                                    <label class="form-check-label" for="inlineRadio1">Mais
-                                                        antigos</label>
-                                                </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio"
-                                                        name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                                    <label class="form-check-label" for="inlineRadio2">Mais
-                                                        recentes</label>
-                                                </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio"
-                                                        name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                                                    <label class="form-check-label" for="inlineRadio3">Todos</label>
+                                                <div class="container-fluid p-0">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <div class="form-group">
+                                                                <label for="date">Data</label>
+                                                                <input type="date" name="" maxlength="" value="" id=""
+                                                                    class="form-control" autocomplete="off" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-3">
+                                                            <div class="form-group">
+                                                                <label for="hour">Horas</label>
+                                                                <input type="hour" name="" maxlength="" value=""
+                                                                    id="datepickerHorasMinutos" class="form-control"
+                                                                    autocomplete="off" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <div class="clearfix mt-4"></div>
-                                                <label for="cmpPosicaoAtual">Selecionar itens da fila</label>
-                                                <select class="selectpicker form-control" id="cmpPosicaoAtual"
-                                                    data-live-search="true" title="Selecione..."
-                                                    data-hide-disabled="true" data-container="body" name=""
-                                                    data-actions-box="true">
-                                                    <option value="1">
-                                                        Sem Orçamento
-                                                    </option>
-                                                    <option value="2">
-                                                        Em processo
-                                                    </option>
-                                                    <option value="3" selected>
-                                                        Aguardando DOC
-                                                    </option>
-                                                    <option value="4">
-                                                        Não Autorizado
-                                                    </option>
-                                                </select>
+                                                <div class="container-fluid p-0">
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <label for="cmpPosicaoAtual">Selecionar Itens da
+                                                                Fila</label>
+                                                            <select class="selectpicker form-control"
+                                                                id="cmpPosicaoAtual" data-live-search="true"
+                                                                title="Selecione..." data-hide-disabled="true"
+                                                                data-container="body" name="" data-actions-box="true">
+                                                                <option value="1">
+                                                                    Sem Orçamento
+                                                                </option>
+                                                                <option value="2">
+                                                                    Em processo
+                                                                </option>
+                                                                <option value="3" selected>
+                                                                    Aguardando DOC
+                                                                </option>
+                                                                <option value="4">
+                                                                    Não Autorizado
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <label for="cmpPosicaoAtual">Selecionar Natureza</label>
+                                                            <select class="selectpicker form-control"
+                                                                id="cmpPosicaoAtual" data-live-search="true"
+                                                                title="Selecione..." data-hide-disabled="true"
+                                                                data-container="body" name="" data-actions-box="true">
+                                                                <option value="1">
+                                                                    Natureza 1
+                                                                </option>
+                                                                <option value="2">
+                                                                    Natureza 2
+                                                                </option>
+                                                                <option value="3" selected>
+                                                                    Natureza 3
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class="clearfix mt-4"></div>
                                                 <p class="mb-1">Selecionar NEWS</p>
-                                                <hr class="m-0">
+                                                <hr class="mt-0">
+                                                <div class="container-fluid p-0">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <div class="form-group">
+                                                                <label for="date">Data</label>
+                                                                <input type="date" name="" maxlength="" value="" id=""
+                                                                    class="form-control" autocomplete="off" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-3">
+                                                            <div class="form-group">
+                                                                <label for="hour">Horas</label>
+                                                                <input type="hour" name="" maxlength="" value=""
+                                                                    id="datepickerHorasMinutos" class="form-control"
+                                                                    autocomplete="off" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class="form-check-inline ex-checkbox mr-3">
                                                     <input class="form-check-input" type="checkbox">
                                                     <label for="">Orçamentos não autorizados</label>
@@ -380,7 +455,9 @@
                                                     <label for="">Paralelismo</label>
                                                 </div>
                                                 <div class="clearfix mt-4"></div>
-                                                <button type="button" name="button" class="btn btn-outline-primary mr-3">Enviar para Prioridade dos itens da fila</button>
+                                                <button type="button" name="button"
+                                                    class="btn btn-outline-primary mr-3">Enviar para Prioridade dos
+                                                    itens da fila</button>
                                             </div>
                                             <div class="col-6 mt-2 mb-1">
                                                 <div id="dualSelectExampleDois"></div>

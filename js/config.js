@@ -28,7 +28,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   var dsl = $('#dualSelectExampleDois').DualSelectList({
-    'candidateItems' : ['1 - Aguardando Doc + NEWS - Notas Fiscais', '2 - Em Processo', '3 - Não Autorizado'],
+    'candidateItems' : ['1 - Aguardando Doc | NEWS - Notas Fiscais | Natureza 3', '2 - Em Processo', '3 - Não Autorizado'],
     // 'selectionItems' : ['Igor Carneiro', 'Diego Mello', 'Marcio Yamamoto'],
     'colors' : {
       'itemText' : '#212529',
