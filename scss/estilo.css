@@ -3509,6 +3509,11 @@ span.btn-add {
 .acc-consulta-grupos {
   border: 2px solid #f2f2f2;
   margin-top: 10px;
+  border-top: 0;
+}
+
+.acc-consulta-grupos .card {
+  border-radius: 0 !important;
 }
 
 .acc-consulta-grupos .card .card-header {
