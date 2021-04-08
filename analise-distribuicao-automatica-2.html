@@ -59,6 +59,13 @@
                 format: 'DD/MM/YYYY'
             });
         });
+        $('#datepickerHorasMinutos').datetimepicker({
+            language: 'pt-BR',
+            format: 'HH:ii',
+            startView: 1,
+            minView: 0,
+            forceParse: 0
+        });
     </script>
 </head>
 
@@ -142,7 +149,7 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="tab"
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="tab"
                                 aria-selected="true">Painéis</a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" id="pills-painel-acompanhamento-tab"
@@ -164,7 +171,7 @@
                             </div>
                         </li>
                         <li class="nav-item position-relative">
-                            <a class="nav-link" id="pills-consultas-tab" data-toggle="pill"
+                            <a class="nav-link active" id="pills-consultas-tab" data-toggle="pill"
                                 href='distribuicao-automatica.html' role="tab" aria-controls="pills-consultas"
                                 onclick="window.location.href = 'distribuicao-automatica.html'"
                                 aria-selected="false">Distribuição Automática</a>
@@ -202,162 +209,148 @@
             <div class="desktop mt-2">
                 <div class="row">
                     <!-- conteudo principal -->
-                    <div class="col-md-12 col-lg-12 col-xl-12" id="tab-content-principal">
+                    <div class="col-12" id="tab-content-principal">
                         <div class="tab-content white" id="conteudo-principal">
                             <div class="header-conteudo-principal">
                                 <div class="container-fluid">
                                     <div class="row mb-4">
                                         <div class="col-lg-12">
-                                            <h1 class="float-left mt-2">Painel de Acompanhamento</h1>
+                                            <h1 class="float-left mt-2">ANÁLISE DA DISTRIBUIÇÃO AUTOMÁTICA</h1>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <hr>
                                         </div>
                                     </div>
-                                    <!-- Opções -->
-                                    <!-- Painel de Acompanhamento -->
-                                    <div class="container-fluid mt-2">
-                                        <div class="row buscas-gerais">
-                                            <div class="col-12">
-                                                <div class="box-periodo bg-gray">
-                                                    <p>Data: 17/03/2021</p>
-                                                </div>
+                                    <div class="row buscas-gerais">
+                                        <div class="col-lg-2">
+                                            <div class="form-group">
+                                                <label for="minutes">Processo</label>
+                                                <input type="minutes" name="" maxlength="" value=""
+                                                    id="datepickerHorasMinutos" class="form-control"
+                                                    autocomplete="off" />
                                             </div>
-                                            <!-- Cards -->
-                                            <div class="col-lg-2">
-                                                <div class="total-grupo">
-                                                    <h6 class="title-dash">Processos - Nome do Grupo</h6>
-                                                    <div class="content-processos">
-                                                        <span>30</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2">
-                                                <div class="total-grupo">
-                                                    <h6 class="title-dash ">Processos - Nome do Grupo</h6>
-                                                    <div class="content-processos">
-                                                        <span>25</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2">
-                                                <div class="total-grupo">
-                                                    <h6 class="title-dash ">Processos - Nome do Grupo</h6>
-                                                    <div class="content-processos">
-                                                        <span>10</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2">
-                                                <div class="total-grupo">
-                                                    <h6 class="title-dash ">Processos - Nome do Grupo</h6>
-                                                    <div class="content-processos">
-                                                        <span>5</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2">
-                                                <div class="total-grupo">
-                                                    <h6 class="title-dash ">Processos - Nome do Grupo</h6>
-                                                    <div class="content-processos">
-                                                        <span>15</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2">
-                                                <div class="total-grupo">
-                                                    <h6 class="title-dash ">Processos - Nome do Grupo</h6>
-                                                    <div class="content-processos">
-                                                        <span>45</span>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 mt-2">
+                                            <button type="reset"
+                                                class="btn btn-second mr-3 mt-4 txt-up w-90">Limpar</button>
+                                            <button type="button" name="button"
+                                                class="btn btn-primary mr-3 mt-4">Buscar</button>
+                                        </div>
 
-                                            <!-- Fim Cards -->
-                                            <div class="col-12">
-                                                <div class="table-responsive">
-                                                    <form id="" name="" action="" method="post">
-                                                        <table class="table table-striped" id="">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th scope="col">Alerta</th>
-                                                                    <th scope="col">Analistas</th>
-                                                                    <th scope="col">Processos em Análise</th>
-                                                                    <th scope="col">Fila dos Processos</th>
-                                                                    <th scope="col">News</th>
-                                                                    <th scope="col">Natureza</th>
-                                                                    <th scope="col">Tempo médio dos processos</th>
-                                                                    <th scope="col">Tempo de Trabalho do Processo</th>
-                                                                    <th scope="col">Tempo Fora da Distribuição</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div>
-                                                                            <a href="#" data-toggle="modal"
-                                                                                data-target="#modalAlertaParecer">
-                                                                                <img src="img/aviso.svg"
-                                                                                    data-toggle="tooltip"
-                                                                                    data-original-title="Analista excedeu o tempo médio definido"
-                                                                                    width="25px"
-                                                                                    style="float: left; margin-right: 8px;">
-                                                                            </a>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>João Carlos</td>
-                                                                    <td>2464760</td>
-                                                                    <td>1 - Nome Grupo<br>2 - Nome Grupo<br>3 - Nome
-                                                                        Grupo</td>
-                                                                    <td>Aguardando DOC</td>
-                                                                    <td>Natureza 2</td>
-                                                                    <td>10 minutos</td>
-                                                                    <td>20 minutos</td>
-                                                                    <td>30 minutos</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div>
-                                                                            <a href="#" data-toggle="modal"
-                                                                                data-target="#modalAlertaParecer">
-                                                                                <img src="img/aviso.svg"
-                                                                                    data-toggle="tooltip"
-                                                                                    data-original-title="Analista excedeu o tempo médio definido"
-                                                                                    width="25px"
-                                                                                    style="float: left; margin-right: 8px;">
-                                                                            </a>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>João Carlos</td>
-                                                                    <td>2464760</td>
-                                                                    <td>1 - Nome Grupo<br>2 - Nome Grupo<br>3 - Nome
-                                                                        Grupo</td>
-                                                                    <td>Aguardando DOC</td>
-                                                                    <td>Natureza 2</td>
-                                                                    <td>10 minutos</td>
-                                                                    <td>20 minutos</td>
-                                                                    <td>30 minutos</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td></td>
-                                                                    <td>João Carlos</td>
-                                                                    <td>2464760</td>
-                                                                    <td>1 - Nome Grupo<br>2 - Nome Grupo<br>3 - Nome
-                                                                        Grupo</td>
-                                                                    <td>Aguardando DOC</td>
-                                                                    <td>Natureza 2</td>
-                                                                    <td>10 minutos</td>
-                                                                    <td>20 minutos</td>
-                                                                    <td>30 minutos</td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </form>
-                                                </div>
+                                        <div class="col-12 p-0">
+                                            <div class="table-responsive">
+                                                <form id="" name="" action="" method="post">
+                                                    <table class="table table-striped" id="">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col" style="width: 4%;"></th>
+                                                                <th scope="col">Analistas</th>
+                                                                <th scope="col">Processos em Análise</th>
+                                                                <th scope="col">Fila dos Processos</th>
+                                                                <th scope="col">News</th>
+                                                                <th scope="col">Natureza</th>
+                                                                <th scope="col">Tempo médio dos processos</th>
+                                                                <th scope="col">Tempo de Trabalho do Processo</th>
+                                                                <th scope="col">Tempo Fora da Distribuição</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div>
+                                                                        <a href="#" data-toggle="modal"
+                                                                            data-target="#modalAlertaParecer">
+                                                                            <img src="img/aviso.svg"
+                                                                                data-toggle="tooltip"
+                                                                                data-original-title="Analista excedeu o tempo médio definido."
+                                                                                width="25px"
+                                                                                style="float: left; margin-right: 15px;">
+                                                                        </a>
+                                                                        <a href="#">
+                                                                        <img src="img/enviar-distribuicao-auto.svg"
+                                                                            data-toggle="tooltip"
+                                                                            data-original-title="Enviar o processo para distribuição automática."
+                                                                            width="25px"
+                                                                            style="float: left;">
+                                                                    </a>
+                                                                    </div>
+                                                                </td>
+                                                                <td>João Carlos</td>
+                                                                <td>2464760</td>
+                                                                <td>1 - Nome Grupo<br>2 - Nome Grupo<br>3 - Nome Grupo
+                                                                </td>
+                                                                <td>Aguardando DOC</td>
+                                                                <td>Natureza 2</td>
+                                                                <td>10 minutos</td>
+                                                                <td>20 minutos</td>
+                                                                <td>30 minutos</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div>
+                                                                        <a href="#" data-toggle="modal"
+                                                                            data-target="#modalAlertaParecer">
+                                                                            <img src="img/aviso.svg"
+                                                                                data-toggle="tooltip"
+                                                                                data-original-title="Analista excedeu o tempo médio definido."
+                                                                                width="25px"
+                                                                                style="float: left; margin-right: 15px;">
+                                                                        </a>
+                                                                        <a href="#">
+                                                                        <img src="img/enviar-distribuicao-auto.svg"
+                                                                            data-toggle="tooltip"
+                                                                            data-original-title="Enviar o processo para distribuição automática."
+                                                                            width="25px"
+                                                                            style="float: left;">
+                                                                    </a>
+                                                                    </div>
+                                                                </td>
+                                                                <td>João Carlos</td>
+                                                                <td>2464760</td>
+                                                                <td>1 - Nome Grupo<br>2 - Nome Grupo<br>3 - Nome Grupo
+                                                                </td>
+                                                                <td>Aguardando DOC</td>
+                                                                <td>Natureza 2</td>
+                                                                <td>10 minutos</td>
+                                                                <td>20 minutos</td>
+                                                                <td>30 minutos</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div>
+                                                                        <a href="#" data-toggle="modal"
+                                                                            data-target="#modalAlertaParecer">
+                                                                            <img src="img/aviso.svg"
+                                                                                data-toggle="tooltip"
+                                                                                data-original-title="Analista excedeu o tempo médio definido."
+                                                                                width="25px"
+                                                                                style="float: left; margin-right: 15px;">
+                                                                        </a>
+                                                                        <a href="#">
+                                                                        <img src="img/enviar-distribuicao-auto.svg"
+                                                                            data-toggle="tooltip"
+                                                                            data-original-title="Enviar o processo para distribuição automática."
+                                                                            width="25px"
+                                                                            style="float: left;">
+                                                                    </a>
+                                                                    </div>
+                                                                </td>
+                                                                <td>João Carlos</td>
+                                                                <td>2464760</td>
+                                                                <td>1 - Nome Grupo<br>2 - Nome Grupo<br>3 - Nome Grupo
+                                                                </td>
+                                                                <td>Aguardando DOC</td>
+                                                                <td>Natureza 2</td>
+                                                                <td>10 minutos</td>
+                                                                <td>20 minutos</td>
+                                                                <td>30 minutos</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Fim Painel de Acompanhamento -->
-
-
-                                    <!-- Fim Opções -->
                                 </div>
                             </div>
                         </div>
@@ -374,37 +367,37 @@
     </footer>
 
     <div class="modal fade bd-example-modal-lg" id="modalAlertaParecer" tabindex="-1" role="dialog"
-        aria-labelledby="modalAlertaParecerLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header m-header">
-                    <h5 class="modal-title" id="modalAlertaParecer">Parecer do processo</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <div class="row mtop-10">
-                            <div class="col-12">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et feugiat dolor.
-                                    Pellentesque scelerisque, leo pharetra pellentesque dictum, nunc nulla faucibus
-                                    sapien, et ornare lacus urna in urna. Curabitur fringilla lacinia sem vel sodales.
-                                    Nam imperdiet mi ante, sed placerat tortor aliquam eu. Ut mattis tellus id augue
-                                    mattis mattis. Donec consequat fringilla ullamcorper. Nulla efficitur lorem ac justo
-                                    gravida, mollis mattis justo maximus. Vestibulum ac rhoncus tellus. Nullam pharetra
-                                    elementum nulla, at varius libero porttitor sed. Curabitur posuere viverra eros in
-                                    ullamcorper. Ut vitae malesuada dui. Nunc vestibulum tortor ut erat pulvinar, eu
-                                    efficitur diam aliquam. Quisque dapibus imperdiet pellentesque. Quisque at felis ut
-                                    purus dignissim vulputate vel at odio. Praesent laoreet elit dolor, aliquam aliquet
-                                    odio posuere nec.</p>
-                            </div>
+    aria-labelledby="modalAlertaParecerLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header m-header">
+                <h5 class="modal-title" id="modalAlertaParecer">Parecer do processo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row mtop-10">
+                        <div class="col-12">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et feugiat dolor.
+                                Pellentesque scelerisque, leo pharetra pellentesque dictum, nunc nulla faucibus
+                                sapien, et ornare lacus urna in urna. Curabitur fringilla lacinia sem vel sodales.
+                                Nam imperdiet mi ante, sed placerat tortor aliquam eu. Ut mattis tellus id augue
+                                mattis mattis. Donec consequat fringilla ullamcorper. Nulla efficitur lorem ac justo
+                                gravida, mollis mattis justo maximus. Vestibulum ac rhoncus tellus. Nullam pharetra
+                                elementum nulla, at varius libero porttitor sed. Curabitur posuere viverra eros in
+                                ullamcorper. Ut vitae malesuada dui. Nunc vestibulum tortor ut erat pulvinar, eu
+                                efficitur diam aliquam. Quisque dapibus imperdiet pellentesque. Quisque at felis ut
+                                purus dignissim vulputate vel at odio. Praesent laoreet elit dolor, aliquam aliquet
+                                odio posuere nec.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
     <!-- configs js -->
     <script type="text/javascript" src="js/p8/inportMenuP8.js"></script>

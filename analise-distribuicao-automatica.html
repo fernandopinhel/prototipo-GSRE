@@ -59,6 +59,13 @@
                 format: 'DD/MM/YYYY'
             });
         });
+        $('#datepickerHorasMinutos').datetimepicker({
+            language: 'pt-BR',
+            format: 'HH:ii',
+            startView: 1,
+            minView: 0,
+            forceParse: 0
+        });
     </script>
 </head>
 
@@ -142,7 +149,7 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="tab"
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="tab"
                                 aria-selected="true">Painéis</a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" id="pills-painel-acompanhamento-tab"
@@ -164,7 +171,7 @@
                             </div>
                         </li>
                         <li class="nav-item position-relative">
-                            <a class="nav-link" id="pills-consultas-tab" data-toggle="pill"
+                            <a class="nav-link active" id="pills-consultas-tab" data-toggle="pill"
                                 href='distribuicao-automatica.html' role="tab" aria-controls="pills-consultas"
                                 onclick="window.location.href = 'distribuicao-automatica.html'"
                                 aria-selected="false">Distribuição Automática</a>
@@ -202,162 +209,116 @@
             <div class="desktop mt-2">
                 <div class="row">
                     <!-- conteudo principal -->
-                    <div class="col-md-12 col-lg-12 col-xl-12" id="tab-content-principal">
+                    <div class="col-12" id="tab-content-principal">
                         <div class="tab-content white" id="conteudo-principal">
                             <div class="header-conteudo-principal">
                                 <div class="container-fluid">
                                     <div class="row mb-4">
                                         <div class="col-lg-12">
-                                            <h1 class="float-left mt-2">Painel de Acompanhamento</h1>
+                                            <h1 class="float-left mt-2">ANÁLISE DA DISTRIBUIÇÃO AUTOMÁTICA</h1>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <hr>
                                         </div>
                                     </div>
-                                    <!-- Opções -->
-                                    <!-- Painel de Acompanhamento -->
                                     <div class="container-fluid mt-2">
                                         <div class="row buscas-gerais">
-                                            <div class="col-12">
-                                                <div class="box-periodo bg-gray">
-                                                    <p>Data: 17/03/2021</p>
+                                            <div class="col-3">
+                                                <label for="cmpPosicaoAtual">Selecionar Natureza</label>
+                                                <select class="selectpicker form-control" id="cmpPosicaoAtual"
+                                                    data-live-search="true" title="Selecione..."
+                                                    data-hide-disabled="true" data-container="body" name=""
+                                                    data-actions-box="true">
+                                                    <option value="1">
+                                                        Natureza 1
+                                                    </option>
+                                                    <option value="2">
+                                                        Natureza 2
+                                                    </option>
+                                                    <option value="3">
+                                                        Natureza 3
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            <div class="col-3">
+                                                <label for="cmpPosicaoAtual">Selecionar Itens da
+                                                    Fila</label>
+                                                <select class="selectpicker form-control" id="cmpPosicaoAtual"
+                                                    data-live-search="true" title="Selecione..."
+                                                    data-hide-disabled="true" data-container="body" name=""
+                                                    data-actions-box="true">
+                                                    <option value="1">
+                                                        Sem Orçamento
+                                                    </option>
+                                                    <option value="2">
+                                                        Em processo
+                                                    </option>
+                                                    <option value="3">
+                                                        Aguardando DOC
+                                                    </option>
+                                                    <option value="4">
+                                                        Não Autorizado
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 mt-5">
+                                                <h6 class="title-cadastro-internas c-blue">Selecionar NEWS</h6>
+                                                <hr class="mt-0">
+                                                <div class="form-check-inline ex-checkbox mr-3">
+                                                    <input class="form-check-input" type="checkbox">
+                                                    <label for="">Orçamentos não autorizados</label>
+                                                </div>
+                                                <div class="form-check-inline ex-checkbox mr-3">
+                                                    <input class="form-check-input" type="checkbox">
+                                                    <label for="">Notas Fiscais</label>
+                                                </div>
+                                                <div class="form-check-inline ex-checkbox mr-3">
+                                                    <input class="form-check-input" type="checkbox">
+                                                    <label for="">Novos Documentos</label>
+                                                </div>
+                                                <div class="form-check-inline ex-checkbox mr-3">
+                                                    <input class="form-check-input" type="checkbox">
+                                                    <label for="">Parecer</label>
+                                                </div>
+                                                <div class="form-check-inline ex-checkbox mr-3">
+                                                    <input class="form-check-input" type="checkbox">
+                                                    <label for="">News ASE</label>
+                                                </div>
+                                                <div class="form-check-inline ex-checkbox mr-3">
+                                                    <input class="form-check-input" type="checkbox">
+                                                    <label for="">Despachantes</label>
+                                                </div>
+                                                <div class="form-check-inline ex-checkbox mr-3">
+                                                    <input class="form-check-input" type="checkbox">
+                                                    <label for="">Paralelismo</label>
                                                 </div>
                                             </div>
-                                            <!-- Cards -->
-                                            <div class="col-lg-2">
-                                                <div class="total-grupo">
-                                                    <h6 class="title-dash">Processos - Nome do Grupo</h6>
-                                                    <div class="content-processos">
-                                                        <span>30</span>
+                                            <div class="col-12 mt-5">
+                                                <h6 class="title-cadastro-internas c-blue">Prazo máximo para análise do processo</h6>
+                                                <hr class="mt-0">
+                                                <div class="col-lg-1 p-0">
+                                                    <div class="form-group">
+                                                        <label for="minutes">Minutos</label>
+                                                        <input type="minutes" name="" maxlength="" value=""
+                                                            id="datepickerHorasMinutos" class="form-control"
+                                                            autocomplete="off" />
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2">
-                                                <div class="total-grupo">
-                                                    <h6 class="title-dash ">Processos - Nome do Grupo</h6>
-                                                    <div class="content-processos">
-                                                        <span>25</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2">
-                                                <div class="total-grupo">
-                                                    <h6 class="title-dash ">Processos - Nome do Grupo</h6>
-                                                    <div class="content-processos">
-                                                        <span>10</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2">
-                                                <div class="total-grupo">
-                                                    <h6 class="title-dash ">Processos - Nome do Grupo</h6>
-                                                    <div class="content-processos">
-                                                        <span>5</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2">
-                                                <div class="total-grupo">
-                                                    <h6 class="title-dash ">Processos - Nome do Grupo</h6>
-                                                    <div class="content-processos">
-                                                        <span>15</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2">
-                                                <div class="total-grupo">
-                                                    <h6 class="title-dash ">Processos - Nome do Grupo</h6>
-                                                    <div class="content-processos">
-                                                        <span>45</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!-- Fim Cards -->
-                                            <div class="col-12">
-                                                <div class="table-responsive">
-                                                    <form id="" name="" action="" method="post">
-                                                        <table class="table table-striped" id="">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th scope="col">Alerta</th>
-                                                                    <th scope="col">Analistas</th>
-                                                                    <th scope="col">Processos em Análise</th>
-                                                                    <th scope="col">Fila dos Processos</th>
-                                                                    <th scope="col">News</th>
-                                                                    <th scope="col">Natureza</th>
-                                                                    <th scope="col">Tempo médio dos processos</th>
-                                                                    <th scope="col">Tempo de Trabalho do Processo</th>
-                                                                    <th scope="col">Tempo Fora da Distribuição</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div>
-                                                                            <a href="#" data-toggle="modal"
-                                                                                data-target="#modalAlertaParecer">
-                                                                                <img src="img/aviso.svg"
-                                                                                    data-toggle="tooltip"
-                                                                                    data-original-title="Analista excedeu o tempo médio definido"
-                                                                                    width="25px"
-                                                                                    style="float: left; margin-right: 8px;">
-                                                                            </a>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>João Carlos</td>
-                                                                    <td>2464760</td>
-                                                                    <td>1 - Nome Grupo<br>2 - Nome Grupo<br>3 - Nome
-                                                                        Grupo</td>
-                                                                    <td>Aguardando DOC</td>
-                                                                    <td>Natureza 2</td>
-                                                                    <td>10 minutos</td>
-                                                                    <td>20 minutos</td>
-                                                                    <td>30 minutos</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div>
-                                                                            <a href="#" data-toggle="modal"
-                                                                                data-target="#modalAlertaParecer">
-                                                                                <img src="img/aviso.svg"
-                                                                                    data-toggle="tooltip"
-                                                                                    data-original-title="Analista excedeu o tempo médio definido"
-                                                                                    width="25px"
-                                                                                    style="float: left; margin-right: 8px;">
-                                                                            </a>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>João Carlos</td>
-                                                                    <td>2464760</td>
-                                                                    <td>1 - Nome Grupo<br>2 - Nome Grupo<br>3 - Nome
-                                                                        Grupo</td>
-                                                                    <td>Aguardando DOC</td>
-                                                                    <td>Natureza 2</td>
-                                                                    <td>10 minutos</td>
-                                                                    <td>20 minutos</td>
-                                                                    <td>30 minutos</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td></td>
-                                                                    <td>João Carlos</td>
-                                                                    <td>2464760</td>
-                                                                    <td>1 - Nome Grupo<br>2 - Nome Grupo<br>3 - Nome
-                                                                        Grupo</td>
-                                                                    <td>Aguardando DOC</td>
-                                                                    <td>Natureza 2</td>
-                                                                    <td>10 minutos</td>
-                                                                    <td>20 minutos</td>
-                                                                    <td>30 minutos</td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Fim Painel de Acompanhamento -->
-
-
-                                    <!-- Fim Opções -->
+                                    <!-- btns -->
+                                    <div class="container-fluid mt-5 bg-gray p-3">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <button type="button"
+                                                    class="btn btn-salvar btn-salvar-modal float-right txt-up">Salvar</button>
+                                                <button type="reset"
+                                                    class="btn btn-second mr-4 float-right txt-up w-90">Limpar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- fim btns -->
                                 </div>
                             </div>
                         </div>
@@ -372,39 +333,6 @@
     <footer>
         <img src="img/bg-footer.png" alt="" style="width:100%">
     </footer>
-
-    <div class="modal fade bd-example-modal-lg" id="modalAlertaParecer" tabindex="-1" role="dialog"
-        aria-labelledby="modalAlertaParecerLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header m-header">
-                    <h5 class="modal-title" id="modalAlertaParecer">Parecer do processo</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <div class="row mtop-10">
-                            <div class="col-12">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et feugiat dolor.
-                                    Pellentesque scelerisque, leo pharetra pellentesque dictum, nunc nulla faucibus
-                                    sapien, et ornare lacus urna in urna. Curabitur fringilla lacinia sem vel sodales.
-                                    Nam imperdiet mi ante, sed placerat tortor aliquam eu. Ut mattis tellus id augue
-                                    mattis mattis. Donec consequat fringilla ullamcorper. Nulla efficitur lorem ac justo
-                                    gravida, mollis mattis justo maximus. Vestibulum ac rhoncus tellus. Nullam pharetra
-                                    elementum nulla, at varius libero porttitor sed. Curabitur posuere viverra eros in
-                                    ullamcorper. Ut vitae malesuada dui. Nunc vestibulum tortor ut erat pulvinar, eu
-                                    efficitur diam aliquam. Quisque dapibus imperdiet pellentesque. Quisque at felis ut
-                                    purus dignissim vulputate vel at odio. Praesent laoreet elit dolor, aliquam aliquet
-                                    odio posuere nec.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- configs js -->
     <script type="text/javascript" src="js/p8/inportMenuP8.js"></script>

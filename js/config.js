@@ -28,7 +28,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   var dsl = $('#dualSelectExampleDois').DualSelectList({
-    'candidateItems' : ['1 - 10/03/21 | 12h | Aguardando Doc | NEWS - Notas Fiscais | Natureza 3', '2 - Em Processo', '3 - Não Autorizado'],
+    'candidateItems' : ['Data/Hora de corte dos Itens e Natureza: <b>10/03/21 - 12h</b> | Itens: <b>Aguardando Doc</b> | Natureza: <b>Natureza 3</b> | Data/Hora de corte das News: <b>11/03/21 - 6h</b> | NEWS - <b>Notas Fiscais</b> | Prazo máximo: <b>30 minutos</b>', 'Data/Hora de corte dos Itens e Natureza: <b>25/03/21 - 8h</b> | Itens: <b>Aguardando Doc</b> | Natureza: <b>Natureza 4</b> | Data/Hora de corte das News: <b>20/03/21 - 4h</b> | NEWS - <b>Novos Documentos</b> | Prazo máximo: <b>15 minutos</b>', 'Data/Hora de corte dos Itens e Natureza: <b>28/03/21 - 7h</b> | Itens: <b>Em processo</b> | Natureza: <b>Natureza 1</b> | Data/Hora de corte das News: <b>22/03/21 - 2h</b> | NEWS - <b>Novos Documentos, Parecer</b> | Prazo máximo: <b>10 minutos</b>'],
     // 'selectionItems' : ['Igor Carneiro', 'Diego Mello', 'Marcio Yamamoto'],
     'colors' : {
       'itemText' : '#212529',
