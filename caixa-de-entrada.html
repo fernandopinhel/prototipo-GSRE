@@ -161,14 +161,12 @@
 							</div>
 						</button>
 						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-							<a class="dropdown-item" href="#">M123456 - Jeniffer</a>
-							<div class="dropdown-divider"></div>
 							<a class="dropdown-item" href="#" data-toggle="modal"
 								data-target="#modal-info-ambiente">Informações de Ambiente</a>
 							<div class="dropdown-divider"></div>
 							<a class="dropdown-item" href="#">Minhas Configurações</a>
 							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">Sair</a>
+							<a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalSair">Sair</a>
 						</div>
 					</div>
 				</div>
@@ -178,59 +176,25 @@
 	<section class="caixa-de-entrada">
 		<div class="container-fluid">
 			<div class="row mt-3 resultado-filtro">
-				<div class="col-lg-6">
-					<p><strong>1</strong> processo foi distribuído para sua caixa de entrada.</p>
-				</div>
-				<div class="col-lg-6">
-					<button type="button" class="btn btn-labeled btn-sair float-right">
-						<span class="btn-label mr-2"> Sair do Processo</span><i class="fa fa-power-off"></i>
-					</button>
-				</div>
 				<div class="col-12">
 					<div class="table-responsive">
 						<div class="action-group mb-3">
 							<div class="container-fluid text-center">
 								<div class="row">
-									<div class="col-12">
-										<button type="button" class="btn btn-warning mr-3 mt-2"
-											onclick="showModalAlteracao()">
-											<span class="btn-label">Alterar</span>
-										</button>
-										<button type="button" class="btn btn-distribuicao mr-3 mt-2" data-toggle="modal"
-											data-target="#modalDistribuicao">
-											<span class="btn-label">Distribuição</span>
-										</button>
+									<div class="col-12 text-left">
 										<button type="button" class="btn btn-info mr-3 mt-2"
 											onclick="telaLiberarNews()">
 											<span class="btn-label">Liberar News</span>
-										</button>
-										<button type="button" class="btn btn-labeled btn-success mr-3 mt-2">
-											<span class="btn-label">Gerar Excel</span>
-										</button>
-										<button type="button" class="btn btn-labeled btn-danger mr-3 mt-2">
-											<span class="btn-label">Gerar PDF</span>
-										</button>
-										<button type="button" class="btn btn-labeled btn-secondary mt-2"
-											onclick="telaCapaAnexo()">
-											<span class="btn-label">Gerar GRPS</span>
 										</button>
 									</div>
 								</div>
 							</div>
 						</div>
-						<form id="formListaConsulta" name="formListaConsulta"
-							action="/GSRE-SinistroAuto/modulo-consulta/listarConsulta.do" method="post">
+						<form id="formListaConsulta" name="formListaConsulta" action="" method="post">
 							<table class="table table-striped t3" id="tabelaProcesso">
 								<thead>
 									<tr>
-										<th>
-											<div class="ex-checkbox chb2">
-												<input class="form-check-input" type="checkbox" data-toggle="tooltip"
-													data-original-title="Selecionar todos">
-												<label for="checkbox-table"></label>
-											</div>
-										</th>
-										<th scope="col"></th>
+										<th scope="col" style="width: 3%;"></th>
 										<th scope="col">Chave da Apólice</th>
 										<th scope="col">Sinistro-Processo</th>
 										<th scope="col">Nº do Aviso</th>
@@ -238,7 +202,7 @@
 										<th scope="col">Ocorrência</th>
 										<th scope="col">Data do Aviso</th>
 										<th scope="col">News</th>
-										<th scope="col">Data Chegada</th>
+										<th scope="col">Data News</th>
 										<th scope="col">Situação do Processo</th>
 										<th scope="col">Posição Atual</th>
 									</tr>
@@ -246,25 +210,9 @@
 								<tbody>
 									<tr>
 										<td>
-											<div class="ex-checkbox chb2">
-												<input class="form-check-input" type="checkbox">
-												<label for="checkbox-table"></label>
-											</div>
-										</td>
-										<td>
-											<a href="#" data-toggle="modal" data-target="#modalReabrirProcesso">
-												<img src="img/reabrir.svg" data-toggle="tooltip"
-													data-original-title="Reabrir Processo" width="27px"
-													style="float:left; margin-right: 5px;">
-											</a>
 											<a href="#" data-toggle="modal" data-target="#modalNewsGrid">
 												<img src="img/news-2.svg" data-toggle="tooltip"
 													data-original-title="News" width="27px"
-													style="float:left; margin-right: 5px;">
-											</a>
-											<a href="#" data-toggle="modal" data-target="#modalAlteracaoProcesso">
-												<img src="img/alterar.svg" data-toggle="tooltip"
-													data-original-title="Alterar" width="27px"
 													style="float:left; margin-right: 5px;">
 											</a>
 											<a href="parecer-encerrado.html">
@@ -288,93 +236,85 @@
 						</form>
 					</div>
 				</div>
-			<!-- modal mensagem aviso processo -->
-			<script type="text/javascript">
-				$(window).on('load', function () {
-					$('#modalAvisoProcesso').modal('show');
-				});
-			</script>
-			<div class="modal fade" id="modalAvisoProcesso" tabindex="-1" role="dialog"
-				aria-labelledby="modalAvisoProcessoLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header m-header">
-							<h5 class="modal-title" id="modalAvisoProcesso">Mensagem</h5>
-							<!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button> -->
-						</div>
-						<div class="modal-body">
-							<div class="container-fluid">
-								<div class="row mtop-10">
-									<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a nibh augue. Curabitur pulvinar turpis in lectus sodales euismod. Etiam eu felis vel enim scelerisque fermentum.</h6>
+					<!-- modal mensagem aviso processo -->
+					<div class="modal fade" id="modalSair" tabindex="-1" role="dialog"
+						aria-labelledby="modalSairLabel" aria-hidden="true" data-backdrop="static"
+						data-keyboard="false">
+						<div class="modal-dialog w-600" role="document">
+							<div class="modal-content">
+								<div class="modal-header m-header">
+									<h5 class="modal-title" id="">Sair do sistema</h5>
+									<!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button> -->
+								</div>
+								<div class="modal-body">
+									<div class="container-fluid">
+										<div class="row mtop-10">
+											<div class="col-12">
+												<h5>Você tem certeza que deseja sair do sistema?</h5>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<div class="container-fluid p-0">
+										<div class="col-12">
+										<button type="button" class="btn btn-cancel txt-up float-right w-90 m-0"
+										data-dismiss="modal">Não</button>
+										<button type="button" class="btn btn-salvar txt-up float-left w-90"
+											data-dismiss="modal">Sim</button>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="modal-footer">
-							<div class="container-fluid">
-								<!-- <button type="button" class="btn btn-cancel txt-up mr-3 float-left"
-									data-dismiss="modal">Cancelar</button> -->
-								<button type="button" class="btn btn-salvar txt-up float-right w-90"
-									data-dismiss="modal">Ok</button>
-							</div>
-						</div>
 					</div>
-				</div>
-			</div>
-			<!-- fim modal mensagem aviso processo -->
-				<!-- MODAL GRPS -->
-				<div class="modal fade bd-example-modal-lg" id="modalGRPS" tabindex="-1" role="dialog"
-					aria-labelledby="modalGRPSLabel" aria-hidden="true">
-					<div class="modal-dialog modal-lg" role="document">
+					<!-- fim modal mensagem aviso processo -->
+				<!-- modal mensagem aviso processo -->
+				<script type="text/javascript">
+					$(window).on('load', function () {
+						$('#modalAvisoProcesso').modal('show');
+					});
+				</script>
+				<div class="modal fade" id="modalAvisoProcesso" tabindex="-1" role="dialog"
+					aria-labelledby="modalAvisoProcessoLabel" aria-hidden="true" data-backdrop="static"
+					data-keyboard="false">
+					<div class="modal-dialog w-700" role="document">
 						<div class="modal-content">
 							<div class="modal-header m-header">
-								<h5 class="modal-title" id="modalGRPSLabel">Guia de Remessa de Processos de Sinistro
-								</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-									<span aria-hidden="true">&times;</span>
-								</button>
+								<h5 class="modal-title" id="modalAvisoProcesso">Justificativa sobre o processo</h5>
+								<!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button> -->
 							</div>
 							<div class="modal-body">
 								<div class="container-fluid">
-									<s:form id="form-capa-guia-sinistro" action="gerarGuiaSinistro">
-										<div class="row mb-3">
-											<div class="col-lg-12">
-												<label for="text">Sucursal/Departamento/Prestador: </label>
-											</div>
-											<div class="col-lg-12">
-												<input type="text" class="form-control"
-													name="capaGuiaSinistro.departamentoRemetente" id="departamento" />
-											</div>
+									<div class="row mtop-10">
+										<div class="col-12">
+											<label for="parecer-processo">Justifique o motivo pelo qual você excedeu o tempo limite deste processo.	</label>
+											<textarea name="parecer-processo" id="parecer-processo" rows="7" style="width: 100%;"></textarea>
 										</div>
-										<div class="row">
-											<div class="col-12">
-												<p> Data do Envio: <b class="color-b">22/05/2017</b></p>
-											</div>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<small class="color-r">Limite de caracteres: 250</small>
 										</div>
-										<div class="row">
-											<div class="col-12">
-												<p>Funcionário Responsável: <b class="color-b">João José</b></p>
-											</div>
-										</div>
-										<div class="row mt-3">
-											<div class="col-lg-12">
-												<label for="comment">Observações: </label>
-											</div>
-											<div class="col-lg-12">
-												<textarea cssClass="form-control" rows="5" cols="90" id="observacoes"
-													name="capaGuiaSinistro.observacoes"></textarea>
-											</div>
-										</div>
-									</s:form>
+									</div>
 								</div>
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-primary" id="gerarGuia">Gerar Guia</button>
+								<div class="container-fluid">
+									<!-- <button type="button" class="btn btn-cancel txt-up mr-3 float-left"
+									data-dismiss="modal">Cancelar</button> -->
+									<button type="button" class="btn btn-salvar txt-up float-right w-90"
+										data-dismiss="modal">Ok</button>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+				<!-- fim modal mensagem aviso processo -->
 				<!-- MODAL LIBERAR NEWS -->
 				<div class="modal fade bd-example-modal-lg" id="modalLiberarNews" tabindex="-1" role="dialog"
 					aria-labelledby="modalLiberaNewsLabel" aria-hidden="true">
@@ -402,114 +342,6 @@
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-primary" onclick="liberarNews()">Liberar</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- MODAL Distribuição -->
-				<div class="modal fade bd-example-modal-lg" id="modalDistribuicao" tabindex="-1" role="dialog"
-					aria-labelledby="modalDistribuicaoLabel" aria-hidden="true">
-					<div class="modal-dialog modal-lg" role="document">
-						<div class="modal-content">
-							<div class="modal-header m-header">
-								<h5 class="modal-title" id="modalDistribuicaoLabel">Distribuição</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-									<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body">
-								<div class="container-fluid">
-									<div class="row">
-										<div class="col-12">
-											<p class="cont-modais">Foram Selecionados <strong><span
-														id="quantidadeSelecionada">1</span></strong> registros para
-												serem alterados.</p>
-										</div>
-									</div>
-									<div class="row mt-2">
-										<div class="col-12">
-											<label for="funcionario-distribuicao">Funcionário</label>
-											<select class="selectpicker form-control" id="funcionario-distribuicao"
-												name="">
-												<option>Adilson Conceição</option>
-												<option>João Carlos</option>
-												<option>Marcelo Ferreira</option>
-												<option>Marcos Paulo</option>
-											</select>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-salvar txt-up" data-dismiss="modal"
-									aria-label="Close">Salvar</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- MODAL ALTERAÇÃO DE GRID -->
-				<div class="modal fade bd-example-modal-lg" id="modalAlteracaoProcesso" tabindex="-1" role="dialog"
-					aria-labelledby="modalAlteracaoProcessoLabel" aria-hidden="true">
-					<div class="modal-dialog modal-lg" role="document">
-						<div class="modal-content">
-							<div class="modal-header m-header">
-								<h5 class="modal-title" id="modalAlteracaoProcesso">Alterar</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-									<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body">
-								<div class="container-fluid">
-									<div class="row mb-4">
-										<span id="modal-myvalue"></span>
-										<div class="col-md-6">
-											<p>Apólice: <b class="color-b">132654987654</b></p>
-										</div>
-										<div class="col-md-6">
-											<p>Sinistro: <b class="color-b">2465879</b></p>
-										</div>
-									</div>
-									<div class="row mtop-10">
-										<div class="col-md-6">
-											<label for="cmpNaturezaSugerida">Natureza Sugerida</label>
-											<select class="selectpicker form-control" id="naturezaSugerida"
-												name="dadosAlterado.naturezaSugerida">
-												<option>Selecione...</option>
-												<option>Natureza 1</option>
-												<option>Natureza 2</option>
-												<option>Natureza 3</option>
-											</select>
-										</div>
-										<div class="col-md-6">
-											<label for="campoPosicaoAtual">Posição Atual</label>
-											<select class="selectpicker form-control" id="situacaoProcesso"
-												name="dadosAlterado.situacaoProcesso">
-												<option>Selecione...</option>
-												<option>Posição Atual 1</option>
-												<option>Posição Atual 2</option>
-												<option>Posição Atual 3</option>
-											</select>
-
-										</div>
-
-										<div class="col-md-6 mt-3">
-											<label for="campoFuncionario">Funcionário</label>
-											<select class="selectpicker form-control" id="funcionario"
-												name="dadosAlterado.codigoFuncionario">
-												<option>Selecione...</option>
-												<option>Funcionário 1</option>
-												<option>Funcionário 2</option>
-												<option>Funcionário 3</option>
-											</select>
-										</div>
-
-									</div>
-								</div>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-cancel txt-up mr-3"
-									data-dismiss="modal">Cancelar</button>
-								<button type="button" class="btn btn-salvar txt-up">Salvar</button>
 							</div>
 						</div>
 					</div>

@@ -155,17 +155,19 @@
                                 <a class="dropdown-item" id="pills-painel-acompanhamento-tab"
                                     href='painel-de-acompanhamento.html'>Acompanhamento</a>
                                 <a class="dropdown-item" id="pills-relatorio-gerencial-acompanhamento-tab"
-                                    href='relatorio-gerencial-de-acompanhamento.html'>Relatório Gerencial de Acompanhamento</a>
+                                    href='relatorio-gerencial-de-acompanhamento.html'>Relatório Gerencial de
+                                    Acompanhamento</a>
                                 <a class="dropdown-item" id="pills-tempo-medio-pag-sinistro-tab"
                                     href='tempo-medio-pag-sinistro.html'>Tempo Médio de Pagamento do Sinistro</a>
                                 <a class="dropdown-item" id="pills-qtd-valor-total-pag-tab"
                                     href='qtd-valor-total-pag.html'>Quantidade e Valor Total de Pagamentos</a>
                                 <a class="dropdown-item" id="pills-qtd-valor-total-pag-nat-tab"
-                                    href='qtd-valor-total-pag-nat.html'>Quantidade e Valor Total de Pagamentos por Natureza</a>
+                                    href='qtd-valor-total-pag-nat.html'>Quantidade e Valor Total de Pagamentos por
+                                    Natureza</a>
                                 <a class="dropdown-item" id="pills-qtd-processo-pag-tab"
                                     href='qtd-processo-pag.html'>Quantidade de Processo com Pagamentos</a>
                                 <a class="dropdown-item" id="pills-tempo-analise-fila-tab"
-                                href='tempo-analise-fila.html'>Tempo de Análise por Fila</a>
+                                    href='tempo-analise-fila.html'>Tempo de Análise por Fila</a>
                             </div>
                         </li>
                         <li class="nav-item position-relative">
@@ -218,18 +220,43 @@
                                     </div>
                                     <div class="container-fluid mt-2">
                                         <div class="row buscas-gerais">
-                                            <div class="col-12 mt-2 mb-1">
+                                            <div class="col-6 mt-2 mb-1">
+                                                <h6 class="title-cadastro-internas mb-3 c-blue">Configuração de tempo
+                                                    limite</h6>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <div class="form-group">
+                                                            <label for="hour">Analista logado</label>
+                                                            <input type="hour" name="" maxlength="" value=""
+                                                                id="datepickerHorasMinutos" class="form-control"
+                                                                autocomplete="off" placeholder="Minutos" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="form-group">
+                                                            <label for="hour">Analista deslogado</label>
+                                                            <input type="hour" name="" maxlength="" value=""
+                                                                id="datepickerHorasMinutos" class="form-control"
+                                                                autocomplete="off" placeholder="Minutos" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 mt-2 mb-1">
                                                 <h6 class="title-cadastro-internas mb-3 c-blue">Selecione o Grupo
                                                     para configurar</h6>
                                                 <hr>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <label for="filtro">Grupo</label>
-                                                <select class="selectpicker form-control" id="filtro" name=""
-                                                    title="Selecione...">
-                                                    <option value="0" selected>Análise Danos Parciais</option>
-                                                    <option value="1">Análise Indenização Integral</option>
-                                                </select>
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <label for="filtro">Grupo</label>
+                                                        <select class="selectpicker form-control" id="filtro" name=""
+                                                            title="Selecione...">
+                                                            <option value="0" selected>Análise Danos Parciais</option>
+                                                            <option value="1">Análise Indenização Integral</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="col-12 mt-5 mb-1">
                                                 <h6 class="title-cadastro-internas c-blue">Escolha os Analistas para
