@@ -140,7 +140,8 @@
                                 <a class="dropdown-item" id="pills-relatorios-gerenciais-tab"
                                     href='relatorios-pendencias.html'>Relatórios de Pendências</a>
                                 <a class="dropdown-item" id="pills-relatorio-gerencial-acompanhamento-tab"
-                                href='relatorio-gerencial-de-acompanhamento.html'>Relatório Gerencial de Acompanhamento</a>
+                                    href='relatorio-gerencial-de-acompanhamento.html'>Relatório Gerencial de
+                                    Acompanhamento</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -154,7 +155,7 @@
                                 <a class="dropdown-item" id="pills-qtd-processo-pag-tab"
                                     href='painel-quantitativo.html'>Quantidade e Valor Total de Pagamentos</a>
                                 <a class="dropdown-item" id="pills-tempo-analise-fila-tab"
-                                href='tempo-analise-fila.html'>Tempo de Análise por Fila</a>
+                                    href='tempo-analise-fila.html'>Tempo de Análise por Fila</a>
                             </div>
                         </li>
                         <li class="nav-item position-relative">
@@ -175,7 +176,7 @@
                                 <span></span>
                             </div>
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">                            
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="#" data-toggle="modal"
                                 data-target="#modal-info-ambiente">Informações de Ambiente</a>
                             <div class="dropdown-divider"></div>
@@ -190,43 +191,42 @@
     </header>
     <section class="interna">
         <div class="container-fluid">
-			<!-- desktop -->
-			<div class="desktop mt-2">
-				<div class="row">
-					<!-- conteudo principal -->
-					<div class="col-md-12 col-lg-12 col-xl-12" id="tab-content-principal">
-						<div class="tab-content white" id="conteudo-principal">
-							<div class="header-conteudo-principal">
-								<div class="container-fluid">
-									<div class="row mb-4">
-										<div class="col-lg-12">
-											<h1 class="float-left mt-2">Quantidade e Valor Total de Pagamentos</h1>
-										</div>
+            <!-- desktop -->
+            <div class="desktop mt-2">
+                <div class="row">
+                    <!-- conteudo principal -->
+                    <div class="col-md-12 col-lg-12 col-xl-12" id="tab-content-principal">
+                        <div class="tab-content white" id="conteudo-principal">
+                            <div class="header-conteudo-principal">
+                                <div class="container-fluid">
+                                    <div class="row mb-4">
+                                        <div class="col-lg-12">
+                                            <h1 class="float-left mt-2">Quantidade e Valor Total de Pagamentos</h1>
+                                        </div>
                                         <!-- <div class="col-lg-6">
 											<div class="exportar float-right">
 												<a href="#" class="excel" data-toggle="tooltip" data-original-title="Exportar Excel"></a>
 											</div>
 										</div> -->
-									</div>
-									<div class="row buscas-gerais mt-3">
+                                    </div>
+                                    <div class="row buscas-gerais mt-3">
                                         <div class="col-lg-2 mt-4">
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                    id="inlineRadio1" value="option1">
                                                 <label class="form-check-label" for="inlineRadio1">Ramo</label>
-                                              </div>
-                                              <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" checked>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                    id="inlineRadio2" value="option2" checked>
                                                 <label class="form-check-label" for="inlineRadio2">Natureza</label>
-                                              </div>
+                                            </div>
                                         </div>
                                         <div class="col-lg-3 mt-3">
                                             <label for="ramo">Natureza</label>
-                                            <select class="selectpicker form-control"
-                                                id="" data-live-search="true"
-                                                title="Selecione..."
-                                                data-hide-disabled="true"
-                                                data-container="body" name=""
-                                                data-actions-box="true">
+                                            <select class="selectpicker form-control" id="" data-live-search="true"
+                                                title="Selecione..." data-hide-disabled="true" data-container="body"
+                                                name="" data-actions-box="true">
                                                 <option value="" selected>
                                                     1 - Colisão Danos Parciais Casco
                                                 </option>
@@ -240,12 +240,9 @@
                                         </div>
                                         <div class="col-lg-3 internas-buscas mt-3">
                                             <label for="ramo">Tipo de Pagamento</label>
-                                            <select class="selectpicker form-control"
-                                                id="" data-live-search="true"
-                                                title="Selecione..."
-                                                data-hide-disabled="true"
-                                                data-container="body" name=""
-                                                data-actions-box="true">
+                                            <select class="selectpicker form-control" id="" data-live-search="true"
+                                                title="Selecione..." data-hide-disabled="true" data-container="body"
+                                                name="" data-actions-box="true">
                                                 <option value="">
                                                     Automático
                                                 </option>
@@ -257,67 +254,69 @@
                                                 </option>
                                             </select>
                                         </div>
-										<div class="col-lg-2 internas-buscas mt-3">
-											<label for="text">Data Início</label>
-											<input type="text" name="" maxlength="8" value="01/01/2020" id="" class="form-control"
-												autocomplete="off">
-										</div>
-										<div class="col-lg-2 internas-buscas mt-3">
-											<label for="text">Data Fim</label>
-											<input type="text" name="" maxlength="8" value="01/01/2021" id="" class="form-control"
-												autocomplete="off">
-										</div>
-										<div class="col-lg-12 mt-4 text-center">
+                                        <div class="col-lg-2 internas-buscas mt-3">
+                                            <label for="text">Data Início</label>
+                                            <input type="text" name="" maxlength="8" value="01/01/2020" id=""
+                                                class="form-control" autocomplete="off">
+                                        </div>
+                                        <div class="col-lg-2 internas-buscas mt-3">
+                                            <label for="text">Data Fim</label>
+                                            <input type="text" name="" maxlength="8" value="01/01/2021" id=""
+                                                class="form-control" autocomplete="off">
+                                        </div>
+                                        <div class="col-lg-12 mt-4 text-center">
                                             <button type="reset"
-                                                    class="btn btn-second  mt-4 mr-4 txt-up w-90">Limpar</button>
-											<button type="button" name="button"
-												class="btn btn-primary txt-up mt-4  mr-4">Buscar</button>
-                                                <button type="button" name="button"
-												class="btn btn-success txt-up mt-4" data-toggle="modal" data-target="#modalGerarExcel">Gerar Excel</button>
-										</div>
-									</div>
-									<div class="row mt-5">
-										<div class="col-lg-10 internas-buscas d-flex my-auto">
-											<p><strong>?</strong> Pagamentos encontrados</p>
-										</div>
-										<div class="col-lg-12">
-											<hr>
-										</div>
-									</div>
-									<div class="table-responsive">
-										<form id="" name="" action="" method="post">
-											<table class="table table-striped">
-												<thead>
-													<tr>
-                                                        <th scope="col"  style="width: 8%;">Natureza</th>
-                                                        <th scope="col"  style="width: 10%;">Descrição</th>
-														<th scope="col"  style="width: 8%;">Data Início</th>
-														<th scope="col"  style="width: 8%;">Data Fim</th>
-                                                        <th scope="col"  style="width: 10%;">Quantidade Total de Pagamentos</th>
-                                                        <th scope="col"  style="width: 10%;">Valor Total de Pagamentos</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-                                                        <td>1</td>														
-														<td>Colisão Danos Parciais Casco</td>
+                                                class="btn btn-second  mt-4 mr-4 txt-up w-90">Limpar</button>
+                                            <button type="button" name="button"
+                                                class="btn btn-primary txt-up mt-4  mr-4">Buscar</button>
+                                            <button type="button" name="button" class="btn btn-success txt-up mt-4"
+                                                data-toggle="modal" data-target="#modalGerarExcel">Gerar Excel</button>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-5">
+                                        <div class="col-lg-10 internas-buscas d-flex my-auto">
+                                            <p><strong>?</strong> Pagamentos encontrados</p>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <form id="" name="" action="" method="post">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" style="width: 8%;">Natureza</th>
+                                                        <th scope="col" style="width: 10%;">Descrição</th>
+                                                        <th scope="col" style="width: 8%;">Data Início</th>
+                                                        <th scope="col" style="width: 8%;">Data Fim</th>
+                                                        <th scope="col" style="width: 10%;">Quantidade Total de
+                                                            Pagamentos</th>
+                                                        <th scope="col" style="width: 10%;">Valor Total de Pagamentos
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Colisão Danos Parciais Casco</td>
                                                         <td>01/01/2020</td>
                                                         <td>01/01/2021</td>
                                                         <td>155</td>
                                                         <td>R$ 7.700,84</td>
-													</tr>
-												</tbody>
-											</table>
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- fim conteudo principal -->
-				</div>
-			</div>
-			<!-- fim desktop -->
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fim conteudo principal -->
+                </div>
+            </div>
+            <!-- fim desktop -->
         </div>
         <!-- fim container-->
     </section>
@@ -325,8 +324,8 @@
         <img src="img/bg-footer.png" alt="" style="width:100%">
     </footer>
 
-        <!-- modal Excluir Item -->
-        <div class="modal fade" id="modalGerarExcel" tabindex="-1" role="dialog" aria-labelledby="modalGerarExcelLabel"
+    <!-- modal Excluir Item -->
+    <div class="modal fade" id="modalGerarExcel" tabindex="-1" role="dialog" aria-labelledby="modalGerarExcelLabel"
         aria-hidden="true">
         <div class="modal-dialog w-600" role="document">
             <div class="modal-content">
@@ -343,14 +342,21 @@
                                 <h5>Qual relatório você deseja gerar?</h5>
                             </div> -->
                             <div class="col-12">
-                                <div class="form-check-inline ex-checkbox mr-3">
-                                    <input class="form-check-input" type="checkbox" checked>
-                                    <label for="">Gerar relatório completo?</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                        id="exampleRadios1" value="option1" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        Gerar relatório completo?
+                                    </label>
                                 </div>
-                                <div class="form-check-inline ex-checkbox mr-3">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label for="">Gerar relatório baseado nos filtros?</label>
-                                </div>
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                        id="exampleRadios2" value="option2">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                        Gerar relatório baseado nos
+                                        filtros?
+                                    </label>
+                                </div>                              
                             </div>
                         </div>
                     </div>
