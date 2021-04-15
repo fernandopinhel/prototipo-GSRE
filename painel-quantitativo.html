@@ -139,6 +139,8 @@
                                     href='relatorios-gerenciais.html'>Relatórios Gerenciais</a>
                                 <a class="dropdown-item" id="pills-relatorios-gerenciais-tab"
                                     href='relatorios-pendencias.html'>Relatórios de Pendências</a>
+                                <a class="dropdown-item" id="pills-relatorio-gerencial-acompanhamento-tab"
+                                href='relatorio-gerencial-de-acompanhamento.html'>Relatório Gerencial de Acompanhamento</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -152,7 +154,7 @@
                                 <a class="dropdown-item" id="pills-qtd-processo-pag-tab"
                                     href='painel-quantitativo.html'>Quantidade e Valor Total de Pagamentos</a>
                                 <a class="dropdown-item" id="pills-tempo-analise-fila-tab"
-                                    href='tempo-analise-fila.html'>Tempo de Análise por Fila</a>
+                                href='tempo-analise-fila.html'>Tempo de Análise por Fila</a>
                             </div>
                         </li>
                         <li class="nav-item position-relative">
@@ -173,9 +175,7 @@
                                 <span></span>
                             </div>
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">M123456 - Jeniffer</a>
-                            <div class="dropdown-divider"></div>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">                            
                             <a class="dropdown-item" href="#" data-toggle="modal"
                                 data-target="#modal-info-ambiente">Informações de Ambiente</a>
                             <div class="dropdown-divider"></div>
@@ -190,34 +190,45 @@
     </header>
     <section class="interna">
         <div class="container-fluid">
-            <!-- desktop -->
-            <div class="desktop mt-2">
-                <div class="row">
-                    <!-- conteudo principal -->
-                    <div class="col-md-12 col-lg-12 col-xl-12" id="tab-content-principal">
-                        <div class="tab-content white" id="conteudo-principal">
-                            <div class="header-conteudo-principal">
-                                <div class="container-fluid">
-                                    <div class="row mb-4">
-                                        <div class="col-lg-6">
-                                            <h1 class="float-left mt-2">Quantidade e Valor Total de Pagamentos por
-                                                Natureza</h1>
+			<!-- desktop -->
+			<div class="desktop mt-2">
+				<div class="row">
+					<!-- conteudo principal -->
+					<div class="col-md-12 col-lg-12 col-xl-12" id="tab-content-principal">
+						<div class="tab-content white" id="conteudo-principal">
+							<div class="header-conteudo-principal">
+								<div class="container-fluid">
+									<div class="row mb-4">
+										<div class="col-lg-12">
+											<h1 class="float-left mt-2">Quantidade e Valor Total de Pagamentos</h1>
+										</div>
+                                        <!-- <div class="col-lg-6">
+											<div class="exportar float-right">
+												<a href="#" class="excel" data-toggle="tooltip" data-original-title="Exportar Excel"></a>
+											</div>
+										</div> -->
+									</div>
+									<div class="row buscas-gerais mt-3">
+                                        <div class="col-lg-2 mt-4">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                <label class="form-check-label" for="inlineRadio1">Ramo</label>
+                                              </div>
+                                              <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" checked>
+                                                <label class="form-check-label" for="inlineRadio2">Natureza</label>
+                                              </div>
                                         </div>
-                                        <div class="col-lg-6">
-                                            <div class="exportar float-right">
-                                                <a href="#" class="excel" data-toggle="tooltip"
-                                                    data-original-title="Exportar Excel"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row buscas-gerais mt-3">
-                                        <div class="col-lg-3 internas-buscas mt-3">
+                                        <div class="col-lg-3 mt-3">
                                             <label for="ramo">Natureza</label>
-                                            <select class="selectpicker form-control" id="" data-live-search="true"
-                                                title="Selecione..." data-hide-disabled="true" data-container="body"
-                                                name="" data-actions-box="true">
-                                                <option value="">
-                                                    Natureza - 1
+                                            <select class="selectpicker form-control"
+                                                id="" data-live-search="true"
+                                                title="Selecione..."
+                                                data-hide-disabled="true"
+                                                data-container="body" name=""
+                                                data-actions-box="true">
+                                                <option value="" selected>
+                                                    1 - Colisão Danos Parciais Casco
                                                 </option>
                                                 <option value="">
                                                     Natureza - 2
@@ -227,88 +238,137 @@
                                                 </option>
                                             </select>
                                         </div>
-                                        <div class="col-lg-2 internas-buscas mt-3">
-                                            <label for="text">Data Início</label>
-                                            <input type="text" name="" maxlength="8" value="" id="" class="form-control"
-                                                autocomplete="off">
+                                        <div class="col-lg-3 internas-buscas mt-3">
+                                            <label for="ramo">Tipo de Pagamento</label>
+                                            <select class="selectpicker form-control"
+                                                id="" data-live-search="true"
+                                                title="Selecione..."
+                                                data-hide-disabled="true"
+                                                data-container="body" name=""
+                                                data-actions-box="true">
+                                                <option value="">
+                                                    Automático
+                                                </option>
+                                                <option value="">
+                                                    Manual
+                                                </option>
+                                                <option value="" selected>
+                                                    Todos
+                                                </option>
+                                            </select>
                                         </div>
-                                        <div class="col-lg-2 internas-buscas mt-3">
-                                            <label for="text">Data Fim</label>
-                                            <input type="text" name="" maxlength="8" value="" id="" class="form-control"
-                                                autocomplete="off">
-                                        </div>
-                                        <div class="col-lg-2 mt-4">
-                                            <button type="button" name="button"
-                                                class="btn btn-primary  mt-4">Buscar</button>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-5">
-                                        <div class="col-lg-10 internas-buscas d-flex my-auto">
-                                            <p><strong>?</strong> Pagamentos encontrados</p>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <hr>
-                                        </div>
-                                    </div>
-                                    <div class="table-responsive">
-                                        <form id="" name="" action="" method="post">
-                                            <table class="table table-striped">
-                                                <thead>
-                                                    <tr>
-                                                        <th scope="col" style="width: 5%;">
-                                                            <div class="ex-checkbox chb2">
-                                                                <input class="form-check-input check-todos"
-                                                                    onclick="marcarTodos(this.checked)"
-                                                                    id="checkbox_one" type="checkbox"
-                                                                    data-toggle="tooltip"
-                                                                    data-original-title="Selecionar todos">
-                                                                <label for="checkbox_one" class="check-estilo"></label>
-                                                            </div>
-                                                        </th>
-                                                        <th scope="col" style="width: 10%;">Natureza</th>
-                                                        <th scope="col" style="width: 10%;">Data Início</th>
-                                                        <th scope="col" style="width: 10%;">Data Fim</th>
-                                                        <th scope="col" style="width: 20%;">Quantidade Total de
-                                                            Pagamentos</th>
-                                                        <th scope="col" style="width: 45%;">Valor Total de Pagamentos
-                                                        </th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="ex-checkbox chb2">
-                                                                <input type="checkbox" class="marcar"
-                                                                    id="checkbox_single">
-                                                                <label for="checkbox_single" class="check-estilo"
-                                                                    data-toggle="tooltip"
-                                                                    data-original-title="Selecionar Orçamento"></label>
-                                                            </div>
-                                                        </td>
-                                                        <td>Natureza 1</td>
-                                                        <td>10/10/2020</td>
-                                                        <td>15/02/2021</td>
-                                                        <td>1</td>
-                                                        <td>R$ 1.999,00</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- fim conteudo principal -->
-                </div>
-            </div>
-            <!-- fim desktop -->
+										<div class="col-lg-2 internas-buscas mt-3">
+											<label for="text">Data Início</label>
+											<input type="text" name="" maxlength="8" value="01/01/2020" id="" class="form-control"
+												autocomplete="off">
+										</div>
+										<div class="col-lg-2 internas-buscas mt-3">
+											<label for="text">Data Fim</label>
+											<input type="text" name="" maxlength="8" value="01/01/2021" id="" class="form-control"
+												autocomplete="off">
+										</div>
+										<div class="col-lg-12 mt-4 text-center">
+                                            <button type="reset"
+                                                    class="btn btn-second  mt-4 mr-4 txt-up w-90">Limpar</button>
+											<button type="button" name="button"
+												class="btn btn-primary txt-up mt-4  mr-4">Buscar</button>
+                                                <button type="button" name="button"
+												class="btn btn-success txt-up mt-4" data-toggle="modal" data-target="#modalGerarExcel">Gerar Excel</button>
+										</div>
+									</div>
+									<div class="row mt-5">
+										<div class="col-lg-10 internas-buscas d-flex my-auto">
+											<p><strong>?</strong> Pagamentos encontrados</p>
+										</div>
+										<div class="col-lg-12">
+											<hr>
+										</div>
+									</div>
+									<div class="table-responsive">
+										<form id="" name="" action="" method="post">
+											<table class="table table-striped">
+												<thead>
+													<tr>
+                                                        <th scope="col"  style="width: 8%;">Natureza</th>
+                                                        <th scope="col"  style="width: 10%;">Descrição</th>
+														<th scope="col"  style="width: 8%;">Data Início</th>
+														<th scope="col"  style="width: 8%;">Data Fim</th>
+                                                        <th scope="col"  style="width: 10%;">Quantidade Total de Pagamentos</th>
+                                                        <th scope="col"  style="width: 10%;">Valor Total de Pagamentos</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+                                                        <td>1</td>														
+														<td>Colisão Danos Parciais Casco</td>
+                                                        <td>01/01/2020</td>
+                                                        <td>01/01/2021</td>
+                                                        <td>155</td>
+                                                        <td>R$ 7.700,84</td>
+													</tr>
+												</tbody>
+											</table>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- fim conteudo principal -->
+				</div>
+			</div>
+			<!-- fim desktop -->
         </div>
         <!-- fim container-->
     </section>
     <footer>
         <img src="img/bg-footer.png" alt="" style="width:100%">
     </footer>
+
+        <!-- modal Excluir Item -->
+        <div class="modal fade" id="modalGerarExcel" tabindex="-1" role="dialog" aria-labelledby="modalGerarExcelLabel"
+        aria-hidden="true">
+        <div class="modal-dialog w-600" role="document">
+            <div class="modal-content">
+                <div class="modal-header m-header">
+                    <h5 class="modal-title" id="">Qual relatório você deseja gerar?</h5>
+                    <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button> -->
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row mtop-10">
+                            <!-- <div class="col-12">
+                                <h5>Qual relatório você deseja gerar?</h5>
+                            </div> -->
+                            <div class="col-12">
+                                <div class="form-check-inline ex-checkbox mr-3">
+                                    <input class="form-check-input" type="checkbox" checked>
+                                    <label for="">Gerar relatório completo?</label>
+                                </div>
+                                <div class="form-check-inline ex-checkbox mr-3">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label for="">Gerar relatório baseado nos filtros?</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="container-fluid p-0">
+                        <div class="col-12">
+                            <button type="button" class="btn btn-cancel txt-up float-left m-0"
+                                data-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-success txt-up float-right w-90"
+                                data-dismiss="modal">Gerar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fim modal Excluir Item -->
 
 
     <!-- configs js -->
