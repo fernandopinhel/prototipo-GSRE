@@ -1,4 +1,18 @@
 $(document).ready(function(){  
+  $('.posicao-atual').addClass('d-none');    
+  
+  $('.fila-radio').click(function(){
+    $('.analistas').addClass('d-none');    
+    $('.posicao-atual').removeClass('d-none');    
+  });
+
+  $('.analista-radio').click(function(){
+    $('.analistas').removeClass('d-none');    
+    $('.posicao-atual').addClass('d-none');    
+  });
+});
+
+$(document).ready(function(){  
   $('.btn-ex-pareceres').click(function(){
     $('.accordion-pareceres > .card > .card-header > h5 > button').toggleClass('change');    
     $('.accordion-pareceres > .card > .card-header > h5 > button').attr('aria-expanded', 'true');    

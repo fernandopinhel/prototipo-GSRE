@@ -124,7 +124,7 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="tab"
+                            <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="tab"
                                 aria-selected="true">Relatórios</a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" id="pills-apolice-emissao-tab"
@@ -142,7 +142,7 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="tab"
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="tab"
                                 aria-selected="true">Painéis</a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" id="pills-painel-acompanhamento-tab"
@@ -174,8 +174,6 @@
                             </div>
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">M123456 - Jeniffer</a>
-                            <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#" data-toggle="modal"
                                 data-target="#modal-info-ambiente">Informações de Ambiente</a>
                             <div class="dropdown-divider"></div>
@@ -190,13 +188,6 @@
     </header>
     <section class="interna">
         <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-lg-12">
-                    <button type="button" class="btn btn-labeled btn-sair float-right">
-                        <span class="btn-label mr-2"> Sair do Processo</span><i class="fa fa-power-off"></i>
-                    </button>
-                </div>
-            </div>
             <!-- desktop -->
             <div class="desktop mt-2">
                 <div class="row">
@@ -206,144 +197,154 @@
                             <div class="header-conteudo-principal">
                                 <div class="container-fluid">
                                     <div class="row mb-4">
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-12">
                                             <h1 class="float-left mt-2">Relatório Gerencial de Acompanhamento</h1>
                                         </div>
-                                        <div class="col-lg-6">
-                                            <a href="#" class="excel-2 float-right" style="top: -8px;"
-                                                data-toggle="tooltip"
-                                                data-original-title="Gerar Relatório em Excel"></a>
+                                    </div>
+                                    <div class="row buscas-gerais mt-4">
+                                        <div class="col-lg-2 mt-4">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input analista-radio" type="radio" name="inlineRadioOptions"
+                                                    id="inlineRadio1" value="option1" checked>
+                                                <label class="form-check-label" for="inlineRadio1">Analista</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input fila-radio" type="radio" name="inlineRadioOptions"
+                                                    id="inlineRadio2" value="option2">
+                                                <label class="form-check-label" for="inlineRadio2">Fila</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 internas-buscas mt-3">
+                                            <label for="ramo">Grupos</label>
+                                            <select class="selectpicker form-control" id="" data-live-search="true"
+                                                title="Selecione..." data-hide-disabled="true" data-container="body"
+                                                name="" data-actions-box="true">
+                                                <option value="" selected>
+                                                    Análise Danos Parciais
+                                                </option>
+                                                <option value="">
+                                                    Análise Indenização Integral
+                                                </option>
+                                                <option value="">
+                                                    Todos
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-3 internas-buscas mt-3 analistas">
+                                            <label for="ramo">Analistas</label>
+                                            <select class="selectpicker form-control" id="" data-live-search="true"
+                                                title="Selecione..." data-hide-disabled="true" data-container="body"
+                                                name="" data-actions-box="true">
+                                                <option value="" selected>
+                                                    João Carlos
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-2 internas-buscas mt-3 posicao-atual">
+                                            <label for="ramo">Posição Atual</label>
+                                            <select class="selectpicker form-control"
+                                            id="cmpPosicaoAtual" data-live-search="true"
+                                            title="Selecione..." data-hide-disabled="true"
+                                            data-container="body" name="" data-actions-box="true">
+                                            <option value="1">
+                                                1 - Sem Orçamento
+                                            </option>
+                                            <option value="2">
+                                                2 - Em processo
+                                            </option>
+                                            <option value="3" selected>
+                                                3 - Aguardando DOC
+                                            </option>
+                                            <option value="4">
+                                                4 - Não Autorizado
+                                            </option>
+                                        </select>
+                                        </div>
+                                        <div class="col-lg-2 internas-buscas mt-3">
+                                            <label for="text">Data Início</label>
+                                            <input type="text" name="" maxlength="8" value="" id="" class="form-control"
+                                                autocomplete="off">
+                                        </div>
+                                        <div class="col-lg-2 internas-buscas mt-3">
+                                            <label for="text">Data Fim</label>
+                                            <input type="text" name="" maxlength="8" value="" id="" class="form-control"
+                                                autocomplete="off">
+                                        </div>
+                                        <div class="col-lg-12 mt-4 text-center">
+                                            <button type="reset"
+                                                class="btn btn-second  mt-4 mr-4 txt-up w-90">Limpar</button>
+                                            <button type="button" name="button"
+                                                class="btn btn-primary txt-up mt-4  mr-4">Buscar</button>
+                                            <button type="button" name="button" class="btn btn-success txt-up mt-4"
+                                                data-toggle="modal" data-target="#modalGerarExcel">Gerar Excel</button>
                                         </div>
                                     </div>
-                                    <!-- Relatório Gerencial de Acompanhamento -->
-                                    <div class="container-fluid mt-2">
+                                    <!-- Opções -->
+                                    <!-- Painel de Acompanhamento -->
+                                    <div class="container-fluid p-0 mt-2">
+                                        <div class="row mt-5">
+                                            <div class="col-lg-10 internas-buscas d-flex my-auto">
+                                                <p><strong>?</strong> Relatórios encontrados</p>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <hr>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="row mb-3">
+                                            <div class="col-lg-12">
+                                                <div class="box-periodo bg-gray" style="height: 40px;">
+                                                    <p class="float-left">Somatório da quantidade total de processos
+                                                        priorizados no grupo / Processos tratados</p>
+                                                    <p class="float-right">Período de 01/01/2021 até 10/10/2021</p>
+                                                </div>
+                                            </div>
+                                        </div> -->
                                         <div class="row buscas-gerais">
-                                            <div class="col-12">
-                                                <div class="box-periodo bg-gray">
-                                                    <p>Data: 17/03/2021</p>
-                                                </div>
-                                            </div>
                                             <!-- Cards -->
-                                            <div class="col-lg-2">
-                                                <div class="total-grupo">
-                                                    <h6 class="title-dash">Processos - Nome do Grupo</h6>
+                                            <!-- <div class="col-lg-2">
+                                                <div class="total-grupo" style="height: 102px;">
+                                                    <h6 class="title-dash">Análise Danos Parciais</h6>
                                                     <div class="content-processos">
-                                                        <span>30</span>
+                                                        <span>30/200</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-2">
                                                 <div class="total-grupo">
-                                                    <h6 class="title-dash ">Processos - Nome do Grupo</h6>
+                                                    <h6 class="title-dash">Análise Indenização Integral</h6>
                                                     <div class="content-processos">
-                                                        <span>25</span>
+                                                        <span>20/180</span>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-lg-2">
-                                                <div class="total-grupo">
-                                                    <h6 class="title-dash ">Processos - Nome do Grupo</h6>
-                                                    <div class="content-processos">
-                                                        <span>10</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2">
-                                                <div class="total-grupo">
-                                                    <h6 class="title-dash ">Processos - Nome do Grupo</h6>
-                                                    <div class="content-processos">
-                                                        <span>5</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2">
-                                                <div class="total-grupo">
-                                                    <h6 class="title-dash ">Processos - Nome do Grupo</h6>
-                                                    <div class="content-processos">
-                                                        <span>15</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2">
-                                                <div class="total-grupo">
-                                                    <h6 class="title-dash ">Processos - Nome do Grupo</h6>
-                                                    <div class="content-processos">
-                                                        <span>45</span>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            </div> -->
                                             <!-- Fim Cards -->
-                                            <div class="col-12">
+                                            <div class="col-12 mt-5 p-0">
                                                 <div class="table-responsive">
                                                     <form id="" name="" action="" method="post">
                                                         <table class="table table-striped" id="">
                                                             <thead>
-                                                                <tr>
-                                                                    <th scope="col">Analistas</th>
-                                                                    <th scope="col">Processos em Análise</th>
-                                                                    <th scope="col">Fila dos Processos</th>
-                                                                    <th scope="col">Natureza</th>
-                                                                    <th scope="col">News</th>
-                                                                    <th scope="col">Fila dos Processos</th>
-                                                                    <th scope="col">Tempo Médio</th>
-                                                                    <th scope="col">Tempo Ocioso</th>
+                                                                <tr>                                                                    
+                                                                    <th scope="col" style="width: 10%;">Analista</th>
+                                                                    <th scope="col" style="width: 10%;">Data da Análise</th>
+                                                                    <th scope="col" style="width: 60%;">Priorização dos
+                                                                        parâmetros do grupo</th>
+                                                                        <th scope="col" style="width: 10%;">Tempo Médio</th>
+                                                                        <th scope="col" style="width: 10%;">Total processos</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
                                                                 <tr>
                                                                     <td>João Carlos</td>
-                                                                    <td>2464760</td>
-                                                                    <td>1 - Nome Grupo<br>2 - Nome Grupo<br>3 - Nome
-                                                                        Grupo</td>
-                                                                    <td>Natureza 2</td>
-                                                                    <td>Paralelismo</td>
-                                                                    <td>10 minutos</td>
+                                                                    <td>25/03/2021</td>
+                                                                    <td>Data/Hora de corte dos itens e natureza:
+                                                                        <b>25/03/21 - 8h</b> | Itens: <b>Aguardando
+                                                                            Doc</b> | Natureza: <b>4</b> | Data/Hora de
+                                                                        corte das News: <b>20/03/21 - 4h</b> | News:
+                                                                        <b>Novos Documentos</b> | Prazo máximo: <b>15
+                                                                            minutos</b>
+                                                                    </td>
                                                                     <td>15 minutos</td>
-                                                                    <td>8 minutos</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Marcelo Barreto</td>
-                                                                    <td>2464760</td>
-                                                                    <td>1 - Nome Grupo<br>2 - Nome Grupo<br>3 - Nome
-                                                                        Grupo</td>
-                                                                    <td>Natureza 4</td>
-                                                                    <td>News ASE</td>
-                                                                    <td>10 minutos</td>
-                                                                    <td>15 minutos</td>
-                                                                    <td>12 minutos</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Carina Silva</td>
-                                                                    <td>2464760</td>
-                                                                    <td>1 - Nome Grupo<br>2 - Nome Grupo<br>3 - Nome
-                                                                        Grupo</td>
-                                                                    <td>Natureza 1</td>
-                                                                    <td>Parecer</td>
-                                                                    <td>10 minutos</td>
-                                                                    <td>15 minutos</td>
-                                                                    <td>5 minutos</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Roberto Campos</td>
-                                                                    <td>2464760</td>
-                                                                    <td>1 - Nome Grupo<br>2 - Nome Grupo<br>3 - Nome
-                                                                        Grupo</td>
-                                                                    <td>Natureza 1</td>
-                                                                    <td>Novos Documentos</td>
-                                                                    <td>10 minutos</td>
-                                                                    <td>15 minutos</td>
-                                                                    <td>25 minutos</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Mariana Ribeiro</td>
-                                                                    <td>2464760</td>
-                                                                    <td>1 - Nome Grupo<br>2 - Nome Grupo<br>3 - Nome
-                                                                        Grupo</td>
-                                                                    <td>Natureza 4</td>
-                                                                    <td>Despachantes</td>
-                                                                    <td>10 minutos</td>
-                                                                    <td>15 minutos</td>
-                                                                    <td>6 minutos</td>
+                                                                    <td>30</td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>
@@ -352,7 +353,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Fim Relatório Gerencial de Acompanhamento -->
+                                    <!-- Fim Painel de Acompanhamento -->
+
+
+                                    <!-- Fim Opções -->
                                 </div>
                             </div>
                         </div>
@@ -367,6 +371,55 @@
     <footer>
         <img src="img/bg-footer.png" alt="" style="width:100%">
     </footer>
+    <div class="modal fade" id="modalGerarExcel" tabindex="-1" role="dialog" aria-labelledby="modalGerarExcelLabel"
+        aria-hidden="true">
+        <div class="modal-dialog w-600" role="document">
+            <div class="modal-content">
+                <div class="modal-header m-header">
+                    <h5 class="modal-title" id="">Qual relatório você deseja gerar?</h5>
+                    <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button> -->
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row mtop-10">
+                            <!-- <div class="col-12">
+                                <h5>Qual relatório você deseja gerar?</h5>
+                            </div> -->
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                        id="exampleRadios1" value="option1" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        Gerar relatório completo?
+                                    </label>
+                                </div>
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                        id="exampleRadios2" value="option2">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                        Gerar relatório baseado nos
+                                        filtros?
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="container-fluid p-0">
+                        <div class="col-12">
+                            <button type="button" class="btn btn-cancel txt-up float-left m-0"
+                                data-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-success txt-up float-right w-90"
+                                data-dismiss="modal">Gerar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="modal fade bd-example-modal-lg" id="modalAlertaParecer" tabindex="-1" role="dialog"
         aria-labelledby="modalAlertaParecerLabel" aria-hidden="true">

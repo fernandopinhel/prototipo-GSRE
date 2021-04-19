@@ -142,7 +142,7 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="tab"
+                            <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="tab"
                                 aria-selected="true">Painéis</a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" id="pills-painel-acompanhamento-tab"
@@ -174,8 +174,6 @@
                             </div>
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">M123456 - Jeniffer</a>
-                            <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#" data-toggle="modal"
                                 data-target="#modal-info-ambiente">Informações de Ambiente</a>
                             <div class="dropdown-divider"></div>
@@ -207,61 +205,25 @@
                                     <!-- Painel de Acompanhamento -->
                                     <div class="container-fluid mt-2">
                                         <div class="row buscas-gerais">
-                                            <div class="col-12">
-                                                <div class="box-periodo bg-gray">
-                                                    <p>Data: 17/03/2021</p>
-                                                </div>
-                                            </div>
                                             <!-- Cards -->
                                             <div class="col-lg-2">
-                                                <div class="total-grupo">
-                                                    <h6 class="title-dash">Processos - Nome do Grupo</h6>
+                                                <div class="total-grupo" style="height: 102px;" data-toggle="tooltip"
+                                                data-original-title="Processos tratados/Priorizações">
+                                                    <h6 class="title-dash">Análise Danos Parciais</h6>
                                                     <div class="content-processos">
-                                                        <span>30</span>
+                                                        <span>30/200</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-2">
-                                                <div class="total-grupo">
-                                                    <h6 class="title-dash ">Processos - Nome do Grupo</h6>
+                                                <div class="total-grupo" data-toggle="tooltip"
+                                                data-original-title="Processos tratados/Priorizações">
+                                                    <h6 class="title-dash">Análise Indenização Integral</h6>
                                                     <div class="content-processos">
-                                                        <span>25</span>
+                                                        <span>20/180</span>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-2">
-                                                <div class="total-grupo">
-                                                    <h6 class="title-dash ">Processos - Nome do Grupo</h6>
-                                                    <div class="content-processos">
-                                                        <span>10</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2">
-                                                <div class="total-grupo">
-                                                    <h6 class="title-dash ">Processos - Nome do Grupo</h6>
-                                                    <div class="content-processos">
-                                                        <span>5</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2">
-                                                <div class="total-grupo">
-                                                    <h6 class="title-dash ">Processos - Nome do Grupo</h6>
-                                                    <div class="content-processos">
-                                                        <span>15</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2">
-                                                <div class="total-grupo">
-                                                    <h6 class="title-dash ">Processos - Nome do Grupo</h6>
-                                                    <div class="content-processos">
-                                                        <span>45</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
                                             <!-- Fim Cards -->
                                             <div class="col-12">
                                                 <div class="table-responsive">
@@ -269,75 +231,38 @@
                                                         <table class="table table-striped" id="">
                                                             <thead>
                                                                 <tr>
-                                                                    <th scope="col">Alerta</th>
-                                                                    <th scope="col">Analistas</th>
-                                                                    <th scope="col">Processos em Análise</th>
-                                                                    <th scope="col">Fila dos Processos</th>
-                                                                    <th scope="col">News</th>
-                                                                    <th scope="col">Natureza</th>
-                                                                    <th scope="col">Tempo médio dos processos</th>
-                                                                    <th scope="col">Tempo de Trabalho do Processo</th>
-                                                                    <th scope="col">Tempo Fora da Distribuição</th>
+                                                                    <th scope="col" style="width: 5%;">Alerta</th>
+                                                                    <th scope="col" style="width: 10%;">Analista</th>
+                                                                    <th scope="col" style="width: 12%;">Processos em
+                                                                        Análise</th>
+                                                                    <th scope="col" style="width: 27%;">Priorização dos
+                                                                        parâmetros do grupo</th>
+                                                                    <th scope="col" style="width: 14%;">Prazo máximo de análise</th>
+                                                                    <th scope="col" style="width: 16%;">Tempo de
+                                                                        Trabalho no Processo</th>
+                                                                    <th scope="col" style="width: 14%;">Tempo Fora da
+                                                                        Distribuição</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
                                                                 <tr>
                                                                     <td>
                                                                         <div>
-                                                                            <a href="#" data-toggle="modal"
-                                                                                data-target="#modalAlertaParecer">
-                                                                                <img src="img/aviso.svg"
-                                                                                    data-toggle="tooltip"
-                                                                                    data-original-title="Analista excedeu o tempo médio definido"
-                                                                                    width="25px"
-                                                                                    style="float: left; margin-right: 8px;">
-                                                                            </a>
+                                                                            <img src="img/aviso.svg" width="25px"
+                                                                                style="float: left; margin-right: 8px;">
                                                                         </div>
                                                                     </td>
                                                                     <td>João Carlos</td>
                                                                     <td>2464760</td>
-                                                                    <td>1 - Nome Grupo<br>2 - Nome Grupo<br>3 - Nome
-                                                                        Grupo</td>
-                                                                    <td>Aguardando DOC</td>
-                                                                    <td>Natureza 2</td>
-                                                                    <td>10 minutos</td>
+                                                                    <td>Data/Hora de corte dos itens e natureza:
+                                                                        <b>25/03/21 - 8h</b> | Itens: <b>Aguardando
+                                                                            Doc</b> | Natureza: <b>4</b> | Data/Hora de
+                                                                        corte das News: <b>20/03/21 - 4h</b> | News:
+                                                                        <b>Novos Documentos</b> | Prazo máximo: <b>15
+                                                                            minutos</b></td>
+                                                                    <td>5 minutos</td>
                                                                     <td>20 minutos</td>
-                                                                    <td>30 minutos</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div>
-                                                                            <a href="#" data-toggle="modal"
-                                                                                data-target="#modalAlertaParecer">
-                                                                                <img src="img/aviso.svg"
-                                                                                    data-toggle="tooltip"
-                                                                                    data-original-title="Analista excedeu o tempo médio definido"
-                                                                                    width="25px"
-                                                                                    style="float: left; margin-right: 8px;">
-                                                                            </a>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>João Carlos</td>
-                                                                    <td>2464760</td>
-                                                                    <td>1 - Nome Grupo<br>2 - Nome Grupo<br>3 - Nome
-                                                                        Grupo</td>
-                                                                    <td>Aguardando DOC</td>
-                                                                    <td>Natureza 2</td>
-                                                                    <td>10 minutos</td>
-                                                                    <td>20 minutos</td>
-                                                                    <td>30 minutos</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td></td>
-                                                                    <td>João Carlos</td>
-                                                                    <td>2464760</td>
-                                                                    <td>1 - Nome Grupo<br>2 - Nome Grupo<br>3 - Nome
-                                                                        Grupo</td>
-                                                                    <td>Aguardando DOC</td>
-                                                                    <td>Natureza 2</td>
-                                                                    <td>10 minutos</td>
-                                                                    <td>20 minutos</td>
-                                                                    <td>30 minutos</td>
+                                                                    <td>15 minutos</td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>
