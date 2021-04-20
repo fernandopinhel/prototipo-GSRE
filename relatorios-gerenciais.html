@@ -260,14 +260,24 @@
                                             </option>
                                         </select>
                                         </div>
-                                        <div class="col-lg-2 internas-buscas mt-3">
+                                        <div class="col-lg-2 internas-buscas mt-3 data-analista">
                                             <label for="text">Data Início</label>
-                                            <input type="text" name="" maxlength="8" value="" id="" class="form-control"
+                                            <input type="text" name="" maxlength="8" value="25/03/2021" id="" class="form-control"
                                                 autocomplete="off">
                                         </div>
-                                        <div class="col-lg-2 internas-buscas mt-3">
+                                        <div class="col-lg-2 internas-buscas mt-3 data-analista">
                                             <label for="text">Data Fim</label>
-                                            <input type="text" name="" maxlength="8" value="" id="" class="form-control"
+                                            <input type="text" name="" maxlength="8" value="27/03/2021" id="" class="form-control"
+                                                autocomplete="off">
+                                        </div>
+                                        <div class="col-lg-2 internas-buscas mt-3 data-fila">
+                                            <label for="text">Data Início</label>
+                                            <input type="text" name="" maxlength="8" value="25/03/2021" id="" class="form-control"
+                                                autocomplete="off">
+                                        </div>
+                                        <div class="col-lg-2 internas-buscas mt-3 data-fila">
+                                            <label for="text">Data Fim</label>
+                                            <input type="text" name="" maxlength="8" value="25/03/2021" id="" class="form-control"
                                                 autocomplete="off">
                                         </div>
                                         <div class="col-lg-12 mt-4 text-center">
@@ -318,33 +328,66 @@
                                                 </div>
                                             </div> -->
                                             <!-- Fim Cards -->
-                                            <div class="col-12 mt-5 p-0">
-                                                <div class="table-responsive">
+                                            <div class="col-12 p-0">
+                                                <div class="table-responsive tabela-fila">
                                                     <form id="" name="" action="" method="post">
                                                         <table class="table table-striped" id="">
                                                             <thead>
                                                                 <tr>                                                                    
-                                                                    <th scope="col" style="width: 10%;">Analista</th>
                                                                     <th scope="col" style="width: 10%;">Data da Análise</th>
-                                                                    <th scope="col" style="width: 60%;">Priorização dos
-                                                                        parâmetros do grupo</th>
-                                                                        <th scope="col" style="width: 10%;">Tempo Médio</th>
-                                                                        <th scope="col" style="width: 10%;">Total processos</th>
+                                                                    <th scope="col" style="width: 60%;">Priorização dos Parâmetros do Grupo</th>
+                                                                    <th scope="col" class="text-center" style="width: 10%;">Tempo Médio(MINUTOS)</th>
+                                                                    <th scope="col" class="text-center" style="width: 10%;">Total Processos</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>25/03/2021</td>
+                                                                    <td>Data/Hora de corte dos itens e natureza: 25/03/21 - 8h | Itens: Aguarda DOC | Natureza: 4 | Data/Hora de corte das News: 20/03/21 - 4h | News: Novos Documentos | Prazo Máximo: 15 minutos</td>
+                                                                    <td class="text-center">15</td>
+                                                                    <td class="text-center">20/48</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </form>
+                                                </div>
+                                                <div class="table-responsive tabela-analista">
+                                                    <form id="" name="" action="" method="post">
+                                                        <table class="table table-striped" id="">
+                                                            <thead>
+                                                                <tr>                                                                    
+                                                                    <th scope="col">Analista</th>
+                                                                    <th scope="col">Data da Análise</th>
+                                                                    <th scope="col">Fila</th>
+                                                                    <th scope="col" class="text-center">Quantidade</th>
+                                                                    <th scope="col" class="text-center">Total Processos</th>
+                                                                    <th scope="col" class="text-center">Tempo Ocioso(MINUTOS)</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
                                                                 <tr>
                                                                     <td>João Carlos</td>
                                                                     <td>25/03/2021</td>
-                                                                    <td>Data/Hora de corte dos itens e natureza:
-                                                                        <b>25/03/21 - 8h</b> | Itens: <b>Aguardando
-                                                                            Doc</b> | Natureza: <b>4</b> | Data/Hora de
-                                                                        corte das News: <b>20/03/21 - 4h</b> | News:
-                                                                        <b>Novos Documentos</b> | Prazo máximo: <b>15
-                                                                            minutos</b>
-                                                                    </td>
-                                                                    <td>15 minutos</td>
-                                                                    <td>30</td>
+                                                                    <td>Não Autorizado<br>Para Análise<br>Aguardando Documento</td>
+                                                                    <td class="text-center">8<br>9<br>5</td>
+                                                                    <td class="text-center">22</td>
+                                                                    <td class="text-center">38</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>João Carlos</td>
+                                                                    <td>26/03/2021</td>
+                                                                    <td>Não Autorizado<br>Para Análise<br>Aguardando Documento</td>
+                                                                    <td class="text-center">8<br>9<br>5</td>
+                                                                    <td class="text-center">22</td>
+                                                                    <td class="text-center">44</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>João Carlos</td>
+                                                                    <td>27/03/2021</td>
+                                                                    <td>Não Autorizado<br>Para Análise<br>Aguardando Documento</td>
+                                                                    <td class="text-center">8<br>9<br>5</td>
+                                                                    <td class="text-center">22</td>
+                                                                    <td class="text-center">12</td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>

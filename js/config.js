@@ -1,14 +1,24 @@
 $(document).ready(function(){  
   $('.posicao-atual').addClass('d-none');    
+  $('.tabela-fila').addClass('d-none');    
+  $('.data-fila').addClass('d-none');    
   
   $('.fila-radio').click(function(){
     $('.analistas').addClass('d-none');    
     $('.posicao-atual').removeClass('d-none');    
+    $('.tabela-fila').removeClass('d-none');    
+    $('.tabela-analista').addClass('d-none');   
+    $('.data-fila').removeClass('d-none');     
+    $('.data-analista').addClass('d-none');     
   });
 
   $('.analista-radio').click(function(){
     $('.analistas').removeClass('d-none');    
     $('.posicao-atual').addClass('d-none');    
+    $('.tabela-fila').addClass('d-none');    
+    $('.tabela-analista').removeClass('d-none');    
+    $('.data-fila').addClass('d-none');     
+    $('.data-analista').removeClass('d-none');    
   });
 });
 
