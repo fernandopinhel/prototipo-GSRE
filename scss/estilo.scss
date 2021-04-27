@@ -186,6 +186,17 @@ textarea{
   color: #0B67BE !important;
 }
 
+.carousel-control-prev-icon{
+  background-image: url('../img/left-arrow-tab-img.png');
+  width: 50px;
+  height: 50px;
+}
+
+.carousel-control-next-icon{
+  background-image: url('../img/right-arrow-tab-img.png');
+  width: 50px;
+  height: 50px;
+}
 
 // page 404
 body.page-404{
