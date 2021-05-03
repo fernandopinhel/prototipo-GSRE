@@ -3253,6 +3253,11 @@ span.btn-add {
   text-decoration: none !important;
 }
 
+.accordion-pareceres > .card > .card-header > h5 > button {
+  list-style: none !important;
+  text-decoration: none !important;
+}
+
 .accordion-pareceres > div > .card > .card-header > h5 > button > div > div > div > p > span {
   font-weight: 600 !important;
 }

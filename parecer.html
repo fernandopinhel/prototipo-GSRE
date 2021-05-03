@@ -259,18 +259,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <div class="col-sm-12 col-md-6 col-lg-3">
-										<div class="box d-flex h-100" data-toggle="tooltip" data-original-title="Explicação">
-											<div class="box-item-text my-auto">
-												<p>Nome Terceiro</p>
-												<span>teste</span>
-											</div>
-											<div class="box-item-img my-auto">
-												<img src="img/nome-terceiro.png" alt="">
-											</div>
-											<div class="clearfix"></div>
-										</div>
-									</div> -->
                             </div>
                         </div>
                     </div>
@@ -315,21 +303,21 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="row mt-4">
                                     <div class="col-sm-12 col-md-6 col-lg-3" data-toggle="modal"
-                                        data-target="#modal-alterar-processo">
-                                        <div class="box d-flex h-100" data-toggle="tooltip"
-                                            data-original-title="Explicação">
-                                            <div class="box-item-text my-auto">
-                                                <p>Posição Atual do Processo</p>
-                                                <span>Sem orçamento</span>
-                                            </div>
-                                            <div class="box-item-img my-auto">
-                                                <img src="img/icon-posicao-atual.png" alt="">
-                                            </div>
+                                    data-target="#modal-alterar-processo">
+                                    <div class="box d-flex h-100" data-toggle="tooltip"
+                                        data-original-title="Explicação">
+                                        <div class="box-item-text my-auto">
+                                            <p>Posição Atual do Processo</p>
+                                            <span>Sem orçamento</span>
+                                        </div>
+                                        <div class="box-item-img my-auto">
+                                            <img src="img/icon-posicao-atual.png" alt="">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row mt-4">
                                     <div class="col-sm-12 col-md-6 col-lg-3" data-toggle="modal"
                                         data-target="#modal-protocolos">
                                         <div class="box d-flex h-100" data-toggle="tooltip"
@@ -426,9 +414,18 @@
                                                     <div class="card-body p-0">
                                                         <div class="container-fluid p-0">
                                                             <div class="row">
-                                                                <div class="col-sm-12 col-md-6 col-lg-3 mb-4"
-                                                                    data-toggle="modal"
-                                                                    data-target="#modal-tipo-de-salvado">
+                                                                <div class="col-sm-12 col-md-6 col-lg-3 mb-4"">
+                                                                    <div class="box d-flex h-100">
+                                                                        <div class="box-item-text my-auto">
+                                                                            <p>Status do Sinistro</p>
+                                                                            <span>Avisado</span>
+                                                                        </div>
+                                                                        <div class="box-item-img my-auto">
+                                                                            <img src="img/icon-status.png" alt="">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-12 col-md-6 col-lg-3 mb-4" data-toggle="modal" data-target="#modal-tipo-de-salvado">
                                                                     <div class="box d-flex h-100" data-toggle="tooltip"
                                                                         data-original-title="Explicação">
                                                                         <div class="box-item-text my-auto">
@@ -456,38 +453,12 @@
                                                                     <div class="box d-flex h-100" data-toggle="tooltip"
                                                                         data-original-title="Explicação">
                                                                         <div class="box-item-text my-auto">
-                                                                            <p>Status do Sinistro</p>
-                                                                            <span>teste</span>
-                                                                        </div>
-                                                                        <div class="box-item-img my-auto">
-                                                                            <img src="img/icon-status.png" alt="">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-sm-12 col-md-6 col-lg-3 mb-4">
-                                                                    <div class="box d-flex h-100" data-toggle="tooltip"
-                                                                        data-original-title="Explicação">
-                                                                        <div class="box-item-text my-auto">
                                                                             <p>Ressarcimento</p>
                                                                             <span>teste</span>
                                                                         </div>
                                                                         <div class="box-item-img my-auto">
                                                                             <img src="img/icon-ressarcimento.png"
                                                                                 alt="">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-sm-12 col-md-6 col-lg-3 mb-4"
-                                                                    data-toggle="modal"
-                                                                    data-target="#modal-terceiros-menu">
-                                                                    <div class="box d-flex h-100" data-toggle="tooltip"
-                                                                        data-original-title="Explicação">
-                                                                        <div class="box-item-text my-auto">
-                                                                            <p>Terceiros</p>
-                                                                            <span>Sim</span>
-                                                                        </div>
-                                                                        <div class="box-item-img my-auto">
-                                                                            <img src="img/icon-terceiros.png" alt="">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -596,6 +567,22 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-12 col-md-6 col-lg-3 mb-4"
+                                                            data-toggle="modal"
+                                                            data-target="#modal-terceiros-menu">
+                                                            <div class="box d-flex h-100" data-toggle="tooltip"
+                                                                data-original-title="Explicação">
+                                                                <div class="box-item-text my-auto">
+                                                                    <p>Terceiros</p>
+                                                                    <span>Sim</span>
+                                                                </div>
+                                                                <div class="box-item-img my-auto">
+                                                                    <img src="img/icon-terceiros.png" alt="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                         </div>
                                                     </div>
                                                 </div>

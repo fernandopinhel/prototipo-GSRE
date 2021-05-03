@@ -2280,6 +2280,7 @@ span.btn-add{
   letter-spacing: 2px;
   line-height: 17px;
 }
+
 .conteudo-parecer{
   background: #fff;
   margin: -20px 0 0 0;
@@ -2980,6 +2981,11 @@ span.btn-add{
 }
 
 .accordion-pareceres > div > .card > .card-header:hover > h5 > button{
+  list-style: none !important;
+  text-decoration: none !important;
+}
+
+.accordion-pareceres > .card > .card-header > h5 > button{
   list-style: none !important;
   text-decoration: none !important;
 }
